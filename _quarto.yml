@@ -14,6 +14,8 @@ website:
         text: Education
       - href: organisations
         text: Organisationer
+      - href: education
+        text: Education
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true
