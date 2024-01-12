@@ -9,7 +9,10 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-
+  page-footer:
+    left: "(c) Christian Knudsen, 2023 –. "
+  twitter-card: true
+  open-graph: true
 format:
   html:
     theme: cosmo
