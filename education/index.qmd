@@ -1,5 +1,47 @@
 ---
-title: "education"
+title: "Education"
 ---
 
-Her skal der stå noget om min uddannelse. Det mere formelle. Og det knap så formelle.
+The purpose of this page is not to show of everything and claim that I am extremely well educated.
+
+The purpose is to have a complete list. And that includes some courses that are not necessarily that relevant for anything.
+
+## Formal Eduction
+
+Københavns universitet
+
+:   **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
+
+CBS
+
+:   Erhversret
+
+    Udvidet erhvervsret
+
+    samfundsøkonomi
+
+    forvaltningsret
+
+:   dataanalyse
+
+AMU
+
+DTU
+
+:   February 1994 -- February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
+
+Helsinge Gymnasium
+
+Helsinge Realskole
+
+## Certifications
+
+FEANI
+
+basic GMP
+
+Isotopteknik
+
+Carpentries
+
+## Not so formal education

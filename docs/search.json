@@ -23,9 +23,9 @@
   {
     "objectID": "education/index.html",
     "href": "education/index.html",
-    "title": "education",
+    "title": "Education",
     "section": "",
-    "text": "Her skal der stå noget om min uddannelse. Det mere formelle. Og det knap så formelle."
+    "text": "The purpose of this page is not to show of everything and claim that I am extremely well educated.\nThe purpose is to have a complete list. And that includes some courses that are not necessarily that relevant for anything."
   },
   {
     "objectID": "organisations/index.html",
@@ -40,5 +40,26 @@
     "title": "work",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "education/index.html#formal-eduction",
+    "href": "education/index.html#formal-eduction",
+    "title": "Education",
+    "section": "Formal Eduction",
+    "text": "Formal Eduction\n\nKøbenhavns universitet\n\nAugust 2023: Introduction to Social Data Science. Summerschool at the Department of Economics.\n\nCBS\n\nErhversret\nUdvidet erhvervsret\nsamfundsøkonomi\nforvaltningsret\n\n\ndataanalyse\n\n\nAMU\n\nDTU\n\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\nHelsinge Gymnasium\nHelsinge Realskole"
+  },
+  {
+    "objectID": "education/index.html#certifications",
+    "href": "education/index.html#certifications",
+    "title": "Education",
+    "section": "Certifications",
+    "text": "Certifications\nFEANI\nbasic GMP\nIsotopteknik\nCarpentries"
+  },
+  {
+    "objectID": "education/index.html#not-so-formal-education",
+    "href": "education/index.html#not-so-formal-education",
+    "title": "Education",
+    "section": "Not so formal education",
+    "text": "Not so formal education"
   }
 ]
