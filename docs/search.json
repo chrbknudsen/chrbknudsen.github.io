@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html#teaching",
     "href": "index.html#teaching",
     "title": "Christian Knudsen",
     "section": "Teaching",
     "text": "Teaching"
-  },
-  {
-    "objectID": "index.html#personal",
-    "href": "index.html#personal",
-    "title": "Christian Knudsen",
-    "section": "Personal",
-    "text": "Personal"
-  },
-  {
-    "objectID": "Organisations.html",
-    "href": "Organisations.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "education.html",
-    "href": "education.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "work.html",
-    "href": "work.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "organisations.html",
-    "href": "organisations.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "index.html#personal-life",
@@ -63,8 +14,8 @@
     "text": "Personal life\nI live in Rødovre, Denmark, with my husband Kristian who works in IT. Born and raised in the cheap part northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation. After graduating, the plans for a ph.d. was thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through mergers and held a number of positions wi"
   },
   {
-    "objectID": "organisations/index.html",
-    "href": "organisations/index.html",
+    "objectID": "about.html",
+    "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
@@ -75,6 +26,13 @@
     "title": "education",
     "section": "",
     "text": "Her skal der stå noget om min uddannelse. Det mere formelle. Og det knap så formelle."
+  },
+  {
+    "objectID": "organisations/index.html",
+    "href": "organisations/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "work/index.html",
