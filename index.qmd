@@ -23,11 +23,4 @@ comments: false
 
 ## Personal life
 
-I live in Rødovre, Denmark, with my husband Kristian who works in IT.
-Born and raised in the cheap part northern Zealand, I moved to Nærum just north
-of Copenhagen as soon as I got tired of commuting to DTU.
-It took me an inordinate amount of time to graduate - mainly due to my intense
-involvement in the local student organisation. 
-After graduating, the plans for a ph.d. was thwarted by cutbacks on environmental 
-research and I ended up at DNLB as a subject specialist for chemistry. I have 
-stayed there through mergers and held a number of positions wi
+I live in Rødovre, Denmark, with my husband Kristian who works in IT. Born and raised in the cheap part northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation. After graduating, the plans for a ph.d. was thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through mergers and held a number of positions wi
