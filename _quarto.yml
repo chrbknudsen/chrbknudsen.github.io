@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - href: work
-        text: Work
+        text: work
       - href: education
         text: Education
       - href: organisations

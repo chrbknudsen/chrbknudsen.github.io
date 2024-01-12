@@ -2,8 +2,4 @@
 title: "education"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+Her skal der stå noget om min uddannelse. Det mere formelle. Og det knap så formelle.
