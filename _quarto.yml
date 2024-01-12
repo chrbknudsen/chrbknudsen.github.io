@@ -9,6 +9,12 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - work.qmd
+        Work
+      - eductaion
+        Education
+      - organisations.qmd
+        Organisationer
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true
