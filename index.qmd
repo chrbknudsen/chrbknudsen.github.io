@@ -1,5 +1,16 @@
 ---
-title: "demosite"
+title: "Christian Knudsen"
+about:
+  template: trestles
+  links: 
+    - icon: linkedin
+      text: LinkedIn
+      url: https://www.linkedin.com/in/cbknudsen/
+    - icon: twitter
+      text: twitter
+      url: https://twitter.com/chrbknudsen
+image: img/IMG_5986.jpeg
+comments: false
 ---
 
 This is a Quarto website.
