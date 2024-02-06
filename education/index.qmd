@@ -8,31 +8,31 @@ The purpose is to have a complete list. And that includes some courses that are 
 
 ## Formal Eduction
 
-Københavns universitet
+### Københavns universitet
 
 :   **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
 
-CBS
+### CBS
 
 :   Erhversret
 
-    Udvidet erhvervsret
+:    Udvidet erhvervsret
 
-    samfundsøkonomi
+:    samfundsøkonomi
 
-    forvaltningsret
+:    forvaltningsret
 
 :   dataanalyse
 
-AMU
+### AMU
 
-DTU
+### DTU
 
 :   February 1994 -- February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
 
-Helsinge Gymnasium
+### Helsinge Gymnasium
 
-Helsinge Realskole
+### Helsinge Realskole
 
 ## Certifications
 

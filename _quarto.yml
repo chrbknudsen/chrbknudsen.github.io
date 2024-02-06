@@ -8,12 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: work
-        text: work
-      - href: education
-        text: Education
-      - href: organisations
-        text: Organisationer
+      - text: CV
+        menu:
+          - href: work
+            text: work
+          - href: education
+            text: Education
+          - href: organisations
+            text: Organisationer
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true

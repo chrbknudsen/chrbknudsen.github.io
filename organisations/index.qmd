@@ -2,6 +2,9 @@
 title: "Organisational work"
 ---
 
+<!-- Denne side er god til at gennemskue ting af -->
+<!-- https://github.com/chrisvoncsefalvay/chrisvoncsefalvay.github.io/blob/main/scripts/pre_create_papers_file.py -->
+
 I have volunteered in several organisations. Paying back to the society of which I am a part, is important to me.
 
 Copenhagen pride feb 2008 - okt 2014 Og efterfølgende som revisor/organisatorisk tilsynsførende
@@ -12,4 +15,17 @@ Radikale venstre Rødovre storkreds hb TR
 
 Hvidovre radikale venstre
 
-dshk Polyteknisk forening kko Konsistorium KSN FAK - SRØ Helsinge skakklub DFFU - forum for e-ressourcer DOAJ ngo-forum
+dshk 
+
+Polyteknisk forening 
+
+kko 
+
+Konsistorium 
+
+KSN 
+DFFU - forum for e-ressourcer DOAJ ngo-forum
+
+Helsinge skakklub 
+
+FAK - SRØ 
