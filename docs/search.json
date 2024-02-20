@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "index.html#teaching",
-    "href": "index.html#teaching",
-    "title": "Christian Knudsen",
-    "section": "Teaching",
-    "text": "Teaching"
+    "objectID": "work/index.html",
+    "href": "work/index.html",
+    "title": "work",
+    "section": "",
+    "text": "KUB\nDTU - studentermedhjælp/underviser\nDanske bank Unibank Løsekraut boghandelen lampefabrikken"
   },
   {
-    "objectID": "index.html#personal-life",
-    "href": "index.html#personal-life",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Christian Knudsen",
-    "section": "Personal life",
-    "text": "Personal life\nI live in Rødovre, Denmark, with my husband Kristian who works in IT. Born and raised in the cheap part northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation. After graduating, the plans for a ph.d. was thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through mergers and held a number of positions wi"
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. 22."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. 22."
   },
   {
     "objectID": "about.html",
@@ -26,20 +33,6 @@
     "title": "Education",
     "section": "",
     "text": "The purpose of this page is not to show of everything and claim that I am extremely well educated.\nThe purpose is to have a complete list. And that includes some courses that are not necessarily that relevant for anything."
-  },
-  {
-    "objectID": "organisations/index.html",
-    "href": "organisations/index.html",
-    "title": "Organisational work",
-    "section": "",
-    "text": "I have volunteered in several organisations. Paying back to the society of which I am a part, is important to me.\nCopenhagen pride feb 2008 - okt 2014 Og efterfølgende som revisor/organisatorisk tilsynsførende\nHappy copenhagen 2015\nRadikale venstre Rødovre storkreds hb TR\nHvidovre radikale venstre\ndshk\nPolyteknisk forening\nkko\nKonsistorium\nKSN DFFU - forum for e-ressourcer DOAJ ngo-forum\nHelsinge skakklub\nFAK - SRØ"
-  },
-  {
-    "objectID": "work/index.html",
-    "href": "work/index.html",
-    "title": "work",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "education/index.html#formal-eduction",
@@ -61,5 +54,12 @@
     "title": "Education",
     "section": "Not so formal education",
     "text": "Not so formal education"
+  },
+  {
+    "objectID": "organisations/index.html",
+    "href": "organisations/index.html",
+    "title": "Organisational work",
+    "section": "",
+    "text": "I have volunteered in several organisations. Paying back to the society of which I am a part, is important to me.\nCopenhagen pride feb 2008 - okt 2014 Og efterfølgende som revisor/organisatorisk tilsynsførende\nHappy copenhagen 2015\nRadikale venstre Rødovre storkreds hb TR\nHvidovre radikale venstre\ndshk\nPolyteknisk forening\nkko\nKonsistorium\nKSN DFFU - forum for e-ressourcer DOAJ ngo-forum\nHelsinge skakklub\nFAK - SRØ"
   }
 ]
