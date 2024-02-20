@@ -10,17 +10,17 @@ The purpose is to have a complete list. And that includes some courses that are 
 
 ### Københavns universitet
 
-:   **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
+: **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
 
 ### CBS
 
-:   Erhversret
+: Erhversret
 
-:    Udvidet erhvervsret
+:   Udvidet erhvervsret
 
-:    samfundsøkonomi
+:   samfundsøkonomi
 
-:    forvaltningsret
+:   forvaltningsret
 
 :   dataanalyse
 
@@ -28,7 +28,7 @@ The purpose is to have a complete list. And that includes some courses that are 
 
 ### DTU
 
-:   February 1994 -- February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
+: February 1994 -- February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
 
 ### Helsinge Gymnasium
 

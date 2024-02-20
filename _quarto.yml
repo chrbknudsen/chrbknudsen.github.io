@@ -11,11 +11,13 @@ website:
       - text: CV
         menu:
           - href: work
-            text: work
+            text: Work
           - href: education
             text: Education
           - href: organisations
             text: Organisationer
+          - href: other
+            text: Other stuff
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true

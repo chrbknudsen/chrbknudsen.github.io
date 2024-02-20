@@ -1,13 +1,71 @@
 ---
-title: "work"
+title: "Work"
 ---
 
-KUB
+A complete list. As far as I recall
 
-DTU - studentermedhjælp/underviser
+Marts 2003 til dato KUB
 
-Danske bank
-Unibank
-Løsekraut
-boghandelen
-lampefabrikken
+2008 til okt. 2013 Specialkonsulent i universitetsbibliotekarens stab
+
+okt. 13 til feb 17 - leder af farmabiblioteket.
+
+Fra jnauar 2016 som chefkonsulent - kombistilling feb 2017 - specialkonsulent ved KUB
+
+DTU - studentermedhjælp/underviser sommeren jeg blev kandidat - treugers. Og en gang før?
+
+Danske bank juni 1996 til aug 1996 - var det græsted? Nope. det var helsinge. For: juni - aug 1995 var Græsted.
+
+Unibank Græsted
+
+Danske Bank
+
+Schwartz. August 1994 - januar 1994 chauffør
+
+Juni 1988 - juli 1993. M. Løsekraut ApS. forefaldende arbejde efter skoletid, montering af printkort og produktionskontrol
+
+aug 1988 - juni 1993. Jensen Lamp. Hjemmearbejder.
+
+
+sept 2002 - Novo Nordisk A/S, Bagsværd Pakning af insulin som vikar.
+
+Jun. 2002 Danmarks Tekniske Universitet Hjælpelærer i kurset "Katalyse, spektroskopi og struktur", ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed, gennemførsel af lovpligtig undervisningsmiljøvurdering.\\
+
+Jun. -- aug. 00 Danske Bank, Gilleleje Sommerferieafløser. Som i tidligere
+sommerferiejob i bankverdenen, udførte jeg her almindelige kundeekspeditioner i kassen samt forefaldende
+kontorarbejde.
+
+Jan. 00 danmarks Tekniske Universitet Hjælpelærer i kurset "Katalyse, spektroskopi og struktur", ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed
+
+Jun. -- aug. 99 Unibank, Græsted
+Jun. -- aug. 98 Den Danske Bank, Helsinge
+Jun. -- aug. 97Den Danske Bank, Helsinge
+Jun. -- aug. 96 Den Danske Bank, Helsinge
+jun - aug 95 Den Danske Bank Græsted
+
+\textbf{Sep. 00 -- dec. 00} & \textbf{Studieophold i Gr\ae kenland}\\
+&	Ved kemisk
+	institut p\aa~universitetet i Patras, Gr\ae kenland. Jeg foretog spektroskopiske
+	(Raman og VIS/NIR) unders\o gelser af modeller af industrielt anvendte
+	svovlsyrekatalysatorer, med henblik p\aa~opn\aa else af viden om
+	komplekskemien og redox-forholdene i disse modeller.\\
+\textbf{Aug. 90 -- jun. 93} & \textbf{Matematisk studentereksamen fra Helsinge Amts Gymnasium}\\
+\\
+\multicolumn{2}{l}{\large \textbf{Kurser}}\\
+\textbf{Mar. 05} & \textbf{Kvalificering og validering af produktionsudstyr}\\
+&Tre dages kursus p\aa~Pharmakon. Udstyrskvalificering, valideringsplanl\ae gning, dokumentation og myndighedsinspektioner.\\
+
+%\textbf{Feb. -- mar. 05} & \textbf{Gaschromatografi}\\
+%& AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. Jeg deltog for at genopfriske mine praktiske
+%f\ae rdigheder.\\
+
+%\textbf{Jan. -- feb. 05} & \textbf{HPLC operat\o r}\\
+%& AMU-kursus i praktisk anvendelse af HPLC. Jeg deltog for at genopfriske mine praktiske f\ae rdigheder.\\
+
+%\textbf{Nov. 03} & \textbf{Patentdag for kemikere}\\
+%& Fagligt m\o de om patentering og patenter udbudt af Kemiingeni\o rgruppen under Ingeni\o rforeningen i %Danmark.\\
+
+\textbf{Jun. 03} & \textbf{GMP grundkursus}\\
+&Kursus udbudt af Kemiingeni\o rgruppen under Ingeni\o rforeningen i Danmark. Kurset 
+gennemgik ved forel\ae sning og \o velser principperne for GMP herunder produktion,
+validering, dokumentation og QA/QC.\\
