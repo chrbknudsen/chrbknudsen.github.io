@@ -18,7 +18,7 @@ website:
             text: Organisationer
           - href: other
             text: Other stuff
-      - href: stuff
+      - href: https://christianknudsen.info/shiny/test-2/
         text: Stuff
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
