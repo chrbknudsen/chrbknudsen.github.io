@@ -2,8 +2,10 @@
 title: "Stuff"
 ---
 
+```{=html}
+<iframe src="https://christianknudsen.info/shiny/clf/" width: 100vw>
+```
 
-<iframe src="https://christianknudsen.info/shiny/clf/" width: 100%; height: 500px;">
 
 ```{r}
 list.dirs("/srv/shiny-server")
