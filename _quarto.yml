@@ -18,6 +18,8 @@ website:
             text: Organisationer
           - href: other
             text: Other stuff
+      - href: stuff
+        text: Stuff
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true
