@@ -2,13 +2,37 @@
 title: "Stuff"
 ---
 
-```{=html}
-<iframe src="https://christianknudsen.info/shiny/test-2/" width:100%;height:100%;>
+løsningen her bliver at trække på denne side
+https://christianknudsen.info/shiny/index/
+
+
+```{r eval = F}
+library(tidyverse)
+library(httr)
+library(rvest)
+shinys <- read_html("https://christianknudsen.info/shiny") %>%
+  html_nodes("a") %>%
+  html_attr("href") %>%
+  .[grepl("/$", .)] %>% 
+  paste0("https://christianknudsen.info/shiny/", .)
+
 ```
 
+```{r eval = F}
+get_readme <- function(x){
+  read_html
+}
+tibble(url = shinys) %>% 
+  mutate(readmes = str_c(url, "READ.me")) %>% 
+  rowwise() %>% 
+  mutate(readmes = map(read_html(readmes, options = "RECOVER")))
+```
 
-```{r}
-list.dirs("/srv/shiny-server")
-
+```{r eval = F}
+tibble(url = shinys) %>% 
+  transmute(readmes = str_c(url, "READ.me")) %>% 
+  slice(6) %>% 
+  pull(readmes) %>% 
+  read_html()
 ```
 

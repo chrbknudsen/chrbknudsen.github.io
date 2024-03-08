@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Christian Knudsen – Stuff</title>
+<title>Christian Knudsen - Stuff</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,8 +97,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Christian Knudsen - Stuff">
+<meta property="og:description" content="">
 <meta property="og:site-name" content="Christian Knudsen">
 <meta name="twitter:title" content="Christian Knudsen - Stuff">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -184,22 +186,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<iframe src="https://christianknudsen.info/shiny/test-2/" width:100%;height:100%;="">
+<p>løsningen her bliver at trække på denne side https://christianknudsen.info/shiny/index/</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.dirs</span>(<span class="st">&quot;/srv/shiny-server&quot;</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>character(0)</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>shinys <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://christianknudsen.info/shiny"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">"a"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  .[<span class="fu">grepl</span>(<span class="st">"/$"</span>, .)] <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="st">"https://christianknudsen.info/shiny/"</span>, .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>get_readme <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  read_html</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">url =</span> shinys) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">readmes =</span> <span class="fu">str_c</span>(url, <span class="st">"READ.me"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">readmes =</span> <span class="fu">map</span>(<span class="fu">read_html</span>(readmes, <span class="at">options =</span> <span class="st">"RECOVER"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden" data-render-id="quarto-int-sidebar-title">Christian Knudsen</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Christian Knudsen</span> <span class="hidden" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden" data-render-id="quarto-int-navbar:CV">CV</span> <span class="hidden" data-render-id="quarto-int-navbar:Work">Work</span> <span class="hidden" data-render-id="quarto-int-navbar:/work">/work</span> <span class="hidden" data-render-id="quarto-int-navbar:Education">Education</span> <span class="hidden" data-render-id="quarto-int-navbar:/education">/education</span> <span class="hidden" data-render-id="quarto-int-navbar:Organisationer">Organisationer</span> <span class="hidden" data-render-id="quarto-int-navbar:/organisations">/organisations</span> <span class="hidden" data-render-id="quarto-int-navbar:Other stuff">Other stuff</span> <span class="hidden" data-render-id="quarto-int-navbar:/other">/other</span> <span class="hidden" data-render-id="quarto-int-navbar:Stuff">Stuff</span> <span class="hidden" data-render-id="quarto-int-navbar:https://christianknudsen.info/shiny/test-2/">https://christianknudsen.info/shiny/test-2/</span> <span class="hidden" data-render-id="footer-left">(c) Christian Knudsen, 2023 –.</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden" data-render-id="quarto-metatitle">Christian Knudsen - Stuff</span> <span class="hidden" data-render-id="quarto-twittercardtitle">Christian Knudsen - Stuff</span> <span class="hidden" data-render-id="quarto-ogcardtitle">Christian Knudsen - Stuff</span> <span class="hidden" data-render-id="quarto-metasitename">Christian Knudsen</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">url =</span> shinys) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">readmes =</span> <span class="fu">str_c</span>(url, <span class="st">"READ.me"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(readmes) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_html</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
+
+
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -435,9 +453,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-      <div class='footer-contents'>(c) Christian Knudsen, 2023 –. </div>  
-    </div>   
+    <div class="nav-footer-left">(c) Christian Knudsen, 2023 –.</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
@@ -447,6 +463,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 
-</body>
 
-</html></iframe></main></div></body></html>
+
+</body></html>
