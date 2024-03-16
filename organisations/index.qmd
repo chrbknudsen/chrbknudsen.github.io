@@ -2,11 +2,11 @@
 title: "Organisational work"
 ---
 
+An attempt at a complete list.
 <!-- Denne side er god til at gennemskue ting af -->
 
 <!-- https://github.com/chrisvoncsefalvay/chrisvoncsefalvay.github.io/blob/main/scripts/pre_create_papers_file.py -->
 
-I have volunteered in several organisations. Paying back to the society of which I am a part, is important to me.
 
 Copenhagen pride feb 2008 - okt 2014 Og efterfølgende som revisor/organisatorisk tilsynsførende
 
@@ -16,7 +16,7 @@ Radikale venstre Rødovre storkredsformand 2007 til maj 2012 hb TR
 
 Hvidovre radikale venstre
 
-dshk nov 2006. Indtil nov 14 som sekretær, fra november 2014 som kasserer
+Dansk selskab for historisk kemi nov 2006. Indtil nov 14 som sekretær, fra november 2014 som kasserer
 
 Polyteknisk forening
 
@@ -37,7 +37,7 @@ Helsinge skakklub
 FAK - SRØ
 
 
-Organisatorisk erfaring
+## Organisatorisk erfaring
 Sep. 02 – apr. 03 Symposiet ”Ledelse af projekter, udvid din kompetence”
 
 Adminstrativ og praktisk deltager i Foreningen for Dansk Projektledelse i
@@ -71,9 +71,7 @@ samt at rekruttere og motivere frivillige til dette arbejde. Derudover indgik je
 i ledelsen af foreningens erhvervsaktiviteter.
 
 Jan. 99 – dec. 99 Konsistorium, DTU
-
-Medlem af Konsistorium p ̊a DTU. Mine fokusomr ̊ader var institutionens
-økonomi og forskning.
+Medlem af konsistorium på DTU. Mine fokusområder var institutionesn økonomi og forskning.
 
 Jan. 97 – dec. 98 Kandidatstudienævnet, DTU
 
