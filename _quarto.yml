@@ -1,5 +1,6 @@
 project:
   type: website
+  editor: source
   output-dir: docs
 
 website:
@@ -29,6 +30,3 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-editor: source
-

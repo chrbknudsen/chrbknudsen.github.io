@@ -1,5 +1,6 @@
 ---
 title: "About"
+editor: source
 ---
 
 About this site
