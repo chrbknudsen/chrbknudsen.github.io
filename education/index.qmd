@@ -2,11 +2,8 @@
 title: "Education"
 ---
 
-The purpose of this page is not to show of everything and claim that I am extremely well educated.
-
-The purpose is to have a complete list. And that includes some courses that are not necessarily that relevant for anything.
-
-Med andre ord, det er ikke for at tvære rundt i at jeg har taget et kursus du ikke har. Slap af, hvil i dig selv, og antag at det nok ikke har noget med dig at gøre.
+An attempt at a complete list. Including stuff that is not necessarily relevant
+for anything.
 
 ## Formal Eduction
 
@@ -47,3 +44,32 @@ Isotopteknik
 Carpentries
 
 ## Not so formal education
+
+
+Sep. 00 -- dec. 00 Studieophold i Grækenland
+Ved kemisk
+	institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
+	(Raman og VIS/NIR) unders\o gelser af modeller af industrielt anvendte
+	svovlsyrekatalysatorer, med henblik på opnåelse af viden om
+	komplekskemien og redox-forholdene i disse modeller.
+
+Aug. 90 -- jun. 93 Matematisk studentereksamen fra Helsinge Amts Gymnasium
+
+## Kurser
+Mar. 05 Kvalificering og validering af produktionsudstyr
+Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
+
+Feb. -- mar. 05 Gaschromatografi 
+AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. 
+
+
+Jan. -- feb. 05 HPLC operat\o r
+ AMU-kursus i praktisk anvendelse af HPLC.
+ 
+Nov. 03  Patentdag for kemikere
+Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.
+
+Jun. 03 GMP grundkursus
+Kursus udbudt af Kemiingeniørgruppen under Ingeni\o rforeningen i Danmark. Kurset 
+gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion,
+validering, dokumentation og QA/QC.
