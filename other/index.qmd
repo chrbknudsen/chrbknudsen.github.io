@@ -18,8 +18,7 @@ order at restaurants.
 In the traditional understanding of that word, I am superuser of Microsoft Office.
 Teach programming in R, basic knowledge of Python. Daily user of Linux, 
 know regular expressions and SQL.
-In general I am able to learn most applications in a couple of days to a level 
-where I can help colleagues.
+
 
 ## Private
 Born June 20th 1974, married to Kristian. Interests include politics and 
