@@ -4,21 +4,22 @@ title: "Other CV related stuff"
 
 ## Languges
 
-Danish
+- Danish
 
-English - americans think I'm british. Brits know I'm not.
-German - Fair reading comprehension, especially technical texts. Understand
-spoken german - if "Hochdeutsch" is spoken slowly. Speaks it well enought to
+- English - americans think I'm british. Brits know I'm not.
+- German - Fair reading comprehension, especially technical texts. Understand
+spoken german - if "Hochdeutsch" is spoken slowly. Speaks it well enough to
 order at restaurants.
-French - I can read and understand chemical literature in french. I do not dare
+- French - I can read and understand chemical literature in french. I do not dare
 order at restaurants.
 
 ## IT 
 
 In the traditional understanding of that word, I am superuser of Microsoft Office.
-Teach programming in R, basic knowledge of Python. Daily user of Linux, know regular expressions and SQL.
-In generel I am able to learn most applications in a couple of days to a level where I can help 
-colleagues.
+Teach programming in R, basic knowledge of Python. Daily user of Linux, 
+know regular expressions and SQL.
+In general I am able to learn most applications in a couple of days to a level 
+where I can help colleagues.
 
 ## Private
 Born June 20th 1974, married to Kristian. Interests include politics and 
