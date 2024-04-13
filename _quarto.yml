@@ -16,12 +16,12 @@ website:
             text: Education
           - href: organisations
             text: Organisationer
-          - href: notes
-            text: Noter and stuff
           - href: other
             text: Other stuff
       - href: stuff
         text: Stuff
+      - href: notes
+        text: Noter and stuff
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true
