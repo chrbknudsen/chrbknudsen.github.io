@@ -16,6 +16,8 @@ website:
             text: Education
           - href: organisations
             text: Organisationer
+          - href: notes
+            text: Noter and stuff
           - href: other
             text: Other stuff
       - href: stuff

@@ -35,6 +35,13 @@
     "text": "Kurser\nMar. 05 Kvalificering og validering af produktionsudstyr Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nFeb. – mar. 05 Gaschromatografi AMU-kursus i praktisk anvendelse af kapillar gaschromatografi.\nJan. – feb. 05 HPLC operatr AMU-kursus i praktisk anvendelse af HPLC.\nNov. 03 Patentdag for kemikere Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 03 GMP grundkursus Kursus udbudt af Kemiingeniørgruppen under Ingenirforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC."
   },
   {
+    "objectID": "stuff/index.html",
+    "href": "stuff/index.html",
+    "title": "Stuff",
+    "section": "",
+    "text": "Stuff not on this website."
+  },
+  {
     "objectID": "other/index.html",
     "href": "other/index.html",
     "title": "Other CV related stuff",
@@ -70,6 +77,20 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "1+1"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Christian Knudsen",
@@ -98,18 +119,10 @@
     "text": "An attempt at a complete list.\nCopenhagen pride feb 2008 - okt 2014 Og efterfølgende som revisor/organisatorisk tilsynsførende\nHappy copenhagen 2015 - hvornår det nu var vi sluttede\nRadikale venstre Rødovre storkredsformand 2007 til maj 2012 hb TR\nHvidovre radikale venstre\nDansk selskab for historisk kemi nov 2006. Indtil nov 14 som sekretær, fra november 2014 som kasserer\nPolyteknisk forening\nkko\nKonsistorium\nKSN\nDFFU - forum for e-ressourcer\nDOAJ\nngo-forum\nHelsinge skakklub\nFAK - SRØ"
   },
   {
-
-    "objectID": "stuff/index.html",
-    "href": "stuff/index.html",
-    "title": "Stuff",
-    "section": "",
-    "text": "løsningen her bliver at trække på denne side https://christianknudsen.info/shiny/index/\n\nlibrary(tidyverse)\nlibrary(httr)\nlibrary(rvest)\nshinys &lt;- read_html(\"https://christianknudsen.info/shiny\") %&gt;%\n  html_nodes(\"a\") %&gt;%\n  html_attr(\"href\") %&gt;%\n  .[grepl(\"/$\", .)] %&gt;% \n  paste0(\"https://christianknudsen.info/shiny/\", .)\n\n\nget_readme &lt;- function(x){\n  read_html\n}\ntibble(url = shinys) %&gt;% \n  mutate(readmes = str_c(url, \"READ.me\")) %&gt;% \n  rowwise() %&gt;% \n  mutate(readmes = map(read_html(readmes, options = \"RECOVER\")))\n\n\ntibble(url = shinys) %&gt;% \n  transmute(readmes = str_c(url, \"READ.me\")) %&gt;% \n  slice(6) %&gt;% \n  pull(readmes) %&gt;% \n  read_html()"
-  },
-  {
-    "objectID": "test.html",
-    "href": "test.html",
-    "title": "Untitled",
-    "section": "",
-    "text": "1+1"
+    "objectID": "organisations/index.html#organisatorisk-erfaring",
+    "href": "organisations/index.html#organisatorisk-erfaring",
+    "title": "Organisational work",
+    "section": "Organisatorisk erfaring",
+    "text": "Organisatorisk erfaring\nSep. 02 – apr. 03 Symposiet ”Ledelse af projekter, udvid din kompetence”\nAdminstrativ og praktisk deltager i Foreningen for Dansk Projektledelse i\nforbindelse med Symposiet Projektledelse 2003. Jeg deltog i hele det prak- tiske arrangement, samt i udvalgte dele af det faglige arrangement, bl.a. ved\nreviewlæsning af de indsendte artikler. Feb. 01 – nov. 02 Danske Studerendes Fællesr ̊ad, DSF\nMedlem af Økonomiudvalget. R ̊adgivende organ vedrørende økonomiske forhold i DSF. Jeg har her specielt arbejdet med budgetlægning og -opfølgning samt personaleforhold.\nFeb. 99 – feb. 02 Kollegiekonsulent Ordningen, KKO\nFormand for Kollegiekonsulent Ordningen - forening tilknyttet studiemiljøet\nved DTU, som udfører frivilligt arbejde inden for organisationsudvikling, kon- fliktløsning, forhandling, samt tilbyder psykologisk bistand. Havde særligt\nansvar for ledelsen af vores ansatte konsulent, samt kommunikations- og strate- giprocesser.\n1995 – 2001 Polyteknisk Forening\nAktiv i studenterorganisationen p ̊a DTU, i 1998, som medlem af foreningens bestyrelse p ̊a fuld tid. Jeg havde her ansvaret for at koordinere foreningens arbejde i de kollegiale organer, herunder at definere foreningens politiske linie samt at rekruttere og motivere frivillige til dette arbejde. Derudover indgik jeg i ledelsen af foreningens erhvervsaktiviteter.\nJan. 99 – dec. 99 Konsistorium, DTU Medlem af konsistorium på DTU. Mine fokusområder var institutionesn økonomi og forskning.\nJan. 97 – dec. 98 Kandidatstudienævnet, DTU\nØverste myndighed hvad angik civilingeniøruddannelsen p ̊a DTU. Mine foku- somr ̊ader var undervisningsevaluering og integration af forskning og undervis- ning."
   }
 ]
