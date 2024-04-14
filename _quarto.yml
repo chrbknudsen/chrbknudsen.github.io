@@ -19,9 +19,9 @@ website:
           - href: other
             text: Other stuff
       - href: stuff
-        text: Stuff
+        text: External Stuff
       - href: notes
-        text: Noter and stuff
+        text: Notes and stuff
   page-footer:
     left: "(c) Christian Knudsen, 2023 –. "
   twitter-card: true

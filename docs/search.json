@@ -39,7 +39,7 @@
     "href": "stuff/index.html",
     "title": "Stuff",
     "section": "",
-    "text": "Stuff not on this website."
+    "text": "Stuff that is not actually on this site. Some shiny. Some workrelated. All with bestagons:"
   },
   {
     "objectID": "other/index.html",
@@ -77,11 +77,46 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "notes/20240414-floral/index.html",
+    "href": "notes/20240414-floral/index.html",
+    "title": "Kosmisk Floræ",
+    "section": "",
+    "text": "Or:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBased on the butterfly curve\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nPrepping data for plot:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nThe last two lines basically rotates the curve\nPlot:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Floræ-1.png\")"
+  },
+  {
+    "objectID": "notes/20240412-talktest/index.html#hvorfor-er-det-svært",
+    "href": "notes/20240412-talktest/index.html#hvorfor-er-det-svært",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Hvorfor er det svært?",
+    "text": "Hvorfor er det svært?\n\nTurn off alarm {tuborg} https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav"
+  },
+  {
+    "objectID": "notes/20240412-talktest/index.html#breakfast",
+    "href": "notes/20240412-talktest/index.html#breakfast",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Breakfast",
+    "text": "Breakfast\n\nEat eggs\nDrink coffee"
+  },
+  {
+    "objectID": "notes/20240412-talktest/index.html#dinner",
+    "href": "notes/20240412-talktest/index.html#dinner",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Dinner",
+    "text": "Dinner\n\nEat spaghetti\nDrink wine"
+  },
+  {
+    "objectID": "notes/20240412-talktest/index.html#spørgsmål",
+    "href": "notes/20240412-talktest/index.html#spørgsmål",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Spørgsmål?",
+    "text": "Spørgsmål?\n\nGet in bed\nCount sheep"
+  },
+  {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+    "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "test.html",

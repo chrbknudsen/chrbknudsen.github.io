@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -96,9 +96,13 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Christian Knudsen - Notes">
+<meta property="og:description" content="">
+<meta property="og:image" content="../notes/20240412-talktest/Kosmisk_Floræ-1.png">
 <meta property="og:site-name" content="Christian Knudsen">
 <meta name="twitter:title" content="Christian Knudsen - Notes">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="../notes/20240412-talktest/Kosmisk_Floræ-1.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -140,10 +144,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Organisationer</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../notes" rel="" target="">
- <span class="dropdown-text">Noter and stuff</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../other" rel="" target="">
  <span class="dropdown-text">Other stuff</span></a>
   </li>  
@@ -151,7 +151,11 @@ ul.task-list li input[type="checkbox"] {
   </li>
   <li class="nav-item">
     <a class="nav-link" href="../stuff" rel="" target="">
- <span class="menu-text">Stuff</span></a>
+ <span class="menu-text">External Stuff</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notes" rel="" target="">
+ <span class="menu-text">Notes and stuff</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -166,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Generative Art"><span class="quarto-category-count category-cloud-5">Generative Art</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-10">R</span></div><div class="category" data-category="Talks"><span class="quarto-category-count category-cloud-5">Talks</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -187,6 +191,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>https://beamilz.com/posts/en for yderligere struktur.</p>
 <div id="notes">
 
 </div>
@@ -218,7 +223,50 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-
+<div class="g-col-1" data-index="0" data-categories="Talks,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1713090026265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../notes/20240412-talktest/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../notes/20240412-talktest/Kosmisk_Floræ-1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Naturvidenskabelig litteratursøgning
+</h5>
+<div class="card-subtitle listing-subtitle">
+For folkebibliotekarer
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 14, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Generative Art,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1713079389241" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../notes/20240414-floral/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../notes/20240414-floral/Kosmisk_Floræ-1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Kosmisk Floræ
+</h5>
+<div class="card-subtitle listing-subtitle">
+Generative Art
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 14, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

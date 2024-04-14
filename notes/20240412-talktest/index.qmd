@@ -1,0 +1,40 @@
+---
+title: "Naturvidenskabelig litteratursøgning"
+subtitle: "For folkebibliotekarer"
+author: "Christian Knudsen"
+categories:
+  - Talks
+  - R
+date: 2024-04-14
+toc: false
+image: "Kosmisk_Floræ-1.png"
+format: revealjs
+---
+
+
+
+# In the morning
+
+## Hvorfor er det svært?
+
+- Turn off alarm
+![kantet](adgangskrav.png){tuborg}
+https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
+
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# Kilder til informationssøgning
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Spørgsmål?
+
+- Get in bed
+- Count sheep
