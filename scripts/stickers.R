@@ -3,15 +3,36 @@ library(magick)
 
 # magi for at lade magick fjerne baggrund
 
-make_transparent <- function(sti){
-  fuzz <- 50
-  image_read(sti)%>% 
+make_transparent <- function(sti, fuzz = 50){
+  
+  p <- image_read(sti)
+  p %>% 
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = "+1+1") %>%
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-1, "+1")) %>%
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+1", "+", image_info(p)$height-1)) %>%
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-1, "+", image_info(p)$height-1)) %>% 
   image_write(path = sti)
 }
+
+# proclaim
+imgurl <- "img/org/proclaim.webp"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "aquamarine",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1,
+                    url = "proclaim",
+                    u_color = "aquamarine",
+                    u_size = 12,
+                    u_x = 1.74,
+                    u_y = 0.55,
+                    u_angle = 90,
+                    white_around_sticker = TRUE,
+                    filename = "img/proclaim.png")
+make_transparent("img/proclaim.png", fuzz = 20)
 
 
 # roman numeral converter
