@@ -4,8 +4,11 @@ editor:
   mode: source
 ---
 
-Stuff that is not actually on this site. Some shiny. Some workrelated. All
-with bestagons:
+Stuff that is not actually on this site. 
+
+Some shiny. Some workrelated. 
+
+All with bestagons:
 
 
 ```{=html}
