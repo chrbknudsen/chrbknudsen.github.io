@@ -9,35 +9,33 @@ for anything.
 
 ### Københavns universitet
 
-: **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
+**August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
 
 ### CBS
 
 - *Erhversret*
-
 - *Udvidet erhvervsret*
-
-- *samfundsøkonomi*
-
-- *forvaltningsret*
-
-- *dataanalyse*
+- *Samfundsøkonomi*
+- *Forvaltningsret*
+- *Dataanalyse*
 
 ### AMU
 
 ### DTU
 
-: February 1994 -- February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
+**February 1994 -- February 2002**: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
 
-### Helsinge Gymnasium
+### Helsinge Amts Gymnasium
+**August 1990 -- Juni 1993**: Matematisk studentereksamen.
 
 ### Helsinge Realskole
+** -- Juni 1990**
 
 ## Certifications
 
 FEANI
 
-basic GMP
+Basic GMP
 
 Isotopteknik
 
@@ -45,31 +43,33 @@ Carpentries
 
 ## Not so formal education
 
-
-Sep. 00 -- dec. 00 Studieophold i Grækenland
+**Sep. 2000 -- dec. 2000**  Studieophold i Grækenland
 Ved kemisk
 	institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
 	(Raman og VIS/NIR) unders\o gelser af modeller af industrielt anvendte
 	svovlsyrekatalysatorer, med henblik på opnåelse af viden om
 	komplekskemien og redox-forholdene i disse modeller.
 
-Aug. 90 -- jun. 93 Matematisk studentereksamen fra Helsinge Amts Gymnasium
 
 ## Kurser
-Mar. 05 Kvalificering og validering af produktionsudstyr
+**Mar. 2005**  Kvalificering og validering af produktionsudstyr
 Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
 
-Feb. -- mar. 05 Gaschromatografi 
+**Feb. -- mar. 2005** Gaschromatografi 
 AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. 
 
 
-Jan. -- feb. 05 HPLC operat\o r
+**Jan. -- feb.  2005**  HPLC operatør
  AMU-kursus i praktisk anvendelse af HPLC.
  
-Nov. 03  Patentdag for kemikere
+**Nov. 2003**  Patentdag for kemikere
 Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.
 
-Jun. 03 GMP grundkursus
-Kursus udbudt af Kemiingeniørgruppen under Ingeni\o rforeningen i Danmark. Kurset 
+**Jun. 03** GMP grundkursus
+Kursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset 
 gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion,
 validering, dokumentation og QA/QC.
+
+IT projektlederuddannelse - Mannax, KB.
+
+Excelkurser fra 4D
