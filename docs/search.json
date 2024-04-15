@@ -1,61 +1,5 @@
 [
   {
-    "objectID": "work/index.html",
-    "href": "work/index.html",
-    "title": "Work",
-    "section": "",
-    "text": "An attempt at a complete list.\nMar. 2003 -  Det Kgl. bibliotek\n- Feb. 2017 -  Specialkonsulent - koordinator for datalab\n- Oct. 2013 - Feb. 2017 leder af farmabiblioteket.\n- Jan 2016 - Feb. 2017 Chefkonsulent i kombistilling mellem KU og KB.\n- 2008 - Oct. 2013 Specialkonsulent i universitetsbibliotekarens stab\n- Mar. 2003 - 2008 Fagreferent for kemi.\nSep. 2002 - Vikar, Novo Nordisk A/S, Bagsværd\nPakning af insulin.\nJun. 2002 Hjælpelærer, Danmarks Tekniske Universitet\nHjælpelærer i kurset “Katalyse, spektroskopi og struktur”, ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed, gennemførsel af lovpligtig undervisningsmiljøvurdering.\nJun. – aug. 2000 Sommerferieafløser, Danske Bank, Gilleleje\nSommerferieafløser. Som i tidligere sommerferiejob i bankverdenen, udførte jeg her almindelige kundeekspeditioner i kassen samt forefaldende kontorarbejde.\nJan. 2000 Hjælpelærer Danmarks Tekniske Universitet\nHjælpelærer i kurset “Katalyse, spektroskopi og struktur”, ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed\nJun. - Aug. 1999 Sommerferieafløser, Unibank, Græsted\nJun. - Aug. 1998 Sommerferieafløser, Den Danske Bank, Helsinge\nJun. - Aug. 1997 Sommerferieafløser, Den Danske Bank, Helsinge\nJun. - Aug. 1996 Sommerferieafløser, Den Danske Bank, Helsinge\njun. - Aug. 1995 Sommerferieafløser, Den Danske Bank Græsted\nAug. 1993 - Jan. 1994 Chauffør, Schwartz Boghandel, Helsinge.\nJun. 1988 - jul. 1993 Ungarbejder, M. Løsekraut ApS, Helsinge.\n    Forefaldende arbejde efter skoletid, montering af printkort og produktionskontrol\nAug. 1988 - Jun. 1993 Hjemmearbejder, Jensen Lamp, Helsinge.\n    Samling af belysningsarmaturer"
-  },
-  {
-    "objectID": "stuff/index.html",
-    "href": "stuff/index.html",
-    "title": "Stuff",
-    "section": "",
-    "text": "Stuff that is not actually on this site.\nSome shiny.\nSome work related.\nAll with bestagons:"
-  },
-  {
-    "objectID": "organisations/index.html",
-    "href": "organisations/index.html",
-    "title": "Organisational work",
-    "section": "",
-    "text": "Et forsøg på en komplet liste - der er lidt vej endnu."
-  },
-  {
-    "objectID": "organisations/index.html#organisatorisk-erfaring",
-    "href": "organisations/index.html#organisatorisk-erfaring",
-    "title": "Organisational work",
-    "section": "Organisatorisk erfaring",
-    "text": "Organisatorisk erfaring\nSep. 02 – apr. 03 Symposiet ”Ledelse af projekter, udvid din kompetence”\nAdminstrativ og praktisk deltager i Foreningen for Dansk Projektledelse i\nforbindelse med Symposiet Projektledelse 2003. Jeg deltog i hele det prak- tiske arrangement, samt i udvalgte dele af det faglige arrangement, bl.a. ved\nreviewlæsning af de indsendte artikler.\nFeb. 01 – nov. 02 Danske Studerendes Fællesråd, DSF -\nMedlem af Økonomiudvalget. Rådgivende organ vedrørende økonomiske forhold i DSF. Jeg har her specielt arbejdet med budgetlægning og -opfølgning samt personaleforhold. De datoer virker underligere.\nFeb. 99 – feb. 02 Kollegiekonsulent Ordningen, KKO\nFormand for Kollegiekonsulent Ordningen - forening tilknyttet studiemiljøet ved DTU, som udførte frivilligt arbejde inden for organisationsudvikling, konfliktløsning, forhandling, samt tilbyder psykologisk bistand. Havde særligt ansvar for ledelsen af vores ansatte konsulent, samt kommunikations- og strategiprocesser.\n1995 – 2001 Polyteknisk Forening\nAktiv i studenterorganisationen på DTU, i 1998, som medlem af foreningens bestyrelse på fuld tid. Jeg havde her ansvaret for at koordinere foreningens arbejde i de kollegiale organer, herunder at definere foreningens politiske linie samt at rekruttere og motivere frivillige til dette arbejde. Derudover indgik jeg i ledelsen af foreningens erhvervsaktiviteter.\nJan. 99 – dec. 99 Konsistorium, DTU Medlem af konsistorium på DTU. Mine fokusområder var institutionens økonomi og forskning.\nJan. 97 – dec. 98 Kandidatstudienævnet, DTU\nØverste myndighed hvad angik civilingeniøruddannelsen på DTU. Mine fokusområder var undervisningsevaluering og integration af forskning og undervisning."
-  },
-  {
-    "objectID": "notes/20240414-floral/index.html",
-    "href": "notes/20240414-floral/index.html",
-    "title": "Kosmisk Floræ",
-    "section": "",
-    "text": "Or:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBased on the butterfly curve\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nPrepping data for plot:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nThe last two lines basically rotates the curve\nPlot:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Floræ-1.png\")"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "education/index.html",
     "href": "education/index.html",
     "title": "Education",
@@ -89,6 +33,55 @@
     "title": "Education",
     "section": "Kurser",
     "text": "Kurser\nMar. 2005 Kvalificering og validering af produktionsudstyr Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nFeb. – mar. 2005 Gaschromatografi AMU-kursus i praktisk anvendelse af kapillar gaschromatografi.\nJan. – feb. 2005 HPLC operatør AMU-kursus i praktisk anvendelse af HPLC.\nNov. 2003 Patentdag for kemikere Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 03 GMP grundkursus Kursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC.\nIT projektlederuddannelse - Mannax, KB.\nExcelkurser fra 4D"
+  },
+  {
+    "objectID": "stuff/index.html",
+    "href": "stuff/index.html",
+    "title": "Stuff",
+    "section": "",
+    "text": "Stuff that is not actually on this site.\nSome shiny.\nSome work related.\nAll with bestagons:"
+  },
+  {
+    "objectID": "other/index.html",
+    "href": "other/index.html",
+    "title": "Other CV related stuff",
+    "section": "",
+    "text": "Danish\nEnglish: americans think I’m british. Brits know I’m not.\nGerman: Fair reading comprehension, especially technical texts. Understand spoken german - if “Hochdeutsch” is spoken slowly. Speaks it well enough to order at restaurants.\nFrench: I can read and understand chemical literature in french. I do not dare order at restaurants."
+  },
+  {
+    "objectID": "other/index.html#languges",
+    "href": "other/index.html#languges",
+    "title": "Other CV related stuff",
+    "section": "",
+    "text": "Danish\nEnglish: americans think I’m british. Brits know I’m not.\nGerman: Fair reading comprehension, especially technical texts. Understand spoken german - if “Hochdeutsch” is spoken slowly. Speaks it well enough to order at restaurants.\nFrench: I can read and understand chemical literature in french. I do not dare order at restaurants."
+  },
+  {
+    "objectID": "other/index.html#it",
+    "href": "other/index.html#it",
+    "title": "Other CV related stuff",
+    "section": "IT",
+    "text": "IT\nIn the traditional understanding of that word, I am superuser of Microsoft Office.\nI teach programming in R and have basic knowledge of Python.\nDaily user of Linux, know regular expressions and SQL. Run my own webserver."
+  },
+  {
+    "objectID": "other/index.html#private",
+    "href": "other/index.html#private",
+    "title": "Other CV related stuff",
+    "section": "Private",
+    "text": "Private\nBorn June 20th 1974, married to Kristian, living i Rødovre.\nInterests include politics and societal matters in general, molecular gastronomy, digital electronics, the history of science, shooting, swimming, Star Trek in particular and science fiction in general."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "notes/20240414-floral/index.html",
+    "href": "notes/20240414-floral/index.html",
+    "title": "Kosmisk Floræ",
+    "section": "",
+    "text": "Or:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBased on the butterfly curve\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nPrepping data for plot:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nThe last two lines basically rotates the curve\nPlot:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Floræ-1.png\")"
   },
   {
     "objectID": "notes/20240412-talktest/index.html#hvorfor-er-det-svært",
@@ -126,38 +119,45 @@
     "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "other/index.html",
-    "href": "other/index.html",
-    "title": "Other CV related stuff",
-    "section": "",
-    "text": "Danish\nEnglish: americans think I’m british. Brits know I’m not.\nGerman: Fair reading comprehension, especially technical texts. Understand spoken german - if “Hochdeutsch” is spoken slowly. Speaks it well enough to order at restaurants.\nFrench: I can read and understand chemical literature in french. I do not dare order at restaurants."
-  },
-  {
-    "objectID": "other/index.html#languges",
-    "href": "other/index.html#languges",
-    "title": "Other CV related stuff",
-    "section": "",
-    "text": "Danish\nEnglish: americans think I’m british. Brits know I’m not.\nGerman: Fair reading comprehension, especially technical texts. Understand spoken german - if “Hochdeutsch” is spoken slowly. Speaks it well enough to order at restaurants.\nFrench: I can read and understand chemical literature in french. I do not dare order at restaurants."
-  },
-  {
-    "objectID": "other/index.html#it",
-    "href": "other/index.html#it",
-    "title": "Other CV related stuff",
-    "section": "IT",
-    "text": "IT\nIn the traditional understanding of that word, I am superuser of Microsoft Office.\nI teach programming in R and have basic knowledge of Python.\nDaily user of Linux, know regular expressions and SQL. Run my own webserver."
-  },
-  {
-    "objectID": "other/index.html#private",
-    "href": "other/index.html#private",
-    "title": "Other CV related stuff",
-    "section": "Private",
-    "text": "Private\nBorn June 20th 1974, married to Kristian, living i Rødovre.\nInterests include politics and societal matters in general, molecular gastronomy, digital electronics, the history of science, shooting, swimming, Star Trek in particular and science fiction in general."
-  },
-  {
     "objectID": "test.html",
     "href": "test.html",
     "title": "Untitled",
     "section": "",
     "text": "1+1"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at DNLB as a subject specialist for chemistry. I have stayed there through a couple of mergers with other libraries and held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+  },
+  {
+    "objectID": "work/index.html",
+    "href": "work/index.html",
+    "title": "Work",
+    "section": "",
+    "text": "An attempt at a complete list.\nMar. 2003 -  Det Kgl. bibliotek\n- Feb. 2017 -  Specialkonsulent - koordinator for datalab\n- Oct. 2013 - Feb. 2017 leder af farmabiblioteket.\n- Jan 2016 - Feb. 2017 Chefkonsulent i kombistilling mellem KU og KB.\n- 2008 - Oct. 2013 Specialkonsulent i universitetsbibliotekarens stab\n- Mar. 2003 - 2008 Fagreferent for kemi.\nSep. 2002 - Vikar, Novo Nordisk A/S, Bagsværd\nPakning af insulin.\nJun. 2002 Hjælpelærer, Danmarks Tekniske Universitet\nHjælpelærer i kurset “Katalyse, spektroskopi og struktur”, ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed, gennemførsel af lovpligtig undervisningsmiljøvurdering.\nJun. – aug. 2000 Sommerferieafløser, Danske Bank, Gilleleje\nSommerferieafløser. Som i tidligere sommerferiejob i bankverdenen, udførte jeg her almindelige kundeekspeditioner i kassen samt forefaldende kontorarbejde.\nJan. 2000 Hjælpelærer Danmarks Tekniske Universitet\nHjælpelærer i kurset “Katalyse, spektroskopi og struktur”, ved Kemisk Institut. Instruktion ved øvelser og laboratoriesikkerhed\nJun. - Aug. 1999 Sommerferieafløser, Unibank, Græsted\nJun. - Aug. 1998 Sommerferieafløser, Den Danske Bank, Helsinge\nJun. - Aug. 1997 Sommerferieafløser, Den Danske Bank, Helsinge\nJun. - Aug. 1996 Sommerferieafløser, Den Danske Bank, Helsinge\njun. - Aug. 1995 Sommerferieafløser, Den Danske Bank Græsted\nAug. 1993 - Jan. 1994 Chauffør, Schwartz Boghandel, Helsinge.\nJun. 1988 - jul. 1993 Ungarbejder, M. Løsekraut ApS, Helsinge.\n    Forefaldende arbejde efter skoletid, montering af printkort og produktionskontrol\nAug. 1988 - Jun. 1993 Hjemmearbejder, Jensen Lamp, Helsinge.\n    Samling af belysningsarmaturer"
+  },
+  {
+    "objectID": "organisations/index.html",
+    "href": "organisations/index.html",
+    "title": "Organisational work",
+    "section": "",
+    "text": "Et forsøg på en komplet liste - der er lidt vej endnu."
+  },
+  {
+    "objectID": "organisations/index.html#organisatorisk-erfaring",
+    "href": "organisations/index.html#organisatorisk-erfaring",
+    "title": "Organisational work",
+    "section": "Organisatorisk erfaring",
+    "text": "Organisatorisk erfaring\nSep. 02 – apr. 03 Symposiet ”Ledelse af projekter, udvid din kompetence”\nAdminstrativ og praktisk deltager i Foreningen for Dansk Projektledelse i\nforbindelse med Symposiet Projektledelse 2003. Jeg deltog i hele det prak- tiske arrangement, samt i udvalgte dele af det faglige arrangement, bl.a. ved\nreviewlæsning af de indsendte artikler.\nFeb. 01 – nov. 02 Danske Studerendes Fællesråd, DSF -\nMedlem af Økonomiudvalget. Rådgivende organ vedrørende økonomiske forhold i DSF. Jeg har her specielt arbejdet med budgetlægning og -opfølgning samt personaleforhold. De datoer virker underligere.\nFeb. 99 – feb. 02 Kollegiekonsulent Ordningen, KKO\nFormand for Kollegiekonsulent Ordningen - forening tilknyttet studiemiljøet ved DTU, som udførte frivilligt arbejde inden for organisationsudvikling, konfliktløsning, forhandling, samt tilbyder psykologisk bistand. Havde særligt ansvar for ledelsen af vores ansatte konsulent, samt kommunikations- og strategiprocesser.\n1995 – 2001 Polyteknisk Forening\nAktiv i studenterorganisationen på DTU, i 1998, som medlem af foreningens bestyrelse på fuld tid. Jeg havde her ansvaret for at koordinere foreningens arbejde i de kollegiale organer, herunder at definere foreningens politiske linie samt at rekruttere og motivere frivillige til dette arbejde. Derudover indgik jeg i ledelsen af foreningens erhvervsaktiviteter.\nJan. 99 – dec. 99 Konsistorium, DTU Medlem af konsistorium på DTU. Mine fokusområder var institutionens økonomi og forskning.\nJan. 97 – dec. 98 Kandidatstudienævnet, DTU\nØverste myndighed hvad angik civilingeniøruddannelsen på DTU. Mine fokusområder var undervisningsevaluering og integration af forskning og undervisning."
   }
 ]
