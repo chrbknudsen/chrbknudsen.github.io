@@ -4,16 +4,16 @@ editor:
   mode: source
 ---
 
-Stuff that is not actually on this site. 
+Stuff that is not actually on this site.
 
-Some shiny. 
+Some shiny.
 
-Some workrelated. 
+Some work related.
 
-All with bestagons:
-
+All with [bestagons](https://www.youtube.com/watch?v=thOifuHs6eY):
 
 ```{=html}
+<br>
 <br>
       <div class="hexBadges">
         
@@ -45,5 +45,3 @@ All with bestagons:
         
       </div>
 ```
-
-
