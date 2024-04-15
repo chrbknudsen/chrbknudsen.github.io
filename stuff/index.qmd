@@ -15,28 +15,28 @@ with bestagons:
         
         <a href="https://christianknudsen.info/shiny/TFCD/"><img src="/img/TFCD.png" alt="The final countdown" class="r1 c0" title="7-segment countdown."></a>
         <a href="https://github.com/chrbknudsen/KnudsenKit/"><img src="/img/KnudsenKit.png" alt="KnudsenKit hex sticker" class="r1 c1" title = "My very own R-package with rarely used utilities."></a>
-        <!-- <a href=""><img src="" alt="" class="r1 c2"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r1 c3"></a> -->
+        <!-- <a href=""><img src="" alt="" class="r1 c2" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r1 c3" title = ""></a> -->
         
-        <!-- <a href=""><img src="" alt="" class="r2 c0"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r2 c1"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r2 c2"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r2 c3"></a> -->
+        <!-- <a href=""><img src="" alt="" class="r2 c0" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r2 c1" title = ""></a> -->
+        <a href="https://christianknudsen.info/shiny/roman/"><img src="/img/roman.png" alt="Converting roman numerals to arabic" class="r2 c2" title = "The Peoples Roman Numeral Converter"></a>
+        <!-- <a href=""><img src="" alt="" class="r2 c3" title = ""></a> -->
 
-        <!-- <a href=""><img src="" alt="" class="r3 c0"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r3 c1"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r3 c2"></a> -->
-        <!-- <a href=""><img src="" alt="" class="r3 c3"></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c0" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c1" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c2" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c3" title = ""></a> -->
         
-        <!-- <a href=""><img src="" alt="" class="r4 c0" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r4 c1" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r4 c2" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r4 c3" /></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c0" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c1" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c2" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c3" title = ""/></a> -->
         
-        <!-- <a href=""><img src="" alt="" class="r5 c0" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r5 c1" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r5 c2" /></a> -->
-        <!-- <a href=""><img src="" alt="" class="r5 c3" /></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c0" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c1" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c2" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c3" title = ""/></a> -->
         
       </div>
 ```
