@@ -4,7 +4,7 @@
 .hexBadges {
   position: relative;
   width: 500px;
-  margin-top: -130px;
+  margin-top: -50px;
   height: 600px; }
   .hexBadges img {
     width: 120px;
@@ -46,7 +46,8 @@
       top: 430px; }
     .hexBadges img.r5 {
       top: 537.5px; }
-
+      
+      
 @media screen and (max-width: 1023px) {
   .hexBadges {
     width: 350px; }
@@ -54,6 +55,7 @@
       left: 125px; }
     .hexBadges img.r1.c2, .hexBadges img.r3.c2, .hexBadges img.r5.c2 {
       left: 187px; } }
+
 
 /* some tweaks added later*/
 code {
