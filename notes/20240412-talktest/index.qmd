@@ -7,7 +7,7 @@ categories:
   - R
 date: 2024-04-14
 toc: false
-image: "Kosmisk_Floræ-1.png"
+image: "cover.webp"
 format: revealjs
 ---
 
