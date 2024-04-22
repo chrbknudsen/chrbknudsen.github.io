@@ -13,11 +13,11 @@ format: revealjs
 
 
 
-# In the morning
+# Naturvidenskabelig litteratursøgning
 
 ## Hvorfor er det svært?
 
-- Turn off alarm
+
 ![kantet](adgangskrav.png){tuborg}
 https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
 
