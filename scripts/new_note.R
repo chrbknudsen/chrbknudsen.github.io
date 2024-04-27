@@ -19,4 +19,3 @@ new_note <- function(title){
   writeLines(content, fileConn)
   close(fileConn)
 }
-new_note("asdilikhjf")
