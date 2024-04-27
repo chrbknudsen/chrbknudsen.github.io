@@ -112,11 +112,18 @@
     "text": "Spørgsmål?\n\nGet in bed\nCount sheep"
   },
   {
+    "objectID": "notes/20240427-piwalk/index.html",
+    "href": "notes/20240427-piwalk/index.html",
+    "title": "Pi-walk",
+    "section": "",
+    "text": "Heavily inspired by the talented Naideh Bremer.\nThe idea is:\nBegin somewhere in the coordinate system. Take the first digit of pi, and take a step in a direction specified by that digit. Take the next digit of i. And take a new step i a direction specified by that digit.\nContinue for 1000000 steps.\nFirst - what direction should we take for a given digit?:\n\nx &lt;- cos(5/2*pi - digit/5*pi)\ny &lt;- sin(5/2*pi - digit/5*pi)\n\nThis should return the x,y step, based on a digit.\nIf we take two steps, the x-position at the end will be the sum of the two x-steps. Similar with the y-position.\nTherefore we can calculate the position at step n by calculating the cumulative sum of x and y.\nWe will need to add (0,0) at the beginning - where we start our walk.\nTaking pi as a string, we can do all that, and return a tibble:\n\nlibrary(tidyverse)\npiPoints &lt;- function(piString){\n  # removing punctuation\n  numbers &lt;- paste0(substr(piString, 1, 1), substr(piString, 3, nchar(piString)))\n  # Splitting numbers\n  numbers &lt;- as.integer(unlist(strsplit(numbers,\"\")))\n  # calculating steps\n  x &lt;- cos(5/2*pi - numbers/5*pi)\n  y &lt;- sin(5/2*pi - numbers/5*pi)\n  # calculating cumulative steps\n  x &lt;- cumsum(x)\n  y &lt;- cumsum(y)\n  # adding start point\n  x &lt;- c(0,x)\n  y &lt;- c(0,y)\n  # adding id for sequential coloring\n  id &lt;- 1:(length(y))\n  # Assembling and returning dataframe\n  tibble(x=x,y=y, id = id)\n}\n\nNext we’ll get pi with a million digits:\n\nlarge_pi &lt;- read_file(\"https://pi2e.ch/blog/wp-content/uploads/2017/03/pi_dec_1m.txt\")\n\nPour that into the function:\n\ndf &lt;- piPoints(large_pi)\n\nPlot - and save\n\nggplot(df, aes(x,y,group=\"1\")) +\n  geom_path(aes(colour=id)) +\n  scale_colour_distiller(type=\"seq\", palette=\"Set1\") +\n  theme_bw() + \n  coord_fixed(ratio = 1) +\n  theme(line = element_blank(),\n        text = element_blank(),\n        title = element_blank(),\n        legend.position=\"none\",\n        panel.border = element_blank(),\n        panel.background = element_blank())\nggsave(\"piwalk.png\")  \n\nThere are several other mathematical constants. And there are also possibilities for variation in calculating the steps. For now I’m satisfied with the result."
+  },
+  {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "test.html",
