@@ -3,7 +3,7 @@ title: "Kosmisk Floræ"
 subtitle: "Generative Art"
 author: "Christian Knudsen"
 categories:
-  - Generative Art
+  - Generative aRt
   - R
 date: 2024-04-14
 toc: true
