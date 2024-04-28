@@ -14,6 +14,26 @@ make_transparent <- function(sti, fuzz = 50){
   image_write(path = sti)
 }
 
+# LogistiCore
+imgurl <- "img/org/LogistiCore.webp"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "orange",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1,
+                    url = "LogistiCore",
+                    u_color = "orange",
+                    u_size = 12,
+                    u_x = 0.95,
+                    u_y = 0.11,
+            #        u_angle = 45,
+                    white_around_sticker = TRUE,
+                    filename = "img/LogistiCore.png")
+make_transparent("img/LogistiCore.png", fuzz = 20)
+
 # proclaim
 imgurl <- "img/org/proclaim.webp"
 hexSticker::sticker(imgurl, package = "", 
