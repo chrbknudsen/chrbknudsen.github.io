@@ -1,15 +1,13 @@
 
-  
-#   I have a strange affinity for attractors, and has had it since graduating highschool, where I got a top grade in the final mathematics examination. That was under the old grading system. And the grade (13) was given to only two students in my high school that year. The examination centered on strange attractors. I've have not spend much time on it lateer. But there is a weird beauty in them.
-# 
-# Recently I discovered Clifford Attractors. Take a look at this page for some very nice examples. They look stunning, and are simple to handle. 
-# Lets play with them!
-# 
+
+
+
 # Clifford Attractors are defined by iteratively making these calculations:
 xn+1 <- sin(a*yn) + c*cos(a*xn)
 yn+1 <- sin(bxn) + d*cos(b*yn)
 
-# Choose a, b, c and d between -2 and 2. Calculate x,y for n=0 to n=10.000.000 and plot them. It looks cool!
+# Choose a, b, c and d between -2 and 2. Calculate x,y for n=0 to n=10.000.000 
+#and plot them. It looks cool!
 # 
 # Lets begin by defining a function that takes four variables and a number of points, and calculate the points:
 
@@ -21,23 +19,26 @@ calcTrace <- function(a,b,c,d,numint){
     x[i] <- sin(a*y[(i-1)]) + c*cos(a*x[(i-1)])
     y[i] <- sin(b*x[(i-1)]) + d*cos(b*y[(i-1)])  
   }
-  df <- data.frame(x=x,y=y)
-  return(df)
+  data.frame(x=x,y=y)
 }
 
-# Lets also define some parameters. I would prefer to choose the parameters at random. But there are a surprising number of instances where this lead to nothing. The formulas converges very quickly on just a few values, and I end up with a simple dot on the plot.
+# Lets also define some parameters. I would prefer to choose the parameters at 
+# random. But there are a surprising number of instances where this lead to 
+# nothing. The formulas converges very quickly on just a few values, and I 
+# end up with a simple dot on the plot.
 # I guess that is to be expected - but not what I am looking for. I want beautiful images!
 
 
-# # a <- -1.8 
-# # b <- -1.9 
-# # c <- -1.7
-# # d <-  1.9
-# 
-# # points <- calcTrace(a,b,c,d,10000000)
+a <- -1.8
+b <- -1.9
+c <- -1.7
+d <-  1.9
+
+points <- calcTrace(a,b,c,d,10000000)
 
 
-# That takes some time - I'll get back to that. Lets plot it. I remove almost anything from the ggplot theme, and insert the parameters in the plot.
+# That takes some time - I'll get back to that. Lets plot it. I remove almost 
+# anything from the ggplot theme, and insert the parameters in the plot.
 
 library(ggplot2)
 opt = theme(legend.position  = "none",
@@ -48,13 +49,13 @@ opt = theme(legend.position  = "none",
             axis.text        = element_blank(),
             plot.title       = element_text(size=9, face="italic", hjust = 0.5)
 )
-
-p <- ggplot(points, aes(x, y)) + geom_point(color="black", shape=46, alpha=.01) + 
+library(dplyr)
+p <- ggplot(points, aes(x, y)) + geom_point(color="blue", shape=46, alpha=.01) + 
   opt +
   ggtitle(paste("a = ",a , ", b = ", b, "\n c = ", c, " d = ",  d))
-print(p)
-
-
+ggsave("cliff.png", plot = p)
+ 
+plot(points$x, points$y)
 # All right. It takes some time to do the calculations. There are ways to speed that up.
 
 # One way is to compile the function. 
@@ -74,9 +75,7 @@ print(test)
 # http://www.decisionproblem.com/paperclips in the background (almost ready to release the 
 # hypnodrones!) on a not particularly powerfull laptop. 
 
-# What else could be done?
-#   I'm tinkering with this to hone my R-skills. But here might be a situation where it would be better to do it in another language. 
-# 
+
 # The library Rcpp allows me to add C++ code. Lets try that:
 library(Rcpp)
 cppFunction('DataFrame cppTrace(double a, double b, double c, double d, int numint) {
@@ -103,7 +102,6 @@ test2 <- microbenchmark(
     times=3
 )
 print(test2)
-```
 
 # That was fast! 
 # 
@@ -122,7 +120,8 @@ q <- ggplot(points, aes(x, y)) + geom_point(color="orange", shape=46, alpha=.01)
   ggtitle(paste("a = ",a , ", b = ", b, "\n c = ", c, " d = ",  d))
 print(q)
 
-
+library(plotly)
+plot_ly(x = points$x, y = points$y, type = 'scatter', mode = 'markers', marker = list(opacity = 0.01))
 # Nice. Lets make one in green as well:
 
 a <-  -1.6
