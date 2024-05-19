@@ -17,7 +17,9 @@ website:
           - href: organisations
             text: Organisations
           - href: other
-            text: Other stuff
+            text: Other 
+          - href: publications
+            text: Publications
       - href: stuff
         text: External Stuff
       - href: notes
