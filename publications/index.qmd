@@ -15,8 +15,16 @@ http://dfdf.dk/index.php/rapporter3/doc_download/27-df-s-ebogsbarometer-2011-rev
 
 
 
-```{r}
+```{r setup, echo  = FALSE}
 library(bibtex)
-read.bib("publications.bib") 
+library(RefManageR)
+pubs <- ReadBib("publications.bib")
+RefManageR::NoCite(pubs)
+```
+
+
+```{r, echo = FALSE, results="asis"}
+PrintBibliography(pubs, .opts = list(style = "html",
+                                     bib.style = "authoryear"))
 ```
 

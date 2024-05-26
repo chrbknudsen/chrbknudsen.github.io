@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -197,75 +163,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Redaktør af DF’s ebogsbarometer 2012. http://dfdf.dk/index.php/rapporter3/doc_download/110-df-s-ebogsbarometer-2012</p>
 <p>Knudsen, C. B., ‘Læsning digitalt’, kapitel i Bogvennen, Forening for Boghaandværk. Under udgivelse</p>
 <p>Redaktør af DF’s ebogsbarometer 2011. http://dfdf.dk/index.php/rapporter3/doc_download/27-df-s-ebogsbarometer-2011-revideret-udgave</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bibtex)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read.bib</span>(<span class="st">"publications.bib"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Damhus T, Hansen PE, Knudsen CB, Petersen A (eds.) (2017).
-_Molekylspektroskopi – et stykke dansk kemihistorie_. Dansk Selskab for
-Historisk Kemi, København. ISBN NA.
-
-Knudsen CB (2006). "Anmeldelse af The Physics of Star Trek."
-_Subspace_, *11*(3), 23. ISSN 1398-9391.
-
-Hansen KS, Fajkovic M, Giesel M, Hansen UM, Harbo K, Knudsen CB,
-Løvenkrands BL (2024). "EVALUATION REPORT: LIBER EMERGING LEADERS
-PROGRAMME." LIBER.
-
-Knudsen CB (2007). "InfoGalleriet - den fremskudte formidling." _DF
-Revy_, *30*(5), 4-5. ISSN NA,
-&lt;http://rauli.cbs.dk/index.php/revy/article/view/977/989&gt;.
-
-Knudsen CB, Christophersen C (2007). "Bogen der blev væk." _Dansk
-Kemi_, *88*(9), 44. ISSN NA,
-&lt;http://techmedia.swiflet.com/tm/dak/9/1/&gt;.
-
-Knudsen CB (2007). "Second Life. Bristet boble eller
-beskæftigelsesterapi?" _DF Revy_, *30*(7), 28. ISSN NA,
-&lt;http://rauli.cbs.dk/index.php/revy/article/view/1304/1298&gt;.
-
-Olsen N, Knudsen CB, Nielsen S.S . (2008). "Forskningsbiblioteket i
-Second Life." _DF Revy_, *31*(3), 12-13. ISSN NA,
-&lt;http://rauli.cbs.dk/index.php/revy/article/view/1726/1750&gt;.
-
-Knudsen C, Kalampounias A, Fehrmann R, Boghosian S (2008). "Thermal
-Dissociation of Molten KHSO4: Temperature Dependence of Raman Spectra
-and Thermodynamics." _J. Phys. Chem. B_, *112*(38), 11996-12000. ISSN
-NA, doi:NA &lt;https://doi.org/NA&gt;,
-&lt;http://pubs.acs.org/cgi-bin/abstract.cgi/jpcbfk/asap/abs/jp801853z.html&gt;.
-
-Knudsen C (2008). "Illegale lærebøger." _DF Revy_, *31*(6), 10-11. ISSN
-NA, &lt;http://ej.lib.cbs.dk/index.php/dfrevy/article/download/2141/2125&gt;.
-
-Knudsen C (2008). "Anm. af 'Kemisk Ordbog Online'." _Dansk Kemi_,
-*89*(6/7), 6. ISSN NA, &lt;http://techmedia.swiflet.com/tm/dak/18/1/&gt;.
-
-Jensen JL, Knudsen CB (2010). "Et bibliotek uden bøger?" _Revy_,
-*33*(6), 4-5. ISSN NA,
-&lt;http://rauli.cbs.dk/index.php/revy/article/view/3094/3209&gt;.
-
-Knudsen C (2010). "Smuk som en Star Trek-PADD." _Subspace_, *15*(2),
-26-27. ISSN 1398-9391.
-
-Knudsen CB (2010). "Der er intet let ved e-bøger." _Revy_, *33*(2),
-16-18. &lt;http://issuu.com/revy/docs/nummer_2_-_2010_for_web&gt;.
-
-Knudsen C (2008). "Illegale lærebøker." _Bibliotekaren_, *16*(11), 6-8.
-ISSN NA, &lt;http://www.bibforb.no/filestore/BIKA/BIKA/bk0811.pdf&gt;.
-
-Hansen KS, Knudsen CB, Dorch BF, Olsen NA (2008).
-"Forskningsbibliotekerne og intranet." _DF Revy_, *31*(7), 12-13. ISSN
-NA, &lt;http://ej.lib.cbs.dk/index.php/dfrevy/article/viewFile/2244/2233&gt;.
-
-Senning A, Knudsen CB (2010). "Stereokemi for viderekomne eller røre i
-andedammen." _Dansk Kemi_, *91*(3), 30-31. ISSN NA,
-&lt;http://techmedia.swiflet.com/tm/dak/31/1/&gt;.
-
-Nielsen AK, Damhus T, Knudsen CB (eds.) (2011). _Kemi og Klæ'r.
-Tekstilkemi i historisk perspektiv_. Dansk Selskab for Historisk Kemi,
-København. ISBN NA.</code></pre>
-</div>
-</div>
+<p>
+<cite><a id="bib-molekylspektroskopi"></a><a href="#cite-molekylspektroskopi">Damhus, T., P. E. Hansen, C. B. Knudsen, et al., ed.</a> (2017). <em>Molekylspektroskopi – et stykke dansk kemihistorie</em>. København: Dansk Selskab for Historisk Kemi. ISBN: NA.</cite>
+</p>
+<p>
+<cite><a id="bib-liber"></a><a href="#cite-liber">Hansen, K. S., M. Fajkovic, M. Giesel, et al.</a> (2024). <em>EVALUATION REPORT: LIBER EMERGING LEADERS PROGRAMME</em>. LIBER. URL: <a href="https://libereurope.eu/wp-content/uploads/LIBER-evaluation-report.pdf">https://libereurope.eu/wp-content/uploads/LIBER-evaluation-report.pdf</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DF317"></a><a href="#cite-DF317">Hansen, K. S., C. B. Knudsen, B. F. Dorch, et al.</a> (2008). “Forskningsbibliotekerne og intranet”. In: <em>DF Revy</em> 31.7, pp.&nbsp;12–13. ISSN: NA. URL: <a href="http://ej.lib.cbs.dk/index.php/dfrevy/article/viewFile/2244/2233">http://ej.lib.cbs.dk/index.php/dfrevy/article/viewFile/2244/2233</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DF33"></a><a href="#cite-DF33">Jensen, J. L. and C. B. Knudsen</a> (2010). “Et bibliotek uden bøger?” In: <em>Revy</em> 33.6, pp.&nbsp;4–5. ISSN: NA. URL: <a href="http://rauli.cbs.dk/index.php/revy/article/view/3094/3209">http://rauli.cbs.dk/index.php/revy/article/view/3094/3209</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DK89"></a><a href="#cite-DK89">Knudsen, C.</a> (2008b). “Anm. af ‘Kemisk Ordbog Online’”. In: <em>Dansk Kemi</em> 89.6/7, p.&nbsp;6. ISSN: NA. URL: <a href="http://techmedia.swiflet.com/tm/dak/18/1/">http://techmedia.swiflet.com/tm/dak/18/1/</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DF316"></a><a href="#cite-DF316">Knudsen, C.</a> (2008a). “Illegale lærebøger”. In: <em>DF Revy</em> 31.6, pp.&nbsp;10–11. ISSN: NA. URL: <a href="http://ej.lib.cbs.dk/index.php/dfrevy/article/download/2141/2125">http://ej.lib.cbs.dk/index.php/dfrevy/article/download/2141/2125</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-norsk"></a><a href="#cite-norsk">Knudsen, C.</a> (2008c). “Illegale lærebøker”. In: <em>Bibliotekaren</em> 16.11, pp.&nbsp;6–8. ISSN: NA. URL: <a href="http://www.bibforb.no/filestore/BIKA/BIKA/bk0811.pdf">http://www.bibforb.no/filestore/BIKA/BIKA/bk0811.pdf</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-subspace15"></a><a href="#cite-subspace15">Knudsen, C.</a> (2010a). “Smuk som en Star Trek-PADD”. In: <em>Subspace</em> 15.2, pp.&nbsp;26–27. ISSN: 1398-9391.</cite>
+</p>
+<p>
+<cite><a id="bib-amnphysst"></a><a href="#cite-amnphysst">Knudsen, C. B.</a> (2006). “Anmeldelse af The Physics of Star Trek”. In: <em>Subspace</em> 11.3, p.&nbsp;23. ISSN: 1398-9391.</cite>
+</p>
+<p>
+<cite><a id="bib-revy30"></a><a href="#cite-revy30">Knudsen, C. B.</a> (2007a). “InfoGalleriet - den fremskudte formidling”. In: <em>DF Revy</em> 30.5, pp.&nbsp;4–5. ISSN: NA. URL: <a href="http://rauli.cbs.dk/index.php/revy/article/view/977/989">http://rauli.cbs.dk/index.php/revy/article/view/977/989</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DF30"></a><a href="#cite-DF30">Knudsen, C. B.</a> (2007b). “Second Life. Bristet boble eller beskæftigelsesterapi?” In: <em>DF Revy</em> 30.7, p.&nbsp;28. ISSN: NA. URL: <a href="http://rauli.cbs.dk/index.php/revy/article/view/1304/1298">http://rauli.cbs.dk/index.php/revy/article/view/1304/1298</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-revy332"></a><a href="#cite-revy332">Knudsen, C. B.</a> (2010b). “Der er intet let ved e-bøger”. In: <em>Revy</em> 33.2, pp.&nbsp;16–18. URL: <a href="http://issuu.com/revy/docs/nummer_2_-_2010_for_web">http://issuu.com/revy/docs/nummer_2_-_2010_for_web</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DK88"></a><a href="#cite-DK88">Knudsen, C. B. and C. Christophersen</a> (2007). “Bogen der blev væk”. In: <em>Dansk Kemi</em> 88.9, p.&nbsp;44. ISSN: NA. URL: <a href="http://techmedia.swiflet.com/tm/dak/9/1/">http://techmedia.swiflet.com/tm/dak/9/1/</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-khso4"></a><a href="#cite-khso4">Knudsen, C., A. Kalampounias, R. Fehrmann, et al.</a> (2008). “Thermal Dissociation of Molten KHSO4: Temperature Dependence of Raman Spectra and Thermodynamics”. In: <em>J. Phys. Chem. B</em> 112.38, pp.&nbsp;11996–12000. ISSN: NA. DOI: <a href="https://doi.org/NA">NA</a>. URL: <a href="http://pubs.acs.org/cgi-bin/abstract.cgi/jpcbfk/asap/abs/jp801853z.html">http://pubs.acs.org/cgi-bin/abstract.cgi/jpcbfk/asap/abs/jp801853z.html</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-klaer"></a><a href="#cite-klaer">Nielsen, A. K., T. Damhus, and C. B. Knudsen, ed.</a> (2011). <em>Kemi og Klæ’r. Tekstilkemi i historisk perspektiv</em>. København: Dansk Selskab for Historisk Kemi. ISBN: NA.</cite>
+</p>
+<p>
+<cite><a id="bib-DF31"></a><a href="#cite-DF31">Olsen, N., C. B. Knudsen, and .. Nielsen S.S</a> (2008). “Forskningsbiblioteket i Second Life”. In: <em>DF Revy</em> 31.3, pp.&nbsp;12–13. ISSN: NA. URL: <a href="http://rauli.cbs.dk/index.php/revy/article/view/1726/1750">http://rauli.cbs.dk/index.php/revy/article/view/1726/1750</a>.</cite>
+</p>
+<p>
+<cite><a id="bib-DK913"></a><a href="#cite-DK913">Senning, A. and C. B. Knudsen</a> (2010). “Stereokemi for viderekomne eller røre i andedammen”. In: <em>Dansk Kemi</em> 91.3, pp.&nbsp;30–31. ISSN: NA. URL: <a href="http://techmedia.swiflet.com/tm/dak/31/1/">http://techmedia.swiflet.com/tm/dak/31/1/</a>.</cite>
+</p>
 
 
 
