@@ -73,3 +73,5 @@ validering, dokumentation og QA/QC.
 IT projektlederuddannelse - Mannax, KB.
 
 Excelkurser fra 4D
+
+QGIS - KU/SC datalab. june 2024
