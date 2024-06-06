@@ -2,45 +2,60 @@
 
 # voronoi-tesselering. Vi har et antal punkter. Og nu deler vi disse punkter op,
 # så alle punkter i et bestemt område er tættere på hinanden end andre punkter.
+# det har praktiske anvendelser - det ligger eksempelvis og gemmer sig nedenunder
+# k-means clustering. Økologer lader til at bruge det til at modellere - og dermed
+# forstå - hvordan dyrs territorier fungerer. Og byplanlæggere til 
+# at afgøre hvilke optageområder der er for hospitaler, skoler etc.
 
 library(ggplot2)
 library(deldir)
+library(tidyverse)
 
-set.seed(1)
-tiler <- 10
+set.seed(42)
+tiler <- 50
 x <- rnorm(tiler)
 y <- rnorm(tiler)
 
 tesselation <- deldir(x, y)
 tiles <- tile.list(tesselation)
 
-s <- seq(0, 2 * pi, length.out = 3000)
-circle <- list(x = 0.5 * (1 + cos(s)),
-               y = 0.5 * (1 + sin(s)))
 
 points <- data.frame(x=x, y=y)
-colors <- hcl.colors(50, "viridis")
+colors <- hcl.colors(50, "Mako")
 
-g <- ggplot(points, aes(x = x, y = y))
-for (i in 1:tiler)
-  g <- g + geom_polygon(data = data.frame(x = tiles[[i]]$x,
-                                          y = tiles[[i]]$y,
-                                          density = 1/tiles[[i]]$area), 
-                        aes(fill = tiles[[i]]$ptNum))
+paletter <- hcl.pals()
 
-g
-library(tidyverse)
+
 tiles_df <- lapply(tiles, function(tile){
   data.frame(x=tile$x, y = tile$y)
 }) %>% 
   bind_rows(.id = "tile_id")
 
-ggplot(tiles_df, aes(x = x, y = y, group = tile_id)) +
-  geom_polygon(fill = "lightblue", color = "black") +
-  theme_minimal() +
-  ggtitle("Voronoi Diagram") 
+farver <- tibble(farve = paletter)
 
-ggplot(tiles_df, aes(x = x, y = y, group = tile_id, fill = tile_id)) +
-  geom_polygon(color = "black") +
+tiles_df %>% 
+ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +
+  geom_polygon() +
   theme_minimal() +
-  ggtitle("Voronoi Diagram") 
+  coord_polar(start = 0.47) +
+  theme(legend.position = "none" ,
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank()) +
+  scale_fill_manual(values = hcl.colors(50, "Purp")) +
+  theme(legend.position = "none")
+
+farver <- tibble(palet_name = c("YlOrRd", "Purp")) %>% 
+    mutate(noget = map(palet_name, ~hcl.colors(50, .)))
+
+theme(legend.position = "none" ,
+      axis.text = element_blank(),
+      axis.title = element_blank(),
+      axis.line = element_blank(),
+      axis.ticks = element_blank(),
+      panel.grid = element_blank())  +
+
+tiles_df <- crossing(tiles_df, farver)
+tiles_df 
