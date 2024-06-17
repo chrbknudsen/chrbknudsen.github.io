@@ -7,11 +7,11 @@ for anything.
 
 ## Formal Eduction
 
-### Københavns universitet
+### University of Copenhagen
 
 **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
 
-### CBS
+### Copenhagen Business School
 
 - *Erhversret*
 - *Udvidet erhvervsret*
@@ -85,3 +85,5 @@ Excelkurser fra 4D
 **Jun. 2024** QGIS
 
 GIS-kursus ved SC Datalab ved Københavns Universitet.
+
+**May-Jun. 2024** Førsteårspædagogik
