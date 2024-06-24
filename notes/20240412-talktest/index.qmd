@@ -15,26 +15,139 @@ format: revealjs
 
 # Naturvidenskabelig litteratursøgning
 
+![](cover.webp){fig-align=center}
+
+## Min baggrund
+
+- Christian Knudsen
+- Civilingeniør - kemi
+- 21 år på lidt af hvert der er endt med at blive til KB
+- Voksede op på et bibliotek
+
+**Slides?**
+
+https://christianknudsen.info/notes/20240412-talktest/
+
+HUSK OPDATER LINK
+
+## Hvad er opgaven?
+
+- At finde litteratur til overvejende gymnasieelever
+
+- Primært deres SRP-opgaver
+
 ## Hvorfor er det svært?
 
+::: {.notes}
 
-![kantet](adgangskrav.png){tuborg}
+Dette er adgangskravene til bibliotekaruddannelsen. 
+Og nu får I ingeniørens fordomme for fuld udblæsning :)
+De af mine klassekammerater i både folkeskole og gymnasie der valgte 
+bibliotekarvejen - de var ikke fans af naturvidenskab, og syntes at det var svært.
 https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
+:::
+
+![](adgangskrav.png)
+
+## Hvorfor er det svært?
+
+"En kvantefysisk analyse af partikelentanglement afslører koherens og superpositionstilstande, som er afgørende for forståelsen af kvantecomputeres potentiale."
 
 
-## Breakfast
+"En dybdegående undersøgelse af det narrative og semantiske indhold i klassisk litteratur afslører de komplekse sociale og kulturelle dynamikker, som former menneskelig erfaring og identitet."
 
-- Eat eggs
-- Drink coffee
+"En hermeneutisk dekonstruktion af poststrukturalistiske teorier i samtidslitteratur belyser de intertekstuelle relationer og diskursive praksisser, der konstruerer subjektivitet og social ontologi gennem et polyfonisk samspil af magtstrukturer og semiotiske systemer."
+
+- begge genereret af chatgpt
+
+## Det betyder at det faktisk er ret let
+
+For en hermeneutisk dekonstruktion kan betyde mange ting
+
+Fortolkningsproces: Hermeneutisk dekonstruktion kan ses som en proces, hvor man fortolker og analyserer tekster ved at afdække de mange lag af betydning og de underliggende antagelser.
+
+Kritisk analyse: Det kan også forstås som en kritisk metode, hvor man dekonstruktivt udfordrer og dekonstruerer de etablerede betydninger og strukturer i en tekst for at afsløre skjulte magtforhold og ideologier.
+
+Tekstanalyse: Hermeneutisk dekonstruktion kan anvendes til at undersøge, hvordan tekster er konstrueret, og hvordan forskellige fortolkninger kan opstå ved at analysere tekstens sprog, struktur og kontekst.
+
+Teoretisk metode: Fra et teoretisk perspektiv kan hermeneutisk dekonstruktion være en kombination af hermeneutikkens fokus på fortolkning og dekonstruktionens fokus på at nedbryde og udfordre tekstens overfladiske mening for at afsløre dybere lag af betydning.
+
+Filosofisk tilgang: Filosofisk kan begrebet forstås som en metode til at udforske, hvordan betydning konstrueres og rekonstrueres gennem fortolkning, og hvordan vores forståelse af tekster og virkeligheden er formet af forskellige diskursive praksisser.
+
+Litterær kritik: I litterær kritik bruges hermeneutisk dekonstruktion til at analysere og fortolke litterære værker, ofte med fokus på at afdække de mange lag af betydning og de kontradiktioner, der kan være til stede i teksten.
+
+Kulturel analyse: I en bredere kulturel kontekst kan hermeneutisk dekonstruktion anvendes til at analysere kulturelle artefakter og praksisser, idet man fokuserer på, hvordan betydninger er skabt, vedligeholdt og udfordret.
+
+Mens partikelentanglement enten er et ret specifikt fysisk fænomen. Eller en matematisk 
+beskrivelse af dette fysiske fænomen.
+
+::: {.notes}
+Og når vi snakker det hjørne af fysikken - er forskellen på matematik og fysik
+ret svær at få øje på.
+:::
+
+## Hvorfor bliver det så svært alligevel?
+
+:::{.notes}
+Anita skriver: 
+Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel
+:::
+
+Det er det dæleme også når man sidder på et universitetsbibliotek. Vi føler ret
+ofte behov for at fortælle de unge mennesker der finder frem til os, at det 
+jo sådan set er en gymnasieopgave de skal skrive. Ikke en bacheloropgave.
+
+
 
 # Kilder til informationssøgning
 
-## Dinner
 
-- Eat spaghetti
-- Drink wine
 
 ## Spørgsmål?
 
-- Get in bed
-- Count sheep
+1) ”Formidling af den digitale materialeoverbygning” er arbejdsgruppens anker og vi kommer derfor ikke uden om digitale kilder, som er tilgængelige for folkebibliotekerne. Det er meget forskelligt hvad der abonneres på lokalt, men alle har adgang til overbygningslicenserne og services som centralbibliotekerne og Det Kgl. Bibliotek stiller til rådighed https://centralbibliotek.dk/materialeoverbygning/materialerogservices
+ 
+2) Det er begrænset hvor meget naturvidenskab er repræsenteret på ovennævnte side, så OA vil være godt.
+ 
+3) Søgetips til bibliotek.dk og netpunkt i forhold til at finde alle typer af naturvidenskabelige kilder
+ 
+4) Vi betjener især studerende på ungdomsuddannelserne, hvor SRP fylder meget i bibliotekernes hverdag i perioden fra januar til marts. Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel. Hvis du har gode tip til at hjælpe denne gruppe med ovennævnte kilder, så vil det være meget velkommen. Vi møder dem på vagten og via Book-en-bibliotekar, som findes på mange biblioteker. Her i Vejle er vi i denne sæson stødt på følgende naturvidenskabelige emner: 
+                             SRO: mikroorganismer, enzymer og proteinsyntese 
+                             SRP: Råstoffer i Bolivia 
+                             SRP: RSA-kryptering og AES-kryptering (matematik og samfundsfag) 
+                             SRP: Etik og organdonation (biologi og religion) 
+ 
+5) Måske lidt om trykte kilder og hvorfor gamle titler også stadig kan være aktuelle.
+ 
+## Er det ikke forældet?
+:::{.notes}
+
+Anita har bedt om mig sige noget om "Måske lidt om trykte kilder og hvorfor 
+gamle titler også stadig kan være aktuelle."
+:::
+
+![](Old_Books_01.jpg){fig-align=center}
+
+Nej, ikke nødvendigvis
+
+- Sundhedsvidenskab - måske
+- Historiske data - uopdaterede
+- Naturvidenskaberne - sjældent
+
+:::{.notes}
+Der er forskelle. I sundhedsvidenskaberne udvikler tingene
+sig ret hurtigt. Det lægerne var sikre på reddede liv
+for ti år siden, viser sig i dag at slå folk ihjel.
+
+Og bogen fra 2017 der fortæller at fossile brændsler udgjorde
+30.7% af Bolivias eksport - har selvfølgelig ikke med at 
+det i 2022 var faldet til 22.4%
+
+Men vi kan være ret sikre på at bogen om RSA og AES
+kryptering stadig har ret i at RSA er en asymmetrisk
+krypteringsteknologi - og at AES er symmetrisk.
+Og matematikken bag RSA er nøjagtig den samme som den var 
+i 1977 (og som AES var i 1998)
+:::
+
+## Spørgsmål?
