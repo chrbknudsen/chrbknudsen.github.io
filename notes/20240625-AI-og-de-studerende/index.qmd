@@ -19,9 +19,46 @@ format:
 
 ## Mit udgangspunkt
 
+Litteratursøgning for kemi- og biologistuderende
+
+KUB Datalab
+
+::: {.notes}
+
+Den første del er rimelig straight forward - selvom kemi-delen kan blive
+lidt langhåret når vi skal søge efter tegninger.
+
+I den anden del er det primært støtte til studerende arbejde med eget 
+data.
+
+:::
+
+
 ## Hvad kan de bruge det til
 
-## konsekvenser i litteratursøgningen
+## Konsekvenser i litteratursøgningen
+
+Jeg underviser på to introducerende biologikurser. mikrobiologi og
+biokemi.
+
+Eksamensformen har i begge været hvad vi i min ungdom i slutningen af 
+sidste årtusinde, kaldte en afløsningsopgave
+
+Altså - find et par håndfulde artikler om et givet emne, læs dem og skriv en
+opsummerende tekst af ca. 10 sider om hvad du kan uddrage af de artikler.
+
+Typisk fordelt med en lidt ældre (ca 10 år) grundlæggende artikel, ofte en
+review artikel. Og så ret nye artikler for resten.
+
+Det er også en god måde for underviserne at få et overblik over deres fag.
+
+Det vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet
+end google scholar
+
+Introduktionen af chatty har ført til at det ene af kurserne (tjek op på hvilket),
+har ændret eksamensform. De studerende skal ikke længere skrive en opgave,
+de skal skrive en sides synops, der kan danne grundlag for en mundtlig
+fremlæggelse.
 
 ## Mere tekniske anvendelser
 
