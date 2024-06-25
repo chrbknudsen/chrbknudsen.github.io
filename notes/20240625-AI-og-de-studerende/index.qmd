@@ -1,0 +1,28 @@
+---
+title: "Hvad vi fortæller de studerende"
+subtitle: "Om AI"
+author: "Christian Knudsen"
+categories:
+  - Talks
+  - R
+date: 2024-06-25
+toc: false
+image: "cover.webp"
+format: 
+  revealjs:
+    logo: LOGO.webp
+    css: logo.css
+--- 
+
+
+## Hvad tror de de kan bruge det til
+
+## Mit udgangspunkt
+
+## Hvad kan de bruge det til
+
+## konsekvenser i litteratursøgningen
+
+## Mere tekniske anvendelser
+
+## hvad er kub-datalab
