@@ -11,7 +11,7 @@ image: "cover.webp"
 format: 
   revealjs:
     logo: LOGO.webp
-    css: logo.css
+    css: logo.css 
 --- 
 
 
