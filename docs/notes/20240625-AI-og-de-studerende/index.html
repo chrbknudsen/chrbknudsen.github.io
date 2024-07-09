@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.3.433">
 
   <meta name="author" content="Christian Knudsen">
   <meta name="dcterms.date" content="2024-06-25">
@@ -158,8 +158,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -325,7 +324,7 @@
 <meta property="og:title" content="Christian Knudsen - Hvad vi fortæller de studerende">
 <meta property="og:description" content="Om AI">
 <meta property="og:image" content="cover.webp">
-<meta property="og:site_name" content="Christian Knudsen">
+<meta property="og:site-name" content="Christian Knudsen">
 <meta name="twitter:title" content="Christian Knudsen - Hvad vi fortæller de studerende">
 <meta name="twitter:description" content="Om AI">
 <meta name="twitter:image" content="cover.webp">
@@ -354,12 +353,35 @@ Christian Knudsen
 </section>
 <section id="mit-udgangspunkt" class="slide level2">
 <h2>Mit udgangspunkt</h2>
+<p>Litteratursøgning for kemi- og biologistuderende</p>
+<p>KUB Datalab</p>
+<aside class="notes">
+<p>Den første del er rimelig straight forward - selvom kemi-delen kan blive lidt langhåret når vi skal søge efter tegninger.</p>
+<p>I den anden del er det primært støtte til studerende arbejde med eget data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="hvad-kan-de-bruge-det-til" class="slide level2">
 <h2>Hvad kan de bruge det til</h2>
 </section>
 <section id="konsekvenser-i-litteratursøgningen" class="slide level2">
-<h2>konsekvenser i litteratursøgningen</h2>
+<h2>Konsekvenser i litteratursøgningen</h2>
+<p>Jeg underviser på to introducerende biologikurser. mikrobiologi og biokemi.</p>
+<p>Eksamensformen har i begge været hvad vi i min ungdom i slutningen af sidste årtusinde, kaldte en afløsningsopgave</p>
+<p>Altså - find et par håndfulde artikler om et givet emne, læs dem og skriv en opsummerende tekst af ca. 10 sider om hvad du kan uddrage af de artikler.</p>
+<p>Typisk fordelt med en lidt ældre (ca 10 år) grundlæggende artikel, ofte en review artikel. Og så ret nye artikler for resten.</p>
+<p>Det er også en god måde for underviserne at få et overblik over deres fag.</p>
+<p>Det vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet end google scholar</p>
+<p>Introduktionen af chatty har ført til at det ene af kurserne (tjek op på hvilket), har ændret eksamensform. De studerende skal ikke længere skrive en opgave, de skal skrive en sides synops, der kan danne grundlag for en mundtlig fremlæggelse.</p>
 </section>
 <section id="mere-tekniske-anvendelser" class="slide level2">
 <h2>Mere tekniske anvendelser</h2>
@@ -367,11 +389,9 @@ Christian Knudsen
 <section id="hvad-er-kub-datalab" class="slide level2">
 <h2>hvad er kub-datalab</h2>
 
-<div class="quarto-auto-generated-content">
-<p><img src="LOGO.webp" class="slide-logo"></p>
-<div class="footer footer-default">
 
-</div>
+<img src="LOGO.webp" class="slide-logo r-stretch"><div class="footer footer-default">
+
 </div>
 </section>
     </div>
@@ -400,6 +420,7 @@ Christian Knudsen
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -660,27 +681,10 @@ Christian Knudsen
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -690,17 +694,8 @@ Christian Knudsen
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -714,11 +709,7 @@ Christian Knudsen
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
