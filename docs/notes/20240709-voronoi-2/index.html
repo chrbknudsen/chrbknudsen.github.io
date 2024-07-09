@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Christian Knudsen">
+<meta name="dcterms.date" content="2024-07-09">
 
-<title>Christian Knudsen - Notes</title>
+<title>Christian Knudsen - Blue Vorontex #47.2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,47 +95,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Christian Knudsen - Notes">
-<meta property="og:description" content="">
-<meta property="og:image" content="../notes/20240412-talktest/cover.webp">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Christian Knudsen - Blue Vorontex #47.2">
+<meta property="og:description" content="Non-polar Circular Vorontex">
+<meta property="og:image" content="Blue_Vorontex-47.2.png">
 <meta property="og:site-name" content="Christian Knudsen">
-<meta name="twitter:title" content="Christian Knudsen - Notes">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="../notes/20240412-talktest/cover.webp">
+<meta name="twitter:title" content="Christian Knudsen - Blue Vorontex #47.2">
+<meta name="twitter:description" content="Non-polar Circular Vorontex">
+<meta name="twitter:image" content="Blue_Vorontex-47.2.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -112,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
@@ -123,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -132,33 +135,33 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">    
         <li>
-    <a class="dropdown-item" href="../work" rel="" target="">
+    <a class="dropdown-item" href="../../work" rel="" target="">
  <span class="dropdown-text">Work</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../education" rel="" target="">
+    <a class="dropdown-item" href="../../education" rel="" target="">
  <span class="dropdown-text">Education</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../organisations" rel="" target="">
+    <a class="dropdown-item" href="../../organisations" rel="" target="">
  <span class="dropdown-text">Organisations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../other" rel="" target="">
+    <a class="dropdown-item" href="../../other" rel="" target="">
  <span class="dropdown-text">Other</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../publications" rel="" target="">
+    <a class="dropdown-item" href="../../publications" rel="" target="">
  <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../stuff" rel="" target="">
+    <a class="nav-link" href="../../stuff" rel="" target="">
  <span class="menu-text">External Stuff</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notes" rel="" target="">
+    <a class="nav-link" href="../../notes" rel="" target="">
  <span class="menu-text">Notes and stuff</span></a>
   </li>  
 </ul>
@@ -169,25 +172,42 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Generative aRt"><span class="quarto-category-count category-cloud-8">Generative aRt</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-10">R</span></div><div class="category" data-category="Talks"><span class="quarto-category-count category-cloud-2">Talks</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
-</div>
+<h1 class="title">Blue Vorontex #47.2</h1>
+<p class="subtitle lead">Non-polar Circular Vorontex</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Generative aRt</div>
+    <div class="quarto-category">R</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christian Knudsen </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 9, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -195,153 +215,55 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>https://beamilz.com/posts/en for yderligere struktur.</p>
-<div id="notes">
-
+<p>Same concept as my Blue Vorentex #47 - just with ggvoronoi instead of polar cooridnates.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggvoronoi)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(deldir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Generate random points, making sure that we can reproduce them.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tiler <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(tiler)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(tiler)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, calculate the tiles, and collect them in a dataframe:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span>x, <span class="at">y=</span>y) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowid_to_column</span>(<span class="st">"id"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">as.integer</span>(id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, plot it, and add a circle for a cutout - thats the outline in geom_voronoi:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="sc">*</span> pi, <span class="at">length.out =</span> <span class="dv">3000</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>radius <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>c_x <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>c_y <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>circle <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> radius <span class="sc">*</span> (c_x <span class="sc">+</span> <span class="fu">cos</span>(s)),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> radius <span class="sc">*</span> (c_y <span class="sc">+</span> <span class="fu">sin</span>(s)),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                     <span class="at">group =</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3000</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>points <span class="sc">%&gt;%</span> </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">fill =</span> <span class="fu">factor</span>(id))) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_voronoi</span>(<span class="at">outline =</span> circle,  <span class="at">color =</span> <span class="dv">1</span>, <span class="at">size=</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span> ,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.line =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">hcl.colors</span>(<span class="dv">100</span>, <span class="st">"Blues 2"</span>)) <span class="sc">+</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"Blue_Vorontex-47.2.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-talks">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-talks-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-talks'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Generative aRt,R" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1720507070551" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="../notes/20240709-voronoi-2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../notes/20240709-voronoi-2/Blue_Vorontex-47.2.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blue Vorontex #47.2
-</h5>
-<div class="card-subtitle listing-subtitle">
-Non-polar Circular Vorontex
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 9, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Generative aRt,R" data-listing-date-sort="1717884000000" data-listing-file-modified-sort="1717937174519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="../notes/20240609-voronoi/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../notes/20240609-voronoi/Blue_Vorontex-47.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blue Vorontex #47
-</h5>
-<div class="card-subtitle listing-subtitle">
-Polar Voronoi Tesselation
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 9, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="R,Generative aRt" data-listing-date-sort="1714168800000" data-listing-file-modified-sort="1714211443926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="../notes/20240427-piwalk/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../notes/20240427-piwalk/piwalk.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pi-walk
-</h5>
-<div class="card-subtitle listing-subtitle">
-Walking the pie
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Apr 27, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Talks,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1713774289859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../notes/20240412-talktest/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../notes/20240412-talktest/cover.webp" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Naturvidenskabelig litteratursøgning
-</h5>
-<div class="card-subtitle listing-subtitle">
-For folkebibliotekarer
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Apr 14, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Generative aRt,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1714295403599" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../notes/20240414-floral/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../notes/20240414-floral/Kosmisk_Floræ-1.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Kosmisk Floræ
-</h5>
-<div class="card-subtitle listing-subtitle">
-Generative Art
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Apr 14, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

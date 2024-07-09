@@ -11,7 +11,7 @@
     "href": "education/index.html#formal-eduction",
     "title": "Education",
     "section": "Formal Eduction",
-    "text": "Formal Eduction\n\nKøbenhavns universitet\nAugust 2023: Introduction to Social Data Science. Summerschool at the Department of Economics.\n\n\nCBS\n\nErhversret\nUdvidet erhvervsret\nSamfundsøkonomi\nForvaltningsret\nDataanalyse\n\n\n\nAMU\nFeb. – mar. 2005 Gaschromatografi\nAMU-kursus i praktisk anvendelse af kapillar gaschromatografi.\nJan. – feb. 2005 HPLC operatør\nAMU-kursus i praktisk anvendelse af HPLC.\n\n\nDTU\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\nHelsinge Amts Gymnasium\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\nHelsinge Realskole\nAug. 1980 – Juni 1990"
+    "text": "Formal Eduction\n\nUniversity of Copenhagen\nAugust 2023: Introduction to Social Data Science. Summerschool at the Department of Economics.\n\n\nCopenhagen Business School\n\nErhversret\nUdvidet erhvervsret\nSamfundsøkonomi\nForvaltningsret\nDataanalyse\n\n\n\nAMU\nFeb. – mar. 2005 Gaschromatografi\nAMU-kursus i praktisk anvendelse af kapillar gaschromatografi.\nJan. – feb. 2005 HPLC operatør\nAMU-kursus i praktisk anvendelse af HPLC.\n\n\nDTU\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\nHelsinge Amts Gymnasium\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\nHelsinge Realskole\nAug. 1980 – Juni 1990"
   },
   {
     "objectID": "education/index.html#certifications",
@@ -32,7 +32,7 @@
     "href": "education/index.html#kurser",
     "title": "Education",
     "section": "Kurser",
-    "text": "Kurser\nMar. 2005 Kvalificering og validering af produktionsudstyr\nTre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nNov. 2003 Patentdag for kemikere\nFagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 2003 GMP grundkursus\nKursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC.\nIT projektlederuddannelse - Mannax, KB.\nExcelkurser fra 4D\nJun. 2024 QGIS\nGIS-kursus ved SC Datalab ved Københavns Universitet."
+    "text": "Kurser\nMar. 2005 Kvalificering og validering af produktionsudstyr\nTre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nNov. 2003 Patentdag for kemikere\nFagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 2003 GMP grundkursus\nKursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC.\nIT projektlederuddannelse - Mannax, KB.\nExcelkurser fra 4D\nJun. 2024 QGIS\nGIS-kursus ved SC Datalab ved Københavns Universitet.\nMay-Jun. 2024 Førsteårspædagogik"
   },
   {
     "objectID": "publications/index.html",
@@ -105,6 +105,13 @@
     "text": "Spørgsmål?\n\nGet in bed\nCount sheep"
   },
   {
+    "objectID": "notes/20240709-voronoi-2/index.html",
+    "href": "notes/20240709-voronoi-2/index.html",
+    "title": "Blue Vorontex #47.2",
+    "section": "",
+    "text": "Same concept as my Blue Vorentex #47 - just with ggvoronoi instead of polar cooridnates.\n\nlibrary(tidyverse)\nlibrary(ggvoronoi)\nlibrary(deldir)\n\nGenerate random points, making sure that we can reproduce them.\n\nset.seed(47)\ntiler &lt;- 100\nx &lt;- rnorm(tiler)\ny &lt;- rnorm(tiler)\n\nThen, calculate the tiles, and collect them in a dataframe:\n\npoints &lt;- data.frame(x=x, y=y) %&gt;% \n  rowid_to_column(\"id\") %&gt;% \n  mutate(id = as.integer(id))\n\nNext, plot it, and add a circle for a cutout - thats the outline in geom_voronoi:\n\ns &lt;- seq(0, 2 * pi, length.out = 3000)\nradius &lt;- 2\nc_x &lt;- 0\nc_y &lt;- 0\ncircle &lt;- data.frame(x = radius * (c_x + cos(s)),\n                     y = radius * (c_y + sin(s)),\n                     group = rep(1, 3000))\n\npoints %&gt;% \n  ggplot(aes(x = x, y = y, fill = factor(id))) +\n  geom_voronoi(outline = circle,  color = 1, size= 0.1) +\n  theme_minimal() +\n  theme(legend.position = \"none\" ,\n        axis.text = element_blank(),\n        axis.title = element_blank(),\n        axis.line = element_blank(),\n        axis.ticks = element_blank(),\n        panel.grid = element_blank()) +\n        scale_fill_manual(values = hcl.colors(100, \"Blues 2\")) +\n        theme(legend.position = \"none\") +\n  coord_fixed()\n\nggsave(\"Blue_Vorontex-47.2.png\")"
+  },
+  {
     "objectID": "notes/20240427-piwalk/index.html",
     "href": "notes/20240427-piwalk/index.html",
     "title": "Pi-walk",
@@ -116,7 +123,7 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "https://beamilz.com/posts/en for yderligere struktur.\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/20240609-voronoi/index.html",
