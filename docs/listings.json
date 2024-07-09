@@ -2,7 +2,11 @@
   {
     "listing": "/notes/index.html",
     "items": [
+<<<<<<< HEAD
       "/notes/20240709-voronoi-2/index.html",
+=======
+      "/notes/20240625-AI-og-de-studerende/index.html",
+>>>>>>> cb27f8d90c0959acc86db1c99712a91d7f911618
       "/notes/20240609-voronoi/index.html",
       "/notes/20240427-piwalk/index.html",
       "/notes/20240412-talktest/index.html",
