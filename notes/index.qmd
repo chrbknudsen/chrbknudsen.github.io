@@ -15,7 +15,7 @@ title-block-banner: false
 comments: false
 toc: true
 ---
-https://beamilz.com/posts/en  for yderligere struktur.
+<!-- https://beamilz.com/posts/en  for yderligere struktur. -->
 
 ::: {#notes}
 :::
