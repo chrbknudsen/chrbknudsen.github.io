@@ -17,6 +17,9 @@ format:
 
 ## Hvad tror de de kan bruge det til
 
+![](students_1.jpg)
+![](students_2.jpg)
+
 ## Mit udgangspunkt
 
 Litteratursøgning for kemi- og biologistuderende
@@ -63,3 +66,23 @@ fremlæggelse.
 ## Mere tekniske anvendelser
 
 ## hvad er kub-datalab
+
+![https://kub.kb.dk/datalab](https://raw.githubusercontent.com/KUBDatalab/KUBDatalab/main/inst/extdata/logotest.svg)
+
+Kurser i høstning, rensning, analyse og visualisering af data. For studerende.
+
+Og her støder vi virkelig på det - de bruger det til at producere kode. 
+til at gøre ting de ikke helt ved hvad er, på måder de ikke ved hvordan fungerer,
+med fejl de ingen anelse har om hvordan de skal fixe. Og - hvis de er heldige -
+med resultater, som de ikke ved hvordan skal tolkes.
+
+Og hvad katten er AI egentlig. Der er chatbotten, som vi alle forholder os til.
+Og så er der alt det andet AI. Det taler vi stort set ikke om.
+
+Forestil dig, at al den viden og alle de færdigheder, du kan opnå med R, er gemt i en uendeligt høj bogreol. Som nybegynder kan du nå de nederste hylder uden problemer. Efterhånden som du lærer mere og øver dig, kan du række ud efter hylder, der er højere og højere oppe. Hvis du virkelig dedikerer dig, læser manualerne og koncentrerer dig, kan du måske stå på tæer og nå en hylde, der ellers ville være uden for rækkevidde.
+
+Store tekstmodeller, som for eksempel GPT-4, kan fungere som en skammel, der hjælper dig med at nå de hylder, der ellers lige akkurat ville være uden for din rækkevidde. Denne skammel kan give dig et løft og spare dig tid og anstrengelse.
+
+Men der er også en risiko forbundet med at bruge store tekstmodeller som stiger for at nå de allerhøjeste hylder, som du endnu ikke er klar til. Hvis du ikke har den nødvendige baggrundsviden og forståelse, kan du risikere at falde ned, fordi du ikke helt forstår, hvad du læser eller bruger.
+
+Så brug store tekstmodeller som et værktøj til at støtte din læring og hjælpe dig med at nå nye højder, men sørg altid for at have en solid grundviden og forståelse som fundament. På den måde kan du sikre, at du står sikkert og fortsat kan udvikle dine færdigheder i R.
