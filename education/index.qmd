@@ -87,3 +87,57 @@ Excelkurser fra 4D
 GIS-kursus ved SC Datalab ved Københavns Universitet.
 
 **May-Jun. 2024** Førsteårspædagogik
+
+## Cognitive Class
+
+### Badges 
+
+
+<a href="https://www.credly.com/badges/053f2ef6-e41d-40f4-b06c-4308b384a2fc" target = "_blank"  style="display: inline-block;">
+  <img src="/documentation/Data_Sci_Found_Level_1_-_CC_-_2019.png" 
+  alt="Data Science Foundations - Level 1" title = "Jan 2018" width="100" height="100">
+</a>
+<a href="https://www.credly.com/badges/d301a01a-d007-46f6-bdf9-4d12253ea98f" target = "_blank" style="display: inline-block;">
+  <img src="/documentation/Data_Sci_Business_Level_1_-_CC_-_2019.png" 
+  alt="Data Science for Business - Level 1" title = "Aug. 2018" width="100" height="100">
+</a>
+<a href="https://www.credly.com/badges/5b5801df-23aa-49d5-89d5-d8182eff0ec2" target = "_blank" style="display: inline-block;">
+  <img src="/documentation/Data_Sci_Foundations_Level_2_-_CC_-_2019.png" 
+  alt="Data Science Foundations - Level 2 (V2)" title = "Sep. 2018" width="100" height="100">
+</a>
+
+
+### Certificates
+
+Data Visualization with R
+https://courses.cognitiveclass.ai/certificates/36bc6d90b29e44a28233981afd48ac22
+
+sept 2018 Data Science Methodology
+https://courses.cognitiveclass.ai/certificates/b1f199a15949450c9272ad19cb9d82ef
+
+aug 2018 Data Science Hands-On With Open Source Tools
+https://courses.cognitiveclass.ai/certificates/c723498c81924f97b3b5bb2bd923abdd
+
+aug 2018 Data Privacy Fundamentals
+https://courses.cognitiveclass.ai/certificates/1ce8c526992f40609b26c9816a9a3d64
+
+
+jan 2018 Introduction to Data Science
+https://courses.cognitiveclass.ai/certificates/d8b6fa2d0e5b4a53a53717988e5a3511
+
+jan 2018 R 101
+https://courses.cognitiveclass.ai/certificates/af4472853909461baae9157481291e1b
+
+
+## EdX
+https://courses.edx.org/certificates/2c3a8d343e254e7094e47a12f2f19e60
+https://courses.edx.org/certificates/e6066e6597a942e8ac929650898a4e32
+https://courses.edx.org/certificates/3bffecb317a8414e972a73d34af3baf6
+https://courses.edx.org/certificates/fba5f6afb4b04779bddd674e530384cc
+https://courses.edx.org/certificates/096454e05a784ee68cf7a2c49c99e42c
+https://courses.edx.org/certificates/fa9229ea21784c8cbdd33c1f715ad05d
+https://courses.edx.org/certificates/51e499c834a4460f8fb861716b44808e
+https://courses.edx.org/certificates/1926f5b740a24b09918e582b54ed207b
+https://courses.edx.org/certificates/0838e90237954049a5f1aab8e048269c
+https://courses.edx.org/certificates/b9498acd34114d4a857f1319d7aaee09
+
