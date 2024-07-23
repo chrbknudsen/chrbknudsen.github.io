@@ -2,9 +2,6 @@
 title: "Education"
 ---
 
-An attempt at a complete list. Including stuff that is not necessarily relevant
-for anything.
-
 ## Formal Eduction
 
 ### University of Copenhagen
@@ -14,21 +11,21 @@ for anything.
 ### Copenhagen Business School
 
 **Aug. -- dec. 2009** Erhversret
+
 **Jan. -- Apr. 2010** Udvidet erhvervsret
+
 **Jan. -- Jun. 2013** Samfundsøkonomi
-- *Forvaltningsret*
+
+Forvaltningsret
+
 **Aug. -- dec. 2008** Dataanalyse
 
 ### AMU
 
-**Feb. -- mar. 2005** Gaschromatografi 
-
-AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. 
+**Feb. -- mar. 2005** Gaschromatografi. AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. 
 
 
-**Jan. -- feb.  2005**  HPLC operatør
-
-AMU-kursus i praktisk anvendelse af HPLC.
+**Jan. -- feb.  2005**  HPLC operatør. AMU-kursus i praktisk anvendelse af HPLC.
 
 
 ### DTU
@@ -48,7 +45,8 @@ FEANI
 
 Basic GMP
 
-Isotopteknik
+<a href="/documentation/isotopteknik.pdf" target="_blank">Isotopteknik</a>
+
 
 Carpentries
 
@@ -109,35 +107,36 @@ GIS-kursus ved SC Datalab ved Københavns Universitet.
 
 ### Certificates
 
-Data Visualization with R
-https://courses.cognitiveclass.ai/certificates/36bc6d90b29e44a28233981afd48ac22
+Sep 2018 <a href="https://courses.cognitiveclass.ai/certificates/36bc6d90b29e44a28233981afd48ac22" target="_blank">Data Visualization with R</a>
 
-sept 2018 Data Science Methodology
-https://courses.cognitiveclass.ai/certificates/b1f199a15949450c9272ad19cb9d82ef
+Sep 2018 <a href="https://courses.cognitiveclass.ai/certificates/b1f199a15949450c9272ad19cb9d82ef" target="_blank">Data Science Methodology</a>
 
-aug 2018 Data Science Hands-On With Open Source Tools
-https://courses.cognitiveclass.ai/certificates/c723498c81924f97b3b5bb2bd923abdd
+Aug 2018 <a href="https://courses.cognitiveclass.ai/certificates/c723498c81924f97b3b5bb2bd923abdd" target="_blank">Data Science Hands-On With Open Source Tools</a>
 
-aug 2018 Data Privacy Fundamentals
-https://courses.cognitiveclass.ai/certificates/1ce8c526992f40609b26c9816a9a3d64
+Aug 2018 <a href="https://courses.cognitiveclass.ai/certificates/1ce8c526992f40609b26c9816a9a3d64" target="_blank">Data Privacy Fundamentals</a>
 
+Jan 2018 <a href="https://courses.cognitiveclass.ai/certificates/d8b6fa2d0e5b4a53a53717988e5a3511" target="_blank">Introduction to Data Science</a>
 
-jan 2018 Introduction to Data Science
-https://courses.cognitiveclass.ai/certificates/d8b6fa2d0e5b4a53a53717988e5a3511
-
-jan 2018 R 101
-https://courses.cognitiveclass.ai/certificates/af4472853909461baae9157481291e1b
+Jan 2018 <a href="https://courses.cognitiveclass.ai/certificates/af4472853909461baae9157481291e1b" target="_blank">R 101</a>
 
 
 ## EdX
-https://courses.edx.org/certificates/2c3a8d343e254e7094e47a12f2f19e60
-https://courses.edx.org/certificates/e6066e6597a942e8ac929650898a4e32
-https://courses.edx.org/certificates/3bffecb317a8414e972a73d34af3baf6
-https://courses.edx.org/certificates/fba5f6afb4b04779bddd674e530384cc
-https://courses.edx.org/certificates/096454e05a784ee68cf7a2c49c99e42c
-https://courses.edx.org/certificates/fa9229ea21784c8cbdd33c1f715ad05d
-https://courses.edx.org/certificates/51e499c834a4460f8fb861716b44808e
-https://courses.edx.org/certificates/1926f5b740a24b09918e582b54ed207b
-https://courses.edx.org/certificates/0838e90237954049a5f1aab8e048269c
-https://courses.edx.org/certificates/b9498acd34114d4a857f1319d7aaee09
+Jun 2020 <a href="https://courses.edx.org/certificates/2c3a8d343e254e7094e47a12f2f19e60" target="_blank">STATSX0001: Statistical Learning </a>
 
+Apr. 2019 <a href="https://courses.edx.org/certificates/e6066e6597a942e8ac929650898a4e32" target="_blank">POPX3.1: Star Trek: Inspiring Culture and Technology </a>
+
+Oct. 2020 <a href="https://courses.edx.org/certificates/3bffecb317a8414e972a73d34af3baf6" target="_blank">PH125.3x: Data Science: Probability </a>
+
+Aug. 2020 <a href="https://courses.edx.org/certificates/fba5f6afb4b04779bddd674e530384cc" target="_blank">PH125.6x: Data Science: Wrangling </a>
+
+Sep. 2020 <a href="https://courses.edx.org/certificates/096454e05a784ee68cf7a2c49c99e42c" target="_blank">PH125.2x: Data Science: Visualization </a>
+
+Sep. 2020 <a href="https://courses.edx.org/certificates/fa9229ea21784c8cbdd33c1f715ad05d" target="_blank">PH125.1x: Data Science: R Basics </a>
+
+Nov. 2020 <a href="https://courses.edx.org/certificates/51e499c834a4460f8fb861716b44808e" target="_blank">PH125.4x: Data Science: Inference and Modeling </a>
+
+Dec. 2020 <a href="https://courses.edx.org/certificates/1926f5b740a24b09918e582b54ed207b" target="_blank">PH125.5x: Data Science: Productivity Tools </a>
+
+Feb. 2021 <a href="https://courses.edx.org/certificates/0838e90237954049a5f1aab8e048269c" target="_blank">PH125.7x: Data Science: Linear Regression </a>
+
+May 2021 <a href="https://courses.edx.org/certificates/b9498acd34114d4a857f1319d7aaee09" target="_blank">PH125.8x: Data Science: Machine Learning</a>
