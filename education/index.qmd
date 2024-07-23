@@ -41,14 +41,16 @@ Forvaltningsret
 
 ## Certifications
 
-FEANI
 
-Basic GMP
+<a href="/documentation/Feani.pdf" target="_blank">FEANI</a>
+
+<a href="/documentation/basicgmp.pdf" target="_blank">Basic GMP</a>
 
 <a href="/documentation/isotopteknik.pdf" target="_blank">Isotopteknik</a>
 
+<a href="/documentation/carpentries.pdf" target="_blank">Carpentries</a>
 
-Carpentries
+
 
 ## Not so formal education
 
