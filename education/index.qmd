@@ -109,6 +109,9 @@ GIS-kursus ved SC Datalab ved Københavns Universitet.
 
 ### Certificates
 
+Jul. 2024 <a href="https://courses.cognitiveclass.ai/certificates/d4a05a9ebf3447c5b424fd7f312c0129" target="_blank">Getting started with MySQL command line</a>
+
+
 Sep 2018 <a href="https://courses.cognitiveclass.ai/certificates/36bc6d90b29e44a28233981afd48ac22" target="_blank">Data Visualization with R</a>
 
 Sep 2018 <a href="https://courses.cognitiveclass.ai/certificates/b1f199a15949450c9272ad19cb9d82ef" target="_blank">Data Science Methodology</a>
