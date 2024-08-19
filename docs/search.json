@@ -46,7 +46,7 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRådgivning af studerende\n\n\nOm AI  AI I ARBEJDSLIVET : DIN NYE KOLLEGA – FORUM FOR E-RESSOURCER TEMADAG\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/20240709-voronoi-2/index.html",
@@ -224,67 +224,11 @@
     "text": "A Voronoi tesselation with 100 tiles in polar coordinates.\nBasically - select 100 random points in a plane and then draw polygons around those points, such that all points closet to a given point, are included in the polygon associated with that point.\nThose tesselations have practical uses in a number of subjects. City planning, trying to place facilities maximising access for the population.\nModelling of territorial behaviour of animal populations.\nIt is also found at the core of certain clustering algorithms, eg k-means clustering.\nAs always we need the tidyverse, and in this case the deldir package, that does the actual tesselation.\n\nlibrary(tidyverse)\nlibrary(deldir)\n\nGenerate random points, making sure that we can reproduce them.\n\nset.seed(47)\ntiler &lt;- 100\nx &lt;- rnorm(tiler)\ny &lt;- rnorm(tiler)\n\nNext, calculate the tiles, and collect them in a dataframe:\n\ntesselation &lt;- deldir(x, y)\ntiles &lt;- tile.list(tesselation)\npoints &lt;- data.frame(x=x, y=y)\ntiles_df &lt;- lapply(tiles, function(tile){\n  data.frame(x=tile$x, y = tile$y)\n}) %&gt;% \n  bind_rows(.id = \"tile_id\")\n\nNext, plot it:\n\ntiles_df %&gt;% \n  ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +\n  geom_polygon() +\n  theme_minimal() +\n  coord_polar(start = 0.47) +\n  theme(legend.position = \"none\" ,\n        axis.text = element_blank(),\n        axis.title = element_blank(),\n        axis.line = element_blank(),\n        axis.ticks = element_blank(),\n        panel.grid = element_blank()) +\n        scale_fill_manual(values = hcl.colors(tiler, \"Blues 3\")) +\n        theme(legend.position = \"none\")\n\nggsave(\"Blue_Vorontex-47.png\")"
   },
   {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-taler-vi-egentlig-om",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-taler-vi-egentlig-om",
-    "title": "Rådgivning af studerende",
-    "section": "Hvad taler vi egentlig om?",
-    "text": "Hvad taler vi egentlig om?\n{https://x.com/marcobravoram/status/1241781966497710080}\nMaskinlæring er værktøjet vi bruger til at opnå kunstig intelligens. Grænsen er flydende. Vi taler ikke her om kunstig intelligens i almindelighed. Vi taler om de store tekstmodeller. De kan så interface med maskinlæring, og trække på metoder til billedgenerering, billedanalyse etc."
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#mit-udgangspunkt",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#mit-udgangspunkt",
-    "title": "Rådgivning af studerende",
-    "section": "Mit udgangspunkt",
-    "text": "Mit udgangspunkt\n\nLitteratursøgning for kemi- og biologistuderende\nKUB Datalab\n\n\nDen første del er rimelig straight forward - selvom kemi-delen kan blive lidt langhåret når vi skal søge efter tegninger.\nI den anden del er det primært støtte til studerende arbejde med eget data.\nJeg har en halv time i alt.\n\nSlides?\nSlides!\nchristianknudsen.info/notes/20241126-AI-og-de-studerende"
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-tror-de-de-kan-bruge-det-til",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-tror-de-de-kan-bruge-det-til",
-    "title": "Rådgivning af studerende",
-    "section": "Hvad tror de de kan bruge det til",
-    "text": "Hvad tror de de kan bruge det til"
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-tror-de-de-kan-bruge-det-til-1",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-tror-de-de-kan-bruge-det-til-1",
-    "title": "Rådgivning af studerende",
-    "section": "Hvad tror de de kan bruge det til",
-    "text": "Hvad tror de de kan bruge det til"
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-forventer-de-at-kunne-bruge-det-til",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-forventer-de-at-kunne-bruge-det-til",
-    "title": "Rådgivning af studerende",
-    "section": "Hvad forventer de at kunne bruge det til?",
-    "text": "Hvad forventer de at kunne bruge det til?\nLitteratursøgninger.\nSkrive tekst\nSkrive kode\nSammenfatte tekst/artikler"
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-kan-de-bruge-det-til",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-kan-de-bruge-det-til",
-    "title": "Rådgivning af studerende",
-    "section": "Hvad kan de bruge det til",
-    "text": "Hvad kan de bruge det til\nBetaler de for adgang - og det er strengt taget en ret lille investering hvis det er det der betyder at du får gode karakterer og kommer let igennem - så er det her løsningen på meget.\nOpsummer artikler. Producer kode"
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#konsekvenser-i-undervisningen",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#konsekvenser-i-undervisningen",
-    "title": "Rådgivning af studerende",
-    "section": "Konsekvenser i undervisningen",
-    "text": "Konsekvenser i undervisningen\nAfløsningsopgaven som eksamensform er død.\nJeg underviser på to introducerende biologikurser. mikrobiologi og biokemi.\nEksamensformen har i begge været hvad vi i min ungdom i slutningen af sidste årtusinde, kaldte en afløsningsopgave\nAltså - find et par håndfulde artikler om et givet emne, læs dem og skriv en opsummerende tekst af ca. 10 sider om hvad du kan uddrage af de artikler.\nTypisk fordelt med en lidt ældre (ca 10 år) grundlæggende artikel, ofte en review artikel. Og så ret nye artikler for resten.\nDet er også en god måde for underviserne at få et overblik over deres fag.\nDet vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet end google scholar\nIntroduktionen af chatty har ført til at det ene af kurserne (tjek op på hvilket), har ændret eksamensform. De studerende skal ikke længere skrive en opgave, de skal skrive en sides synops, der kan danne grundlag for en mundtlig fremlæggelse."
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#mere-tekniske-anvendelser",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#mere-tekniske-anvendelser",
-    "title": "Rådgivning af studerende",
-    "section": "Mere tekniske anvendelser",
-    "text": "Mere tekniske anvendelser\nDen anden del af hvad jeg møder. Datalab."
-  },
-  {
-    "objectID": "notes/20241126-AI-og-de-studerende/index.html#hvad-er-kub-datalab",
-    "href": "notes/20241126-AI-og-de-studerende/index.html#hvad-er-kub-datalab",
-    "title": "Rådgivning af studerende",
-    "section": "hvad er kub-datalab",
-    "text": "hvad er kub-datalab\n\n\n\nhttps://kub.kb.dk/datalab\n\n\nKurser i høstning, rensning, analyse og visualisering af data. For studerende.\nÅbne værksteder hvor vi assisterer med konkret analyse af data.\nOg her støder vi virkelig på det - de bruger det til at producere kode. til at gøre ting de ikke helt ved hvad er, på måder de ikke ved hvordan fungerer, med fejl de ingen anelse har om hvordan de skal fixe. Og - hvis de er heldige - med resultater, som de ikke ved hvordan skal tolkes.\nOg hvad katten er AI egentlig. Der er chatbotten, som vi alle forholder os til. Og så er der alt det andet AI. Det taler vi stort set ikke om.\nForestil dig, at al den viden og alle de færdigheder, du kan opnå med R, er gemt i en uendeligt høj bogreol. Som nybegynder kan du nå de nederste hylder uden problemer. Efterhånden som du lærer mere og øver dig, kan du række ud efter hylder, der er højere og højere oppe. Hvis du virkelig dedikerer dig, læser manualerne og koncentrerer dig, kan du måske stå på tæer og nå en hylde, der ellers ville være uden for rækkevidde.\nStore tekstmodeller, som for eksempel GPT-4, kan fungere som en skammel, der hjælper dig med at nå de hylder, der ellers lige akkurat ville være uden for din rækkevidde. Denne skammel kan give dig et løft og spare dig tid og anstrengelse.\nMen der er også en risiko forbundet med at bruge store tekstmodeller som stiger for at nå de allerhøjeste hylder, som du endnu ikke er klar til. Hvis du ikke har den nødvendige baggrundsviden og forståelse, kan du risikere at falde ned, fordi du ikke helt forstår, hvad du læser eller bruger.\nSå brug store tekstmodeller som et værktøj til at støtte din læring og hjælpe dig med at nå nye højder, men sørg altid for at have en solid grundviden og forståelse som fundament. På den måde kan du sikre, at du står sikkert og fortsat kan udvikle dine færdigheder i R."
+    "objectID": "notes/20240816-sex-distribution-ucph/index.html",
+    "href": "notes/20240816-sex-distribution-ucph/index.html",
+    "title": "Kønsfordelingen på KU",
+    "section": "",
+    "text": "fak_data %&gt;%   \nggplot(aes(år,andel, color = fct_relevel(køn, c(\"Kvinder\", \"Mænd\", \"diff\")))) +\n  geom_line() +\n  geom_point() +\n  theme_bw() +\n  ylim(c(0,100)) +\n  facet_wrap(~fakultet) +\n  ggtitle(label = \"Science er i mål, Teologi er på rette kurs.\",\n          subtitle = \"Resten går den gale vej.\") +\n  ylab(\"Andel af studenterbestand (%)\")+ \n  xlab(\"\")+\n  theme(legend.title = element_blank()) +\n  scale_color_manual(values = c(\"diff\" = \"red\", \"Kvinder\" = \"purple\", \"Mænd\" = \"darkgrey\"),\n                     labels = c(\"diff\" = \"Abs. Forskel (%-point)\", \"Kvinder\" = \"Kvinder\", \"Mænd\" = \"Mænd\")) +\n  labs(caption = \"Udviklingen i kønsfordelingen på KUs fakulteter 2014-2023\n          Rå data: https://us.ku.dk/studiestatistik/studiestatistikker/bestand/\")"
   },
   {
     "objectID": "organisations/index.html",
