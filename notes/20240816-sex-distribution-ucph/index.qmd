@@ -107,7 +107,8 @@ if(length(filer_til_hentning)>0){sapply(excel_links, download_bestand)}
 Vi skal også have en funktion til at trække data ud af regnearkene.
 
 ```{r eval = FALSE}
-
+#| code-fold: true
+#| code-summary: "Vis koden"
 # funktion til at ekstrahere data fra excelfilerne.
 ekstraher_data <- function(fil){
   data <- read_xlsx(fil) # indlæser fil
@@ -134,8 +135,10 @@ ekstraher_data <- function(fil){
 }
 ```
 
-Den funktion bruger vi så på alle excelfilerne:
+Den funktion bruger vi så på alle excelfilerne.
 ```{r eval= FALSE}
+#| code-fold: true
+#| code-summary: "Vis koden"
 # ekstraherer data fra alle excelfilerne
 data <- list.files(path = data_sti, full.names = TRUE) %>% as_tibble() %>% 
   mutate(data = map(value, ekstraher_data))
@@ -143,6 +146,8 @@ data <- list.files(path = data_sti, full.names = TRUE) %>% as_tibble() %>%
 
 Og så unnester vi, og pivoterer til et pænt langt dataformat.
 ```{r eval= FALSE}
+#| code-fold: true
+#| code-summary: "Vis koden"
 # unnest data til langt format
 data <- data %>% 
   select(-value) %>% 
@@ -154,9 +159,11 @@ Og så har vi en fin dataframe med en række for hvert fag, med angivelse
 af år, fakultet og bac/kand-niveau. Og hvor mange mænd og kvinder der var på
 faget.
 
-Det tillader os at beregne kønsfordelingen på de 6 fakulteter. Vi gør det i to
-trin, for at få differencerne med:
+Det tillader os at beregne kønsfordelingen på de 6 fakulteter. 
 ```{r eval = FALSE}
+#| code-fold: true
+#| code-summary: "Vis koden"
+# Vi gør det i to trin, for at få differencerne med:
 fak_data <- data %>% 
   group_by(år, fakultet, køn) %>% 
   summarise(bestand = sum(bestand)) %>% 
@@ -172,5 +179,67 @@ fak_data <- fak_data %>%
   ) %>% 
   rbind(fak_data) %>% 
   ungroup()
+```
+
+Og så kan der plottes. Vi har set resultatet ovenfor, men du kan folde koden ud
+herunder
+
+```{r eval = FALSE}
+#| code-fold: true
+#| code-summary: "Vis koden"
+fak_data %>%   
+ggplot(aes(år,andel, color = fct_relevel(køn, c("Kvinder", "Mænd", "diff")))) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  ylim(c(0,100)) +
+  facet_wrap(~fakultet) +
+  ggtitle(label = "Science er i mål, Teologi er på rette kurs.",
+          subtitle = "Resten går den gale vej.") +
+  ylab("Andel af studenterbestand (%)")+ 
+  xlab("")+
+  theme(legend.title = element_blank()) +
+  scale_color_manual(values = c("diff" = "red", "Kvinder" = "purple", "Mænd" = "darkgrey"),
+                     labels = c("diff" = "Abs. Forskel (%-point)", "Kvinder" = "Kvinder", "Mænd" = "Mænd")) +
+  labs(caption = "Udviklingen i kønsfordelingen på KUs fakulteter 2014-2023
+          Rå data: https://us.ku.dk/studiestatistik/studiestatistikker/bestand/")
+
+```
+
+Det går ret meget tilbage med ligestillingen på SUND. Men er det et generelt
+forhold, eller er der variation? Lad os betragte opdelingen på niveauer. 
+Det kunne jo være et udtryk for at det er helt galt på kandidaten - men at 
+problemet er blevet taget alvorligt, og der derfor er en mere ligelig kønsfordeling¨
+på vej. Det ville vi se hvis bacheloruddannelserne var ved at blive mere lige.
+
+```{r}
+data %>% pivot_wider(names_from = køn, values_from = bestand) %>% 
+  group_by(fakultet, niveau, år) %>% 
+  summarise(K_tot = sum(Kvinder),
+            M_tot = sum(Mænd)) %>% 
+  ungroup() %>% 
+  mutate(K_andel = K_tot/(K_tot + M_tot)*100,
+         M_andel = 100 - K_andel,
+    diff = 2 * (K_tot / (K_tot + M_tot)) - 1,
+         diff = diff*100) %>% 
+  mutate(diff = abs(diff)) %>% 
+  mutate(color = factor(sign(diff))) %>% 
+  pivot_longer(cols = K_andel:diff, names_to = "køn", values_to = "andel") %>% 
+  ggplot(aes(år, andel, color=køn, group=køn)) +
+  geom_line() +
+  facet_grid(fakultet~niveau)
+```
+
+
+
+```{r}
+data %>% pivot_wider(names_from = køn, values_from = bestand) %>% 
+  mutate(diff = 2 * (Kvinder / (Kvinder + Mænd)) - 1,
+         diff = diff*100) %>% 
+  mutate(color = factor(sign(diff))) %>% 
+  ggplot(aes(år, diff, color = color, group =interaction(fag,niveau))) +
+    geom_line()  +
+  facet_wrap(~fakultet)
+
 ```
 
