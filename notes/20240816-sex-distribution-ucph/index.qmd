@@ -206,7 +206,56 @@ ggplot(aes(år,andel, color = fct_relevel(køn, c("Kvinder", "Mænd", "diff"))))
 
 ```
 
-Det går ret meget tilbage med ligestillingen på SUND. Men er det et generelt
+Det går ret meget tilbage med ligestillingen på SUND. 
+
+Kan vi vise dette på en bedre måde? Evt koge forskellen ned til en enkelt linie?
+
+Det er oplagt at kigge på forskellen i andel for de to køn, og farvelægge efter 
+om der er et problem i forskellen eller ej - grøn hvis der er ligestilling, rød
+hvis der ikke er.
+
+Kriteriet for farvelægning vil så være:
+
+$$
+Andel_{♀} = Andel_{♂} : grøn \\
+Andel_{♀} > Andel_{♂} : grøn \\
+Andel_{♀} < Andel_{♂} : rød \\
+$$
+
+Det betyder at vi kan klare os med en enkelt kurve. Vi filtrerer de overflødige
+fra, plotter den absolutte forskel på andelene, og farvelægger punkterne efter
+om der er en ligestillingsudfordring eller ej.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Vis koden"
+fak_data %>% 
+  filter(køn == "diff") %>% 
+  select(-bestand) %>% 
+  mutate(farve = factor(sign(andel))) %>% 
+   ggplot(aes(år, andel, group = fakultet, color = farve)) +
+  geom_point()+
+  geom_line() +
+  facet_wrap(~fakultet) +
+  ggtitle(label = "Forskel på andelen af kvinder og mænd",
+          subtitle = "En værdi på 50% svarer til en 70-20 fordeling i kvinders favør") +
+    labs(caption = "Udviklingen i kønsfordelingen på KUs fakulteter 2014-2023
+          Rå data: https://us.ku.dk/studiestatistik/studiestatistikker/bestand/") +
+  ylab("Andel af studenterbestand (%)")+ 
+  xlab("") +
+  theme_bw() +
+  scale_color_manual(values = c("1" = "green", "-1" = "red"),
+                     labels = c("1" = "Alt ok", "-1" = "Problem"))
+```
+
+Det ser jo ok ud. Men er der variation? Dækker det flotte resultat for Det 
+Sundhedsvidenskabelige Fakultet måske over at alt er godt på bachelor uddannelserne,
+mens der er ligestillingsproblemer på kandidaten?
+
+
+
+
+Men er det et generelt
 forhold, eller er der variation? Lad os betragte opdelingen på niveauer. 
 Det kunne jo være et udtryk for at det er helt galt på kandidaten - men at 
 problemet er blevet taget alvorligt, og der derfor er en mere ligelig kønsfordeling¨
