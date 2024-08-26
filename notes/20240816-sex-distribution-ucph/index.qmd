@@ -7,7 +7,7 @@ categories:
   - kategori 2
 date: 2024-08-16
 toc: true
-image: ""
+image: "kønsfordeling.webp"
 format:
   html:
     theme: cosmo
