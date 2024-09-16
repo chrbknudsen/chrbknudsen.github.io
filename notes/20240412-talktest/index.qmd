@@ -4,7 +4,6 @@ subtitle: "For folkebibliotekarer"
 author: "Christian Knudsen"
 categories:
   - Talks
-  - R
 date: 2024-04-14
 toc: false
 image: "cover.webp"
