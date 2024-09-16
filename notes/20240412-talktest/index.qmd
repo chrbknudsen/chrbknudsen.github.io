@@ -8,21 +8,26 @@ categories:
 date: 2024-04-14
 toc: false
 image: "cover.webp"
-format: revealjs
+format: 
+  revealjs: 
+    logo: logo.png
+    css: logo.css
+
+editor: 
+  markdown: 
+    wrap: 72
 ---
-
-
 
 # Naturvidenskabelig litteratursøgning
 
-![](cover.webp){fig-align=center}
+![](cover.webp){fig-align="center"}
 
 ## Min baggrund
 
-- Christian Knudsen
-- Civilingeniør - kemi
-- 21 år på lidt af hvert der er endt med at blive til KB
-- Voksede op på et bibliotek
+-   Christian Knudsen
+-   Civilingeniør - kemi
+-   21 år på lidt af hvert der er endt med at blive til KB
+-   Voksede op på et bibliotek
 
 **Slides?**
 
@@ -32,172 +37,288 @@ HUSK OPDATER LINK
 
 ## Hvad er opgaven?
 
-- At finde litteratur til overvejende gymnasieelever
+-   At finde litteratur til overvejende gymnasieelever
 
-- Primært deres SRP-opgaver
+-   Primært deres SRP-opgaver
 
-## Hvorfor er det svært?
+## Hvorfor er det *meget* svært?
 
-::: {.notes}
-
-Dette er adgangskravene til bibliotekaruddannelsen. 
-Min tese er, at det grundlæggende er et sprogproblem.
-I taler ikke naturvidenskabsk. Helt enkelt.
+::: notes
+Dette er adgangskravene til bibliotekaruddannelsen. Min tese er, at det
+grundlæggende er et sprogproblem. I taler ikke naturvidenskabsk. I er på
+lige så dybt vand som hvis problemformuleringen var på finsk.
 https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
 :::
 
 ![](adgangskrav.png)
 
-## Hvorfor er det svært?
+## Hvorfor er det svært - generelt?
 
-"En kvantefysisk analyse af partikelentanglement afslører koherens og superpositionstilstande, som er afgørende for forståelsen af kvantecomputeres potentiale."
+"En kvantefysisk analyse af partikelentanglement afslører koherens og
+superpositionstilstande, som er afgørende for forståelsen af
+kvantecomputeres potentiale."
+
+## Hvorfor er det svært - generelt?
+::: {.incremental}
+-   "En kvanttifysiikkaa analyse af hiukkasten takertuminen afslører
+    johdonmukaisuutta og superpositiomoodit, som er afgørende for
+    forståelsen af kvantecomputeres potentiale." 
+:::
+
+-   "En hermeneutisk dekonstruktion af poststrukturalistiske teorier i
+    samtidslitteratur belyser de intertekstuelle relationer og
+    diskursive praksisser, der konstruerer subjektivitet og social
+    ontologi gennem et polyfonisk samspil af magtstrukturer og
+    semiotiske systemer."
+
+begge genereret af chatgpt 
 
 
-"En dybdegående undersøgelse af det narrative og semantiske indhold i klassisk litteratur afslører de komplekse sociale og kulturelle dynamikker, som former menneskelig erfaring og identitet."
+::: notes
+Det er finsk. Og den anden tekst kunne ligeså godt være på finsk når man
+er ingeniør.
+:::
 
-"En hermeneutisk dekonstruktion af poststrukturalistiske teorier i samtidslitteratur belyser de intertekstuelle relationer og diskursive praksisser, der konstruerer subjektivitet og social ontologi gennem et polyfonisk samspil af magtstrukturer og semiotiske systemer."
-
-- begge genereret af chatgpt
-
-## Det betyder at det faktisk er ret let
+## Det gør det lettere!
 
 En hermeneutisk dekonstruktion kan betyde mange ting
-::: {.notes}
 
-Fortolkningsproces: Hermeneutisk dekonstruktion kan ses som en proces, hvor man fortolker og analyserer tekster ved at afdække de mange lag af betydning og de underliggende antagelser.
+::: notes
+Fortolkningsproces: Hermeneutisk dekonstruktion kan ses som en proces,
+hvor man fortolker og analyserer tekster ved at afdække de mange lag af
+betydning og de underliggende antagelser.
 
-Kritisk analyse: Det kan også forstås som en kritisk metode, hvor man dekonstruktivt udfordrer og dekonstruerer de etablerede betydninger og strukturer i en tekst for at afsløre skjulte magtforhold og ideologier.
+Kritisk analyse: Det kan også forstås som en kritisk metode, hvor man
+dekonstruktivt udfordrer og dekonstruerer de etablerede betydninger og
+strukturer i en tekst for at afsløre skjulte magtforhold og ideologier.
 
-Tekstanalyse: Hermeneutisk dekonstruktion kan anvendes til at undersøge, hvordan tekster er konstrueret, og hvordan forskellige fortolkninger kan opstå ved at analysere tekstens sprog, struktur og kontekst.
+Tekstanalyse: Hermeneutisk dekonstruktion kan anvendes til at undersøge,
+hvordan tekster er konstrueret, og hvordan forskellige fortolkninger kan
+opstå ved at analysere tekstens sprog, struktur og kontekst.
 
-Teoretisk metode: Fra et teoretisk perspektiv kan hermeneutisk dekonstruktion være en kombination af hermeneutikkens fokus på fortolkning og dekonstruktionens fokus på at nedbryde og udfordre tekstens overfladiske mening for at afsløre dybere lag af betydning.
+Teoretisk metode: Fra et teoretisk perspektiv kan hermeneutisk
+dekonstruktion være en kombination af hermeneutikkens fokus på
+fortolkning og dekonstruktionens fokus på at nedbryde og udfordre
+tekstens overfladiske mening for at afsløre dybere lag af betydning.
 
-Filosofisk tilgang: Filosofisk kan begrebet forstås som en metode til at udforske, hvordan betydning konstrueres og rekonstrueres gennem fortolkning, og hvordan vores forståelse af tekster og virkeligheden er formet af forskellige diskursive praksisser.
+Filosofisk tilgang: Filosofisk kan begrebet forstås som en metode til at
+udforske, hvordan betydning konstrueres og rekonstrueres gennem
+fortolkning, og hvordan vores forståelse af tekster og virkeligheden er
+formet af forskellige diskursive praksisser.
 
-Litterær kritik: I litterær kritik bruges hermeneutisk dekonstruktion til at analysere og fortolke litterære værker, ofte med fokus på at afdække de mange lag af betydning og de kontradiktioner, der kan være til stede i teksten.
+Litterær kritik: I litterær kritik bruges hermeneutisk dekonstruktion
+til at analysere og fortolke litterære værker, ofte med fokus på at
+afdække de mange lag af betydning og de kontradiktioner, der kan være
+til stede i teksten.
 
-Kulturel analyse: I en bredere kulturel kontekst kan hermeneutisk dekonstruktion anvendes til at analysere kulturelle artefakter og praksisser, idet man fokuserer på, hvordan betydninger er skabt, vedligeholdt og udfordret.
+Kulturel analyse: I en bredere kulturel kontekst kan hermeneutisk
+dekonstruktion anvendes til at analysere kulturelle artefakter og
+praksisser, idet man fokuserer på, hvordan betydninger er skabt,
+vedligeholdt og udfordret.
 :::
 
-Partikelentanglement enten er et ret specifikt fysisk fænomen. Eller en matematisk 
-beskrivelse af dette fysiske fænomen.
+Partikelentanglement er et ret specifikt fysisk fænomen.
 
-::: {.notes}
-Og når vi snakker det hjørne af fysikken - er forskellen på matematik og fysik
-ret svær at få øje på.
-:::
+Det er koherens og superposition også.
+
+Det betyder at det faktisk er ret specifikke og meget konkrete ting vi
+leder efter.
 
 ## Hvorfor bliver det så svært alligevel?
 
-:::{.notes}
-Anita skriver: 
-Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel.
-Det er det dæleme også når man sidder på et universitetsbibliotek. Vi føler ret
-ofte behov for at fortælle de unge mennesker der finder frem til os, at det 
-jo sådan set er en gymnasieopgave de skal skrive. Ikke en bacheloropgave.
-
+::: notes
+Anita skriver: Niveauet for de naturvidenskabelige opgaver er højt set
+fra en folkebiblioteksvinkel. Det er det dæleme også når man sidder på
+et universitetsbibliotek. Vi føler ret ofte behov for at fortælle de
+unge mennesker der finder frem til os, at det jo sådan set er en
+gymnasieopgave de skal skrive. Ikke en bacheloropgave.
 :::
 
-* Deres problemformuleringer er komplekse.
-* Gymnasie eller bachelor opgave?
+::: incremental
+-   Deres problemformuleringer er komplekse.
+-   Eller bare meget brede:
+    -   "Mikroorganismer, enzymer og proteinsyntese"
+-   Gymnasie eller bachelor opgave?
+:::
 
+::: notes
+Puha. Det er bredt. Vi ved ikke engang hvor mange arter vi har på
+jorden. Estimaterne er mellem 2 millioner og 1 milliard. Der er en vis
+konsensus om at 11 millioner er det bedste bud.
+
+Svampe udgør 1½ millon. En del af dem er at regne som mikroorganismer.
+Restgruppen - herunder diverse alger - dem er der ca 2½ million af.
+
+Men. Hvis det er det der er emnet - så må det være noget med de enzymer
+der indgår i proteinsyntesen i mikroorganismer.
+
+Det er en ret bred afløsningsopgave på mikrobiologistudiet på KU.
+
+En SRP-opgave skal være på 15-20 sider. En bachelor opgave på KU må være
+på maks 30 sider...
+:::
+
+## Og så er der deres forventninger...
+
+![](spørgsmålene.png) 
+
+::: notes 
+Vi noterer os at chatbotten er helt med på at en bibliotekar har knold i nakken... 
+:::
+
+## Nå. Hvad gør vi så?
+
+
+
+::: notes
+Det er de gode klassiske bibliotekardyder.
+Interview og bloksøgning.
+:::
+
+Hvilke mikroorganismer? Hvad kan vi ellers kalde enzymer? Den der
+proteinsyntese - hvad sker der i sådan en?
+
+
+| Term 1          | Term 2       | Term 3            |
+|-----------------|--------------|-------------------|
+| Mikroorganismer | Enzymer      | Proteinsyntese    |
+|                 |              |                   |
+| Microorganisms  | Enzymes      | Protein Synthesis |
+| Bacteria        | Biocatalysts | Transcription Translation     |
+| Fungi           |              | Ribosomes       |
+
+(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR transcription OR translation OR ribosomes)
+
+::: notes
+Og selvfølgelig på engelsk. Vi finder ikke meget på dansk.
+:::
 
 ## Hvor søger vi?
 
-I har den "digitale materialeoverbygning". Og det er,
-særligt på det naturvidenskabelige område ... tyndt.
+Så langt så godt. Hvor katten søger vi så?
 
-Så vi må holde os til åbne søgemaskiner. 
+I har den "digitale materialeoverbygning". Og det er, særligt på det
+naturvidenskabelige område ... tyndt.
 
-
+Så vi må holde os til åbne søgemaskiner.
 
 ## Bibliotek.dk
 
-## netpunkt
+![Bibliotek.dk er ikke så ringe endda](bibliotek-advanced.png)
 
+Svagheden er - at det er et ret begrænset indhold der søges i.
+
+Det fine er at den avancerede søgning i bibliotek.dk taler samme sprog som
+netpunkt.dk
 
 ## Google Scholar
+
+I må godt...
+
+::: notes
+Jeg underviser både biokemi og mikrobiologi studerende i litteratursøgning.
+
+Deres undervisere - og der er i hvert fald et par professorer på dét hold, 
+klarer sig fint med google scholar...
+
+:::
 
 ## Pubmed
 
 Det vi ville kalde for sundhedsvidenskab. Men nu var det jo
-naturvidenskab vi skulle tale om. 
+naturvidenskab vi skulle tale om.
 
 Ret meget biokemi, (human) fysiologi. Kemi.
 
 ## Arxiv
-CS, fysik (i meget bred forstand). matematik, statistik, 
 
-En smule elektroingeniørfag. Kvantitativ biologi,
-kvantitativ økonomi.
+CS, fysik (i meget bred forstand). matematik, statistik,
 
+En smule elektroingeniørfag. Kvantitativ biologi, kvantitativ økonomi.
 
-
-
+Og hvad skal de have? De skal nok overvejende have review artikler.
 
 # Kilder til informationssøgning
 
-Så mget hjælper vi simpelthen ikke. Lad os være helt ærlige - det vi har som
-vi kategoriserer som naturvidenskab er godt nok småt. 
+Så mget hjælper vi simpelthen ikke. Lad os være helt ærlige - det vi har
+som vi kategoriserer som naturvidenskab er godt nok småt.
 
 Men! Vi kan skaffe det meste.
 
-Så - det er helt klassisk litteratursøgning. Find referencen. Og skaf materialet.
+Så - det er helt klassisk litteratursøgning. Find referencen. Og skaf
+materialet.
 
 Hvordan finder vi så referencerne?
 
-
-Og svaret fra vores folk der servicerer jer - fjernlån! 
+Og svaret fra vores folk der servicerer jer - fjernlån!
 
 Det er heldigvis ret hurtigt. Men...
 
 ## Spørgsmål?
 
-1) ”Formidling af den digitale materialeoverbygning” er arbejdsgruppens anker og vi kommer derfor ikke uden om digitale kilder, som er tilgængelige for folkebibliotekerne. Det er meget forskelligt hvad der abonneres på lokalt, men alle har adgang til overbygningslicenserne og services som centralbibliotekerne og Det Kgl. Bibliotek stiller til rådighed https://centralbibliotek.dk/materialeoverbygning/materialerogservices
- 
-2) Det er begrænset hvor meget naturvidenskab er repræsenteret på ovennævnte side, så OA vil være godt.
- 
-Og fjernlån! 
- 
-3) Søgetips til bibliotek.dk og netpunkt i forhold til at finde alle typer af naturvidenskabelige kilder
- 
-4) Vi betjener især studerende på ungdomsuddannelserne, hvor SRP fylder meget i bibliotekernes hverdag i perioden fra januar til marts. Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel. Hvis du har gode tip til at hjælpe denne gruppe med ovennævnte kilder, så vil det være meget velkommen. Vi møder dem på vagten og via Book-en-bibliotekar, som findes på mange biblioteker. Her i Vejle er vi i denne sæson stødt på følgende naturvidenskabelige emner: 
-                             SRO: mikroorganismer, enzymer og proteinsyntese 
-                             SRP: Råstoffer i Bolivia 
-                             SRP: RSA-kryptering og AES-kryptering (matematik og samfundsfag) 
-                             SRP: Etik og organdonation (biologi og religion) 
- 
-5) Måske lidt om trykte kilder og hvorfor gamle titler også stadig kan være aktuelle.
- 
-## Er det ikke forældet?
-:::{.notes}
+1)  ”Formidling af den digitale materialeoverbygning” er arbejdsgruppens
+    anker og vi kommer derfor ikke uden om digitale kilder, som er
+    tilgængelige for folkebibliotekerne. Det er meget forskelligt hvad
+    der abonneres på lokalt, men alle har adgang til
+    overbygningslicenserne og services som centralbibliotekerne og Det
+    Kgl. Bibliotek stiller til rådighed
+    https://centralbibliotek.dk/materialeoverbygning/materialerogservices
 
-Anita har bedt om mig sige noget om "Måske lidt om trykte kilder og hvorfor 
-gamle titler også stadig kan være aktuelle."
+2)  Det er begrænset hvor meget naturvidenskab er repræsenteret på
+    ovennævnte side, så OA vil være godt.
+
+Og fjernlån!
+
+3)  Søgetips til bibliotek.dk og netpunkt i forhold til at finde alle
+    typer af naturvidenskabelige kilder
+
+4)  Vi betjener især studerende på ungdomsuddannelserne, hvor SRP fylder
+    meget i bibliotekernes hverdag i perioden fra januar til marts.
+    Niveauet for de naturvidenskabelige opgaver er højt set fra en
+    folkebiblioteksvinkel. Hvis du har gode tip til at hjælpe denne
+    gruppe med ovennævnte kilder, så vil det være meget velkommen. Vi
+    møder dem på vagten og via Book-en-bibliotekar, som findes på mange
+    biblioteker. Her i Vejle er vi i denne sæson stødt på følgende
+    naturvidenskabelige emner:
+
+SRO: mikroorganismer, enzymer og proteinsyntese SRP: Råstoffer i Bolivia
+SRP: RSA-kryptering og AES-kryptering (matematik og samfundsfag) SRP:
+Etik og organdonation (biologi og religion)
+
+5)  Måske lidt om trykte kilder og hvorfor gamle titler også stadig kan
+    være aktuelle.
+
+## Er det ikke forældet?
+
+Lærebøger. På papir. Det kan I trods alt indlåne. Også selvom de er af
+lidt ældre dato.
+
+::: notes
+Anita har bedt om mig sige noget om "Måske lidt om trykte kilder og
+hvorfor gamle titler også stadig kan være aktuelle."
 :::
 
-![](Old_Books_01.jpg){fig-align=center}
+![](Old_Books_01.jpg){fig-align="center"}
 
 Nej, ikke nødvendigvis
 
-- Sundhedsvidenskab - måske
-- Historiske data - uopdaterede
-- Naturvidenskaberne - sjældent
+-   Sundhedsvidenskab - måske
+-   Historiske data - uopdaterede
+-   Naturvidenskaberne - sjældent
 
-:::{.notes}
-Der er forskelle. I sundhedsvidenskaberne udvikler tingene
-sig ret hurtigt. Det lægerne var sikre på reddede liv
-for ti år siden, viser sig i dag at slå folk ihjel.
+::: notes
+Der er forskelle. I sundhedsvidenskaberne udvikler tingene sig ret
+hurtigt. Det lægerne var sikre på reddede liv for ti år siden, viser sig
+i dag at slå folk ihjel.
 
-Og bogen fra 2017 der fortæller at fossile brændsler udgjorde
-30.7% af Bolivias eksport - har selvfølgelig ikke med at 
-det i 2022 var faldet til 22.4%
+Og bogen fra 2017 der fortæller at fossile brændsler udgjorde 30.7% af
+Bolivias eksport - har selvfølgelig ikke med at det i 2022 var faldet
+til 22.4%
 
-Men vi kan være ret sikre på at bogen om RSA og AES
-kryptering stadig har ret i at RSA er en asymmetrisk
-krypteringsteknologi - og at AES er symmetrisk.
-Og matematikken bag RSA er nøjagtig den samme som den var 
-i 1977 (og som AES var i 1998)
+Men vi kan være ret sikre på at bogen om RSA og AES kryptering stadig
+har ret i at RSA er en asymmetrisk krypteringsteknologi - og at AES er
+symmetrisk. Og matematikken bag RSA er nøjagtig den samme som den var i
+1977 (og som AES var i 1998)
 :::
 
 ## Spørgsmål?
