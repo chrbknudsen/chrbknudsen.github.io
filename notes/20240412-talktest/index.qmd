@@ -41,9 +41,8 @@ HUSK OPDATER LINK
 ::: {.notes}
 
 Dette er adgangskravene til bibliotekaruddannelsen. 
-Og nu får I ingeniørens fordomme for fuld udblæsning :)
-De af mine klassekammerater i både folkeskole og gymnasie der valgte 
-bibliotekarvejen - de var ikke fans af naturvidenskab, og syntes at det var svært.
+Min tese er, at det grundlæggende er et sprogproblem.
+I taler ikke naturvidenskabsk. Helt enkelt.
 https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
 :::
 
@@ -62,7 +61,8 @@ https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikatio
 
 ## Det betyder at det faktisk er ret let
 
-For en hermeneutisk dekonstruktion kan betyde mange ting
+En hermeneutisk dekonstruktion kan betyde mange ting
+::: {.notes}
 
 Fortolkningsproces: Hermeneutisk dekonstruktion kan ses som en proces, hvor man fortolker og analyserer tekster ved at afdække de mange lag af betydning og de underliggende antagelser.
 
@@ -77,8 +77,9 @@ Filosofisk tilgang: Filosofisk kan begrebet forstås som en metode til at udfors
 Litterær kritik: I litterær kritik bruges hermeneutisk dekonstruktion til at analysere og fortolke litterære værker, ofte med fokus på at afdække de mange lag af betydning og de kontradiktioner, der kan være til stede i teksten.
 
 Kulturel analyse: I en bredere kulturel kontekst kan hermeneutisk dekonstruktion anvendes til at analysere kulturelle artefakter og praksisser, idet man fokuserer på, hvordan betydninger er skabt, vedligeholdt og udfordret.
+:::
 
-Mens partikelentanglement enten er et ret specifikt fysisk fænomen. Eller en matematisk 
+Partikelentanglement enten er et ret specifikt fysisk fænomen. Eller en matematisk 
 beskrivelse af dette fysiske fænomen.
 
 ::: {.notes}
@@ -90,16 +91,48 @@ ret svær at få øje på.
 
 :::{.notes}
 Anita skriver: 
-Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel
-:::
-
+Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel.
 Det er det dæleme også når man sidder på et universitetsbibliotek. Vi føler ret
 ofte behov for at fortælle de unge mennesker der finder frem til os, at det 
 jo sådan set er en gymnasieopgave de skal skrive. Ikke en bacheloropgave.
 
+:::
+
+* Deres problemformuleringer er komplekse.
+* Gymnasie eller bachelor opgave?
+
+
+## Hvor søger vi?
+
+I har den "digitale materialeoverbygning". Og det er,
+særligt på det naturvidenskabelige område ... tyndt.
+
+Så vi må holde os til åbne søgemaskiner. 
+
+
+
 ## Bibliotek.dk
 
 ## netpunkt
+
+
+## Google Scholar
+
+## Pubmed
+
+Det vi ville kalde for sundhedsvidenskab. Men nu var det jo
+naturvidenskab vi skulle tale om. 
+
+Ret meget biokemi, (human) fysiologi. Kemi.
+
+## Arxiv
+CS, fysik (i meget bred forstand). matematik, statistik, 
+
+En smule elektroingeniørfag. Kvantitativ biologi,
+kvantitativ økonomi.
+
+
+
 
 
 # Kilder til informationssøgning
