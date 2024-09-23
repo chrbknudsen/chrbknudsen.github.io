@@ -9,7 +9,8 @@ about:
     - icon: twitter
       text: twitter
       url: https://twitter.com/chrbknudsen
-    - text: "{{< fa envelope >}} Email"
+    - icon: envelope
+      text: Email
       url: mailto:christian.knudsen@gmail.com
     - text: "{{< ai orcid >}} ORCID 0000-0002-9816-768X"
       url: https://orcid.org/0000-0002-9816-768X
