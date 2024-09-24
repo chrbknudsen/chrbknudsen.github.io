@@ -15,7 +15,7 @@ about:
     - icon: github
       text: Github
       url: https://github.com/chrbknudsen
-    - icon: orcid
+    - icon: ORCID
       text: ORCID
       url: https://orcid.org/0000-0002-9816-768X
 image: img/cbk.jpg
