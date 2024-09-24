@@ -74,7 +74,7 @@
     "href": "index.html",
     "title": "Christian Knudsen",
     "section": "",
-    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+    "text": "ai orcid ## Bio\nBorn and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
   },
   {
     "objectID": "index.html#bio",
@@ -172,14 +172,14 @@
     "href": "notes/20241003-natvid-lit-søgn/index.html#min-baggrund",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Min baggrund",
-    "text": "Min baggrund\n\nChristian Knudsen\nCivilingeniør - kemi\n21 år på lidt af hvert der er endt med at blive til KB\nVoksede op på et bibliotek\n\nSlides?\nhttps://christianknudsen.info/notes/20240412-talktest/\nHUSK OPDATER LINK"
+    "text": "Min baggrund\n\nChristian Knudsen\nCivilingeniør - kemi\n21 år på lidt af hvert der er endt med at blive til KB\nVoksede op på et bibliotek\n\nSlides?\nhttps://christianknudsen.info/notes/20241003-natvid-lit-search"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#hvad-er-opgaven",
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvad-er-opgaven",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvad er opgaven?",
-    "text": "Hvad er opgaven?\n\n”Formidling af den digitale materialeoverbygning” er arbejdsgruppens anker og vi kommer derfor ikke uden om digitale kilder, som er tilgængelige for folkebibliotekerne. Det er meget forskelligt hvad der abonneres på lokalt, men alle har adgang til overbygningslicenserne og services som centralbibliotekerne og Det Kgl. Bibliotek stiller til rådighed https://centralbibliotek.dk/materialeoverbygning/materialerogservices\nDet er begrænset hvor meget naturvidenskab er repræsenteret på ovennævnte side, så OA vil være godt.\n\n\nJeg er jo priviligeret med formentlig nationens bedste adgang til naturvidenskabelig litteratur. Så jeg kommer ikke så ofte forbi overbygningslicenserne, og smuttede lige forbi til forberedelse.\nDet er dog en trist oplevelse!"
+    "text": "Hvad er opgaven?\n\n”Formidling af den digitale materialeoverbygning” er arbejdsgruppens anker og vi kommer derfor ikke uden om digitale kilder, som er tilgængelige for folkebibliotekerne. Det er meget forskelligt hvad der abonneres på lokalt, men alle har adgang til overbygningslicenserne og services som centralbibliotekerne og Det Kgl. Bibliotek stiller til rådighed\nDet er begrænset hvor meget naturvidenskab er repræsenteret på ovennævnte side, så OA vil være godt.\n\n\nJeg er jo priviligeret med formentlig nationens bedste adgang til naturvidenskabelig litteratur. Så jeg kommer ikke så ofte forbi overbygningslicenserne, og smuttede lige forbi til forberedelse.\nDet er dog en trist oplevelse!"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#så-hvad-er-opgaven",
@@ -193,21 +193,21 @@
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-er-det-meget-svært",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvorfor er det meget svært?",
-    "text": "Hvorfor er det meget svært?\n\nDette er adgangskravene til bibliotekaruddannelsen. Min tese er, at det grundlæggende er et sprogproblem. I taler ikke naturvidenskabsk. I er på lige så dybt vand som hvis problemformuleringen var på finsk. https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav"
+    "text": "Hvorfor er det meget svært?\n\nDette er adgangskravene til bibliotekaruddannelsen. Min tese er, at det grundlæggende er et sprogproblem. I taler ikke naturvidenskabsk. I er på lige så dybt vand som hvis problemformuleringen var på finsk.\nSå min opgave er at prøve at afmystificere det bare en smule.\n\n\nhttps://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-er-det-svært---generelt",
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-er-det-svært---generelt",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvorfor er det svært - generelt?",
-    "text": "Hvorfor er det svært - generelt?\n“En kvantefysisk analyse af partikelentanglement afslører koherens og superpositionstilstande, som er afgørende for forståelsen af kvantecomputeres potentiale.”"
+    "text": "Hvorfor er det svært - generelt?\n\n“En kvantefysisk analyse af partikelentanglement afslører koherens og superpositionstilstande, som er afgørende for forståelsen af kvantecomputeres potentiale.”\n“En hermeneutisk dekonstruktion af poststrukturalistiske teorier i samtidslitteratur belyser de intertekstuelle relationer og diskursive praksisser, der konstruerer subjektivitet og social ontologi gennem et polyfonisk samspil af magtstrukturer og semiotiske systemer.”"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-er-det-svært---generelt-1",
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-er-det-svært---generelt-1",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvorfor er det svært - generelt?",
-    "text": "Hvorfor er det svært - generelt?\n\n\n“En kvanttifysiikkaa analyse af hiukkasten takertuminen afslører johdonmukaisuutta og superpositiomoodit, som er afgørende for forståelsen af kvantecomputeres potentiale.”\n\n\n\n“En hermeneutisk dekonstruktion af poststrukturalistiske teorier i samtidslitteratur belyser de intertekstuelle relationer og diskursive praksisser, der konstruerer subjektivitet og social ontologi gennem et polyfonisk samspil af magtstrukturer og semiotiske systemer.”\n\nbegge genereret af chatgpt\n\nDet er finsk. Og den anden tekst kunne ligeså godt være på finsk når man er ingeniør."
+    "text": "Hvorfor er det svært - generelt?\n\n\n“En kvanttifysiikkaa analyse af hiukkasten takertuminen afslører johdonmukaisuutta og superpositiomoodit, som er afgørende for forståelsen af kvantecomputeres potentiale.”\n\n\n\n“En hermeneutisk dekonstruktion af poststrukturalistiske teorier i samtidslitteratur belyser de intertekstuelle relationer og diskursive praksisser, der konstruerer subjektivitet og social ontologi gennem et polyfonisk samspil af magtstrukturer og semiotiske systemer.”\n\nbegge genereret af chatgpt\n\nDet er finsk. Og den anden tekst kunne ligeså godt være på finsk når man er ingeniør.\nMEN! De her vanskelige og bøvlede naturvidenskabelige fagudtryk betyder i almindelighed noget meget præcist. Det er derfor de er bøvlede."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#det-gør-det-lettere",
@@ -221,7 +221,7 @@
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvorfor-bliver-det-så-svært-alligevel",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvorfor bliver det så svært alligevel?",
-    "text": "Hvorfor bliver det så svært alligevel?\n\nAnita skriver: Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel. Det er det dæleme også når man sidder på et universitetsbibliotek. Vi føler ret ofte behov for at fortælle de unge mennesker der finder frem til os, at det jo sådan set er en gymnasieopgave de skal skrive. Ikke en bacheloropgave.\n\n\n\nDeres problemformuleringer er komplekse.\nEller bare meget brede:\n\n“Mikroorganismer, enzymer og proteinsyntese”\n\nGymnasie eller bachelor opgave?\n\n\n\nPuha. Det er bredt. Vi ved ikke engang hvor mange arter vi har på jorden. Estimaterne er mellem 2 millioner og 1 milliard. Der er en vis konsensus om at 11 millioner er det bedste bud.\nSvampe udgør 1½ millon. En del af dem er at regne som mikroorganismer. Restgruppen - herunder diverse alger - dem er der ca 2½ million af.\nMen. Hvis det er det der er emnet - så må det være noget med de enzymer der indgår i proteinsyntesen i mikroorganismer.\nDet er en ret bred afløsningsopgave på mikrobiologistudiet på KU.\nEn SRP-opgave skal være på 15-20 sider. En bachelor opgave på KU må være på maks 30 sider…"
+    "text": "Hvorfor bliver det så svært alligevel?\n\nAnita skriver: Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel.\nDet er det dæleme også når man sidder på et universitetsbibliotek. Vi føler ret ofte behov for at fortælle de unge mennesker der finder frem til os, at det jo sådan set er en gymnasieopgave de skal skrive. Ikke en bacheloropgave.\n\n\n\nDeres problemformuleringer er komplekse.\nEller bare meget brede:\n\n“Mikroorganismer, enzymer og proteinsyntese”\n\nGymnasie eller bachelor opgave?\n\n\n\nPuha. Det er bredt. Vi ved ikke engang hvor mange arter vi har på jorden. Estimaterne er mellem 2 millioner og 1 milliard. Der er en vis konsensus om at 11 millioner er det bedste bud.\nSvampe udgør 1½ millon. En del af dem er at regne som mikroorganismer. Restgruppen - herunder diverse alger - dem er der ca 2½ million af.\nMen. Hvis det er det der er emnet - så må det være noget med de enzymer der indgår i proteinsyntesen i mikroorganismer.\nDet er en ret bred afløsningsopgave på mikrobiologistudiet på KU.\nEn SRP-opgave skal være på 15-20 sider. En bachelor opgave på KU må være på maks 30 sider…"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#og-så-er-der-deres-forventninger",
@@ -235,49 +235,49 @@
     "href": "notes/20241003-natvid-lit-søgn/index.html#nå.-hvad-gør-vi-så",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Nå. Hvad gør vi så?",
-    "text": "Nå. Hvad gør vi så?\n\nDet er de gode klassiske bibliotekardyder. Interview og bloksøgning.\n\nHvilke mikroorganismer? Hvad kan vi ellers kalde enzymer? Den der proteinsyntese - hvad sker der i sådan en?\n\n\n\nTerm 1\nTerm 2\nTerm 3\n\n\n\n\nMikroorganismer\nEnzymer\nProteinsyntese\n\n\n\n\n\n\n\nMicroorganisms\nEnzymes\nProtein Synthesis\n\n\nBacteria\nBiocatalysts\nTranscription Translation\n\n\nFungi\n\nRibosomes\n\n\n\n(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR transcription OR translation OR ribosomes)\n\nOg selvfølgelig på engelsk. Vi finder ikke meget på dansk."
+    "text": "Nå. Hvad gør vi så?\n\nDet er de gode klassiske bibliotekardyder. Interview og bloksøgning.\n\nHvilke mikroorganismer? Hvad kalder vi ellers enzymer? Proteinsyntese - hvad sker der?\n\n\n\nTerm 1\nTerm 2\nTerm 3\n\n\n\n\nMikroorganismer\nEnzymer\nProteinsyntese\n\n\n\n\n\n\n\nMicroorganisms\nEnzymes\nProtein Synthesis\n\n\nBacteria\nBiocatalysts\nTranscription Translation\n\n\nFungi\n\nRibosomes\n\n\n\n(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR ribosomes)\n\nOg selvfølgelig på engelsk. Vi finder ikke meget på dansk."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#hvor-søger-vi",
     "href": "notes/20241003-natvid-lit-søgn/index.html#hvor-søger-vi",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Hvor søger vi?",
-    "text": "Hvor søger vi?\nSå langt så godt. Hvor katten søger vi så?\nI har den “digitale materialeoverbygning”. Og det er, særligt på det naturvidenskabelige område … tyndt.\nSå vi må holde os til åbne søgemaskiner.\n\nOg så håbe at vi kan få fingrene i artikler og bøger hurtigt nok…"
+    "text": "Hvor søger vi?\nSå langt så godt.\n\n\nHvor katten søger vi så?\nI har den “digitale materialeoverbygning”.\n\nOg det er, særligt på det naturvidenskabelige område …\ntyndt.\n\nSå vi må holde os til åbne søgemaskiner.\n\n\n\nOg så håbe at vi kan få fingrene i artikler og bøger hurtigt nok…"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#bibliotek.dk",
     "href": "notes/20241003-natvid-lit-søgn/index.html#bibliotek.dk",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Bibliotek.dk",
-    "text": "Bibliotek.dk\n\nBibliotek.dk er ikke så ringe enddaSvagheden er - at det er et ret begrænset indhold der søges i.\nDet fine er at den avancerede søgning i bibliotek.dk taler samme sprog som netpunkt.dk\n\nIndholdet er det lidt tungt med. Det er lidt hit’n’miss hvad der er af artikler. Bøgerne er ret godt dækket, også ikke-danske udgivelser."
+    "text": "Bibliotek.dk\n\nBibliotek.dk er ikke så ringe enddaSvagheden er - at det er et ret begrænset indhold der søges i.\nDet fine er at den avancerede søgning i bibliotek.dk taler samme sprog som netpunkt.dk\n\nIndholdet er det lidt tungt med. Det er lidt hit’n’miss hvad der er af artikler. Bøgerne er ret godt dækket, også ikke-danske udgivelser.\nDet betyder så også at der nok bør søges på både dansk og engelsk."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#google-scholar",
     "href": "notes/20241003-natvid-lit-søgn/index.html#google-scholar",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Google Scholar",
-    "text": "Google Scholar\nI må godt…\n\nGoogle Scholar bruges foruroligende ofte\nJeg underviser både biokemi og mikrobiologi studerende i litteratursøgning.\nDeres undervisere - og der er i hvert fald et par professorer på dét hold, klarer sig fint med google scholar…\nCitations: Det er resultater hvor Google kan regne ud at artiklen - eller hvad det nu er - må eksistere, fordi nogen har citeret den. Men de kan ikke give os et link. Så sorter dem fra.\nSorter også patenter fra. De er frit tilgængelige, men med mindre de er fra før 1960 er de tæt på ulæselige.\nSøgemulighederne er ret begrænsede…\nIndholdet - det hele. Alle fag. De er der alle sammen."
+    "text": "Google Scholar\nI må godt bruge den\n\nGoogle Scholar bruges foruroligende ofte\nJeg underviser både biokemi og mikrobiologi studerende i litteratursøgning.\nDeres undervisere - og der er i hvert fald et par professorer på dét hold, klarer sig fint med google scholar…\nCitations: Det er resultater hvor Google kan regne ud at artiklen - eller hvad det nu er - må eksistere, fordi nogen har citeret den. Men de kan ikke give os et link. Så sorter dem fra.\nSorter også patenter fra. De er frit tilgængelige, men med mindre de er fra før 1960 er de tæt på ulæselige.\nSøgemulighederne er ret begrænsede…\nIndholdet - det hele. Alle fag. De er der alle sammen."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#og-artiklerne",
     "href": "notes/20241003-natvid-lit-søgn/index.html#og-artiklerne",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Og artiklerne?",
-    "text": "Og artiklerne?\nDer er desværre ikke mulighed for at søge kun i OA-litteraturen.\n\n\nGoogle er ret god til at finde alternativer. “All 10 versions” vil ofte, men ikke altid kunne føre til en åben udgave.\nIndholdet - det hele. Alle fag. De er der alle sammen."
+    "text": "Og artiklerne?\nDer er desværre ikke mulighed for at søge kun i OA-litteraturen.\n\n\nMen!\n\n\n\n\nGoogle er ret god til at finde alternativer. “All 10 versions” vil ofte, men ikke altid kunne føre til en åben udgave.\nIndholdet - det hele. Alle fag. De er der alle sammen."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#pubmed",
     "href": "notes/20241003-natvid-lit-søgn/index.html#pubmed",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Pubmed",
-    "text": "Pubmed\nI mellemrummet mellem egentlig sundhedsvidenskab og de fugtige naturvidenskaber.\nDet vi ville kalde for sundhedsvidenskab. Men nu var det jo naturvidenskab vi skulle tale om.\nRet meget biokemi, (human) fysiologi. Kemi.\n\nJamen det var jo naturvidenskab vi skulle arbejde med. Ja. Men fag som fysiologi farmaci og medicinal kemi bliver publiceret i ca. de samme tidsskrifter som biokemi organisk kemi og den slags. Og derfor har de RIGTIG mange relevante artikler med.\nEn lækker ting er at man kan begrænse til artikler som der er fri adgang til.\nOg så er der en dyb dyb indeksering af artiklerne. Vi kalder dem MESH-termer."
+    "text": "Pubmed\nSuper relevant for biologi og kemi - og beslægtede fag.\n\nDyb indexering!\n\nI mellemrummet mellem egentlig sundhedsvidenskab og de fugtige naturvidenskaber.\nJamen det var jo naturvidenskab vi skulle arbejde med. Ja. Men fag som fysiologi farmaci og medicinal kemi bliver publiceret i ca. de samme tidsskrifter som biokemi organisk kemi og den slags. Og derfor har de RIGTIG mange relevante artikler med.\nEn lækker ting er at man kan begrænse til artikler som der er fri adgang til.\nOg så er der en dyb dyb indeksering af artiklerne. Vi kalder dem MESH-termer."
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#arxiv",
     "href": "notes/20241003-natvid-lit-søgn/index.html#arxiv",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Arxiv",
-    "text": "Arxiv\n CS, fysik (i meget bred forstand). matematik, statistik,\nEn smule elektroingeniørfag. Kvantitativ biologi, kvantitativ økonomi.\nOg hvad skal de have? De skal nok overvejende have review artikler."
+    "text": "Arxiv\n\nFysikerne har en lang tradition for at dele preprints.\nCS, fysik (i meget bred forstand). matematik, statistik,\nEn smule elektroingeniørfag. Kvantitativ biologi, kvantitativ økonomi.\n\nHvad er preprints? Når en forsker(gruppe) har skrevet en artikel, sendes den til et tidsskrift. Den undergår peer-review. Og når den er kommet gennem det, sættes den op og layoutes. Og så er der et preprint, som forfatterne får til sidste korrektur. I gamle dage var dele af den økonomiske model, at man godt nok ikke betalte for at få artiklen publiceret. Men man skulle købe et antal preprints, som var 1. til uddeling blandt kollegerne. 2. det dyreste papir nogensinde.\nDisse preprints eksisterer i dag i digital udgave. De skal ikke købes, men må stadig deles. Og det gør de. Det betyder at det ikke er den endelige autoriserede udgave af en artikel. Men den er så tæt på at det ikke gør nogen betydende forskel.\nOg det er gratis!"
   },
   {
     "objectID": "notes/20241003-natvid-lit-søgn/index.html#er-det-ikke-forældet",
@@ -298,7 +298,7 @@
     "href": "notes/20241003-natvid-lit-søgn/index.html#spørgsmål",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Spørgsmål?",
-    "text": "Spørgsmål?\nOg fjernlån!\n\nSøgetips til bibliotek.dk og netpunkt i forhold til at finde alle typer af naturvidenskabelige kilder\nVi betjener især studerende på ungdomsuddannelserne, hvor SRP fylder meget i bibliotekernes hverdag i perioden fra januar til marts. Niveauet for de naturvidenskabelige opgaver er højt set fra en folkebiblioteksvinkel. Hvis du har gode tip til at hjælpe denne gruppe med ovennævnte kilder, så vil det være meget velkommen. Vi møder dem på vagten og via Book-en-bibliotekar, som findes på mange biblioteker. Her i Vejle er vi i denne sæson stødt på følgende naturvidenskabelige emner:"
+    "text": "Spørgsmål?"
   },
   {
     "objectID": "organisations/index.html",
@@ -334,5 +334,19 @@
     "title": "Untitled",
     "section": "",
     "text": "1+1"
+  },
+  {
+    "objectID": "notes/20241003-natvid-lit-søgn/index.html#hierarkiet",
+    "href": "notes/20241003-natvid-lit-søgn/index.html#hierarkiet",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Hierarkiet",
+    "text": "Hierarkiet\n\n© 2024 The University of Notre Dame Australia"
+  },
+  {
+    "objectID": "notes/20241003-natvid-lit-søgn/index.html#hvor-får-vi-så-fat-i-materialerne",
+    "href": "notes/20241003-natvid-lit-søgn/index.html#hvor-får-vi-så-fat-i-materialerne",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Hvor får vi så fat i materialerne?",
+    "text": "Hvor får vi så fat i materialerne?\n\n\nGode kolleger siger:\nfjernlån/indlån/*lån"
   }
 ]
