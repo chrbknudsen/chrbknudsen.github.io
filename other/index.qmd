@@ -6,7 +6,7 @@ title: "Other CV related stuff"
 
 - Danish
 
-- English: americans think I'm british. Brits know I'm not.
+- English: Americans think I'm british. Brits know I'm not.
 - German: Fair reading comprehension, especially technical texts. Understand
 spoken german - if "Hochdeutsch" is spoken slowly. Speaks it well enough to
 order at restaurants.
@@ -15,11 +15,11 @@ order at restaurants.
 
 ## IT 
 
-In the traditional understanding of that word, I am a superuser of Microsoft Office.
+- In the traditional understanding of that word, I am a superuser of Microsoft Office.
 
-I teach programming in R and have basic knowledge of Python. 
+- I teach programming in R and have basic knowledge of Python. 
 
-Daily user of Linux, know regular expressions and SQL. Run my own webserver.
+- Daily user of Linux, know regular expressions and SQL. Run my own webserver.
 
 
 ## Private
