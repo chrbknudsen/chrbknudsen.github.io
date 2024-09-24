@@ -13,6 +13,8 @@ PrintBibliography(pubs, .opts = list(style = "html",
 
 ## Talks
 
+
+
 *1. marts 2012* - "Fagspecifikke databaser contra Web scale discovery, og om
 brugen af sidstnævnte kan spores  i statistikkerne".
 30 minutters oplæg på temadagen "Alt i ét? Overvejelser og praktiske erfaringer med Web Scale Discovery i Danmark".
@@ -45,11 +47,12 @@ Arrangeret af DFs forum for E-ressourcer. Den Sorte Diamant, København
 **26. maj 2009** - foredrag om ebøger - hovedbiblioteket Guldborgsund
 **30. marts 2009**-  foredrag om ebøger, BF, frederiksberg.
 
-
-Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København) 19. oktober, 2007
+**Oct. 19 2007** Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København) 
  
-Formidling i nye medier, seminar 21. juni 2007 (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”
+**Jun. 21 2007** Formidling i nye medier (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”
 
-Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe 17. november 2008 (BFs hus) ”Teknik: Software og hardware – læsere”
+**Nov. 17 2008** Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe (BFs hus) ”Teknik: Software og hardware – læsere”
 
-Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener” 12/10-07
+**Oct. 12 2007** Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener” 
+
+To gange - naturvidenskab for bibliotekarer
