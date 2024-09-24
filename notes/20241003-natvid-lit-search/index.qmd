@@ -221,11 +221,15 @@ Hvilke mikroorganismer? Hvad kalder vi ellers enzymer? Proteinsyntese - hvad ske
 | Bacteria        | Biocatalysts | Transcription Translation     |
 | Fungi           |              | Ribosomes       |
 
-(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR  ribosomes)
+
 
 ::: notes
 Og selvfølgelig på engelsk. Vi finder ikke meget på dansk.
 :::
+
+## Så søgningen er:
+
+(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR  ribosomes)
 
 ## Hvor søger vi?
 
