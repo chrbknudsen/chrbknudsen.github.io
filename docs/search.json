@@ -228,7 +228,14 @@
     "href": "notes/20241003-natvid-lit-search/index.html#nå.-hvad-gør-vi-så",
     "title": "Naturvidenskabelig litteratursøgning",
     "section": "Nå. Hvad gør vi så?",
-    "text": "Nå. Hvad gør vi så?\n\nDet er de gode klassiske bibliotekardyder. Interview og bloksøgning.\n\nHvilke mikroorganismer? Hvad kalder vi ellers enzymer? Proteinsyntese - hvad sker der?\n\n\n\nTerm 1\nTerm 2\nTerm 3\n\n\n\n\nMikroorganismer\nEnzymer\nProteinsyntese\n\n\n\n\n\n\n\nMicroorganisms\nEnzymes\nProtein Synthesis\n\n\nBacteria\nBiocatalysts\nTranscription Translation\n\n\nFungi\n\nRibosomes\n\n\n\n(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR ribosomes)\n\nOg selvfølgelig på engelsk. Vi finder ikke meget på dansk."
+    "text": "Nå. Hvad gør vi så?\n\nDet er de gode klassiske bibliotekardyder. Interview og bloksøgning.\n\nHvilke mikroorganismer? Hvad kalder vi ellers enzymer? Proteinsyntese - hvad sker der?\n\n\n\nTerm 1\nTerm 2\nTerm 3\n\n\n\n\nMikroorganismer\nEnzymer\nProteinsyntese\n\n\n\n\n\n\n\nMicroorganisms\nEnzymes\nProtein Synthesis\n\n\nBacteria\nBiocatalysts\nTranscription Translation\n\n\nFungi\n\nRibosomes\n\n\n\n\nOg selvfølgelig på engelsk. Vi finder ikke meget på dansk."
+  },
+  {
+    "objectID": "notes/20241003-natvid-lit-search/index.html#så-søgningen-er",
+    "href": "notes/20241003-natvid-lit-search/index.html#så-søgningen-er",
+    "title": "Naturvidenskabelig litteratursøgning",
+    "section": "Så søgningen er:",
+    "text": "Så søgningen er:\n(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR ribosomes)"
   },
   {
     "objectID": "notes/20241003-natvid-lit-search/index.html#hvor-søger-vi",
