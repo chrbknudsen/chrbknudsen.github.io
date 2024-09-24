@@ -9,6 +9,7 @@ toc: false
 image: "cover.webp"
 format: 
   revealjs: 
+    theme: serif
     logo: logo.png
     css: logo.css
 
@@ -30,9 +31,8 @@ editor:
 
 **Slides?**
 
-https://christianknudsen.info/notes/20240412-talktest/
+https://christianknudsen.info/notes/20241003-natvid-lit-search
 
-HUSK OPDATER LINK
 
 ## Hvad er opgaven?
 
@@ -42,7 +42,6 @@ HUSK OPDATER LINK
     der abonneres på lokalt, men alle har adgang til
     overbygningslicenserne og services som centralbibliotekerne og Det
     Kgl. Bibliotek stiller til rådighed
-    https://centralbibliotek.dk/materialeoverbygning/materialerogservices
 
 2)  Det er begrænset hvor meget naturvidenskab er repræsenteret på
     ovennævnte side, så OA vil være godt.
@@ -56,12 +55,10 @@ Det er dog en trist oplevelse!
 
 :::
 
-## Så hvad er opgaven?
+## Så hvad _er_ opgaven? 
 
 -   At finde litteratur til overvejende gymnasieelever
-
 -   Primært deres SRP-opgaver
-
   - SRO: mikroorganismer, enzymer og proteinsyntese 
   - SRP: Råstoffer i Bolivia
   - SRP: RSA-kryptering og AES-kryptering (matematik og samfundsfag) 
@@ -75,16 +72,23 @@ Det er dog en trist oplevelse!
 Dette er adgangskravene til bibliotekaruddannelsen. Min tese er, at det
 grundlæggende er et sprogproblem. I taler ikke naturvidenskabsk. I er på
 lige så dybt vand som hvis problemformuleringen var på finsk.
-https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav
+
+Så min opgave er at prøve at afmystificere det bare en smule.
+
 :::
 
-![](adgangskrav.png)
+![https://www.sdu.dk/da/uddannelse/bachelor/biblioteksvidenskab_it_og_kommunikation/adgangskrav](adgangskrav.png)
 
 ## Hvorfor er det svært - generelt?
 
-"En kvantefysisk analyse af partikelentanglement afslører koherens og
+- "En kvantefysisk analyse af partikelentanglement afslører koherens og
 superpositionstilstande, som er afgørende for forståelsen af
 kvantecomputeres potentiale."
+-   "En hermeneutisk dekonstruktion af poststrukturalistiske teorier i
+    samtidslitteratur belyser de intertekstuelle relationer og
+    diskursive praksisser, der konstruerer subjektivitet og social
+    ontologi gennem et polyfonisk samspil af magtstrukturer og
+    semiotiske systemer."
 
 ## Hvorfor er det svært - generelt?
 ::: {.incremental}
@@ -99,12 +103,15 @@ kvantecomputeres potentiale."
     ontologi gennem et polyfonisk samspil af magtstrukturer og
     semiotiske systemer."
 
-begge genereret af chatgpt 
+begge genereret af chatgpt  
 
 
 ::: notes
 Det er finsk. Og den anden tekst kunne ligeså godt være på finsk når man
 er ingeniør.
+
+MEN! De her vanskelige og bøvlede naturvidenskabelige fagudtryk betyder
+i almindelighed noget meget præcist. Det er derfor de er bøvlede.
 :::
 
 ## Det gør det lettere!
@@ -156,7 +163,9 @@ leder efter.
 
 ::: notes
 Anita skriver: Niveauet for de naturvidenskabelige opgaver er højt set
-fra en folkebiblioteksvinkel. Det er det dæleme også når man sidder på
+fra en folkebiblioteksvinkel. 
+
+Det er det _dæleme_ også når man sidder på
 et universitetsbibliotek. Vi føler ret ofte behov for at fortælle de
 unge mennesker der finder frem til os, at det jo sådan set er en
 gymnasieopgave de skal skrive. Ikke en bacheloropgave.
@@ -164,7 +173,7 @@ gymnasieopgave de skal skrive. Ikke en bacheloropgave.
 
 ::: incremental
 -   Deres problemformuleringer er komplekse.
--   Eller bare meget brede:
+-   Eller bare _meget_ brede:
     -   "Mikroorganismer, enzymer og proteinsyntese"
 -   Gymnasie eller bachelor opgave?
 :::
@@ -196,15 +205,12 @@ Vi noterer os at chatbotten er helt med på at en bibliotekar har knold i nakken
 
 ## Nå. Hvad gør vi så?
 
-
-
 ::: notes
 Det er de gode klassiske bibliotekardyder.
 Interview og bloksøgning.
 :::
 
-Hvilke mikroorganismer? Hvad kan vi ellers kalde enzymer? Den der
-proteinsyntese - hvad sker der i sådan en?
+Hvilke mikroorganismer? Hvad kalder vi ellers enzymer? Proteinsyntese - hvad sker der?
 
 
 | Term 1          | Term 2       | Term 3            |
@@ -215,7 +221,7 @@ proteinsyntese - hvad sker der i sådan en?
 | Bacteria        | Biocatalysts | Transcription Translation     |
 | Fungi           |              | Ribosomes       |
 
-(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR transcription OR translation OR ribosomes)
+(microorganisms OR bacteria OR fungi) AND (enzymes OR biocatalysts) AND (protein synthesis OR  ribosomes)
 
 ::: notes
 Og selvfølgelig på engelsk. Vi finder ikke meget på dansk.
@@ -223,12 +229,17 @@ Og selvfølgelig på engelsk. Vi finder ikke meget på dansk.
 
 ## Hvor søger vi?
 
-Så langt så godt. Hvor katten søger vi så?
+Så langt så godt.
 
-I har den "digitale materialeoverbygning". Og det er, særligt på det
-naturvidenskabelige område ... tyndt.
+::: incremental
+- Hvor katten søger vi så?
 
-Så vi må holde os til åbne søgemaskiner.
+- I har den "digitale materialeoverbygning". 
+  - Og det er, særligt på det naturvidenskabelige område ... 
+  - tyndt.
+
+- Så vi må holde os til åbne søgemaskiner.
+::: 
 
 ::: notes
 Og så håbe at vi kan få fingrene i artikler og bøger hurtigt nok...
@@ -240,7 +251,8 @@ Og så håbe at vi kan få fingrene i artikler og bøger hurtigt nok...
 
 Svagheden er - at det er et ret begrænset indhold der søges i.
 
-Det fine er at den avancerede søgning i bibliotek.dk taler samme sprog som
+Det fine er at den avancerede søgning i
+[bibliotek.dk](https://bibliotek.dk/){target="_blank} taler samme sprog som 
 netpunkt.dk
 
 ::: notes
@@ -248,11 +260,13 @@ netpunkt.dk
 Indholdet er det lidt tungt med. Det er lidt hit'n'miss hvad der er af 
 artikler. Bøgerne er ret godt dækket, også ikke-danske udgivelser.
 
+Det betyder så også at der nok bør søges på både dansk og engelsk.
+
 :::
 
 ## Google Scholar
 
-I må godt...
+I må godt bruge [den](https://scholar.google.com/){target="_blank} 
 
 ![Google Scholar bruges foruroligende ofte](scholar.png)
 
@@ -279,7 +293,14 @@ Indholdet - det hele. Alle fag. De er der alle sammen.
 
 Der er desværre ikke mulighed for at søge kun i OA-litteraturen.
 
-![](scholar2.png)
+::: incremental
+
+- Men!
+
+- ![](scholar2.png)
+
+
+:::
 
 ::: notes 
 Google er ret god til at finde alternativer. "All 10 versions" vil ofte, men
@@ -293,16 +314,16 @@ Indholdet - det hele. Alle fag. De er der alle sammen.
 
 ## Pubmed
 
-I mellemrummet mellem egentlig sundhedsvidenskab og de fugtige naturvidenskaber.
+Super relevant for biologi og kemi - og beslægtede fag. 
+
+![](pubmed-logo-white.png){height=100px}
 
 
 
-Det vi ville kalde for sundhedsvidenskab. Men nu var det jo
-naturvidenskab vi skulle tale om.
-
-Ret meget biokemi, (human) fysiologi. Kemi.
+[Dyb indexering](https://pubmed.gov/)!
 
 ::: notes
+I mellemrummet mellem egentlig sundhedsvidenskab og de fugtige naturvidenskaber.
 
 Jamen det var jo naturvidenskab vi skulle arbejde med. Ja. Men fag som fysiologi
 farmaci og medicinal kemi bliver publiceret i ca. de samme tidsskrifter som 
@@ -316,28 +337,40 @@ Og så er der en dyb dyb indeksering af artiklerne. Vi kalder dem MESH-termer.
 :::
 
 ## Arxiv
-![https://arxiv.org/](arxiv.png)
+![](arxiv.png)
+
+
+
+[Fysikerne](https://arxiv.org/) har en lang tradition for at dele preprints.
+
 CS, fysik (i meget bred forstand). matematik, statistik,
 
 En smule elektroingeniørfag. Kvantitativ biologi, kvantitativ økonomi.
 
-Og hvad skal de have? De skal nok overvejende have review artikler.
 
-# Kilder til informationssøgning
 
-Så mget hjælper vi simpelthen ikke. Lad os være helt ærlige - det vi har
-som vi kategoriserer som naturvidenskab er godt nok småt.
+::: notes
+Hvad er preprints? Når en forsker(gruppe) har skrevet en artikel, sendes den
+til et tidsskrift. Den undergår peer-review. Og når den er kommet gennem det,
+sættes den op og layoutes. Og så er der et preprint, som forfatterne får til
+sidste korrektur. I gamle dage var dele af den økonomiske model, at man godt nok
+ikke betalte for at få artiklen publiceret. Men man skulle købe et antal preprints,
+som var 1. til uddeling blandt kollegerne. 2. det dyreste papir nogensinde.
 
-Men! Vi kan skaffe det meste.
+Disse preprints eksisterer i dag i digital udgave. De skal ikke købes, men må 
+stadig deles. Og det gør de. Det betyder at det ikke er den endelige autoriserede
+udgave af en artikel. Men den er så tæt på at det ikke gør nogen betydende forskel.
 
-Så - det er helt klassisk litteratursøgning. Find referencen. Og skaf
-materialet.
+Og det er gratis!
 
-Hvordan finder vi så referencerne?
+:::
 
-Og svaret fra vores folk der servicerer jer - fjernlån!
+## Hvor får vi så fat i materialerne?
 
-Det er heldigvis ret hurtigt. Men...
+::: incremental 
+- Gode kolleger siger:
+- fjernlån/indlån/*lån
+:::
 
 
 
@@ -368,35 +401,24 @@ Den matematik vi bruger til at beregne planeternes baner er grundlæggende den
 samme som Newton offentliggjorde i 1687. Og den ikke for alvor blevet korrigeret 
 siden 1905.
 
-
 :::
 
 ![](Old_Books_01.jpg){fig-align="center"}
+
+
 
 ## Andre datakilder
 
 Det der med Bolivas råstoffer.
 
-https://data.worldbank.org/
+[https://data.worldbank.org/](https://data.worldbank.org/)
 
-https://kub.kb.dk/datalab/opendata
+[https://kub.kb.dk/datalab/opendata](https://kub.kb.dk/datalab/opendata)
 
 ## Spørgsmål?
 
 
 
-Og fjernlån!
 
-3)  Søgetips til bibliotek.dk og netpunkt i forhold til at finde alle
-    typer af naturvidenskabelige kilder
-
-4)  Vi betjener især studerende på ungdomsuddannelserne, hvor SRP fylder
-    meget i bibliotekernes hverdag i perioden fra januar til marts.
-    Niveauet for de naturvidenskabelige opgaver er højt set fra en
-    folkebiblioteksvinkel. Hvis du har gode tip til at hjælpe denne
-    gruppe med ovennævnte kilder, så vil det være meget velkommen. Vi
-    møder dem på vagten og via Book-en-bibliotekar, som findes på mange
-    biblioteker. Her i Vejle er vi i denne sæson stødt på følgende
-    naturvidenskabelige emner:
 
 
