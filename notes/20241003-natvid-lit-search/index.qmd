@@ -207,7 +207,19 @@ Vi noterer os at chatbotten er helt med på at en bibliotekar har knold i nakken
 ## Hvad er emnet?
 
 ![Efbrazil, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons](The_Scientific_Universe.png)
+::: notes
 
+Baseret på Auguste Comtes teori om videnskabens udvikling. Vi starter med
+generelle emner, og bevæger os op af i et hierarki hvor videnskaberne bliver
+tiltagende komplekse og mindre generelle. Teorien forudsiger at der vil være
+højere grad af konsensus blandt forskerne og hurtigere udvikling i eksempelvis
+fysik end i socialvidenskaberne. 
+
+Det er jo fascinerende at det åbenbart gør dem vanskeligere. Jo højere i hierarkiet
+vi kommer, jo større udsikkerhed er der om hvad der er rigtigt og forkert. Men
+af en eller anden årsag forekommer det os lettere at søge i/efter.
+
+:::
 
 ## Nå. Hvad gør vi så?
 
