@@ -437,6 +437,8 @@ Det der med Bolivas råstoffer.
 
 [https://kub.kb.dk/datalab/opendata](https://kub.kb.dk/datalab/opendata)
 
+[ChemSpider](https://www.chemspider.com/search)
+
 ## Spørgsmål?
 
 
