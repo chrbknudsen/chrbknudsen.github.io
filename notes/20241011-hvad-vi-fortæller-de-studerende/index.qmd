@@ -1,0 +1,16 @@
+---
+title: hvad-vi-fortæller-de-studerende
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+categories:
+  - kategori 1
+  - kategori 2
+date: 2024-10-11
+toc: true
+image: ""
+format:
+  revealjs:
+    theme: serif
+    logo: logo.png
+    css: logo.css
+---

@@ -1,0 +1,22 @@
+---
+title: "Robots reading licenser"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+categories:
+  - kategori 1
+  - kategori 2
+date: 2024-10-11
+toc: true
+image: "robots-reading-licenses.webp"
+format:
+  revealjs:
+    theme: serif
+    logo: logo.png
+    css: logo.css
+---
+## slide1
+
+testk
+
+## slide2
+tsatased
