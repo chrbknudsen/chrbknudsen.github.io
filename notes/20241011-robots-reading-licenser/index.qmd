@@ -14,9 +14,31 @@ format:
     logo: logo.png
     css: logo.css
 ---
-## slide1
+## Opsamling
 
 testk
 
-## slide2
-tsatased
+## Robotter læser licenser
+
+Kunstig intelligens, maskinlæring og it-automatisering har været en ting i
+den virkelige verden længe.
+
+Vi har set det i databaserne. Hver gang vi ser "related papers" på en tidsskrift
+hjemmeside, har vi i virkeligheden set resultaterne af ML.
+
+Så kom chatbotten, og det gik op for biblioteksverdenen at der skete noget på den
+front. Og nu, et par år efter, er vi nået til at tage det i brug.
+
+KB har udvalgt X temaer. 
+
+Vi skal lige have listen her...
+
+Et af dem er superrelevant for netop dette forum. Nemlig at bruge 
+de store tekstmodeller og andet godt, til at læse licensaftaler.
+
+det bliver noget one-shot encoding, og udtræk af ting. Og det kræver at vi
+har en foundational model at bygge oven på, for selvom det forekommer at være
+en meget uoverskuelig opgave at læse de utroligt mange licensaftaler vi har 
+i spil i biblioteksverdenen, så er der faktisk ikke særligt mange...
+
+
