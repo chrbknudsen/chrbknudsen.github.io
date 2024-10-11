@@ -16,8 +16,8 @@ new_talk <- function(title){
                'format:', 
                '  revealjs:', 
                '    theme: serif',
-               '    logo: logo.png',
-               '    css: logo.css',
+               '    logo: ../../scripts/logo.png',
+               '    css: ../../scripts/logo.css',
                '---')
   dir.create(path)
   fileConn<-file(paste0(path,"/","index.qmd"))
