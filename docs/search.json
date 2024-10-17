@@ -336,13 +336,6 @@
     "text": "Spørgsmål?"
   },
   {
-    "objectID": "notes/20241126-studenter-forventninger/index.html#hvad-taler-vi-egentlig-om",
-    "href": "notes/20241126-studenter-forventninger/index.html#hvad-taler-vi-egentlig-om",
-    "title": "Studerendes forventninger til store tekstmodeller",
-    "section": "Hvad taler vi egentlig om?",
-    "text": "Hvad taler vi egentlig om?\n{https://x.com/marcobravoram/status/1241781966497710080}\n\nMaskinlæring er værktøjet vi bruger til at opnå kunstig intelligens. Grænsen er flydende. Vi taler ikke her om kunstig intelligens i almindelighed. Vi taler om de store tekstmodeller. De kan så interface med maskinlæring, og trække på metoder til billedgenerering, billedanalyse etc."
-  },
-  {
     "objectID": "notes/20241126-studenter-forventninger/index.html#mit-udgangspunkt",
     "href": "notes/20241126-studenter-forventninger/index.html#mit-udgangspunkt",
     "title": "Studerendes forventninger til store tekstmodeller",
@@ -354,14 +347,63 @@
     "href": "notes/20241126-studenter-forventninger/index.html#slides",
     "title": "Studerendes forventninger til store tekstmodeller",
     "section": "Slides?",
-    "text": "Slides?\nSlides!"
+    "text": "Slides?\nSlides! https://christianknudsen.info/notes/20241126-studenter-forventninger\nopdater link!"
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#hvad-taler-vi-egentlig-om",
+    "href": "notes/20241126-studenter-forventninger/index.html#hvad-taler-vi-egentlig-om",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Hvad taler vi egentlig om?",
+    "text": "Hvad taler vi egentlig om?\n{https://x.com/marcobravoram/status/1241781966497710080}\n\nMaskinlæring er værktøjet vi bruger til at opnå kunstig intelligens. Grænsen er flydende. Vi taler ikke her om kunstig intelligens i almindelighed. Vi taler om de store tekstmodeller. De kan så interface med maskinlæring, og trække på metoder til billedgenerering, billedanalyse etc."
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#maskinlæring",
+    "href": "notes/20241126-studenter-forventninger/index.html#maskinlæring",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Maskinlæring",
+    "text": "Maskinlæring\n\nhttps://serokell.io/files/no/no39r3xi.2_(3)_(1).png"
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#gai",
+    "href": "notes/20241126-studenter-forventninger/index.html#gai",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "GAI",
+    "text": "GAI\n\nhttps://commons.wikimedia.org/wiki/File:HAL9000.svg\nDet er ikke generel kunstig intelligens. Der er ingen bevidsthed. Maskinen forstår os ikke. Og den er ikke ved at overtage verden.\nEndnu."
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#chatbotten",
+    "href": "notes/20241126-studenter-forventninger/index.html#chatbotten",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Chatbotten",
+    "text": "Chatbotten\n\nchatty"
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede",
+    "href": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Dystopien er her allerede",
+    "text": "Dystopien er her allerede"
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede-1",
+    "href": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede-1",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Dystopien er her allerede",
+    "text": "Dystopien er her allerede"
+  },
+  {
+    "objectID": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede-2",
+    "href": "notes/20241126-studenter-forventninger/index.html#dystopien-er-her-allerede-2",
+    "title": "Studerendes forventninger til store tekstmodeller",
+    "section": "Dystopien er her allerede",
+    "text": "Dystopien er her allerede"
   },
   {
     "objectID": "notes/20241126-studenter-forventninger/index.html#hvad-tror-de-de-kan-bruge-det-til",
     "href": "notes/20241126-studenter-forventninger/index.html#hvad-tror-de-de-kan-bruge-det-til",
     "title": "Studerendes forventninger til store tekstmodeller",
     "section": "Hvad tror de de kan bruge det til",
-    "text": "Hvad tror de de kan bruge det til\nHvad forventer de at kunne bruge det til? Litteratursøgninger.\nSkrive tekst\nSkrive kode\nSammenfatte tekst/artikler\nHvad kan de bruge det til Betaler de for adgang - og det er strengt taget en ret lille investering hvis det er det der betyder at du får gode karakterer og kommer let igennem - så er det her løsningen på meget.\nOpsummer artikler. Producer kode"
+    "text": "Hvad tror de de kan bruge det til\n\nSøgemaskine\n\nHvad forventer de at kunne bruge det til? Litteratursøgninger.\nSkrive tekst\nSkrive kode\nSammenfatte tekst/artikler\nHvad kan de bruge det til Betaler de for adgang - og det er strengt taget en ret lille investering hvis det er det der betyder at du får gode karakterer og kommer let igennem - så er det her løsningen på meget.\nOpsummer artikler. Producer kode"
   },
   {
     "objectID": "notes/20241126-studenter-forventninger/index.html#konsekvenser-i-undervisningen",
