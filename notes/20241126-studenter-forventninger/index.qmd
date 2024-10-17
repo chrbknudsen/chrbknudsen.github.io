@@ -4,8 +4,8 @@ subtitle: "Og hvordan vi skuffer dem"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - talks
+  - AI
 date: 2024-10-11
 toc: false
 image: "cover.webp"
@@ -15,6 +15,27 @@ format:
     logo: ../../scripts/logo.png
     css: ../../scripts/logo.css
 ---
+
+## Mit udgangspunkt
+
+* Litteratursøgning for kemi- og biologistuderende
+* KUB Datalab
+
+:::: notes
+Den første del er rimelig straight forward - selvom kemi-delen kan blive lidt langhåret når vi skal søge efter tegninger.
+
+I den anden del er det primært støtte til studerende arbejde med eget data.
+
+Jeg har en halv time i alt.
+
+::::
+
+## Slides?
+
+Slides!
+https://christianknudsen.info/notes/20241126-studenter-forventninger
+
+opdater link!
 
 ## Hvad taler vi egentlig om?
 
@@ -31,31 +52,30 @@ metoder til billedgenerering, billedanalyse etc.
 
 ::::
 
-## Mit udgangspunkt
-
-* Litteratursøgning for kemi- og biologistuderende
-* KUB Datalab
-
-:::: notes
-Den første del er rimelig straight forward - selvom kemi-delen kan blive lidt langhåret når vi skal søge efter tegninger.
-
-I den anden del er det primært støtte til studerende arbejde med eget data.
+## hvad taler vi om?
 
 
+![](stokastisk_papagei.webp)
 
-Jeg har en halv time i alt.
+## og ikke om
 
-::::
-
-## Slides?
-
-Slides!
+![](nerualt_net.png)
 
 
+## Dystopien er her allerede
+
+![](students_1.jpg)
+
+## Dystopien er her allerede
+![](students_2.jpg)
+
+## Dystopien er her allerede
+
+![](students_3.jpg)
 
 ## Hvad tror de de kan bruge det til
 
-
+* Søgemaskine
 
 Hvad forventer de at kunne bruge det til?
 Litteratursøgninger.
@@ -67,7 +87,9 @@ Skrive kode
 Sammenfatte tekst/artikler
 
 Hvad kan de bruge det til
-Betaler de for adgang - og det er strengt taget en ret lille investering hvis det er det der betyder at du får gode karakterer og kommer let igennem - så er det her løsningen på meget.
+Betaler de for adgang - og det er strengt taget en ret lille investering hvis 
+det er det der betyder at du får gode karakterer og kommer let igennem - så er 
+det her løsningen på meget.
 
 Opsummer artikler. Producer kode
 
@@ -76,17 +98,24 @@ Afløsningsopgaven som eksamensform er død.
 
 Jeg underviser på to introducerende biologikurser. mikrobiologi og biokemi.
 
-Eksamensformen har i begge været hvad vi i min ungdom i slutningen af sidste årtusinde, kaldte en afløsningsopgave
+Eksamensformen har i begge været hvad vi i min ungdom i slutningen af sidste 
+årtusinde, kaldte en afløsningsopgave
 
-Altså - find et par håndfulde artikler om et givet emne, læs dem og skriv en opsummerende tekst af ca. 10 sider om hvad du kan uddrage af de artikler.
+Altså - find et par håndfulde artikler om et givet emne, læs dem og skriv en 
+opsummerende tekst af ca. 10 sider om hvad du kan uddrage af de artikler.
 
-Typisk fordelt med en lidt ældre (ca 10 år) grundlæggende artikel, ofte en review artikel. Og så ret nye artikler for resten.
+Typisk fordelt med en lidt ældre (ca 10 år) grundlæggende artikel, ofte en 
+review artikel. Og så ret nye artikler for resten.
 
 Det er også en god måde for underviserne at få et overblik over deres fag.
 
-Det vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet end google scholar
+Det vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet end 
+google scholar
 
-Introduktionen af chatty har ført til at det ene af kurserne (tjek op på hvilket), har ændret eksamensform. De studerende skal ikke længere skrive en opgave, de skal skrive en sides synops, der kan danne grundlag for en mundtlig fremlæggelse.
+Introduktionen af chatty har ført til at det ene af kurserne (tjek op på 
+hvilket), har ændret eksamensform. De studerende skal ikke længere skrive en 
+opgave, de skal skrive en sides synops, der kan danne grundlag for en mundtlig 
+fremlæggelse.
 
 ## Mere tekniske anvendelser
 Den anden del af hvad jeg møder. Datalab.
@@ -99,9 +128,13 @@ Kurser i høstning, rensning, analyse og visualisering af data. For studerende.
 
 Åbne værksteder hvor vi assisterer med konkret analyse af data.
 
-Og her støder vi virkelig på det - de bruger det til at producere kode. til at gøre ting de ikke helt ved hvad er, på måder de ikke ved hvordan fungerer, med fejl de ingen anelse har om hvordan de skal fixe. Og - hvis de er heldige - med resultater, som de ikke ved hvordan skal tolkes.
+Og her støder vi virkelig på det - de bruger det til at producere kode. til at 
+gøre ting de ikke helt ved hvad er, på måder de ikke ved hvordan fungerer, med 
+fejl de ingen anelse har om hvordan de skal fixe. Og - hvis de er heldige - med 
+resultater, som de ikke ved hvordan skal tolkes.
 
-Og hvad katten er AI egentlig. Der er chatbotten, som vi alle forholder os til. Og så er der alt det andet AI. Det taler vi stort set ikke om.
+Og hvad katten er AI egentlig. Der er chatbotten, som vi alle forholder os til. 
+Og så er der alt det andet AI. Det taler vi stort set ikke om.
 
 Forestil dig, at al den viden og alle de færdigheder, du kan opnå med R, er gemt i en uendeligt høj bogreol. Som nybegynder kan du nå de nederste hylder uden problemer. Efterhånden som du lærer mere og øver dig, kan du række ud efter hylder, der er højere og højere oppe. Hvis du virkelig dedikerer dig, læser manualerne og koncentrerer dig, kan du måske stå på tæer og nå en hylde, der ellers ville være uden for rækkevidde.
 
