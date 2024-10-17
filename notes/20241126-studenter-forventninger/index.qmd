@@ -52,14 +52,28 @@ metoder til billedgenerering, billedanalyse etc.
 
 ::::
 
-## hvad taler vi om?
+## Maskinlæring
+
+![https://serokell.io/files/no/no39r3xi.2_(3)_(1).png](nerualt_net.png)
 
 
-![](stokastisk_papagei.webp)
+## GAI
 
-## og ikke om
+![https://commons.wikimedia.org/wiki/File:HAL9000.svg](HAL9000.svg)
 
-![](nerualt_net.png)
+:::: notes
+
+Det er ikke generel kunstig intelligens. Der er ingen bevidsthed. 
+Maskinen forstår os ikke. Og den er ikke ved at overtage verden.
+
+Endnu.
+
+::::
+
+## Chatbotten
+
+![chatty](stokastisk_papagei.webp)
+
 
 
 ## Dystopien er her allerede
