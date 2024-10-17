@@ -1,13 +1,14 @@
 ---
-title: hvad-vi-fortæller-de-studerende
-subtitle: "indsæt subtitle"
+title: Studerendes forventninger til store tekstmodeller
+subtitle: "Og hvordan vi skuffer dem"
 author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget er færdigt
 categories:
   - kategori 1
   - kategori 2
 date: 2024-10-11
-toc: true
-image: "talking-with-students.webp"
+toc: false
+image: "cover.webp"
 format:
   revealjs:
     theme: serif
@@ -16,18 +17,35 @@ format:
 ---
 
 ## Hvad taler vi egentlig om?
-https://x.com/marcobravoram/status/1241781966497710080{https://x.com/marcobravoram/status/1241781966497710080}
 
-Maskinlæring er værktøjet vi bruger til at opnå kunstig intelligens. Grænsen er flydende. Vi taler ikke her om kunstig intelligens i almindelighed. Vi taler om de store tekstmodeller. De kan så interface med maskinlæring, og trække på metoder til billedgenerering, billedanalyse etc.
+![](diff.jpg){https://x.com/marcobravoram/status/1241781966497710080}
+
+
+
+:::: notes
+
+Maskinlæring er værktøjet vi bruger til at opnå kunstig intelligens. Grænsen er 
+flydende. Vi taler ikke her om kunstig intelligens i almindelighed. Vi taler om 
+de store tekstmodeller. De kan så interface med maskinlæring, og trække på 
+metoder til billedgenerering, billedanalyse etc.
+
+::::
 
 ## Mit udgangspunkt
-Litteratursøgning for kemi- og biologistuderende
-KUB Datalab
+
+* Litteratursøgning for kemi- og biologistuderende
+* KUB Datalab
+
+:::: notes
 Den første del er rimelig straight forward - selvom kemi-delen kan blive lidt langhåret når vi skal søge efter tegninger.
 
 I den anden del er det primært støtte til studerende arbejde med eget data.
 
+
+
 Jeg har en halv time i alt.
+
+::::
 
 ## Slides?
 
