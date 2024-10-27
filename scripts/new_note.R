@@ -7,7 +7,7 @@ new_note <- function(title){
     'title: "indsæt title"',
   'subtitle: "indsæt subtitle"',
   'author: "Christian Knudsen"',
-  'visible: "false" # sæt til noget andet når oplægget er færdigt',
+  'visible: "false" # sæt til noget andet når oplægget/noten er færdigt',
   'categories:',
   '  - kategori 1',
   '  - kategori 2',
