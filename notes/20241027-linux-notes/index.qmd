@@ -1,0 +1,65 @@
+---
+title: "Linux Notes"
+subtitle: "Commands to remember"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget er færdigt
+categories:
+  - linux
+date: 2024-10-27
+toc: true
+image: "linux-notes.webp"
+---
+
+## mc - midnight commander
+Oh the nostalgia. It looks exactly like I remember Norton Commander!
+
+Command: mc
+
+Install: sudo apt install mc
+
+## whatis
+
+What does this command do? For when you've forgotten what it does.
+
+Command: whatis man
+
+
+
+## whereis
+
+What it says on the tin. Where is that file?
+
+Command: whereis myfile.txt
+
+## ncdu - disk usage
+
+Easily locate those ginormous files that need to be deleted. 
+
+Command: ncdu
+
+Install: sudo apt install ncdu
+
+## htop - find processes
+
+top in itself is usefull to locate the process that for some reason
+needs to be killed.
+htop makes it easy to actually complete the hit.
+
+Command: htop
+
+Install: sudo apt install htop
+
+
+## alias - make your own commands
+
+alias update='sudo apt update && sudo apt upgrade'
+
+But that is only temporarily. Add it to your ~/.bashrc file, to make it 
+permanent.
+
+## Copy-paste
+
+Ctrl+c and ctrl+v is not working on the console. But ctrl-shift-c/v is.
+
+
+s
