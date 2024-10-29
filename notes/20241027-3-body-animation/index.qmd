@@ -1,0 +1,59 @@
+---
+title: "3 Body Problem"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget er færdigt
+categories:
+  - R
+  - kategori 2
+date: 2024-10-27
+toc: true
+image: ""
+---
+
+
+https://evgenii.com/blog/three-body-problem-simulator/
+
+Og den vil jeg gerne ku' animere. Eller noget. Der er noget javascript et 
+sted på todo-listen der kan bruges. Og vi ender nok med en omfattende
+note med kode og sådan. 
+
+Kan det laves i noget shiny noget?
+
+Anyway.
+
+The three body problem. Not the book. Not the series. But the problem from 
+physics. 
+
+Three bodies, having initial masses and velocities (momenta), orbiting eachother,
+are left to their
+own devices. Or at least left Newtons laws of motion and gravitaion. What
+orbits will they follow?
+
+There is no closed-form solution to that, that is we are not able to write an
+expression that will return the result for time = 2, given initial values at 
+time = 0.
+We will have to do the calculation for time = 1, and then, based on that result
+calculate the next step. The results are rather sensitive to the initial values,
+and exhibits chaotic behavior. Are we able to do these calculations in R, and
+visualise them?
+
+We will have to be able to describe the positions of the three bodies at t=1, and
+then calculate their positions at t=2.
+
+So - let us define a coordinatesystem with origin in the center of mass for the
+entire system. We do that, because that will either be stationary, or will move
+with constant velocity.
+
+```{r}
+library(tidyverse)
+tribble(~x0, ~y0, ~x1, ~y1,
+        0, 0, 4, 2,
+        0,0,-4,3,
+        0,0,-3,-3
+        
+        ) %>% 
+  ggplot(aes(xend = x1, yend = y1, x = x0, y = y0)) +
+  geom_segment(arrow = arrow(length = unit(0.03, "npc")))
+```
+
