@@ -89,3 +89,5 @@ De to andre er helt parallelle:
 $$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
 
 $$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+runge.kutta {rmutil}
