@@ -41,9 +41,30 @@ visualise them?
 We will have to be able to describe the positions of the three bodies at t=1, and
 then calculate their positions at t=2.
 
-So - let us define a coordinatesystem with origin in the center of mass for the
-entire system. We do that, because that will either be stationary, or will move
-with constant velocity.
+
+
+Vi skal have fat i vores gymnasiefysik. 
+
+Newtons generelle gravitationsligning beskriver den kraft der er mellem
+to legemer:
+
+$$F =  \frac{Gm_1m_2}{r^2}$$ 
+Hvor $m_i$ er legemernes masse , G er gravitationskonstanten  og r er afstanden
+mellem de to legemer.
+
+Newtons anden lov:
+
+$$F = ma$$
+
+Fortæller os at kraften der virker på et legeme er lig legemets masse ganget
+dets acceleration.
+
+Accelleration er ændring af hastighed, hastighed er ændring af position. 
+Og hvis vi skal finde en afstand mellem to legemer, skal vi have fat  på deres
+positioner. Så lad os definere et koordinatsystem.
+
+Det lader vi have origo i massemidtpunktet for de tre legemer, for det vil vise
+sig at det enten ligger fast, eller bevæger sig med konstant hastighed.
 
 ```{r}
 library(tidyverse)
@@ -57,3 +78,14 @@ tribble(~x0, ~y0, ~x1, ~y1,
   geom_segment(arrow = arrow(length = unit(0.03, "npc")))
 ```
 
+
+Godt så. Hvordan påvirkes det første legeme?
+
+
+$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+De to andre er helt parallelle:
+
+$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
