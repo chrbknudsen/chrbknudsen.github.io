@@ -81,8 +81,13 @@ tribble(~x0, ~y0, ~x1, ~y1,
 
 Godt så. Hvordan påvirkes det første legeme?
 
+$$m_1a =  \frac{Gm_1m_2}{r^2}$$ 
 
-$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+Måske vi skal have et trin eller to inden vi når hertil?
+
+
+$$\frac{d^2\overrightarrow{r}_1}{dt^2} = G\frac{m_2}{|\overrightarrow{r_2}-\overrightarrow{r_1}|}\frac{\overrightarrow{r_2}-\overrightarrow{r_1}}{|\overrightarrow{r_2}-\overrightarrow{r}_1|} + G\frac{m_3}{|\overrightarrow{r_3}-\overrightarrow{r_1}|}\frac{\overrightarrow{r_3}-\overrightarrow{r_1}}{|\overrightarrow{r_3}-\overrightarrow{r_1}|} $$ 
 
 De to andre er helt parallelle:
 
