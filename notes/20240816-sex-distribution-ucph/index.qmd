@@ -21,7 +21,7 @@ de to køn på uddannelserne, så har KU et problem:
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 source("script.R",encoding = "UTF-8")
 ```
-```{r echo = FALSE}
+```{r echo = FALSE, message=FALSE}
 data %>% 
   pivot_wider(names_from = køn, values_from = bestand) %>% 
   mutate(samlet = Kvinder + Mænd) %>% 
@@ -33,7 +33,7 @@ data %>%
   ungroup() %>% 
   mutate(Kvinder = Kvinder/samlet*100,
          Mænd = Mænd/samlet*100,
-         Diff = Kvinder - Mænd) %>% 
+         Diff = abs(Kvinder - Mænd)) %>% 
   select(-samlet) %>% 
   pivot_longer(cols = Kvinder:Diff, names_to = "køn", values_to = "andel") %>% 
 ggplot(aes(år,andel, color = fct_relevel(køn, c("Kvinder", "Mænd", "Diff")))) +
@@ -173,7 +173,7 @@ af år, fakultet og bac/kand-niveau. Og hvor mange mænd og kvinder der var på
 faget.
 
 Det tillader os at beregne kønsfordelingen på de 6 fakulteter. 
-```{r eval = FALSE}
+```{r eval = FALSE, message=FALSE}
 #| code-fold: true
 #| code-summary: "Vis koden"
 
@@ -196,7 +196,7 @@ fak_data <- data %>%
 Og så kan der plottes. Vi har set resultatet ovenfor, men du kan folde koden ud
 herunder
 
-```{r eval = FALSE}
+```{r eval = FALSE, message=FALSE}
 #| code-fold: true
 #| code-summary: "Vis koden"
 fak_data  %>% 
@@ -243,16 +243,4 @@ data %>% pivot_wider(names_from = køn, values_from = bestand) %>%
   facet_grid(fakultet~niveau)
 ```
 
-
-
-```{r}
-data %>% pivot_wider(names_from = køn, values_from = bestand) %>% 
-  mutate(diff = 2 * (Kvinder / (Kvinder + Mænd)) - 1,
-         diff = diff*100) %>% 
-  mutate(color = factor(sign(diff))) %>% 
-  ggplot(aes(år, diff, color = color, group =interaction(fag,niveau))) +
-    geom_line()  +
-  facet_wrap(~fakultet)
-
-```
 
