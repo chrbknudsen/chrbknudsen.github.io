@@ -1,0 +1,98 @@
+---
+title: "3 Body Problem"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget er færdigt
+categories:
+  - R
+  - kategori 2
+date: 2024-10-27
+toc: true
+image: ""
+---
+
+
+https://evgenii.com/blog/three-body-problem-simulator/
+
+Og den vil jeg gerne ku' animere. Eller noget. Der er noget javascript et 
+sted på todo-listen der kan bruges. Og vi ender nok med en omfattende
+note med kode og sådan. 
+
+Kan det laves i noget shiny noget?
+
+Anyway.
+
+The three body problem. Not the book. Not the series. But the problem from 
+physics. 
+
+Three bodies, having initial masses and velocities (momenta), orbiting eachother,
+are left to their
+own devices. Or at least left Newtons laws of motion and gravitaion. What
+orbits will they follow?
+
+There is no closed-form solution to that, that is we are not able to write an
+expression that will return the result for time = 2, given initial values at 
+time = 0.
+We will have to do the calculation for time = 1, and then, based on that result
+calculate the next step. The results are rather sensitive to the initial values,
+and exhibits chaotic behavior. Are we able to do these calculations in R, and
+visualise them?
+
+We will have to be able to describe the positions of the three bodies at t=1, and
+then calculate their positions at t=2.
+
+
+
+Vi skal have fat i vores gymnasiefysik. 
+
+Newtons generelle gravitationsligning beskriver den kraft der er mellem
+to legemer:
+
+$$F =  \frac{Gm_1m_2}{r^2}$$ 
+Hvor $m_i$ er legemernes masse , G er gravitationskonstanten  og r er afstanden
+mellem de to legemer.
+
+Newtons anden lov:
+
+$$F = ma$$
+
+Fortæller os at kraften der virker på et legeme er lig legemets masse ganget
+dets acceleration.
+
+Accelleration er ændring af hastighed, hastighed er ændring af position. 
+Og hvis vi skal finde en afstand mellem to legemer, skal vi have fat  på deres
+positioner. Så lad os definere et koordinatsystem.
+
+Det lader vi have origo i massemidtpunktet for de tre legemer, for det vil vise
+sig at det enten ligger fast, eller bevæger sig med konstant hastighed.
+
+```{r}
+library(tidyverse)
+tribble(~x0, ~y0, ~x1, ~y1,
+        0, 0, 4, 2,
+        0,0,-4,3,
+        0,0,-3,-3
+        
+        ) %>% 
+  ggplot(aes(xend = x1, yend = y1, x = x0, y = y0)) +
+  geom_segment(arrow = arrow(length = unit(0.03, "npc")))
+```
+
+
+Godt så. Hvordan påvirkes det første legeme?
+
+$$m_1a =  \frac{Gm_1m_2}{r^2}$$ 
+
+
+Måske vi skal have et trin eller to inden vi når hertil?
+
+
+$$\frac{d^2\overrightarrow{r}_1}{dt^2} = G\frac{m_2}{|\overrightarrow{r_2}-\overrightarrow{r_1}|}\frac{\overrightarrow{r_2}-\overrightarrow{r_1}}{|\overrightarrow{r_2}-\overrightarrow{r}_1|} + G\frac{m_3}{|\overrightarrow{r_3}-\overrightarrow{r_1}|}\frac{\overrightarrow{r_3}-\overrightarrow{r_1}}{|\overrightarrow{r_3}-\overrightarrow{r_1}|} $$ 
+
+De to andre er helt parallelle:
+
+$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+runge.kutta {rmutil}
