@@ -1,0 +1,47 @@
+---
+title: "Stakkede barcharts"
+subtitle: "undertietel"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet n?r opl?gget/noten er f?rdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2024-11-15
+toc: true
+image: ""
+---
+
+
+
+library(tidyverse)
+library(jsonlite)
+library(httr)
+res <- GET("https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_TIME_USE@DF_TIME_USE,1.0/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels")
+
+df <- read_csv("https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_TIME_USE@DF_TIME_USE,1.0/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels")
+
+
+df %>% 
+  select(Country = `Reference area`, Measure, Sex = SEX, time = OBS_VALUE) %>% 
+  filter(Sex != "_T") %>% 
+  filter(Country %in% c("Denmark", "Sweden")) %>% 
+  filter(str_detect(Measure, "work")) %>% 
+  ggplot(aes(x = Sex, y = time, fill = Measure)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~ Country) +
+  labs(
+    title = "Stakkede søjlediagrammer for betalt og ubetalt arbejde",
+    x = "Land",
+    y = "Tid (minutter)",
+    fill = "Arbejde"
+  ) +
+  theme_minimal()
+  
+  
+  
+  ggplot(aes(x = Country, y = time, fill = Measure, group=Sex)) +
+  geom_col(position = "dodge") +
+  coord_flip()
+  
+  
+
