@@ -14,6 +14,8 @@ image: ""
 
 https://evgenii.com/blog/three-body-problem-simulator/
 
+https://fb.watch/vIMrdED-A_/
+
 Og den vil jeg gerne ku' animere. Eller noget. Der er noget javascript et 
 sted på todo-listen der kan bruges. Og vi ender nok med en omfattende
 note med kode og sådan. 
@@ -83,7 +85,6 @@ Godt så. Hvordan påvirkes det første legeme?
 
 $$m_1a =  \frac{Gm_1m_2}{r^2}$$ 
 
-
 Måske vi skal have et trin eller to inden vi når hertil?
 
 
@@ -91,8 +92,22 @@ $$\frac{d^2\overrightarrow{r}_1}{dt^2} = G\frac{m_2}{|\overrightarrow{r_2}-\over
 
 De to andre er helt parallelle:
 
-$$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+$$\frac{d^2\overrightarrow{r_2}}{dt^2} = G\frac{m_1}{|\overrightarrow{r_1}-\overrightarrow{r_2}|}\frac{\overrightarrow{r_1}-\overrightarrow{r_2}}{|\overrightarrow{r_1}-\overrightarrow{r_2}|} + G\frac{m_3}{|\overrightarrow{r_3}-\overrightarrow{r_2}|}\frac{\overrightarrow{r_3}-\overrightarrow{r_2}}{|\overrightarrow{r_3}-\overrightarrow{r_2}|} $$ 
 
 $$\frac{d^2\overrightarrow{r_1}}{dt^2} = G\frac{m_2}{}\frac{}{} + G\frac{m_3}{}\frac{}{} $$ 
+
+
+r12, som er lig r2 - r1, kan findes ved kvadratroden af x2-x1 i anden - y2-y1 i anden.
+
+
+Vi fik tre bevægelsesligninger. Og hvis vi skriver dem som funktioner af x og y istedet,
+får vi seks ligninger.
+
+Dernæst definerer vi 12 nye variable, der gør det muligt at definere 12 første ordens 
+differentialligninger.
+
+Dem skal vi så løse.
+
+
 
 runge.kutta {rmutil}
