@@ -1,0 +1,73 @@
+---
+title: "Lagkagediagrammer"
+subtitle: "inds?t subtitle"
+author: "Christian Knudsen"
+visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2024-11-19
+toc: true
+image: ""
+---
+jf https://www.facebook.com/mrapeterhansen/posts/pfbid0dKabAdGWg46Hz7cvdBdEYHLAb74EEteczRg9LKHETEPHLhfMFBfyNRxQfWH42hE2l
+
+# Indlæs nødvendige pakker
+library(ggplot2)
+library(dplyr)
+
+# Opret datasættet
+data <- data.frame(
+  KØN = c("Mænd", "Kvinder", "Mænd", "Kvinder", "Mænd", "Kvinder", "Mænd", "Kvinder"),
+  ALDER = c("35-39 år", "35-39 år", "40-44 år", "40-44 år", "45-49 år", "45-49 år", "50-54 år", "50-54 år"),
+  INDHOLD = c(106117, 131599, 134851, 118063, 151005, 134647, 151143, 132615)
+)
+
+# Tilføj total for hver aldersgruppe
+data <- data %>%
+  group_by(ALDER) %>%
+  mutate(TOTAL = sum(INDHOLD))
+
+# Plot lagkagediagrammer med facetter
+ggplot(data, aes(x = "", y = INDHOLD, fill = KØN)) +
+  geom_bar(stat = "identity", width = 1, color = "black") +
+  coord_polar("y", start = 0) +
+  facet_wrap(~ALDER, ncol = 4) +
+  labs(
+    title = "Tilknytning til arbejdsmarkedet (fuldtidspersoner)",
+    subtitle = "Ordinær beskæftigelse i alt (2022)",
+    fill = "Køn"
+  ) +
+  theme_void() +
+  theme(
+    strip.text = element_text(size = 12, face = "bold"), # Aldergrupper over diagrammerne
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 14),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10)
+  )
+
+
+library(httr)
+library(tidyplots)
+library(tidyverse)
+
+library(danstat)
+library(ggpie)
+
+danstat::get_table_metadata("AMR2")
+
+variables <- list(list(code = "KØN", values = c("M","K")),
+                  list(code = "SOCIO", values = "021"),
+                  list(code = "ALDER", values = NA),
+                  list(code = "TID", values = 2022))
+
+
+data <- danstat::get_data("AMR2", variables = variables, language = "da")
+data %>% select(-TID) %>% 
+  filter(ALDER == "40-44 år") %>% 
+  ggplot(aes(x = ALDER, y = INDHOLD, fill = KØN)) +
+  geom_bar( stat = "identity") +
+  coord_polar("y", start = 0)
+
+
