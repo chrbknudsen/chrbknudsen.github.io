@@ -30,12 +30,7 @@ Jeg har en halv time i alt.
 
 ::::
 
-## Slides?
 
-Slides!
-https://christianknudsen.info/notes/20241126-studenter-forventninger
-
-opdater link!
 
 ## Hvad taler vi egentlig om?
 
@@ -74,7 +69,12 @@ Endnu.
 
 ![chatty](stokastisk_papagei.webp)
 
+:::: notes
 
+
+Her illustreret ved en stokastisk papegøje. For det er hvad den er. 
+
+::::
 
 ## Dystopien er her allerede
 
@@ -87,29 +87,88 @@ Endnu.
 
 ![](students_3.jpg)
 
+
 ## Hvad tror de de kan bruge det til
 
 * Søgemaskine
 
-Hvad forventer de at kunne bruge det til?
-Litteratursøgninger.
+![](search.png)
 
-Skrive tekst
 
-Skrive kode
+## Hvad tror de de kan bruge det til
 
-Sammenfatte tekst/artikler
+* Søgemaskine
+
+![](chatty-uwe.png)
+
+:::: notes
+
+søgemaskine... Ja, det kan den efterhånden bruges til. Altså bortset fra at
+den Uwe der er tale om ikke er ham her. 
+
+
+::::
+
+
+## Hvad tror de de kan bruge det til
+
+* Litteratursøgninger
+
+![](kragh.png)
+
+
+:::: notes
+
+Og det fungerer faktisk efterhånden.
+der har været sjove eksempler med titler som man godt kunne forestille sig
+ at Lone Frank havde skrevet. Men som hun ikke havde skrevet. Den er ved
+ at have styr på det.
+ 
+Hvad fortæller vi dem så? Vi fortæller dem at der ikke er tale om en systematisk
+søgning. De får udvalget, og de får det som chatbotten har udvalgt for dem.
+
+Det er det der er mest sandsynligt at de vil have glæde af ja, men det interessante
+resultat, det får de ikke nødvendigvis.
+
+Virker det? Nej. De er ligeglade.
+
+
+ 
+::::
+
+
+## Hvad tror de de kan bruge det til
+
+
+* Skrive tekst
+* Sammenfatte tekst/artikler
+* Skrive kode
+
+:::: notes
 
 Hvad kan de bruge det til
 Betaler de for adgang - og det er strengt taget en ret lille investering hvis 
 det er det der betyder at du får gode karakterer og kommer let igennem - så er 
 det her løsningen på meget.
 
-Opsummer artikler. Producer kode
+forcemultiplier
+
+Og lad os være ærlige. chatbotten kan sagtens. Den leverer på rigeligt godt 
+niveau til at de kan bestå. Så længe de gør sig selv den tjeneste at læse korrektur
+på teksten.
+
+::::
+
 
 ## Konsekvenser i undervisningen
+
 Afløsningsopgaven som eksamensform er død.
 
+
+![](afløsningsopgave.png)
+
+
+:::: notes 
 Jeg underviser på to introducerende biologikurser. mikrobiologi og biokemi.
 
 Eksamensformen har i begge været hvad vi i min ungdom i slutningen af sidste 
@@ -126,34 +185,70 @@ Det er også en god måde for underviserne at få et overblik over deres fag.
 Det vil chokere jer at jeg har skulle kæmpe for at introducere dem til andet end 
 google scholar
 
-Introduktionen af chatty har ført til at det ene af kurserne (tjek op på 
-hvilket), har ændret eksamensform. De studerende skal ikke længere skrive en 
+Introduktionen af chatty har ført til at mikrobiologi-udgaven , har ændret 
+eksamensform. De studerende skal ikke længere skrive en 
 opgave, de skal skrive en sides synops, der kan danne grundlag for en mundtlig 
 fremlæggelse.
 
+
+::::
+
 ## Mere tekniske anvendelser
-Den anden del af hvad jeg møder. Datalab.
-
-## hvad er kub-datalab
 
 
-https://kub.kb.dk/datalab
-Kurser i høstning, rensning, analyse og visualisering af data. For studerende.
+![](kode.png)
 
-Åbne værksteder hvor vi assisterer med konkret analyse af data.
+:::: notes
 
-Og her støder vi virkelig på det - de bruger det til at producere kode. til at 
-gøre ting de ikke helt ved hvad er, på måder de ikke ved hvordan fungerer, med 
-fejl de ingen anelse har om hvordan de skal fixe. Og - hvis de er heldige - med 
-resultater, som de ikke ved hvordan skal tolkes.
+Her støder vi på to problemer.
 
-Og hvad katten er AI egentlig. Der er chatbotten, som vi alle forholder os til. 
-Og så er der alt det andet AI. Det taler vi stort set ikke om.
+Der er studerende der ikke fatter en bønne af hvad der sker. Det gør ikke noget,
+for det gør chatbotten heller ikke. Og nu skal vi så forsøge at hjælpe studerende
+der intet fatter af hvad de forsøger at gøre, intet fatter af det der bliver produceret
+af chatbotten. Og heller ikke fatter noget af de fejlbeskeder de får.
 
-Forestil dig, at al den viden og alle de færdigheder, du kan opnå med R, er gemt i en uendeligt høj bogreol. Som nybegynder kan du nå de nederste hylder uden problemer. Efterhånden som du lærer mere og øver dig, kan du række ud efter hylder, der er højere og højere oppe. Hvis du virkelig dedikerer dig, læser manualerne og koncentrerer dig, kan du måske stå på tæer og nå en hylde, der ellers ville være uden for rækkevidde.
+De er notorisk vanskelige at hjælpe. For de er dårligt nok klar over at de ikke
+forstår.
 
-Store tekstmodeller, som for eksempel GPT-4, kan fungere som en skammel, der hjælper dig med at nå de hylder, der ellers lige akkurat ville være uden for din rækkevidde. Denne skammel kan give dig et løft og spare dig tid og anstrengelse.
+Og så er der de andre. En del af dem er faktisk forsigtige med at bruge chatbotten,
+for de er godt klar over at det er farligt. De får ikke helt det de er på jagt efter.
+De kan godt se at promptes der forkert, bliver resultatet stille og roligt 
+ringere og ringere.
 
-Men der er også en risiko forbundet med at bruge store tekstmodeller som stiger for at nå de allerhøjeste hylder, som du endnu ikke er klar til. Hvis du ikke har den nødvendige baggrundsviden og forståelse, kan du risikere at falde ned, fordi du ikke helt forstår, hvad du læser eller bruger.
+Det vi forsøger her - er at lære dem computationel tænkning. Når de har 
+forstået det, hjælper det på det.
 
-Så brug store tekstmodeller som et værktøj til at støtte din læring og hjælpe dig med at nå nye højder, men sørg altid for at have en solid grundviden og forståelse som fundament. På den måde kan du sikre, at du står sikkert og fortsat kan udvikle dine færdigheder i R.
+
+
+:::: 
+
+
+
+
+
+
+## Og hvad kan vi lære af det?
+
+* De skal have fundamentet på plads
+
+* Så de kan bruge værktøjet fornuftigt
+
+:::: notes
+
+Det er i virkeligheden et supergammeldags budskab.
+
+::::
+
+## Hvad tror de?
+
+De tror de kan få maskinen til at lave arbejdet for dem.
+
+
+## Hvad burde de tro?
+
+![](forcemultiplier.png)
+
+At de kan få maskinen til at hjælpe dem med at lave arbejdet.
+
+
+## slut

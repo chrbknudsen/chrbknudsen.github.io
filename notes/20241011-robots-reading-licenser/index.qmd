@@ -1,6 +1,6 @@
 ---
 title: "Robots reading licenser"
-subtitle: "indsæt subtitle"
+subtitle: "Og afrunding af dagen"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget er færdigt
 categories:
@@ -21,25 +21,50 @@ testk
 
 ## Robotter læser licenser
 
-Kunstig intelligens, maskinlæring og it-automatisering har været en ting i
-den virkelige verden længe.
+![](robots-reading-licenses.webp)
 
-Vi har set det i databaserne. Hver gang vi ser "related papers" på en tidsskrift
-hjemmeside, har vi i virkeligheden set resultaterne af ML.
+## Så er drømmen realistisk?
 
-Så kom chatbotten, og det gik op for biblioteksverdenen at der skete noget på den
-front. Og nu, et par år efter, er vi nået til at tage det i brug.
+Det finder vi ud af!
 
-KB har udvalgt X temaer. 
+## Mulighederne
 
-Vi skal lige have listen her...
+Lad sprogmodellen identificere hvor der er huller i osten
 
-Et af dem er superrelevant for netop dette forum. Nemlig at bruge 
-de store tekstmodeller og andet godt, til at læse licensaftaler.
-
-det bliver noget one-shot encoding, og udtræk af ting. Og det kræver at vi
-har en foundational model at bygge oven på, for selvom det forekommer at være
-en meget uoverskuelig opgave at læse de utroligt mange licensaftaler vi har 
-i spil i biblioteksverdenen, så er der faktisk ikke særligt mange...
+Lad den ikke fortolke - men lad den gerne identificere
 
 
+## Helt praktisk
+
+![](rpa.png)
+
+:::: notes
+
+RPA. Værktøjer der kan interagere med forskellige programmer på en computer.
+Ligesom mennesker kan. 
+
+Det er mere fleksibelt end at forsøge at trække data ud og indlæse.
+
+Så - automatiseret overførsel af data mellem forskellige systemer.
+
+
+
+
+::::
+
+## Hvor er jeg skeptisk
+
+Er det faktisk svært nok?
+
+:::: notes
+
+Vi har aftaler med under 150 forlag (og andet godt)
+
+Vi har godt nok ofte mere end en aftale med hvert forlag.
+
+Det kan godt føles som ret meget, når man ikke har mulighed for at hyre
+dyre jurister ind i store mængder for at håndtere det. 
+
+Men set fra et AI perspektiv. Så er der dæleme ikke meget materiale.
+
+::::
