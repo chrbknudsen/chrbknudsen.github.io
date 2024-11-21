@@ -132,3 +132,27 @@ hexSticker::sticker(imgurl, package = "",
                     u_x = 0.95,
                     u_y = 0.11,
                     filename = "img/KnudsenKit.png")
+
+
+
+# 12-days
+imgurl <- "img/org/12-days.webp"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "red",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1,
+                    url = "12 juledage",
+                    u_color = "red",
+                    u_size = 11,
+                    u_x = 0.95,
+                    u_y = 0.11,
+                    #        u_angle = 45,
+                    white_around_sticker = TRUE,
+                    filename = "img/12-days.png")
+make_transparent("img/12-days.png", fuzz = 20)
+
+
