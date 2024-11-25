@@ -2,11 +2,11 @@
 title: Studerendes forventninger til store tekstmodeller
 subtitle: "Og hvordan vi skuffer dem"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget er færdigt
+visible: "true" # sæt til noget andet når oplægget er færdigt
 categories:
   - talks
   - AI
-date: 2024-10-11
+date: 2024-11-26
 toc: false
 image: "cover.webp"
 format:
@@ -106,7 +106,7 @@ Her illustreret ved en stokastisk papegøje. For det er hvad den er.
 søgemaskine... Ja, det kan den efterhånden bruges til. Altså bortset fra at
 den Uwe der er tale om ikke er ham her. 
 
-
+Uwe Ligge, matematiker fra Dortmund Universitet.
 ::::
 
 

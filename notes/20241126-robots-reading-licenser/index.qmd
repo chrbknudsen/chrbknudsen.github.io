@@ -1,0 +1,83 @@
+---
+title: "Robots reading licenser"
+subtitle: "Og afrunding af dagen"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2024-11-26
+toc: true
+image: "robots-reading-licenses.webp"
+format:
+  revealjs:
+    theme: serif
+    logo: logo.png
+    css: logo.css
+---
+## Opsamling
+
+
+## Robotter læser licenser
+
+![](robots-reading-licenses.webp)
+
+:::: notes
+Som Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på 
+KB, under overskriften "AI og licenser". 
+Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare
+os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede
+den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk.
+
+
+::::
+
+## Så er drømmen realistisk?
+
+![](ballon.png)
+
+:::: notes
+
+Her havde jeg overvejet at tage en rekvisit med - en knappenål. 
+
+Nej. Tidligere i dag talte jeg om at vi ofte må skuffe de studerende. De 
+store tekstmodeller kan være rigtig nyttige. De kan meget. Men der er altså ret
+store huller i osten. 
+
+Jeg får forskellige meldinger om hvor mange licensaftaler vi faktisk har. Nogen
+siger 150 forskelllige aftale partnere, enkelte med mere end en licensaftale.
+Andre siger at vi har i omegnen af 400 aftaler. Det er heller ikke vigtigt. 
+
+Det er ikke mange!
+
+
+
+::::
+
+## Mange faldgruber!
+
+![](hallucinerende_robot.png)
+
+:::: notes
+
+Og fortolkning? Retspraksis? Love? Vi kan ikke altid få et klart svar fra 
+nationens førende eksperter. Robotten vil hallucinere, og vi skal i retten.
+
+::::
+
+## Helt praktisk
+
+![](rpa.png)
+Ingen AI. Men robotter!
+
+:::: notes
+
+RPA. Værktøjer der kan interagere med forskellige programmer på en computer.
+Ligesom mennesker kan. 
+
+Det er mere fleksibelt end at forsøge at trække data ud og indlæse.
+
+Så - automatiseret overførsel af data mellem forskellige systemer.
+
+::::
+

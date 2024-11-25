@@ -46,112 +46,56 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nStakkede barcharts\n\n\nAf kønsopdelt tidsforbrug i Danmark\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux Notes\n\n\nCommands to remember\n\n\n\nOct 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nOct 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParade ruter\n\n\nDen der oplevelse når aviserne skriver om noget du faktisk ved noget om.\n\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStuderendes forventninger til store tekstmodeller\n\n\nOg hvordan vi skuffer dem\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStakkede barcharts\n\n\nAf kønsopdelt tidsforbrug i Danmark\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux Notes\n\n\nCommands to remember\n\n\n\nOct 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nOct 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParade ruter\n\n\nDen der oplevelse når aviserne skriver om noget du faktisk ved noget om.\n\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/20241119-lagkager/index.html",
-    "href": "notes/20241119-lagkager/index.html",
-    "title": "Lagkagediagrammer",
-    "section": "",
-    "text": "jf https://www.facebook.com/mrapeterhansen/posts/pfbid0dKabAdGWg46Hz7cvdBdEYHLAb74EEteczRg9LKHETEPHLhfMFBfyNRxQfWH42hE2l\n\nIndlæs nødvendige pakker\nlibrary(ggplot2) library(dplyr)\n\n\nOpret datasættet\ndata &lt;- data.frame( KØN = c(“Mænd”, “Kvinder”, “Mænd”, “Kvinder”, “Mænd”, “Kvinder”, “Mænd”, “Kvinder”), ALDER = c(“35-39 år”, “35-39 år”, “40-44 år”, “40-44 år”, “45-49 år”, “45-49 år”, “50-54 år”, “50-54 år”), INDHOLD = c(106117, 131599, 134851, 118063, 151005, 134647, 151143, 132615) )\n\n\nTilføj total for hver aldersgruppe\ndata &lt;- data %&gt;% group_by(ALDER) %&gt;% mutate(TOTAL = sum(INDHOLD))\n\n\nPlot lagkagediagrammer med facetter\nggplot(data, aes(x = ““, y = INDHOLD, fill = KØN)) + geom_bar(stat =”identity”, width = 1, color = “black”) + coord_polar(“y”, start = 0) + facet_wrap(~ALDER, ncol = 4) + labs( title = “Tilknytning til arbejdsmarkedet (fuldtidspersoner)”, subtitle = “Ordinær beskæftigelse i alt (2022)”, fill = “Køn” ) + theme_void() + theme( strip.text = element_text(size = 12, face = “bold”), # Aldergrupper over diagrammerne plot.title = element_text(size = 16, face = “bold”), plot.subtitle = element_text(size = 14), legend.title = element_text(size = 12), legend.text = element_text(size = 10) )\nlibrary(httr) library(tidyplots) library(tidyverse)\nlibrary(danstat) library(ggpie)\ndanstat::get_table_metadata(“AMR2”)\nvariables &lt;- list(list(code = “KØN”, values = c(“M”,“K”)), list(code = “SOCIO”, values = “021”), list(code = “ALDER”, values = NA), list(code = “TID”, values = 2022))\ndata &lt;- danstat::get_data(“AMR2”, variables = variables, language = “da”) data %&gt;% select(-TID) %&gt;% filter(ALDER == “40-44 år”) %&gt;% ggplot(aes(x = ALDER, y = INDHOLD, fill = KØN)) + geom_bar( stat = “identity”) + coord_polar(“y”, start = 0)"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html",
-    "href": "notes/20241027-linux-notes/index.html",
-    "title": "Linux Notes",
-    "section": "",
-    "text": "Oh the nostalgia. It looks exactly like I remember Norton Commander!\nCommand: mc\nInstall: sudo apt install mc"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#mc---midnight-commander",
-    "href": "notes/20241027-linux-notes/index.html#mc---midnight-commander",
-    "title": "Linux Notes",
-    "section": "",
-    "text": "Oh the nostalgia. It looks exactly like I remember Norton Commander!\nCommand: mc\nInstall: sudo apt install mc"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#whatis",
-    "href": "notes/20241027-linux-notes/index.html#whatis",
-    "title": "Linux Notes",
-    "section": "whatis",
-    "text": "whatis\nWhat does this command do? For when you’ve forgotten what it does.\nCommand: whatis man"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#whereis",
-    "href": "notes/20241027-linux-notes/index.html#whereis",
-    "title": "Linux Notes",
-    "section": "whereis",
-    "text": "whereis\nWhat it says on the tin. Where is that file?\nCommand: whereis myfile.txt"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#ncdu---disk-usage",
-    "href": "notes/20241027-linux-notes/index.html#ncdu---disk-usage",
-    "title": "Linux Notes",
-    "section": "ncdu - disk usage",
-    "text": "ncdu - disk usage\nEasily locate those ginormous files that need to be deleted.\nCommand: ncdu\nInstall: sudo apt install ncdu"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#htop---find-processes",
-    "href": "notes/20241027-linux-notes/index.html#htop---find-processes",
-    "title": "Linux Notes",
-    "section": "htop - find processes",
-    "text": "htop - find processes\ntop in itself is usefull to locate the process that for some reason needs to be killed. htop makes it easy to actually complete the hit.\nCommand: htop\nInstall: sudo apt install htop"
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#alias---make-your-own-commands",
-    "href": "notes/20241027-linux-notes/index.html#alias---make-your-own-commands",
-    "title": "Linux Notes",
-    "section": "alias - make your own commands",
-    "text": "alias - make your own commands\nalias update=‘sudo apt update && sudo apt upgrade’\nBut that is only temporarily. Add it to your ~/.bashrc file, to make it permanent."
-  },
-  {
-    "objectID": "notes/20241027-linux-notes/index.html#copy-paste",
-    "href": "notes/20241027-linux-notes/index.html#copy-paste",
-    "title": "Linux Notes",
-    "section": "Copy-paste",
-    "text": "Copy-paste\nCtrl+c and ctrl+v is not working on the console. But ctrl-shift-c/v is.\ns"
-  },
-  {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#opsamling",
-    "href": "notes/20241011-robots-reading-licenser/index.html#opsamling",
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#opsamling",
+    "href": "notes/20241126-robots-reading-licenser/index.html#opsamling",
     "title": "Robots reading licenser",
     "section": "Opsamling",
-    "text": "Opsamling\ntestk"
+    "text": "Opsamling"
   },
   {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#robotter-læser-licenser",
-    "href": "notes/20241011-robots-reading-licenser/index.html#robotter-læser-licenser",
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
+    "href": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
     "title": "Robots reading licenser",
     "section": "Robotter læser licenser",
-    "text": "Robotter læser licenser"
+    "text": "Robotter læser licenser\n\n\nSom Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på KB, under overskriften “AI og licenser”. Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk."
   },
   {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
-    "href": "notes/20241011-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
+    "href": "notes/20241126-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
     "title": "Robots reading licenser",
     "section": "Så er drømmen realistisk?",
-    "text": "Så er drømmen realistisk?\nDet finder vi ud af!"
+    "text": "Så er drømmen realistisk?\n\n\nHer havde jeg overvejet at tage en rekvisit med - en knappenål.\nNej. Tidligere i dag talte jeg om at vi ofte må skuffe de studerende. De store tekstmodeller kan være rigtig nyttige. De kan meget. Men der er altså ret store huller i osten.\nJeg får forskellige meldinger om hvor mange licensaftaler vi faktisk har. Nogen siger 150 forskelllige aftale partnere, enkelte med mere end en licensaftale. Andre siger at vi har i omegnen af 400 aftaler. Det er heller ikke vigtigt.\nDet er ikke mange!"
   },
   {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#mulighederne",
-    "href": "notes/20241011-robots-reading-licenser/index.html#mulighederne",
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#mange-faldgruber",
+    "href": "notes/20241126-robots-reading-licenser/index.html#mange-faldgruber",
     "title": "Robots reading licenser",
-    "section": "Mulighederne",
-    "text": "Mulighederne\nLad sprogmodellen identificere hvor der er huller i osten\nLad den ikke fortolke - men lad den gerne identificere"
+    "section": "Mange faldgruber!",
+    "text": "Mange faldgruber!\n\n\nOg fortolkning? Retspraksis? Love? Vi kan ikke altid få et klart svar fra nationens førende eksperter. Robotten vil hallucinere, og vi skal i retten."
   },
   {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#helt-praktisk",
-    "href": "notes/20241011-robots-reading-licenser/index.html#helt-praktisk",
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
+    "href": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
     "title": "Robots reading licenser",
     "section": "Helt praktisk",
-    "text": "Helt praktisk\n\n\nRPA. Værktøjer der kan interagere med forskellige programmer på en computer. Ligesom mennesker kan.\nDet er mere fleksibelt end at forsøge at trække data ud og indlæse.\nSå - automatiseret overførsel af data mellem forskellige systemer."
+    "text": "Helt praktisk\n Ingen AI. Men robotter!\n\nRPA. Værktøjer der kan interagere med forskellige programmer på en computer. Ligesom mennesker kan.\nDet er mere fleksibelt end at forsøge at trække data ud og indlæse.\nSå - automatiseret overførsel af data mellem forskellige systemer."
   },
   {
-    "objectID": "notes/20241011-robots-reading-licenser/index.html#hvor-er-jeg-skeptisk",
-    "href": "notes/20241011-robots-reading-licenser/index.html#hvor-er-jeg-skeptisk",
-    "title": "Robots reading licenser",
-    "section": "Hvor er jeg skeptisk",
-    "text": "Hvor er jeg skeptisk\nEr det faktisk svært nok?\n\nVi har aftaler med under 150 forlag (og andet godt)\nVi har godt nok ofte mere end en aftale med hvert forlag.\nDet kan godt føles som ret meget, når man ikke har mulighed for at hyre dyre jurister ind i store mængder for at håndtere det.\nMen set fra et AI perspektiv. Så er der dæleme ikke meget materiale."
+    "objectID": "notes/20241115-stakkede-barcharts/index.html",
+    "href": "notes/20241115-stakkede-barcharts/index.html",
+    "title": "Stakkede barcharts",
+    "section": "",
+    "text": "Hvordan laver man et stakket barchart?\nVi starter som sædvanlig med at indlæse biblioteker:\n\nlibrary(tidyverse)\n\nVi skal også bruge noget data. Vi smutter forbi OECDs data for folks tidsforbrug pr dag på ting i forskellige lande.\nOg så hiver vi fat i deres “Developer API, henter url’en til et data query, og sætter lidt ekstra på;”&format=csvfilewithlabels” for at få resultatet i et format der ikke kræver utroligt meget arbejde at hive data ud af.\n\nurl &lt;- \"https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_TIME_USE@DF_TIME_USE,1.0/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels\"\n\nDen kan vi indlæse direkte:\n\ndf &lt;- read_csv(url)\n\nRows: 494 Columns: 20\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (15): STRUCTURE, STRUCTURE_ID, STRUCTURE_NAME, ACTION, REF_AREA, Referen...\ndbl  (3): OBS_VALUE, DECIMALS, UNIT_MULT\nlgl  (2): Sex, Observation value\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nSpecifikationen af kolonner afslører at der er en del af dem vi ikke rigtig har brug for, så dem sorterer vi fra. Vi får tidsforbrug fordelt på køn og total. Og totalen er redundant. Lægger vi tallene for “Other” sammen for de to køn, får vi naturligvis totalen.\nSå alt det sorterer vi fra:\n\ndf &lt;- df %&gt;% \n  select(Country = `Reference area`, Measure, Sex = SEX, time = OBS_VALUE) %&gt;% \n  filter(Sex != \"_T\")\n\nDer er meget data, så lad os nøjes med at kigge på Danmark. OECD foretrækker eksonymet (fordi de er nogle lingvistisk hegemoniske kolonialister). Så det er “Denmark” vi skal have fat på.\nSå vi filtrerer for kun at få Danmark med, ændrer M og F til ♂ og ♀. Og oversætter de forskellige aktiviteter til dansk. Mon ikke “Personal care” indeholder en del søvn? Vi kalder det her “Personlig pleje”. Jeg plejer at sove, og det er noget jeg gør personligt:\n\ndf &lt;- df %&gt;% \n  filter(Country == \"Denmark\") %&gt;% \n  mutate(Sex = case_match(Sex,\n             \"M\" ~ \"♂\", \n             \"F\" ~ \"♀️\",\n             .default =  Sex)) %&gt;% \n  mutate(Measure = case_match(Measure, \n                              \"Leisure\" ~ \"Fritid\",\n                              \"Paid work or study\" ~ \"Lønarbejde eller studier\",\n                              \"Other\" ~ \"Andet\",\n                              \"Unpaid work\" ~ \"Ulønnet arbejde\", \n                              \"Personal care\" ~ \"Personlig Pleje\",\n                              .default = Measure))\n\nOg så kan vi lave søjlediagrammet.\nVi styrer tingene to steder i koden. I aes() fortæller vi hvad der er på x- og y-akserne. Farvelægningen styres samme sted (husk fill i stedet for color), og med den får vi samtidig grupperet vores data - og det bruges i geom_col. Her specificerer vi nemlig at det skal stakkes. Vi kunne også have skrevet “dodge”, men målet var et stakket søjlediagram, så…\nHvorfor geom_col i stedet for geom_bar? geom_bar foretager som default en statistisk transformation på data, hvor den tæller antallet af observationer. Nu var det ikke antallet af observationer af tidsforbrug vi ville have (de er nemlig ens), men tallene selv. geom_col laver ingen transformation. Vi kunne også have givet geom_bar argumentet stat = \"identity\", det havde for de fleste praktiske formål givet samme resultat.\nOg så justerer vi på labels i plottet, fjerner clutter fra default temaet, og justerer på farverne:\n\ndf %&gt;% \n  ggplot(aes(x = Sex, y = time, fill = Measure)) +\n  geom_col(position = \"stack\") +\n  labs(\n    title = \"Stakkede søjlediagrammer for de to køns tidsforbrug\",\n    x = \"\",\n    y = \"Tid (minutter)\",\n    fill = \"Aktivitet\"\n  ) +\n  theme_minimal() +\n  scale_fill_brewer(palette = \"Set2\")\n\n\n\n\n\n\n\n\nBum. De to søjler er her, helt naturligt, lige høje, for der er ikke forskel på hvad de to køn har af tid i løbet af en dag.\nDet er dog lidt vanskeligt at sammenligne. Det er en af udfordringerne med stakkede søjler.\nI stedet kan vi dele det lidt op. Vi vælger position = \"dodge\" for at få søjlerne ved siden af hinanden, ændrer på titlen, og tilføjer facet_wrap(~Measure) for at få et plot for hver type aktivitet der bruges tid på:\n\ndf %&gt;% \n  ggplot(aes(x = Sex, y = time, fill = Measure)) +\n  geom_col(position = \"dodge\") +\n  labs(\n    title = \"Søjlediagrammer for de to køns tidsforbrug\",\n    x = \"\",\n    y = \"Tid (minutter)\",\n    fill = \"Aktivitet\"\n  ) +\n  theme_minimal() +\n  scale_fill_brewer(palette = \"Set2\") +\n  facet_wrap(~Measure)\n\n\n\n\n\n\n\n\nBum-bum.\nKonklusioner? Den eneste jeg tør drage er, at sammenligninger i stakkede søjlediagrammer kan være vanskelige."
+  },
+  {
+    "objectID": "notes/20241027-3-body-animation/index.html",
+    "href": "notes/20241027-3-body-animation/index.html",
+    "title": "3 Body Problem",
+    "section": "",
+    "text": "https://evgenii.com/blog/three-body-problem-simulator/\nhttps://fb.watch/vIMrdED-A_/\nOg den vil jeg gerne ku’ animere. Eller noget. Der er noget javascript et sted på todo-listen der kan bruges. Og vi ender nok med en omfattende note med kode og sådan.\nKan det laves i noget shiny noget?\nAnyway.\nThe three body problem. Not the book. Not the series. But the problem from physics.\nThree bodies, having initial masses and velocities (momenta), orbiting eachother, are left to their own devices. Or at least left Newtons laws of motion and gravitaion. What orbits will they follow?\nThere is no closed-form solution to that, that is we are not able to write an expression that will return the result for time = 2, given initial values at time = 0. We will have to do the calculation for time = 1, and then, based on that result calculate the next step. The results are rather sensitive to the initial values, and exhibits chaotic behavior. Are we able to do these calculations in R, and visualise them?\nWe will have to be able to describe the positions of the three bodies at t=1, and then calculate their positions at t=2.\nVi skal have fat i vores gymnasiefysik.\nNewtons generelle gravitationsligning beskriver den kraft der er mellem to legemer:\n\\[F =  \\frac{Gm_1m_2}{r^2}\\] Hvor \\(m_i\\) er legemernes masse , G er gravitationskonstanten og r er afstanden mellem de to legemer.\nNewtons anden lov:\n\\[F = ma\\]\nFortæller os at kraften der virker på et legeme er lig legemets masse ganget dets acceleration.\nAccelleration er ændring af hastighed, hastighed er ændring af position. Og hvis vi skal finde en afstand mellem to legemer, skal vi have fat på deres positioner. Så lad os definere et koordinatsystem.\nDet lader vi have origo i massemidtpunktet for de tre legemer, for det vil vise sig at det enten ligger fast, eller bevæger sig med konstant hastighed.\n\nlibrary(tidyverse)\n\nWarning: pakke 'tidyverse' blev bygget under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntribble(~x0, ~y0, ~x1, ~y1,\n        0, 0, 4, 2,\n        0,0,-4,3,\n        0,0,-3,-3\n        \n        ) %&gt;% \n  ggplot(aes(xend = x1, yend = y1, x = x0, y = y0)) +\n  geom_segment(arrow = arrow(length = unit(0.03, \"npc\")))\n\n\n\n\n\n\n\n\nGodt så. Hvordan påvirkes det første legeme?\n\\[m_1a =  \\frac{Gm_1m_2}{r^2}\\]\nMåske vi skal have et trin eller to inden vi når hertil?\n\\[\\frac{d^2\\overrightarrow{r}_1}{dt^2} = G\\frac{m_2}{|\\overrightarrow{r_2}-\\overrightarrow{r_1}|}\\frac{\\overrightarrow{r_2}-\\overrightarrow{r_1}}{|\\overrightarrow{r_2}-\\overrightarrow{r}_1|} + G\\frac{m_3}{|\\overrightarrow{r_3}-\\overrightarrow{r_1}|}\\frac{\\overrightarrow{r_3}-\\overrightarrow{r_1}}{|\\overrightarrow{r_3}-\\overrightarrow{r_1}|} \\]\nDe to andre er helt parallelle:\n\\[\\frac{d^2\\overrightarrow{r_2}}{dt^2} = G\\frac{m_1}{|\\overrightarrow{r_1}-\\overrightarrow{r_2}|}\\frac{\\overrightarrow{r_1}-\\overrightarrow{r_2}}{|\\overrightarrow{r_1}-\\overrightarrow{r_2}|} + G\\frac{m_3}{|\\overrightarrow{r_3}-\\overrightarrow{r_2}|}\\frac{\\overrightarrow{r_3}-\\overrightarrow{r_2}}{|\\overrightarrow{r_3}-\\overrightarrow{r_2}|} \\]\n\\[\\frac{d^2\\overrightarrow{r_1}}{dt^2} = G\\frac{m_2}{}\\frac{}{} + G\\frac{m_3}{}\\frac{}{} \\]\nr12, som er lig r2 - r1, kan findes ved kvadratroden af x2-x1 i anden - y2-y1 i anden.\nVi fik tre bevægelsesligninger. Og hvis vi skriver dem som funktioner af x og y istedet, får vi seks ligninger.\nDernæst definerer vi 12 nye variable, der gør det muligt at definere 12 første ordens differentialligninger.\nDem skal vi så løse.\nrunge.kutta {rmutil}"
   },
   {
     "objectID": "notes/20240819-parade-ruter/index.html",
@@ -427,18 +371,67 @@
     "text": "Spørgsmål?"
   },
   {
-    "objectID": "notes/20241027-3-body-animation/index.html",
-    "href": "notes/20241027-3-body-animation/index.html",
-    "title": "3 Body Problem",
+    "objectID": "notes/20241027-linux-notes/index.html",
+    "href": "notes/20241027-linux-notes/index.html",
+    "title": "Linux Notes",
     "section": "",
-    "text": "https://evgenii.com/blog/three-body-problem-simulator/\nhttps://fb.watch/vIMrdED-A_/\nOg den vil jeg gerne ku’ animere. Eller noget. Der er noget javascript et sted på todo-listen der kan bruges. Og vi ender nok med en omfattende note med kode og sådan.\nKan det laves i noget shiny noget?\nAnyway.\nThe three body problem. Not the book. Not the series. But the problem from physics.\nThree bodies, having initial masses and velocities (momenta), orbiting eachother, are left to their own devices. Or at least left Newtons laws of motion and gravitaion. What orbits will they follow?\nThere is no closed-form solution to that, that is we are not able to write an expression that will return the result for time = 2, given initial values at time = 0. We will have to do the calculation for time = 1, and then, based on that result calculate the next step. The results are rather sensitive to the initial values, and exhibits chaotic behavior. Are we able to do these calculations in R, and visualise them?\nWe will have to be able to describe the positions of the three bodies at t=1, and then calculate their positions at t=2.\nVi skal have fat i vores gymnasiefysik.\nNewtons generelle gravitationsligning beskriver den kraft der er mellem to legemer:\n\\[F =  \\frac{Gm_1m_2}{r^2}\\] Hvor \\(m_i\\) er legemernes masse , G er gravitationskonstanten og r er afstanden mellem de to legemer.\nNewtons anden lov:\n\\[F = ma\\]\nFortæller os at kraften der virker på et legeme er lig legemets masse ganget dets acceleration.\nAccelleration er ændring af hastighed, hastighed er ændring af position. Og hvis vi skal finde en afstand mellem to legemer, skal vi have fat på deres positioner. Så lad os definere et koordinatsystem.\nDet lader vi have origo i massemidtpunktet for de tre legemer, for det vil vise sig at det enten ligger fast, eller bevæger sig med konstant hastighed.\n\nlibrary(tidyverse)\n\nWarning: pakke 'tidyverse' blev bygget under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntribble(~x0, ~y0, ~x1, ~y1,\n        0, 0, 4, 2,\n        0,0,-4,3,\n        0,0,-3,-3\n        \n        ) %&gt;% \n  ggplot(aes(xend = x1, yend = y1, x = x0, y = y0)) +\n  geom_segment(arrow = arrow(length = unit(0.03, \"npc\")))\n\n\n\n\n\n\n\n\nGodt så. Hvordan påvirkes det første legeme?\n\\[m_1a =  \\frac{Gm_1m_2}{r^2}\\]\nMåske vi skal have et trin eller to inden vi når hertil?\n\\[\\frac{d^2\\overrightarrow{r}_1}{dt^2} = G\\frac{m_2}{|\\overrightarrow{r_2}-\\overrightarrow{r_1}|}\\frac{\\overrightarrow{r_2}-\\overrightarrow{r_1}}{|\\overrightarrow{r_2}-\\overrightarrow{r}_1|} + G\\frac{m_3}{|\\overrightarrow{r_3}-\\overrightarrow{r_1}|}\\frac{\\overrightarrow{r_3}-\\overrightarrow{r_1}}{|\\overrightarrow{r_3}-\\overrightarrow{r_1}|} \\]\nDe to andre er helt parallelle:\n\\[\\frac{d^2\\overrightarrow{r_2}}{dt^2} = G\\frac{m_1}{|\\overrightarrow{r_1}-\\overrightarrow{r_2}|}\\frac{\\overrightarrow{r_1}-\\overrightarrow{r_2}}{|\\overrightarrow{r_1}-\\overrightarrow{r_2}|} + G\\frac{m_3}{|\\overrightarrow{r_3}-\\overrightarrow{r_2}|}\\frac{\\overrightarrow{r_3}-\\overrightarrow{r_2}}{|\\overrightarrow{r_3}-\\overrightarrow{r_2}|} \\]\n\\[\\frac{d^2\\overrightarrow{r_1}}{dt^2} = G\\frac{m_2}{}\\frac{}{} + G\\frac{m_3}{}\\frac{}{} \\]\nr12, som er lig r2 - r1, kan findes ved kvadratroden af x2-x1 i anden - y2-y1 i anden.\nVi fik tre bevægelsesligninger. Og hvis vi skriver dem som funktioner af x og y istedet, får vi seks ligninger.\nDernæst definerer vi 12 nye variable, der gør det muligt at definere 12 første ordens differentialligninger.\nDem skal vi så løse.\nrunge.kutta {rmutil}"
+    "text": "Oh the nostalgia. It looks exactly like I remember Norton Commander!\nCommand: mc\nInstall: sudo apt install mc"
   },
   {
-    "objectID": "notes/20241115-stakkede-barcharts/index.html",
-    "href": "notes/20241115-stakkede-barcharts/index.html",
-    "title": "Stakkede barcharts",
+    "objectID": "notes/20241027-linux-notes/index.html#mc---midnight-commander",
+    "href": "notes/20241027-linux-notes/index.html#mc---midnight-commander",
+    "title": "Linux Notes",
     "section": "",
-    "text": "Hvordan laver man et stakket barchart?\nVi starter som sædvanlig med at indlæse biblioteker:\n\nlibrary(tidyverse)\n\nVi skal også bruge noget data. Vi smutter forbi OECDs data for folks tidsforbrug pr dag på ting i forskellige lande.\nOg så hiver vi fat i deres “Developer API, henter url’en til et data query, og sætter lidt ekstra på;”&format=csvfilewithlabels” for at få resultatet i et format der ikke kræver utroligt meget arbejde at hive data ud af.\n\nurl &lt;- \"https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_TIME_USE@DF_TIME_USE,1.0/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels\"\n\nDen kan vi indlæse direkte:\n\ndf &lt;- read_csv(url)\n\nRows: 494 Columns: 20\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (15): STRUCTURE, STRUCTURE_ID, STRUCTURE_NAME, ACTION, REF_AREA, Referen...\ndbl  (3): OBS_VALUE, DECIMALS, UNIT_MULT\nlgl  (2): Sex, Observation value\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nSpecifikationen af kolonner afslører at der er en del af dem vi ikke rigtig har brug for, så dem sorterer vi fra. Vi får tidsforbrug fordelt på køn og total. Og totalen er redundant. Lægger vi tallene for “Other” sammen for de to køn, får vi naturligvis totalen.\nSå alt det sorterer vi fra:\n\ndf &lt;- df %&gt;% \n  select(Country = `Reference area`, Measure, Sex = SEX, time = OBS_VALUE) %&gt;% \n  filter(Sex != \"_T\")\n\nDer er meget data, så lad os nøjes med at kigge på Danmark. OECD foretrækker eksonymet (fordi de er nogle lingvistisk hegemoniske kolonialister). Så det er “Denmark” vi skal have fat på.\nSå vi filtrerer for kun at få Danmark med, ændrer M og F til ♂ og ♀. Og oversætter de forskellige aktiviteter til dansk. Mon ikke “Personal care” indeholder en del søvn? Vi kalder det her “Personlig pleje”. Jeg plejer at sove, og det er noget jeg gør personligt:\n\ndf &lt;- df %&gt;% \n  filter(Country == \"Denmark\") %&gt;% \n  mutate(Sex = case_match(Sex,\n             \"M\" ~ \"♂\", \n             \"F\" ~ \"♀️\",\n             .default =  Sex)) %&gt;% \n  mutate(Measure = case_match(Measure, \n                              \"Leisure\" ~ \"Fritid\",\n                              \"Paid work or study\" ~ \"Lønarbejde eller studier\",\n                              \"Other\" ~ \"Andet\",\n                              \"Unpaid work\" ~ \"Ulønnet arbejde\", \n                              \"Personal care\" ~ \"Personlig Pleje\",\n                              .default = Measure))\n\nOg så kan vi lave søjlediagrammet.\nVi styrer tingene to steder i koden. I aes() fortæller vi hvad der er på x- og y-akserne. Farvelægningen styres samme sted (husk fill i stedet for color), og med den får vi samtidig grupperet vores data - og det bruges i geom_col. Her specificerer vi nemlig at det skal stakkes. Vi kunne også have skrevet “dodge”, men målet var et stakket søjlediagram, så…\nHvorfor geom_col i stedet for geom_bar? geom_bar foretager som default en statistisk transformation på data, hvor den tæller antallet af observationer. Nu var det ikke antallet af observationer af tidsforbrug vi ville have (de er nemlig ens), men tallene selv. geom_col laver ingen transformation. Vi kunne også have givet geom_bar argumentet stat = \"identity\", det havde for de fleste praktiske formål givet samme resultat.\nOg så justerer vi på labels i plottet, fjerner clutter fra default temaet, og justerer på farverne:\n\ndf %&gt;% \n  ggplot(aes(x = Sex, y = time, fill = Measure)) +\n  geom_col(position = \"stack\") +\n  labs(\n    title = \"Stakkede søjlediagrammer for de to køns tidsforbrug\",\n    x = \"\",\n    y = \"Tid (minutter)\",\n    fill = \"Aktivitet\"\n  ) +\n  theme_minimal() +\n  scale_fill_brewer(palette = \"Set2\")\n\n\n\n\n\n\n\n\nBum. De to søjler er her, helt naturligt, lige høje, for der er ikke forskel på hvad de to køn har af tid i løbet af en dag.\nDet er dog lidt vanskeligt at sammenligne. Det er en af udfordringerne med stakkede søjler.\nI stedet kan vi dele det lidt op. Vi vælger position = \"dodge\" for at få søjlerne ved siden af hinanden, ændrer på titlen, og tilføjer facet_wrap(~Measure) for at få et plot for hver type aktivitet der bruges tid på:\n\ndf %&gt;% \n  ggplot(aes(x = Sex, y = time, fill = Measure)) +\n  geom_col(position = \"dodge\") +\n  labs(\n    title = \"Søjlediagrammer for de to køns tidsforbrug\",\n    x = \"\",\n    y = \"Tid (minutter)\",\n    fill = \"Aktivitet\"\n  ) +\n  theme_minimal() +\n  scale_fill_brewer(palette = \"Set2\") +\n  facet_wrap(~Measure)\n\n\n\n\n\n\n\n\nBum-bum.\nKonklusioner? Den eneste jeg tør drage er, at sammenligninger i stakkede søjlediagrammer kan være vanskelige."
+    "text": "Oh the nostalgia. It looks exactly like I remember Norton Commander!\nCommand: mc\nInstall: sudo apt install mc"
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#whatis",
+    "href": "notes/20241027-linux-notes/index.html#whatis",
+    "title": "Linux Notes",
+    "section": "whatis",
+    "text": "whatis\nWhat does this command do? For when you’ve forgotten what it does.\nCommand: whatis man"
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#whereis",
+    "href": "notes/20241027-linux-notes/index.html#whereis",
+    "title": "Linux Notes",
+    "section": "whereis",
+    "text": "whereis\nWhat it says on the tin. Where is that file?\nCommand: whereis myfile.txt"
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#ncdu---disk-usage",
+    "href": "notes/20241027-linux-notes/index.html#ncdu---disk-usage",
+    "title": "Linux Notes",
+    "section": "ncdu - disk usage",
+    "text": "ncdu - disk usage\nEasily locate those ginormous files that need to be deleted.\nCommand: ncdu\nInstall: sudo apt install ncdu"
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#htop---find-processes",
+    "href": "notes/20241027-linux-notes/index.html#htop---find-processes",
+    "title": "Linux Notes",
+    "section": "htop - find processes",
+    "text": "htop - find processes\ntop in itself is usefull to locate the process that for some reason needs to be killed. htop makes it easy to actually complete the hit.\nCommand: htop\nInstall: sudo apt install htop"
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#alias---make-your-own-commands",
+    "href": "notes/20241027-linux-notes/index.html#alias---make-your-own-commands",
+    "title": "Linux Notes",
+    "section": "alias - make your own commands",
+    "text": "alias - make your own commands\nalias update=‘sudo apt update && sudo apt upgrade’\nBut that is only temporarily. Add it to your ~/.bashrc file, to make it permanent."
+  },
+  {
+    "objectID": "notes/20241027-linux-notes/index.html#copy-paste",
+    "href": "notes/20241027-linux-notes/index.html#copy-paste",
+    "title": "Linux Notes",
+    "section": "Copy-paste",
+    "text": "Copy-paste\nCtrl+c and ctrl+v is not working on the console. But ctrl-shift-c/v is.\ns"
+  },
+  {
+    "objectID": "notes/20241119-lagkager/index.html",
+    "href": "notes/20241119-lagkager/index.html",
+    "title": "Lagkagediagrammer",
+    "section": "",
+    "text": "jf https://www.facebook.com/mrapeterhansen/posts/pfbid0dKabAdGWg46Hz7cvdBdEYHLAb74EEteczRg9LKHETEPHLhfMFBfyNRxQfWH42hE2l\n\nIndlæs nødvendige pakker\nlibrary(ggplot2) library(dplyr)\n\n\nOpret datasættet\ndata &lt;- data.frame( KØN = c(“Mænd”, “Kvinder”, “Mænd”, “Kvinder”, “Mænd”, “Kvinder”, “Mænd”, “Kvinder”), ALDER = c(“35-39 år”, “35-39 år”, “40-44 år”, “40-44 år”, “45-49 år”, “45-49 år”, “50-54 år”, “50-54 år”), INDHOLD = c(106117, 131599, 134851, 118063, 151005, 134647, 151143, 132615) )\n\n\nTilføj total for hver aldersgruppe\ndata &lt;- data %&gt;% group_by(ALDER) %&gt;% mutate(TOTAL = sum(INDHOLD))\n\n\nPlot lagkagediagrammer med facetter\nggplot(data, aes(x = ““, y = INDHOLD, fill = KØN)) + geom_bar(stat =”identity”, width = 1, color = “black”) + coord_polar(“y”, start = 0) + facet_wrap(~ALDER, ncol = 4) + labs( title = “Tilknytning til arbejdsmarkedet (fuldtidspersoner)”, subtitle = “Ordinær beskæftigelse i alt (2022)”, fill = “Køn” ) + theme_void() + theme( strip.text = element_text(size = 12, face = “bold”), # Aldergrupper over diagrammerne plot.title = element_text(size = 16, face = “bold”), plot.subtitle = element_text(size = 14), legend.title = element_text(size = 12), legend.text = element_text(size = 10) )\nlibrary(httr) library(tidyplots) library(tidyverse)\nlibrary(danstat) library(ggpie)\ndanstat::get_table_metadata(“AMR2”)\nvariables &lt;- list(list(code = “KØN”, values = c(“M”,“K”)), list(code = “SOCIO”, values = “021”), list(code = “ALDER”, values = NA), list(code = “TID”, values = 2022))\ndata &lt;- danstat::get_data(“AMR2”, variables = variables, language = “da”) data %&gt;% select(-TID) %&gt;% filter(ALDER == “40-44 år”) %&gt;% ggplot(aes(x = ALDER, y = INDHOLD, fill = KØN)) + geom_bar( stat = “identity”) + coord_polar(“y”, start = 0)"
   },
   {
     "objectID": "notes/20241126-studenter-forventninger/index.html#mit-udgangspunkt",
@@ -508,7 +501,7 @@
     "href": "notes/20241126-studenter-forventninger/index.html#hvad-tror-de-de-kan-bruge-det-til-1",
     "title": "Studerendes forventninger til store tekstmodeller",
     "section": "Hvad tror de de kan bruge det til",
-    "text": "Hvad tror de de kan bruge det til\n\nSøgemaskine\n\n\n\nsøgemaskine… Ja, det kan den efterhånden bruges til. Altså bortset fra at den Uwe der er tale om ikke er ham her."
+    "text": "Hvad tror de de kan bruge det til\n\nSøgemaskine\n\n\n\nsøgemaskine… Ja, det kan den efterhånden bruges til. Altså bortset fra at den Uwe der er tale om ikke er ham her.\nUwe Ligge, matematiker fra Dortmund Universitet."
   },
   {
     "objectID": "notes/20241126-studenter-forventninger/index.html#hvad-tror-de-de-kan-bruge-det-til-2",
