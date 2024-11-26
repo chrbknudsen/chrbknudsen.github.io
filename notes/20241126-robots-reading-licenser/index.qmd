@@ -91,11 +91,7 @@ Ingen AI. Men robotter!
 :::: notes
 
 RPA. Værktøjer der kan interagere med forskellige programmer på en computer.
-Ligesom mennesker kan. 
-
-Det er mere fleksibelt end at forsøge at trække data ud og indlæse.
-
-Så - automatiseret overførsel af data mellem forskellige systemer.
+Og hvis I vil vide hvad det er - så skal I lige snakke med Søren.
 
 ::::
 
@@ -205,6 +201,10 @@ Og så begyndte vi at nærme os - det helt konkrete - måske ikke
 så konkret som jeg kunne ønske mig, men så må jeg jo tale med 
 Søren - eksempel på hvordan vi faktisk kan bruge det der AI til
 noget i virkeligheden.
+
+For nu kan - nogle af os - selv, i stedet for at skrive en 
+projektansøgning i tre eksemplarer om at få bevilget adgang til en
+programmør i en afdeling i en anden by.
 
 ::::
 
