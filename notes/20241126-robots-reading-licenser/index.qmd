@@ -102,10 +102,9 @@ Så - automatiseret overførsel af data mellem forskellige systemer.
 
 ## Opsamling
 
-![](træls.png)
+![](træls2.png)
 
 
-Et billede i pointillistisk stil, der illustrerer en meget flittig ny kollega der viser sig at være meget træls. 
 
 :::: notes
 
@@ -153,14 +152,26 @@ vi skal i gang med....
 
 ::::
 
-## Anne og Søren
+## Undervisning af vejledere (og studerende)
 
 ![](sdav.png)
-
+Et billede i dieselpunk stil af to bibliotekarer der underviser undervisere i brugen af generativ ai
 
 :::: notes
 Og en af de ting vi er i gang med - er Anne og Sørens vejledningstilbud
-til
+til undervisere - og efterhånden også studerende. 
+
+Efterspørgslen er stor, men det er kompleksiteten også. 
+
+Annes bemærkning om behovet for konstant komptenceudvikling 
+og at det faktisk er ret hårdt kan jeg godt genkende. 
+
+Emnet udvikler sig konstant. Hele tiden. Og det er en kamp at holde
+sig et par uger foran dem vi underviser. For ikke at tale om 
+alt det ingen faktisk kender svaret på. Det der med ophavsret eksempelvis...
+
+Og den der do's and dont liste - den må I godt dele med resten af
+klassen.
 
 ::::
 
@@ -169,7 +180,44 @@ til
 
 ![](cbk.png)
 
+
 Jeg skal bruge et billede i steampunk stil, der illusterer de studerendes forventninger til kunstig intelligens med en fyldt ballon, og en gal videnskabsmand der står ved siden af med en nål
+
+:::: notes
+
+De har mange - men er faktisk ret opmærksomme på at der er 
+begrænsninger. Udfordringen er de studerende der ikke er opmærksomme.
+Det er der det går rigtig galt!
+
+
+::::
+
+## Hvad møder forlagene os med?
+
+![](such.png)
+
+Hvad møder forlagene os med? I takt med den hastige udvikling inden for AI værktøjer sker der også ændringer i forlagenes udkast til licenskontrakter, i særdeleshed i klausuler om text- og data mining.
+
+Susanne Christoffersen og Maya Mitre, License Managers på Det Kgl. Bibliotek giver et indblik i, hvad dette års forhandlinger har budt på.
+
+To inspirationsoplæg – kast dig ud i at bruge AI og LLM til at løse dine opgaver på en ny måde:
+
+## Automatisering af e-bogsworkflow
+
+![](ebog.png)
+
+I art deco stil: Automatisering af e-bogsworkflow med AI 
+
+## Urania
+
+![](urania.png)
+
+I stilen brutalisme: Udvikling af værktøjet Urania med brug af LLM – til scanning og katalogisering af bøger
+
+## Robotter læser licensaftaler
+
+![](robots-reading-licenses.webp)
+
 
 ## The end
 
