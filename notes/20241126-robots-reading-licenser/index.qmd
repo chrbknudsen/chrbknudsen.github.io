@@ -241,6 +241,9 @@ Eller, Uwes maxim. Thinking hurts and computers are cheap.
 ## Robotter læser licensaftaler
 
 ![](robots-reading-licenses.webp)
+
+Men de skal dæleme ikke fortolke noget for os!
+
 :::: notes
 
 Og så lidt koldt vand over alt for vidtløftige fantasier om
