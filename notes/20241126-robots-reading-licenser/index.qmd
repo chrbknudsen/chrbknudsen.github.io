@@ -236,6 +236,9 @@ om ikke man kunne få computeren i spil".
 
 Eller, Uwes maxim. Thinking hurts and computers are cheap.
 
+Og også en udfordring af vores deterministiske måde at tænke på. 
+Hvorfor læser den ikke det her?
+
 ::::
 
 ## Robotter læser licensaftaler
