@@ -49,18 +49,11 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStuderendes forventninger til store tekstmodeller\n\n\nOg hvordan vi skuffer dem\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStakkede barcharts\n\n\nAf kønsopdelt tidsforbrug i Danmark\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux Notes\n\n\nCommands to remember\n\n\n\nOct 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nOct 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParade ruter\n\n\nDen der oplevelse når aviserne skriver om noget du faktisk ved noget om.\n\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/20241126-robots-reading-licenser/index.html#opsamling",
-    "href": "notes/20241126-robots-reading-licenser/index.html#opsamling",
-    "title": "Robots reading licenser",
-    "section": "Opsamling",
-    "text": "Opsamling"
-  },
-  {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
     "href": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
     "title": "Robots reading licenser",
     "section": "Robotter læser licenser",
-    "text": "Robotter læser licenser\n\n\nSom Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på KB, under overskriften “AI og licenser”. Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk."
+    "text": "Robotter læser licenser\n\n\nSom Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på KB, under overskriften “AI og licenser”.\nDet er i sin vorden. Der er udgået en befaling fra direktionen, men det er meget luftigt indtil videre, der er ikke kigget på scope af projektet, ingen ved hvor mange penge der er i det, der er ikke engang fundet en projektleder endnu.\nDa det rygtedes var forventingerne store. så nu vil jeg punktere ballonen.\nNu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk."
   },
   {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
@@ -74,14 +67,49 @@
     "href": "notes/20241126-robots-reading-licenser/index.html#mange-faldgruber",
     "title": "Robots reading licenser",
     "section": "Mange faldgruber!",
-    "text": "Mange faldgruber!\n\n\nOg fortolkning? Retspraksis? Love? Vi kan ikke altid få et klart svar fra nationens førende eksperter. Robotten vil hallucinere, og vi skal i retten."
+    "text": "Mange faldgruber!\n\n\nOg fortolkning? Retspraksis? Love?\nvi får behov for at fintune modellen på retskilderne. Og lovgivningen kan vi godt få ind. Domsafsigelser nok også, hvis vi taler pænt med domsstolsstyrelsen. Men Karnov? Glem det. Og det er bare Danmark..\nRigsfællesskabets fremmeste ekspert hedder vist nok Morten Rosenmeier. Han kan ikke (altid) give os et klart svar. Hvorfor forventer vi at en generisk amerikansk chatbot, der som en af de væsentlige dele af sit danske træningsmateriale bruger hestenettet, kan?\nRobotten vil hallucinere, og vi skal i retten."
   },
   {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
     "href": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
     "title": "Robots reading licenser",
     "section": "Helt praktisk",
-    "text": "Helt praktisk\n Ingen AI. Men robotter!\n\nRPA. Værktøjer der kan interagere med forskellige programmer på en computer. Ligesom mennesker kan.\nDet er mere fleksibelt end at forsøge at trække data ud og indlæse.\nSå - automatiseret overførsel af data mellem forskellige systemer."
+    "text": "Helt praktisk\n\nIngen AI. Men robotter!\n\nRPA. Værktøjer der kan interagere med forskellige programmer på en computer. Ligesom mennesker kan.\nDet er mere fleksibelt end at forsøge at trække data ud og indlæse.\nSå - automatiseret overførsel af data mellem forskellige systemer."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#opsamling",
+    "href": "notes/20241126-robots-reading-licenser/index.html#opsamling",
+    "title": "Robots reading licenser",
+    "section": "Opsamling",
+    "text": "Opsamling\n\nEt billede i pointillistisk stil, der illustrerer en meget flittig ny kollega der viser sig at være meget træls.\n\nOverskriften var “AI i arbejdslivet: din nye kollega”\nDet lyder som om den der nye kollega er meget flittig.\nRet dygtig.\nOg supertræls\nSå på dagens møde har vi haft vores nye kollega til tjenstlig samtale…"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#bibliotekets-møde-med-ai",
+    "href": "notes/20241126-robots-reading-licenser/index.html#bibliotekets-møde-med-ai",
+    "title": "Robots reading licenser",
+    "section": "Bibliotekets møde med AI",
+    "text": "Bibliotekets møde med AI\n\nJeg skal bruge et billede i renaissance stil med titlen “Bonnies AI-panik”\n\nOg ja, det var mig der lod chatbotten lave en bedre udgave af Kiras julehilsen…\nVi startede med at få et overblik over - måske primært udfordringerne. Og der er dæleme mange! Personligt deler jeg mange af bekymringerne. Men jeg kunne virkelig godt tænke mig at se tal for hvad marginal omkostningen er for at jeg har fået lavet dette billede.\nOg mange af de bekymringer vi har - det er dem der hele tiden har været. Maskinlæringsfolk har bekymret sig om bias de sidste ca 20 år. Det er en ti års tid siden aviserne begyndte at lave automatiske artikler…\nSå - hvis vi nu bekymrer os om ting eksperterne har bekymret sig over de sidste 10 år - bekymrer vi os så om det rigtige?\nOg så bliver jeg lettere forpustet over alt det Bonnie ridser op at vi skal i gang med…."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#anne-og-søren",
+    "href": "notes/20241126-robots-reading-licenser/index.html#anne-og-søren",
+    "title": "Robots reading licenser",
+    "section": "Anne og Søren",
+    "text": "Anne og Søren\n\n\nOg en af de ting vi er i gang med - er Anne og Sørens vejledningstilbud til"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#studerendes-forventninger",
+    "href": "notes/20241126-robots-reading-licenser/index.html#studerendes-forventninger",
+    "title": "Robots reading licenser",
+    "section": "Studerendes forventninger",
+    "text": "Studerendes forventninger\n\nJeg skal bruge et billede i steampunk stil, der illusterer de studerendes forventninger til kunstig intelligens med en fyldt ballon, og en gal videnskabsmand der står ved siden af med en nål"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#the-end",
+    "href": "notes/20241126-robots-reading-licenser/index.html#the-end",
+    "title": "Robots reading licenser",
+    "section": "The end",
+    "text": "The end\nFor af en eller anden årsag bliver billedet på den sidste slide altid enshittificeret, så der skal lige være en til sidst…"
   },
   {
     "objectID": "notes/20241115-stakkede-barcharts/index.html",

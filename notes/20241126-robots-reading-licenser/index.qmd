@@ -15,8 +15,6 @@ format:
     logo: logo.png
     css: logo.css
 ---
-## Opsamling
-
 
 ## Robotter læser licenser
 
@@ -25,6 +23,13 @@ format:
 :::: notes
 Som Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på 
 KB, under overskriften "AI og licenser". 
+
+Det er i sin vorden. Der er udgået en befaling fra direktionen, men det er meget
+luftigt indtil videre, der er ikke kigget på scope af projektet, ingen ved hvor
+mange penge der er i det, der er ikke engang fundet en projektleder endnu.
+
+Da det rygtedes var forventingerne store. så nu vil jeg punktere ballonen.
+
 Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare
 os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede
 den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk.
@@ -60,14 +65,28 @@ Det er ikke mange!
 
 :::: notes
 
-Og fortolkning? Retspraksis? Love? Vi kan ikke altid få et klart svar fra 
-nationens førende eksperter. Robotten vil hallucinere, og vi skal i retten.
+Og fortolkning? Retspraksis? Love? 
+
+vi får behov for at fintune modellen på retskilderne. Og lovgivningen kan vi 
+godt få ind. Domsafsigelser nok også, hvis vi taler pænt med domsstolsstyrelsen.
+Men Karnov? Glem det. Og det er bare Danmark..
+
+Rigsfællesskabets fremmeste ekspert hedder vist nok Morten Rosenmeier. Han kan
+ikke (altid) give os et klart svar. Hvorfor forventer vi at en generisk
+amerikansk chatbot, der som en af de væsentlige dele af sit danske træningsmateriale
+bruger hestenettet, kan?
+
+
+Robotten vil hallucinere, og vi skal i retten.
+
+
 
 ::::
 
 ## Helt praktisk
 
 ![](rpa.png)
+
 Ingen AI. Men robotter!
 
 :::: notes
@@ -81,3 +100,78 @@ Så - automatiseret overførsel af data mellem forskellige systemer.
 
 ::::
 
+## Opsamling
+
+![](træls.png)
+
+
+Et billede i pointillistisk stil, der illustrerer en meget flittig ny kollega der viser sig at være meget træls. 
+
+:::: notes
+
+Overskriften var "AI i arbejdslivet: din nye kollega"
+
+Det lyder som om den der nye kollega er meget flittig.
+
+Ret dygtig.
+
+Og supertræls
+
+Så på dagens møde har vi haft vores nye kollega til tjenstlig 
+samtale...
+
+::::
+
+## Bibliotekets møde med AI
+
+
+
+![](bofr.png)
+
+Jeg skal bruge et billede i renaissance stil med titlen "Bonnies AI-panik"
+
+:::: notes
+
+Og ja, det var mig der lod chatbotten lave en bedre udgave af 
+Kiras julehilsen...
+
+Vi startede med at få et overblik over - måske primært udfordringerne.
+Og der er dæleme mange! Personligt deler jeg mange af bekymringerne.
+Men jeg kunne virkelig godt tænke mig at se tal for hvad marginal
+omkostningen er for at jeg har fået lavet dette billede.
+
+Og mange af de bekymringer vi har - det er dem der hele tiden har
+været. Maskinlæringsfolk har bekymret sig om bias de sidste ca
+20 år. Det er en ti års tid siden aviserne begyndte at lave
+automatiske artikler...
+
+Så - hvis vi nu bekymrer os om ting eksperterne har bekymret sig
+over de sidste 10 år - bekymrer vi os så om det rigtige?
+
+Og så bliver jeg lettere forpustet over alt det Bonnie ridser op at 
+vi skal i gang med....
+
+::::
+
+## Anne og Søren
+
+![](sdav.png)
+
+
+:::: notes
+Og en af de ting vi er i gang med - er Anne og Sørens vejledningstilbud
+til
+
+::::
+
+
+## Studerendes forventninger
+
+![](cbk.png)
+
+Jeg skal bruge et billede i steampunk stil, der illusterer de studerendes forventninger til kunstig intelligens med en fyldt ballon, og en gal videnskabsmand der står ved siden af med en nål
+
+## The end
+
+For af en eller anden årsag bliver billedet på den sidste slide
+altid enshittificeret, så der skal lige være en til sidst...
