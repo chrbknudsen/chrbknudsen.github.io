@@ -28,6 +28,17 @@ Det er i sin vorden. Der er udgået en befaling fra direktionen, men det er mege
 luftigt indtil videre, der er ikke kigget på scope af projektet, ingen ved hvor
 mange penge der er i det, der er ikke engang fundet en projektleder endnu.
 
+::::
+
+## Det lyder bekendt...
+
+![](teamet.jpg)
+
+Kilde: Noget der dukkede op i mit feed for 10 minutter siden...
+
+:::: notes
+
+
 Da det rygtedes var forventingerne store. så nu vil jeg punktere ballonen.
 
 Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare
@@ -198,8 +209,8 @@ I art deco stil: Automatisering af e-bogsworkflow med AI
 
 :::: notes
 Og så begyndte vi at nærme os - det helt konkrete - måske ikke
-så konkret som jeg kunne ønske mig, men så må jeg jo tale med 
-Søren - eksempel på hvordan vi faktisk kan bruge det der AI til
+så konkret som jeg kunne ønske mig, men Søren har lovet at sende
+mig kildekoden - eksempel på hvordan vi faktisk kan bruge det der AI til
 noget i virkeligheden.
 
 For nu kan - nogle af os - selv, i stedet for at skrive en 
@@ -209,15 +220,36 @@ programmør i en afdeling i en anden by.
 ::::
 
 
-## Urania
+## Katalogica
 
 ![](urania.png)
 
-I stilen brutalisme: Udvikling af værktøjet Urania med brug af LLM – til scanning og katalogisering af bøger
+I stilen brutalisme: Udvikling af værktøjet Katalogica med brug af LLM – til scanning og katalogisering af bøger
+
+:::: notes
+
+Og endnu et eksempel på hvad man faktisk kan.
+
+Søren og jeg sad i kaffepausen og talte om at det jo er en
+kreativ øvelse, hvor det handler om at få tanken "gad vide
+om ikke man kunne få computeren i spil".
+
+Eller, Uwes maxim. Thinking hurts and computers are cheap.
+
+::::
 
 ## Robotter læser licensaftaler
 
 ![](robots-reading-licenses.webp)
+:::: notes
+
+Og så lidt koldt vand over alt for vidtløftige fantasier om
+hvad vi faktisk kan få den kunstige intelligens til at gøre
+for os på licensområdet. Der er ikke robotter der sætter sig
+i vores stole lige med det første.
+
+::::
+
 
 ## Sammenfattende
 
