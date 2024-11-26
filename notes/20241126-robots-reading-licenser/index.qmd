@@ -4,16 +4,16 @@ subtitle: "Og afrunding af dagen"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - talks
+  - AI
 date: 2024-11-26
-toc: true
+toc: false
 image: "robots-reading-licenses.webp"
 format:
   revealjs:
     theme: serif
-    logo: logo.png
-    css: logo.css
+    logo: ../../scripts/logo.png
+    css: ../../scripts/logo.css
 ---
 
 ## Robotter læser licenser
@@ -102,24 +102,6 @@ Så - automatiseret overførsel af data mellem forskellige systemer.
 
 ## Opsamling
 
-![](træls2.png)
-
-
-
-:::: notes
-
-Overskriften var "AI i arbejdslivet: din nye kollega"
-
-Det lyder som om den der nye kollega er meget flittig.
-
-Ret dygtig.
-
-Og supertræls
-
-Så på dagens møde har vi haft vores nye kollega til tjenstlig 
-samtale...
-
-::::
 
 ## Bibliotekets møde med AI
 
@@ -196,11 +178,22 @@ Det er der det går rigtig galt!
 
 ![](such.png)
 
-Hvad møder forlagene os med? I takt med den hastige udvikling inden for AI værktøjer sker der også ændringer i forlagenes udkast til licenskontrakter, i særdeleshed i klausuler om text- og data mining.
+:::: notes 
+Så hørte vi frontlinieberetninger fra kontakten med forlagene.
 
-Susanne Christoffersen og Maya Mitre, License Managers på Det Kgl. Bibliotek giver et indblik i, hvad dette års forhandlinger har budt på.
+Og vi vil så gerne have lov at arbejde med teksterne. Det vil 
+forskerne. Og mange af de studerende, rigtig rigtig gerne,
 
-To inspirationsoplæg – kast dig ud i at bruge AI og LLM til at løse dine opgaver på en ny måde:
+Jeg er særligt glad for pointen om at konflikten mellem 
+forlagenes pengepung og den teknologiske udvikling ikke er spor ny.
+Artikel 1 sektion 8 i den amerikanske forfatning fra 1789.
+
+Jeg er meget tryg ved at vi har jer på sagen, og er glad for at 
+jeg ikke selv er med nede i skyttegravene.
+
+::::
+
+
 
 ## Automatisering af e-bogsworkflow
 
@@ -217,6 +210,27 @@ I stilen brutalisme: Udvikling af værktøjet Urania med brug af LLM – til sca
 ## Robotter læser licensaftaler
 
 ![](robots-reading-licenses.webp)
+
+## Sammenfattende
+
+![](træls2.png)
+
+
+
+:::: notes
+
+Overskriften var "AI i arbejdslivet: din nye kollega"
+
+Det lyder som om den der nye kollega er meget flittig.
+
+Ret dygtig.
+
+Og supertræls
+
+Så på dagens møde har vi haft vores nye kollega til tjenstlig 
+samtale...
+
+::::
 
 
 ## The end
