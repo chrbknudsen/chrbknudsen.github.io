@@ -34,7 +34,6 @@ Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forkla
 os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede
 den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk.
 
-
 ::::
 
 ## Så er drømmen realistisk?
@@ -200,6 +199,15 @@ jeg ikke selv er med nede i skyttegravene.
 ![](ebog.png)
 
 I art deco stil: Automatisering af e-bogsworkflow med AI 
+
+:::: notes
+Og så begyndte vi at nærme os - det helt konkrete - måske ikke
+så konkret som jeg kunne ønske mig, men så må jeg jo tale med 
+Søren - eksempel på hvordan vi faktisk kan bruge det der AI til
+noget i virkeligheden.
+
+::::
+
 
 ## Urania
 
