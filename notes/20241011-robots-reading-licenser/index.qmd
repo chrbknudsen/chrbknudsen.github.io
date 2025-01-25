@@ -2,18 +2,18 @@
 title: "Robots reading licenser"
 subtitle: "Og afrunding af dagen"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget er færdigt
+visible: "true" # sæt til noget andet når oplægget er færdigt
 categories:
   - kategori 1
   - kategori 2
-date: 2024-10-11
+date: 2024-11-26
 toc: true
 image: "robots-reading-licenses.webp"
 format:
   revealjs:
     theme: serif
-    logo: logo.png
-    css: logo.css
+    # logo: logo.png
+    # css: logo.css
 ---
 ## Opsamling
 

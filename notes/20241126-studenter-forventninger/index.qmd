@@ -2,18 +2,18 @@
 title: Studerendes forventninger til store tekstmodeller
 subtitle: "Og hvordan vi skuffer dem"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget er færdigt
+visible: "true" # sæt til noget andet når oplægget er færdigt
 categories:
   - talks
   - AI
-date: 2024-10-11
+date: 2024-11-26
 toc: false
 image: "cover.webp"
 format:
   revealjs:
     theme: serif
-    logo: ../../scripts/logo.png
-    css: ../../scripts/logo.css
+    # logo: ../../scripts/logo.png
+    # css: ../../scripts/logo.css
 ---
 
 ## Mit udgangspunkt
