@@ -9,10 +9,30 @@ make_transparent <- function(sti, fuzz = 50){
   p %>% 
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = "+1+1") %>%
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-1, "+1")) %>%
-    image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+1", "+", image_info(p)$height-1)) %>%
-    image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-1, "+", image_info(p)$height-1)) %>% 
+    image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+1", "+", image_info(p)$height-10)) %>%
+    image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-10, "+", image_info(p)$height-10)) %>% 
   image_write(path = sti)
 }
+# orange
+
+imgurl <- "img/org/trump.webp"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "orange",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1,
+                    url = "OMG",
+                    u_color = "orange",
+                    u_size = 11,
+                    u_x = 0.95,
+                    u_y = 0.11,
+                    #        u_angle = 45,
+                    white_around_sticker = TRUE,
+                    filename = "img/orange.png")
+make_transparent("img/orange.png", fuzz = 20)
 
 # LogistiCore
 imgurl <- "img/org/LogistiCore.webp"

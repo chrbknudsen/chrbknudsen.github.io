@@ -1,0 +1,285 @@
+---
+title: "Robots reading licenser"
+subtitle: "Og afrunding af dagen"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget er færdigt
+categories:
+  - talks
+  - AI
+date: 2024-11-26
+toc: false
+image: "robots-reading-licenses.webp"
+format:
+  revealjs:
+    theme: serif
+    logo: ../../scripts/logo.png
+    css: ../../scripts/logo.css
+---
+
+## Robotter læser licenser
+
+![](robots-reading-licenses.webp)
+
+:::: notes
+Som Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på 
+KB, under overskriften "AI og licenser". 
+
+Det er i sin vorden. Der er udgået en befaling fra direktionen, men det er meget
+luftigt indtil videre, der er ikke kigget på scope af projektet, ingen ved hvor
+mange penge der er i det, der er ikke engang fundet en projektleder endnu.
+
+::::
+
+## Det lyder bekendt...
+
+![](teamet.jpg)
+
+Kilde: Noget der dukkede op i mit feed for 10 minutter siden...
+
+:::: notes
+
+
+Da det rygtedes var forventingerne store. så nu vil jeg punktere ballonen.
+
+Nu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare
+os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede
+den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk.
+
+::::
+
+## Så er drømmen realistisk?
+
+![](ballon.png)
+
+:::: notes
+
+Her havde jeg overvejet at tage en rekvisit med - en knappenål. 
+
+Nej. Tidligere i dag talte jeg om at vi ofte må skuffe de studerende. De 
+store tekstmodeller kan være rigtig nyttige. De kan meget. Men der er altså ret
+store huller i osten. 
+
+Jeg får forskellige meldinger om hvor mange licensaftaler vi faktisk har. Nogen
+siger 150 forskelllige aftale partnere, enkelte med mere end en licensaftale.
+Andre siger at vi har i omegnen af 400 aftaler. Det er heller ikke vigtigt. 
+
+Det er ikke mange!
+
+
+
+::::
+
+## Mange faldgruber!
+
+![](hallucinerende_robot.png)
+
+:::: notes
+
+Og fortolkning? Retspraksis? Love? 
+
+vi får behov for at fintune modellen på retskilderne. Og lovgivningen kan vi 
+godt få ind. Domsafsigelser nok også, hvis vi taler pænt med domsstolsstyrelsen.
+Men Karnov? Glem det. Og det er bare Danmark..
+
+Rigsfællesskabets fremmeste ekspert hedder vist nok Morten Rosenmeier. Han kan
+ikke (altid) give os et klart svar. Hvorfor forventer vi at en generisk
+amerikansk chatbot, der som en af de væsentlige dele af sit danske træningsmateriale
+bruger hestenettet, kan?
+
+
+Robotten vil hallucinere, og vi skal i retten.
+
+
+
+::::
+
+## Helt praktisk
+
+![](rpa.png)
+
+Ingen AI. Men robotter!
+
+:::: notes
+
+RPA. Værktøjer der kan interagere med forskellige programmer på en computer.
+Og hvis I vil vide hvad det er - så skal I lige snakke med Søren.
+
+::::
+
+## Opsamling
+
+
+## Bibliotekets møde med AI
+
+
+
+![](bofr.png)
+
+Jeg skal bruge et billede i renaissance stil med titlen "Bonnies AI-panik"
+
+:::: notes
+
+Og ja, det var mig der lod chatbotten lave en bedre udgave af 
+Kiras julehilsen...
+
+Vi startede med at få et overblik over - måske primært udfordringerne.
+Og der er dæleme mange! Personligt deler jeg mange af bekymringerne.
+Men jeg kunne virkelig godt tænke mig at se tal for hvad marginal
+omkostningen er for at jeg har fået lavet dette billede.
+
+Og mange af de bekymringer vi har - det er dem der hele tiden har
+været. Maskinlæringsfolk har bekymret sig om bias de sidste ca
+20 år. Det er en ti års tid siden aviserne begyndte at lave
+automatiske artikler...
+
+Så - hvis vi nu bekymrer os om ting eksperterne har bekymret sig
+over de sidste 10 år - bekymrer vi os så om det rigtige?
+
+Og så bliver jeg lettere forpustet over alt det Bonnie ridser op at 
+vi skal i gang med....
+
+::::
+
+## Undervisning af vejledere (og studerende)
+
+![](sdav.png)
+Et billede i dieselpunk stil af to bibliotekarer der underviser undervisere i brugen af generativ ai
+
+:::: notes
+Og en af de ting vi er i gang med - er Anne og Sørens vejledningstilbud
+til undervisere - og efterhånden også studerende. 
+
+Efterspørgslen er stor, men det er kompleksiteten også. 
+
+Annes bemærkning om behovet for konstant komptenceudvikling 
+og at det faktisk er ret hårdt kan jeg godt genkende. 
+
+Emnet udvikler sig konstant. Hele tiden. Og det er en kamp at holde
+sig et par uger foran dem vi underviser. For ikke at tale om 
+alt det ingen faktisk kender svaret på. Det der med ophavsret eksempelvis...
+
+Og den der do's and dont liste - den må I godt dele med resten af
+klassen.
+
+::::
+
+
+## Studerendes forventninger
+
+![](cbk.png)
+
+
+Jeg skal bruge et billede i steampunk stil, der illusterer de studerendes forventninger til kunstig intelligens med en fyldt ballon, og en gal videnskabsmand der står ved siden af med en nål
+
+:::: notes
+
+De har mange - men er faktisk ret opmærksomme på at der er 
+begrænsninger. Udfordringen er de studerende der ikke er opmærksomme.
+Det er der det går rigtig galt!
+
+
+::::
+
+## Hvad møder forlagene os med?
+
+![](such.png)
+
+:::: notes 
+Så hørte vi frontlinieberetninger fra kontakten med forlagene.
+
+Og vi vil så gerne have lov at arbejde med teksterne. Det vil 
+forskerne. Og mange af de studerende, rigtig rigtig gerne,
+
+Jeg er særligt glad for pointen om at konflikten mellem 
+forlagenes pengepung og den teknologiske udvikling ikke er spor ny.
+Artikel 1 sektion 8 i den amerikanske forfatning fra 1789.
+
+Jeg er meget tryg ved at vi har jer på sagen, og er glad for at 
+jeg ikke selv er med nede i skyttegravene.
+
+::::
+
+
+
+## Automatisering af e-bogsworkflow
+
+![](ebog.png)
+
+I art deco stil: Automatisering af e-bogsworkflow med AI 
+
+:::: notes
+Og så begyndte vi at nærme os - det helt konkrete - måske ikke
+så konkret som jeg kunne ønske mig, men Søren har lovet at sende
+mig kildekoden - eksempel på hvordan vi faktisk kan bruge det der AI til
+noget i virkeligheden.
+
+For nu kan - nogle af os - selv, i stedet for at skrive en 
+projektansøgning i tre eksemplarer om at få bevilget adgang til en
+programmør i en afdeling i en anden by.
+
+::::
+
+
+## Katalogica
+
+![](urania.png)
+
+I stilen brutalisme: Udvikling af værktøjet Katalogica med brug af LLM – til scanning og katalogisering af bøger
+
+:::: notes
+
+Og endnu et eksempel på hvad man faktisk kan.
+
+Søren og jeg sad i kaffepausen og talte om at det jo er en
+kreativ øvelse, hvor det handler om at få tanken "gad vide
+om ikke man kunne få computeren i spil".
+
+Eller, Uwes maxim. Thinking hurts and computers are cheap.
+
+Og også en udfordring af vores deterministiske måde at tænke på. 
+Hvorfor læser den ikke det her?
+
+::::
+
+## Robotter læser licensaftaler
+
+![](robots-reading-licenses.webp)
+
+Men de skal dæleme ikke fortolke noget for os!
+
+:::: notes
+
+Og så lidt koldt vand over alt for vidtløftige fantasier om
+hvad vi faktisk kan få den kunstige intelligens til at gøre
+for os på licensområdet. Der er ikke robotter der sætter sig
+i vores stole lige med det første.
+
+::::
+
+
+## Sammenfattende
+
+![](træls2.png)
+
+
+
+:::: notes
+
+Overskriften var "AI i arbejdslivet: din nye kollega"
+
+Det lyder som om den der nye kollega er meget flittig.
+
+Ret dygtig.
+
+Og supertræls
+
+Så på dagens møde har vi haft vores nye kollega til tjenstlig 
+samtale...
+
+::::
+
+
+## The end
+
+For af en eller anden årsag bliver billedet på den sidste slide
+altid enshittificeret, så der skal lige være en til sidst...

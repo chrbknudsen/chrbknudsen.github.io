@@ -3,7 +3,7 @@ title: "Work"
 ---
 
 
-### Royal Danish Library
+### Det Kgl. Bibliotek
   - **Feb. 2017 - ** Special adviser - Coordinator for Copenhagen University Library Datalab.  
   - **Jan 2016 - Feb. 2017** Senior adviser in a position split between the University of Copenhagen and the Royal Library.  
   - **Oct. 2013 - Feb. 2017** Manager - The Pharmaceutical Library.  
@@ -16,11 +16,13 @@ title: "Work"
 **Sep. 2002** - Temp position, Novo Nordisk A/S, Bagsværd.  
 Packing insulin ampoules.
 
-### Technical University of Denmark
-**Jun. 2002** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
+### Danmarks Tekniske Universitet
+**Jun. 2002** Teaching Assistant, Danmarks Tekniske Universitet  
+Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
 Provided instruction in practical exercises and laboratory safety, conducted mandatory educational environment assessments.
 
-**Jan. 2000** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
+**Jan. 2000** Teaching Assistant Danmarks Tekniske Universitet  
+Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
 Provided instruction in practical exercises and laboratory safety.
 
 ### Danske Bank
