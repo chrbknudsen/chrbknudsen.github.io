@@ -6,11 +6,11 @@ title: "Education"
 
 ### University of Copenhagen
 
-**August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summerschool at the Department of Economics.
+**August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summer school at the Department of Economics.
 
 ### Copenhagen Business School
 
-**Sep. -- Oct. 2019 ** Forvaltningsret
+**Sep. -- Oct. 2019 ** Administrative law
 
 **Jan. -- Jun. 2013** Economics
 
@@ -22,10 +22,10 @@ title: "Education"
 
 ### AMU
 
-**Feb. -- mar. 2005** Gaschromatografi. AMU-kursus i praktisk anvendelse af kapillar gaschromatografi. 
+**Feb. -- mar. 2005** Gaschromatografi. AMU course in the practical use of capillary gas chromatography. 
 
 
-**Jan. -- feb.  2005**  HPLC operatør. AMU-kursus i praktisk anvendelse af HPLC.
+**Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
 
 
 ### DTU
