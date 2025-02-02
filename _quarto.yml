@@ -42,12 +42,12 @@ babelquarto:
   languagelinks: navbar
   languagecodes:
   - name: da
-    text: "Version in da"
+    text: "Dansk"
   - name: en
-    text: "Version in en"
+    text: "English"
   mainlanguage: 'en'
   languages: ['da']
-title-da: title in da
+title-da: Christian Knudsen
 description-da: description in da
 author-da: author in da
 lang: en

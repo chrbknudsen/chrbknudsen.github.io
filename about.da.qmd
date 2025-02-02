@@ -1,9 +1,9 @@
 ---
-title: "About"
+title: "Om"
 editor: source
 ---
 
-About this site
+Om dette site
 
 ```{r}
 1 + 1
