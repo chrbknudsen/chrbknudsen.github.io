@@ -37,3 +37,17 @@ format:
     toc: true
 
 editor: source
+
+babelquarto:
+  languagelinks: navbar
+  languagecodes:
+  - name: da
+    text: "Version in da"
+  - name: en
+    text: "Version in en"
+  mainlanguage: 'en'
+  languages: ['da']
+title-da: title in da
+description-da: description in da
+author-da: author in da
+lang: en

@@ -1,0 +1,29 @@
+---
+title: "Other CV related stuff"
+---
+
+## Languges
+
+- Danish
+
+- English: Americans think I'm british. Brits know I'm not.
+- German: Fair reading comprehension, especially technical texts. Understand
+spoken german - if "Hochdeutsch" is spoken slowly. Speaks it well enough to
+order at restaurants.
+- French: I can read and understand chemical literature in french. I do not dare
+order at restaurants.
+
+## IT 
+
+- In the traditional understanding of that word, I am a superuser of Microsoft Office.
+
+- I teach programming in R and have basic knowledge of Python. 
+
+- Daily user of Linux, know regular expressions and SQL. Run my own webserver.
+
+
+## Private
+Born June 20th 1974, married to Kristian, living i Rødovre.
+
+Interests include politics and societal matters in general, molecular gastronomy, digital electronics, the history of science, shooting, swimming, Star Trek in particular and science fiction in general.
+

@@ -1,0 +1,46 @@
+---
+title: "Christian Knudsen"
+about:
+  template: trestles
+  links: 
+    - icon: linkedin
+      text: LinkedIn
+      url: https://www.linkedin.com/in/cbknudsen/
+    - icon: twitter
+      text: twitter
+      url: https://twitter.com/chrbknudsen
+    - icon: envelope
+      text: Email
+      url: mailto:christian.knudsen@gmail.com
+    - icon: github
+      text: Github
+      url: https://github.com/chrbknudsen
+    - icon: ORCID
+      text: ORCID
+      url: https://orcid.org/0000-0002-9816-768X
+image: img/cbk.jpg
+comments: false
+---
+
+## Bio
+
+Og så på dansk
+Born and raised in the cheap part of northern Zealand, I moved to Nærum just 
+north of Copenhagen as soon as I got tired of commuting to DTU. It took me an 
+inordinate amount of time to graduate - mainly due to my intense involvement in 
+the local student organisation. 
+
+After graduating, the plans for a ph.d. were thwarted by cutbacks on 
+environmental research and I ended up at the National Library for Science and 
+Medicine as a subject specialist for chemistry staying there through a 
+couple of mergers with 
+other libraries. Currently that means I ended up in Copenhagen University Library, a 
+part of the Danish Royal Library. I have held a number of positions, including at the staff of the 
+university librarian, managing the pharmaceutical library and currently 
+coordinating the activities in the library Datalab.
+
+I live in Rødovre, Denmark, with my husband Kristian, who works in IT. 
+
+In my spare time I love tinkering with digital electronics and LEGO, experimenting
+with molecular gastronomy and trying to hit a piece of cardboard with a 
+Walther GSP cal. .22. 
