@@ -24,23 +24,18 @@ comments: false
 
 ## Bio
 
-Og så på dansk
-Born and raised in the cheap part of northern Zealand, I moved to Nærum just 
-north of Copenhagen as soon as I got tired of commuting to DTU. It took me an 
-inordinate amount of time to graduate - mainly due to my intense involvement in 
-the local student organisation. 
+Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for 
+København så snart jeg var blevet træt af at pendle til
+DTU.
+Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.
 
-After graduating, the plans for a ph.d. were thwarted by cutbacks on 
-environmental research and I ended up at the National Library for Science and 
-Medicine as a subject specialist for chemistry staying there through a 
-couple of mergers with 
-other libraries. Currently that means I ended up in Copenhagen University Library, a 
-part of the Danish Royal Library. I have held a number of positions, including at the staff of the 
-university librarian, managing the pharmaceutical library and currently 
-coordinating the activities in the library Datalab.
+Efter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de 
+miljøfonde der skulle have finansieret det. I stedet 
+endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. 
+Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. 
+Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek.
+Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.
 
-I live in Rødovre, Denmark, with my husband Kristian, who works in IT. 
+Jeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.
 
-In my spare time I love tinkering with digital electronics and LEGO, experimenting
-with molecular gastronomy and trying to hit a piece of cardboard with a 
-Walther GSP cal. .22. 
+Når jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP.
