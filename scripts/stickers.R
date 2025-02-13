@@ -13,6 +13,29 @@ make_transparent <- function(sti, fuzz = 50){
     image_fill(color = "transparent", refcolor = "white", fuzz = fuzz, point = paste0("+", image_info(p)$width-10, "+", image_info(p)$height-10)) %>% 
   image_write(path = sti)
 }
+
+
+# tvangshygge
+imgurl <- "img/org/tvangshygge.svg"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "red",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1.1,
+                    url = "tilbagevenden",
+                    u_color = "black",
+                    u_size = 11,
+                    u_x = 0.95,
+                    u_y = 0.11,
+                    #        u_angle = 45,
+                    white_around_sticker = TRUE,
+                    filename = "img/tilbagevenden.png")
+make_transparent("img/tilbagevenden.png", fuzz = 20)
+
+
 # orange
 
 imgurl <- "img/org/trump.webp"
