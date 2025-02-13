@@ -1,0 +1,22 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient fra sort til rød -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#FF0000" />
+    </linearGradient>
+    <!-- Definér arrowhead -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF"/>
+    </marker>
+  </defs>
+  
+  <!-- Baggrundscirkel med gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#grad1)" />
+  
+  <!-- Buet pil, som følger en cirkelbue (radius 60) med en hvid pilspids -->
+  <path d="M160,100 A60,60 0 1,0 100,40" stroke="#FFFFFF" stroke-width="5" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Bogstavet "T" centreret i midten -->
+  <text x="100" y="115" font-size="50" text-anchor="middle" fill="#FFFFFF" font-family="Arial">T</text>
+</svg>
