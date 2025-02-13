@@ -1,0 +1,10 @@
+---
+title: "Om"
+editor: source
+---
+
+Om dette site
+
+```{r}
+1 + 1
+```

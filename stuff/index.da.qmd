@@ -1,0 +1,48 @@
+---
+title: "Stuff"
+editor:
+  mode: source
+---
+
+Stuff that is not actually on this site.
+
+Some shiny. 
+
+Some work related.
+
+All with [bestagons](https://www.youtube.com/watch?v=thOifuHs6eY){target="_blank"}:
+
+
+```{=html}
+<br>
+<p>
+      <div class="hexBadges">
+        
+        
+        <a href="https://christianknudsen.info/shiny/TFCD/"><img src="/img/TFCD.png" alt="The final countdown" class="r0 c0" title="7-segment countdown."></a>
+        <a href="https://github.com/chrbknudsen/KnudsenKit/"><img src="/img/KnudsenKit.png" alt="KnudsenKit hex sticker" class="r0 c1" title = "My very own R-package with rarely used utilities."></a>
+        <a href="https://christianknudsen.info/shiny/12-days"><img src="/img/12-days.png" alt="" class="r1 c2" title = "12 juledagelys"></a>
+        <!-- <a href=""><img src="" alt="" class="r1 c3" title = ""></a> -->
+        
+        <!-- <a href=""><img src="" alt="" class="r2 c0" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r2 c1" title = ""></a> -->
+        <a href="https://christianknudsen.info/shiny/roman/"><img src="/img/roman.png" alt="Converting roman numerals to arabic" class="r1 c1" title = "The Peoples Roman Numeral Converter"></a>
+        <!-- <a href=""><img src="" alt="" class="r2 c3" title = ""></a> -->
+
+        <!-- <a href=""><img src="" alt="" class="r3 c0" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c1" title = ""></a> -->
+        <!-- <a href=""><img src="" alt="" class="r3 c2" title = ""></a> -->
+        <a href="https://christianknudsen.info/shiny/orange/"><img src="/img/orange.png" alt="" class="r2 c1" title = "OMFG"/></a>
+        <!-- <a href=""><img src="" alt="" class="r4 c0" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c1" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c2" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r4 c3" title = ""/></a> -->
+        
+        <!-- <a href=""><img src="" alt="" class="r5 c0" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c1" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c2" title = ""/></a> -->
+        <!-- <a href=""><img src="" alt="" class="r5 c3" title = ""/></a> -->
+        
+      </div>
+      </p>
+```

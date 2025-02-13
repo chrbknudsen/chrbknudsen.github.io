@@ -1,0 +1,58 @@
+---
+title: "Kosmisk Floræ"
+subtitle: "Generative Art"
+author: "Christian Knudsen"
+categories:
+  - Generative aRt
+  - R
+date: 2024-04-14
+toc: true
+image: "Kosmisk_Floræ-1.png"
+---
+Or:
+
+- Cosmic Florae
+- Flores Cosmiques
+- Kosmische Florae
+
+
+```{r eval = FALSE}
+library(tidyverse)
+```
+
+Based on the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental))
+```{r}
+calc <- function(theta){
+  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5
+}
+```
+
+Prepping data for plot:
+
+```{r eval = FALSE}
+A <- seq(0,12*pi, 0.1)
+r <-  calc(A)
+B <- seq(0,12*pi, 2.1*pi)
+C <- lapply(B, function(x) A - x) %>%  unlist()
+```
+
+The last two lines basically rotates the curve
+
+Plot:
+```{r eval  = FALSE}
+tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>% 
+    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +
+  geom_point() +
+  coord_polar() +
+  theme_void()+
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = "black")) +
+  scale_color_gradientn(colours  = c("red", "blue", "green")) 
+  ggsave("Kosmisk_Floræ-1.png")
+```
+
+```{r out.width="30%",echo  =F}
+knitr::include_graphics("Kosmisk_Floræ-1.png")
+```
+
+

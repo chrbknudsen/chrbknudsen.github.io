@@ -12,8 +12,8 @@ image: "cover.webp"
 format:
   revealjs:
     theme: serif
-    logo: ../../scripts/logo.png
-    css: ../../scripts/logo.css
+    # logo: ../../scripts/logo.png
+    # css: ../../scripts/logo.css
 ---
 
 ## Mit udgangspunkt

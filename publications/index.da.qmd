@@ -1,0 +1,85 @@
+---
+title: "Publications and Talks"
+---
+## Publications
+
+```{r setup, echo  = FALSE, warning=FALSE, message=FALSE, results="asis"}
+library(bibtex)
+library(RefManageR)
+pubs <- ReadBib("publications.bib")
+RefManageR::NoCite(pubs)
+PrintBibliography(pubs, .opts = list(style = "html",
+                                     bib.style = "authoryear"))
+```
+
+
+## Talks
+
+**8. oktober 2024** Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning
+efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet
+"Har du styr på den naturvidenskabelige opgave? (Vest)" ved Vejle Bibliotek. 
+[slides](https://christianknudsen.info/notes/20241003-natvid-lit-search/)
+
+
+**3. oktober 2024** Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning
+efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet
+"Har du styr på den naturvidenskabelige opgave? (Øst)" ved Gentofte Bibliotek.
+[slides](https://christianknudsen.info/notes/20241003-natvid-lit-search/)
+
+**1. marts 2012** "Fagspecifikke databaser contra Web scale discovery, og om
+brugen af sidstnævnte kan spores  i statistikkerne".
+30 minutters oplæg på temadagen "Alt i ét? Overvejelser og praktiske erfaringer med Web Scale Discovery i Danmark".
+Arrangeret af DFs forum for E-ressourcer. Den Sorte Diamant, København
+
+**21. februar 2012** "Causeri over e-bogen og e-bogslæsere". 1 times foredrag for Bibliotekarforeningens seniorgruppe. Det Kongelige Bibliotek, København.
+
+**27. oktober 2011** oplæg til forskningsbibliotekardag i Helsinki
+
+**2. september 2011** to-timers oplæg og debat på fredericia bibliotek
+
+**24. maj 2011** oplæg til møde i erhversskolernes biblioteksorening - hindsgavl
+
+**11. marts 2011** oplæg om ebøger, CBS biblioteket
+
+**24. februar 2011** oplæg om ebøgernes historie og (u)muligheder. temadag på københavns kommunebiblioteker
+
+**27. januar 2011** DF-vinterinternat om ebøger
+
+**2. december 2010** E-bøger - før og lige nu. Temadag om E-bøger på Gentofte Centralbibliotek, Hellerup
+
+**16. november 2010** E-bøger på KB - hype, men vejen frem? Foredag på forskningsnet konference 2010, Comwell Middelfart
+
+**9. november 2010** - Chair ved debat på uddannelsesforum 2010, bellacenteret (Dorthe Toft)
+
+**27. juli 2010** - indslag om e-bøger i TV-avisen
+
+**15. juni 2010** - oplæg om (e)bøgernes fremtid ved åbning af emedialab på Odense Centralbibliotek
+
+**19. maj 2010** Oplæg om ebogens historie i forbindelse med projektet "Library bypass", Fredericia (og hvornår var det så at dagen om library bypass blev holdt?)
+
+**6. maj 2010**- foredrag om ebøger - gå-hjem-møde på Statsbiblioteket
+
+**9. april  2010** -  Ebogserfaringer, oplæg for Faggruppen for medicinsk information. Glostrup Sygehus.
+
+**7. april 2010** - E-bøger, status, muligheder og begrænsninger. Oplæg og paneldebat ved semesterseminar på SDU.
+
+**23. marts 2010** - So Ein Ding, DR2 om vores udbud af ebøger og udlån af ebogslæsere
+
+**12. februar 2010**-  oplæg for TORS om ebogslæsere, Værløse
+
+
+**17. november 2009** foredrag om ebøger for minibib, københavn
+
+**26. maj 2009** - foredrag om ebøger - hovedbiblioteket Guldborgsund
+
+**30. marts 2009**-  foredrag om ebøger, BF, frederiksberg.
+
+**Oct. 19 2007** Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København) 
+ 
+**Jun. 21 2007** Formidling i nye medier (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”
+
+**Nov. 17 2008** Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe (BFs hus) ”Teknik: Software og hardware – læsere”
+
+**Oct. 12 2007** Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener” 
+
+To gange - naturvidenskab for bibliotekarer

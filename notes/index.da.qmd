@@ -1,0 +1,23 @@
+---
+title: "Notes"
+listing:
+  - id: talks
+    contents: "**/*/index.qmd"
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 36
+    exclude: 
+      visible: "false"
+page-layout: full
+title-block-banner: false
+comments: false
+toc: true
+---
+<!-- https://beamilz.com/posts/en  for yderligere struktur. -->
+
+::: {#notes}
+:::
