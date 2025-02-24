@@ -1,0 +1,133 @@
+---
+title: "Håndtering af gpg-nøgler"
+subtitle: "Keep it secret - keep it safe!"
+author: "Christian Knudsen"
+visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-02-24
+toc: true
+image: ""
+---
+
+Den kvikke trafikkanin vil bemærke at jeg har en offentlig
+gpg-nøgle liggende her på siden. 
+
+Du kan bruge den til at kryptere evt. beskeder til mig. Men det 
+er nok overkill til de fleste formål
+
+Hvad du også kan bruge den til, er at bekræfte at ting der 
+påstås at komme fra mig, faktisk kommer fra mig. 
+
+Du kan også hoppe på den github side, der ultimativt genererer
+denne side, og se at de commits der er lavet, er signeret af mig.
+
+Og hvordan har jeg så sat det op?
+
+
+### 1. Produktion af masternøgle
+
+Jeg har lavet en sikker masternøgle. Den er fuldstændigt air-gapped, det vil se at den er lavet på en computer uden 
+netadgang. Det sikrer ikke 100% imod at der kan være lyttet 
+med, men det er ret sikkert. Nøglen opbevares på en fysisk 
+enhed under lås og slå.
+
+
+- **Generér masternøgle:**  
+  Brug din Nitrokey til at generere et nøglepar, så den private masternøgle aldrig forlader enheden.
+
+- **Eksporter den offentlige masternøgle:**  
+  ```
+  gpg --armor --export [din-masternøgle-ID] > master_public.asc
+  ```
+
+- **Overførsel til online maskine:**  
+  Kopiér `master_public.asc` til en USB-stick og flyt filen til en online maskine, og importer den der:
+  ```
+  gpg --import master_public.asc
+  ```
+
+- **Upload til nøgleserver:**  
+  ```
+  gpg --keyserver keyserver.ubuntu.com --send-keys [din-masternøgle-ID]
+  ```
+
+---
+
+### 2. Generering og signering af en arbejdsnøgle
+
+#### A. Generer en arbejdsnøgle (på arbejdscomputeren)
+
+- **Generér nøgle:**  
+  ```
+  gpg --full-generate-key
+  ```
+  Følg anvisningerne og noter nøgle-ID'et for din arbejdsnøgle.
+
+- **Eksporter den offentlige arbejdsnøgle:**  
+  ```
+  gpg --armor --export [arbejdsnøgle-ID] > arbejds_public.asc
+  ```
+  Overfør filen til din sikre maskine via USB-stick eller anden sikker metode.
+
+#### B. Signér arbejdsnøglen med din masternøgle (på den sikre maskine)
+
+- **Importér arbejdsnøglen:**  
+  ```
+  gpg --import arbejds_public.asc
+  ```
+
+- **Signér nøglen med masternøglen:**  
+  Start redigeringssession:
+  ```
+  gpg --edit-key [arbejdsnøgle-ID]
+  ```
+  Indtast kommandoen:
+  ```
+  sign
+  ```
+  Bekræft signeringen, og gem med:
+  ```
+  save
+  ```
+
+- **Eksporter den signerede nøgle:**  
+  ```
+  gpg --armor --export [arbejdsnøgle-ID] > arbejds_public_signed.asc
+  ```
+  Overfør den signerede nøgle tilbage til arbejdscomputeren, og importer den:
+  ```
+  gpg --import arbejds_public_signed.asc
+  ```
+
+Med denne signaturkæde kan modtagere verificere, at den arbejdsnøgle, du bruger til eksempelvis commits, er godkendt af din masternøgle.
+
+---
+
+### 3. Tilbagekaldelse af en arbejdsnøgle
+
+- **Generér et tilbagekaldelsescertifikat:**  
+  På arbejdscomputeren (eller enhver computer med GnuPG) kør:
+  ```
+  gpg --gen-revoke [arbejdsnøgle-ID] > revocation.asc
+  ```
+  Følg vejledningen for at angive årsagen til tilbagekaldelsen.
+
+- **Importér certifikatet:**  
+  På den computer, hvor du ønsker at gennemføre tilbagekaldelsen, kør:
+  ```
+  gpg --import revocation.asc
+  ```
+
+- **Distribuér den tilbagekaldte nøgle:**  
+  Upload nøglen til en nøgleserver:
+  ```
+  gpg --keyserver keyserver.ubuntu.com --send-keys [arbejdsnøgle-ID]
+  ```
+
+> **Bemærk:** Da `revocation.asc` kun indeholder offentlig information, kan denne import og upload gennemføres på enhver computer med GnuPG og internetadgang – din private masternøgle forbliver airgapped.
+
+---
+
+Denne proces sikrer, at din private masternøgle forbliver sikkert offline, mens den offentlige masternøgle og dine signeret arbejdsnøgler bliver tilgængelige online. Dermed kan andre verificere, at dine arbejdsnøgler er godkendt af din masternøgle, og du har mulighed for at tilbagekalde en nøgle, hvis den skulle blive kompromitteret.
