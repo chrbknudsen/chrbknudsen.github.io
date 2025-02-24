@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Christian Knudsen">
-<meta name="dcterms.date" content="2024-04-14">
+<meta name="dcterms.date" content="2025-02-24">
 
-<title>Kosmisk Floræ – Christian Knudsen</title>
+<title>Håndtering af gpg-nøgler – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -105,14 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Kosmisk Floræ – Christian Knudsen">
-<meta property="og:description" content="Generative Art">
-<meta property="og:image" content="Kosmisk_Florae-1.png">
+<meta property="og:title" content="Håndtering af gpg-nøgler – Christian Knudsen">
+<meta property="og:description" content="Keep it secret - keep it safe!">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Kosmisk Floræ – Christian Knudsen">
-<meta name="twitter:description" content="Generative Art">
-<meta name="twitter:image" content="Kosmisk_Florae-1.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Håndtering af gpg-nøgler – Christian Knudsen">
+<meta name="twitter:description" content="Keep it secret - keep it safe!">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -182,19 +146,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#produktion-af-masternøgle" id="toc-produktion-af-masternøgle" class="nav-link active" data-scroll-target="#produktion-af-masternøgle">1. Produktion af masternøgle</a></li>
+  <li><a href="#generering-og-signering-af-en-arbejdsnøgle" id="toc-generering-og-signering-af-en-arbejdsnøgle" class="nav-link" data-scroll-target="#generering-og-signering-af-en-arbejdsnøgle">2. Generering og signering af en arbejdsnøgle</a></li>
+  <li><a href="#tilbagekaldelse-af-en-arbejdsnøgle" id="toc-tilbagekaldelse-af-en-arbejdsnøgle" class="nav-link" data-scroll-target="#tilbagekaldelse-af-en-arbejdsnøgle">3. Tilbagekaldelse af en arbejdsnøgle</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kosmisk Floræ</h1>
-<p class="subtitle lead">Generative Art</p>
+<h1 class="title">Håndtering af gpg-nøgler</h1>
+<p class="subtitle lead">Keep it secret - keep it safe!</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Generative aRt</div>
-    <div class="quarto-category">R</div>
+    <div class="quarto-category">kategori 1</div>
+    <div class="quarto-category">kategori 2</div>
   </div>
   </div>
 
@@ -212,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 14, 2024</p>
+      <p class="date">February 24, 2025</p>
     </div>
   </div>
   
@@ -224,52 +196,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Or:</p>
+<p>Den kvikke trafikkanin vil bemærke at jeg har en offentlig gpg-nøgle liggende her på siden.</p>
+<p>Du kan bruge den til at kryptere evt. beskeder til mig. Men det er nok overkill til de fleste formål</p>
+<p>Hvad du også kan bruge den til, er at bekræfte at ting der påstås at komme fra mig, faktisk kommer fra mig.</p>
+<p>Du kan også hoppe på den github side, der ultimativt genererer denne side, og se at de commits der er lavet, er signeret af mig.</p>
+<p>Og hvordan har jeg så sat det op?</p>
+<section id="produktion-af-masternøgle" class="level3">
+<h3 class="anchored" data-anchor-id="produktion-af-masternøgle">1. Produktion af masternøgle</h3>
+<p>Jeg har lavet en sikker masternøgle. Den er fuldstændigt air-gapped, det vil se at den er lavet på en computer uden netadgang. Det sikrer ikke 100% imod at der kan være lyttet med, men det er ret sikkert. Nøglen opbevares på en fysisk enhed under lås og slå.</p>
 <ul>
-<li>Cosmic Florae</li>
-<li>Flores Cosmiques</li>
-<li>Kosmische Florae</li>
+<li><p><strong>Generér masternøgle:</strong><br>
+Brug din Nitrokey til at generere et nøglepar, så den private masternøgle aldrig forlader enheden.</p></li>
+<li><p><strong>Eksporter den offentlige masternøgle:</strong></p>
+<pre><code>gpg --armor --export [din-masternøgle-ID] &gt; master_public.asc</code></pre></li>
+<li><p><strong>Overførsel til online maskine:</strong><br>
+Kopiér <code>master_public.asc</code> til en USB-stick og flyt filen til en online maskine, og importer den der:</p>
+<pre><code>gpg --import master_public.asc</code></pre></li>
+<li><p><strong>Upload til nøgleserver:</strong></p>
+<pre><code>gpg --keyserver keyserver.ubuntu.com --send-keys [din-masternøgle-ID]</code></pre></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Based on the <a href="https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)">butterfly curve</a></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>calc <span class="ot">&lt;-</span> <span class="cf">function</span>(theta){</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">exp</span>(<span class="fu">sin</span>(theta)) <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">4</span><span class="sc">*</span>theta) <span class="sc">+</span> <span class="fu">sin</span>((<span class="dv">2</span><span class="sc">*</span>theta <span class="sc">-</span> pi ) <span class="sc">/</span><span class="dv">24</span>)<span class="sc">^</span><span class="dv">5</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Prepping data for plot:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">12</span><span class="sc">*</span>pi, <span class="fl">0.1</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span>  <span class="fu">calc</span>(A)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">12</span><span class="sc">*</span>pi, <span class="fl">2.1</span><span class="sc">*</span>pi)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>C <span class="ot">&lt;-</span> <span class="fu">lapply</span>(B, <span class="cf">function</span>(x) A <span class="sc">-</span> x) <span class="sc">%&gt;%</span>  <span class="fu">unlist</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The last two lines basically rotates the curve</p>
-<p>Plot:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">theta =</span> C, <span class="at">r =</span> <span class="fu">rep</span>(r, <span class="at">times =</span> <span class="fu">length</span>(C)<span class="sc">/</span><span class="fu">length</span>(r))) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>theta, <span class="at">y =</span> r, <span class="at">color =</span> r, <span class="at">alpha =</span> <span class="fl">0.0001</span>)) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()<span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>)) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_gradientn</span>(<span class="at">colours  =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>)) </span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="st">"Kosmisk_Florae-1.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Kosmisk_Florae-1.png" class="img-fluid figure-img" style="width:30.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<hr>
+</section>
+<section id="generering-og-signering-af-en-arbejdsnøgle" class="level3">
+<h3 class="anchored" data-anchor-id="generering-og-signering-af-en-arbejdsnøgle">2. Generering og signering af en arbejdsnøgle</h3>
+<section id="a.-generer-en-arbejdsnøgle-på-arbejdscomputeren" class="level4">
+<h4 class="anchored" data-anchor-id="a.-generer-en-arbejdsnøgle-på-arbejdscomputeren">A. Generer en arbejdsnøgle (på arbejdscomputeren)</h4>
+<ul>
+<li><p><strong>Generér nøgle:</strong></p>
+<pre><code>gpg --full-generate-key</code></pre>
+<p>Følg anvisningerne og noter nøgle-ID’et for din arbejdsnøgle.</p></li>
+<li><p><strong>Eksporter den offentlige arbejdsnøgle:</strong></p>
+<pre><code>gpg --armor --export [arbejdsnøgle-ID] &gt; arbejds_public.asc</code></pre>
+<p>Overfør filen til din sikre maskine via USB-stick eller anden sikker metode.</p></li>
+</ul>
+</section>
+<section id="b.-signér-arbejdsnøglen-med-din-masternøgle-på-den-sikre-maskine" class="level4">
+<h4 class="anchored" data-anchor-id="b.-signér-arbejdsnøglen-med-din-masternøgle-på-den-sikre-maskine">B. Signér arbejdsnøglen med din masternøgle (på den sikre maskine)</h4>
+<ul>
+<li><p><strong>Importér arbejdsnøglen:</strong></p>
+<pre><code>gpg --import arbejds_public.asc</code></pre></li>
+<li><p><strong>Signér nøglen med masternøglen:</strong><br>
+Start redigeringssession:</p>
+<pre><code>gpg --edit-key [arbejdsnøgle-ID]</code></pre>
+<p>Indtast kommandoen:</p>
+<pre><code>sign</code></pre>
+<p>Bekræft signeringen, og gem med:</p>
+<pre><code>save</code></pre></li>
+<li><p><strong>Eksporter den signerede nøgle:</strong></p>
+<pre><code>gpg --armor --export [arbejdsnøgle-ID] &gt; arbejds_public_signed.asc</code></pre>
+<p>Overfør den signerede nøgle tilbage til arbejdscomputeren, og importer den:</p>
+<pre><code>gpg --import arbejds_public_signed.asc</code></pre></li>
+</ul>
+<p>Med denne signaturkæde kan modtagere verificere, at den arbejdsnøgle, du bruger til eksempelvis commits, er godkendt af din masternøgle.</p>
+<hr>
+</section>
+</section>
+<section id="tilbagekaldelse-af-en-arbejdsnøgle" class="level3">
+<h3 class="anchored" data-anchor-id="tilbagekaldelse-af-en-arbejdsnøgle">3. Tilbagekaldelse af en arbejdsnøgle</h3>
+<ul>
+<li><p><strong>Generér et tilbagekaldelsescertifikat:</strong><br>
+På arbejdscomputeren (eller enhver computer med GnuPG) kør:</p>
+<pre><code>gpg --gen-revoke [arbejdsnøgle-ID] &gt; revocation.asc</code></pre>
+<p>Følg vejledningen for at angive årsagen til tilbagekaldelsen.</p></li>
+<li><p><strong>Importér certifikatet:</strong><br>
+På den computer, hvor du ønsker at gennemføre tilbagekaldelsen, kør:</p>
+<pre><code>gpg --import revocation.asc</code></pre></li>
+<li><p><strong>Distribuér den tilbagekaldte nøgle:</strong><br>
+Upload nøglen til en nøgleserver:</p>
+<pre><code>gpg --keyserver keyserver.ubuntu.com --send-keys [arbejdsnøgle-ID]</code></pre></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Bemærk:</strong> Da <code>revocation.asc</code> kun indeholder offentlig information, kan denne import og upload gennemføres på enhver computer med GnuPG og internetadgang – din private masternøgle forbliver airgapped.</p>
+</blockquote>
+<hr>
+<p>Denne proces sikrer, at din private masternøgle forbliver sikkert offline, mens den offentlige masternøgle og dine signeret arbejdsnøgler bliver tilgængelige online. Dermed kan andre verificere, at dine arbejdsnøgler er godkendt af din masternøgle, og du har mulighed for at tilbagekalde en nøgle, hvis den skulle blive kompromitteret.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

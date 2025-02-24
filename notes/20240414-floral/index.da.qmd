@@ -52,7 +52,7 @@ tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>%
 ```
 
 ```{r out.width="30%",echo  =F}
-knitr::include_graphics("Kosmisk_Floræ-1.png")
+knitr::include_graphics("Kosmisk_Florae-1.png")
 ```
 
 
