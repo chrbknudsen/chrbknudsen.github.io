@@ -7,7 +7,7 @@ categories:
   - R
 date: 2024-04-14
 toc: true
-image: "Kosmisk_Floræ-1.png"
+image: "Kosmisk_Florae-1.png"
 ---
 Or:
 
@@ -52,7 +52,7 @@ tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>%
 ```
 
 ```{r out.width="30%",echo  =F}
-knitr::include_graphics("Kosmisk_Floræ-1.png")
+knitr::include_graphics("Kosmisk_Florae-1.png")
 ```
 
 
