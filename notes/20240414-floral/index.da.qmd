@@ -1,6 +1,6 @@
 ---
 title: "Kosmisk Floræ"
-subtitle: "Generative Art"
+subtitle: "Generativ Kunst"
 author: "Christian Knudsen"
 categories:
   - Generative aRt
@@ -9,7 +9,7 @@ date: 2024-04-14
 toc: true
 image: "Kosmisk_Florae-1.png"
 ---
-Or:
+Eller:
 
 - Cosmic Florae
 - Flores Cosmiques
@@ -20,14 +20,21 @@ Or:
 library(tidyverse)
 ```
 
-Based on the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental))
+Baseret på  [sommerfugle kurven](https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)),
+der i polære koordinater er defineret ved:
+
+
+$$
+r = \exp^{\sin\theta} - 2\cos(4\theta) + 5 \sin^5(\frac{2\theta - \pi}{24})
+$$
+Det skriver vi en funktion til:
 ```{r}
 calc <- function(theta){
   exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5
 }
 ```
 
-Prepping data for plot:
+Så prepper vi noget data:
 
 ```{r eval = FALSE}
 A <- seq(0,12*pi, 0.1)
@@ -36,9 +43,14 @@ B <- seq(0,12*pi, 2.1*pi)
 C <- lapply(B, function(x) A - x) %>%  unlist()
 ```
 
-The last two lines basically rotates the curve
+A giver os en række tal fra 0 til 12 gange pi. I r har vi så 
+de matchende koordinater der giver sommerfuglekurven.
+B giver os også en række tal, men med andre step end vi havde i A.
+Og i C trækker vi værdierne fra B fra værdierne i A - som i, den
+første værdi i B trækkes fra alle værdier i A, den anden værdi i B
+trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.
 
-Plot:
+Så plotter vi:
 ```{r eval  = FALSE}
 tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>% 
     ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +
@@ -55,4 +67,4 @@ tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>%
 knitr::include_graphics("Kosmisk_Florae-1.png")
 ```
 
-
+Nice.

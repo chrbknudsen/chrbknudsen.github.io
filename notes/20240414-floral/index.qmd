@@ -20,7 +20,13 @@ Or:
 library(tidyverse)
 ```
 
-Based on the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental))
+Based on the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)),
+defined, in polar coordinates, by:
+
+$$
+r = \exp^{\sin\theta} - 2\cos(4\theta) + 5 \sin^5(\frac{2\theta - \pi}{24})
+$$
+Let's write a function for that:
 ```{r}
 calc <- function(theta){
   exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5
@@ -36,9 +42,13 @@ B <- seq(0,12*pi, 2.1*pi)
 C <- lapply(B, function(x) A - x) %>%  unlist()
 ```
 
-The last two lines basically rotates the curve
+A contains a sequence of numbers from 0 to 12 times pi. In r we have
+the matching coordinates. Together they give us the butterfly curve.
+B is a shorter sequence of numbers.
+And in C we subtract each value in B from all values in A.
+The last two lines basically rotates the curve.
 
-Plot:
+Now we plot:
 ```{r eval  = FALSE}
 tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>% 
     ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +
@@ -55,4 +65,4 @@ tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>%
 knitr::include_graphics("Kosmisk_Florae-1.png")
 ```
 
-
+Nice
