@@ -165,7 +165,7 @@ på teksten.
 Afløsningsopgaven som eksamensform er død.
 
 
-![](afløsningsopgave.png)
+![](afloesningsopgave.png)
 
 
 :::: notes 
