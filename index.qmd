@@ -18,6 +18,9 @@ about:
     - icon: ORCID
       text: ORCID
       url: https://orcid.org/0000-0002-9816-768X
+    - icon: person-lock
+      text: gpg
+      url: files/chrbknudsen.gpg
 image: img/cbk.jpg
 comments: false
 ---
