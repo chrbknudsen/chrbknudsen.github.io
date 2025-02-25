@@ -46,28 +46,14 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Sorter ved\n       Standard\n         \n          Overskrift\n        \n         \n          Dato - Ældste\n        \n         \n          Dato - Nyeste\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n14. apr. 2024\n\n\n\n\n\n\n\n\nIngen resultater"
+    "text": "Sorter ved\n       Standard\n         \n          Overskrift\n        \n         \n          Dato - Ældste\n        \n         \n          Dato - Nyeste\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\n26. nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n14. apr. 2024\n\n\n\n\n\n\n\n\nIngen resultater"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
+    "objectID": "notes/20240414-floral/index.html",
+    "href": "notes/20240414-floral/index.html",
+    "title": "Kosmisk Floræ",
     "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
   },
   {
     "objectID": "education/index.html",
@@ -119,11 +105,130 @@
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
   },
   {
-    "objectID": "notes/20240414-floral/index.html",
-    "href": "notes/20240414-floral/index.html",
-    "title": "Kosmisk Floræ",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
     "section": "",
-    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
+    "href": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
+    "title": "Robots reading licenser",
+    "section": "Robotter læser licenser",
+    "text": "Robotter læser licenser\n\n\nSom Susanne (et al) talte om, sættes der lige straks et AI initiativ i gang på KB, under overskriften “AI og licenser”.\nDet er i sin vorden. Der er udgået en befaling fra direktionen, men det er meget luftigt indtil videre, der er ikke kigget på scope af projektet, ingen ved hvor mange penge der er i det, der er ikke engang fundet en projektleder endnu."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#det-lyder-bekendt",
+    "href": "notes/20241126-robots-reading-licenser/index.html#det-lyder-bekendt",
+    "title": "Robots reading licenser",
+    "section": "Det lyder bekendt…",
+    "text": "Det lyder bekendt…\n\nKilde: Noget der dukkede op i mit feed for 10 minutter siden…\n\nDa det rygtedes var forventingerne store. så nu vil jeg punktere ballonen.\nNu har vi jo fået den kunstige intelligens. Chatbotten kan læse ting og forklare os hvad der står i den. Så lad os hælde alle vores licensaftaler ind i den, og bede den forklare os hvad der står, hvad vi må, og hvor alle hullerne er. Fremtiden bliver fantastisk."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
+    "href": "notes/20241126-robots-reading-licenser/index.html#så-er-drømmen-realistisk",
+    "title": "Robots reading licenser",
+    "section": "Så er drømmen realistisk?",
+    "text": "Så er drømmen realistisk?\n\n\nHer havde jeg overvejet at tage en rekvisit med - en knappenål.\nNej. Tidligere i dag talte jeg om at vi ofte må skuffe de studerende. De store tekstmodeller kan være rigtig nyttige. De kan meget. Men der er altså ret store huller i osten.\nJeg får forskellige meldinger om hvor mange licensaftaler vi faktisk har. Nogen siger 150 forskelllige aftale partnere, enkelte med mere end en licensaftale. Andre siger at vi har i omegnen af 400 aftaler. Det er heller ikke vigtigt.\nDet er ikke mange!"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#mange-faldgruber",
+    "href": "notes/20241126-robots-reading-licenser/index.html#mange-faldgruber",
+    "title": "Robots reading licenser",
+    "section": "Mange faldgruber!",
+    "text": "Mange faldgruber!\n\n\nOg fortolkning? Retspraksis? Love?\nvi får behov for at fintune modellen på retskilderne. Og lovgivningen kan vi godt få ind. Domsafsigelser nok også, hvis vi taler pænt med domsstolsstyrelsen. Men Karnov? Glem det. Og det er bare Danmark..\nRigsfællesskabets fremmeste ekspert hedder vist nok Morten Rosenmeier. Han kan ikke (altid) give os et klart svar. Hvorfor forventer vi at en generisk amerikansk chatbot, der som en af de væsentlige dele af sit danske træningsmateriale bruger hestenettet, kan?\nRobotten vil hallucinere, og vi skal i retten."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
+    "href": "notes/20241126-robots-reading-licenser/index.html#helt-praktisk",
+    "title": "Robots reading licenser",
+    "section": "Helt praktisk",
+    "text": "Helt praktisk\n\nIngen AI. Men robotter!\n\nRPA. Værktøjer der kan interagere med forskellige programmer på en computer. Og hvis I vil vide hvad det er - så skal I lige snakke med Søren."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#opsamling",
+    "href": "notes/20241126-robots-reading-licenser/index.html#opsamling",
+    "title": "Robots reading licenser",
+    "section": "Opsamling",
+    "text": "Opsamling"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#bibliotekets-møde-med-ai",
+    "href": "notes/20241126-robots-reading-licenser/index.html#bibliotekets-møde-med-ai",
+    "title": "Robots reading licenser",
+    "section": "Bibliotekets møde med AI",
+    "text": "Bibliotekets møde med AI\n\nJeg skal bruge et billede i renaissance stil med titlen “Bonnies AI-panik”\n\nOg ja, det var mig der lod chatbotten lave en bedre udgave af Kiras julehilsen…\nVi startede med at få et overblik over - måske primært udfordringerne. Og der er dæleme mange! Personligt deler jeg mange af bekymringerne. Men jeg kunne virkelig godt tænke mig at se tal for hvad marginal omkostningen er for at jeg har fået lavet dette billede.\nOg mange af de bekymringer vi har - det er dem der hele tiden har været. Maskinlæringsfolk har bekymret sig om bias de sidste ca 20 år. Det er en ti års tid siden aviserne begyndte at lave automatiske artikler…\nSå - hvis vi nu bekymrer os om ting eksperterne har bekymret sig over de sidste 10 år - bekymrer vi os så om det rigtige?\nOg så bliver jeg lettere forpustet over alt det Bonnie ridser op at vi skal i gang med…."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#undervisning-af-vejledere-og-studerende",
+    "href": "notes/20241126-robots-reading-licenser/index.html#undervisning-af-vejledere-og-studerende",
+    "title": "Robots reading licenser",
+    "section": "Undervisning af vejledere (og studerende)",
+    "text": "Undervisning af vejledere (og studerende)\n Et billede i dieselpunk stil af to bibliotekarer der underviser undervisere i brugen af generativ ai\n\nOg en af de ting vi er i gang med - er Anne og Sørens vejledningstilbud til undervisere - og efterhånden også studerende.\nEfterspørgslen er stor, men det er kompleksiteten også.\nAnnes bemærkning om behovet for konstant komptenceudvikling og at det faktisk er ret hårdt kan jeg godt genkende.\nEmnet udvikler sig konstant. Hele tiden. Og det er en kamp at holde sig et par uger foran dem vi underviser. For ikke at tale om alt det ingen faktisk kender svaret på. Det der med ophavsret eksempelvis…\nOg den der do’s and dont liste - den må I godt dele med resten af klassen."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#studerendes-forventninger",
+    "href": "notes/20241126-robots-reading-licenser/index.html#studerendes-forventninger",
+    "title": "Robots reading licenser",
+    "section": "Studerendes forventninger",
+    "text": "Studerendes forventninger\n\nJeg skal bruge et billede i steampunk stil, der illusterer de studerendes forventninger til kunstig intelligens med en fyldt ballon, og en gal videnskabsmand der står ved siden af med en nål\n\nDe har mange - men er faktisk ret opmærksomme på at der er begrænsninger. Udfordringen er de studerende der ikke er opmærksomme. Det er der det går rigtig galt!"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#hvad-møder-forlagene-os-med",
+    "href": "notes/20241126-robots-reading-licenser/index.html#hvad-møder-forlagene-os-med",
+    "title": "Robots reading licenser",
+    "section": "Hvad møder forlagene os med?",
+    "text": "Hvad møder forlagene os med?\n\n\nSå hørte vi frontlinieberetninger fra kontakten med forlagene.\nOg vi vil så gerne have lov at arbejde med teksterne. Det vil forskerne. Og mange af de studerende, rigtig rigtig gerne,\nJeg er særligt glad for pointen om at konflikten mellem forlagenes pengepung og den teknologiske udvikling ikke er spor ny. Artikel 1 sektion 8 i den amerikanske forfatning fra 1789.\nJeg er meget tryg ved at vi har jer på sagen, og er glad for at jeg ikke selv er med nede i skyttegravene."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#automatisering-af-e-bogsworkflow",
+    "href": "notes/20241126-robots-reading-licenser/index.html#automatisering-af-e-bogsworkflow",
+    "title": "Robots reading licenser",
+    "section": "Automatisering af e-bogsworkflow",
+    "text": "Automatisering af e-bogsworkflow\n\nI art deco stil: Automatisering af e-bogsworkflow med AI\n\nOg så begyndte vi at nærme os - det helt konkrete - måske ikke så konkret som jeg kunne ønske mig, men Søren har lovet at sende mig kildekoden - eksempel på hvordan vi faktisk kan bruge det der AI til noget i virkeligheden.\nFor nu kan - nogle af os - selv, i stedet for at skrive en projektansøgning i tre eksemplarer om at få bevilget adgang til en programmør i en afdeling i en anden by."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#katalogica",
+    "href": "notes/20241126-robots-reading-licenser/index.html#katalogica",
+    "title": "Robots reading licenser",
+    "section": "Katalogica",
+    "text": "Katalogica\n\nI stilen brutalisme: Udvikling af værktøjet Katalogica med brug af LLM – til scanning og katalogisering af bøger\n\nOg endnu et eksempel på hvad man faktisk kan.\nSøren og jeg sad i kaffepausen og talte om at det jo er en kreativ øvelse, hvor det handler om at få tanken “gad vide om ikke man kunne få computeren i spil”.\nEller, Uwes maxim. Thinking hurts and computers are cheap.\nOg også en udfordring af vores deterministiske måde at tænke på. Hvorfor læser den ikke det her?"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licensaftaler",
+    "href": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licensaftaler",
+    "title": "Robots reading licenser",
+    "section": "Robotter læser licensaftaler",
+    "text": "Robotter læser licensaftaler\n\nMen de skal dæleme ikke fortolke noget for os!\n\nOg så lidt koldt vand over alt for vidtløftige fantasier om hvad vi faktisk kan få den kunstige intelligens til at gøre for os på licensområdet. Der er ikke robotter der sætter sig i vores stole lige med det første."
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#sammenfattende",
+    "href": "notes/20241126-robots-reading-licenser/index.html#sammenfattende",
+    "title": "Robots reading licenser",
+    "section": "Sammenfattende",
+    "text": "Sammenfattende\n\n\nOverskriften var “AI i arbejdslivet: din nye kollega”\nDet lyder som om den der nye kollega er meget flittig.\nRet dygtig.\nOg supertræls\nSå på dagens møde har vi haft vores nye kollega til tjenstlig samtale…"
+  },
+  {
+    "objectID": "notes/20241126-robots-reading-licenser/index.html#the-end",
+    "href": "notes/20241126-robots-reading-licenser/index.html#the-end",
+    "title": "Robots reading licenser",
+    "section": "The end",
+    "text": "The end\nFor af en eller anden årsag bliver billedet på den sidste slide altid enshittificeret, så der skal lige være en til sidst…"
   },
   {
     "objectID": "organisations/index.html",
