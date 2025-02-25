@@ -26,6 +26,11 @@ denne side, og se at de commits der er lavet, er signeret af mig.
 Og hvordan har jeg så sat det op?
 
 
+NB man skal huske at den mailadresse man har på sin nøgle - den skal matche
+hvad man fortæller github at den er. Så når jeg har en nøgle der har en mailadresse.
+Og vil bruge den til at signere commits. Så skal bruger id i github have samme
+mailadresse som i nøglen.
+
 ### 1. Produktion af masternøgle
 
 Jeg har lavet en sikker masternøgle. Den er fuldstændigt air-gapped, det vil se at den er lavet på en computer uden 
