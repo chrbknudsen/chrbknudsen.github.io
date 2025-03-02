@@ -1,0 +1,51 @@
+---
+title: "Setup RStudio and Shiny server on your own"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-03-02
+toc: true
+image: ""
+---
+
+Is it safe to have your website on a service from the US?
+Probably. 
+
+Is it safe to run it on a service from a country
+led by a... somewhat unpredictable... president. Taking advice
+from people who should either take more Ritalin. Or less
+ketamine. Probably. 
+
+Is it a good idea? Probably not.
+
+This site has, and at the time of writing hosted on DigitalOcean.
+Nice service. Affordable. The server is located in Frankfurt 
+(I am here writing to people from the civilised world, so
+it is unnessecary to specify the country).
+
+But, DigitalOcean is an american company.
+
+So I would like to move it to a service based in a civilised
+country. Hubby says it should be Hetzner. So here we go.
+
+Begin by signing up at www.hetzner.com. Remember to save your 
+login and password to recover your 2FA-setup. 
+
+You might also be asked to verify your identity using a passport,
+drivers license or other document. 
+
+In the upper right hand corner there is the usual small
+person with information about your account. Next to it 
+there are nine small squares. Click that, and chose 
+"cloud"
+
+You can now make a new project:
+![](hetzner1.png)
+click "Create server":
+![](hetzner2.png)
+
+Now click "Create server" and 
+
