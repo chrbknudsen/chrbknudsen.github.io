@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "work/index.html",
-    "href": "work/index.html",
-    "title": "Work",
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Untitled",
     "section": "",
-    "text": "Det Kgl. Bibliotek\n\nFeb. 2017 -  Special adviser - Coordinator for Copenhagen University Library Datalab.\n\nJan 2016 - Feb. 2017 Senior adviser in a position split between the University of Copenhagen and the Royal Library.\n\nOct. 2013 - Feb. 2017 Manager - The Pharmaceutical Library.\n\n2008 - Oct. 2013 Special adviser at the staff of the university librarian\n\nMar. 2003 - 2008 Subject specialist for chemistry.\n\n\n\nNovo Nordisk A/S\nSep. 2002 - Temp position, Novo Nordisk A/S, Bagsværd.\nPacking insulin ampoules.\n\n\nDanmarks Tekniske Universitet\nJun. 2002 Teaching Assistant, Danmarks Tekniske Universitet\nTeaching Assistant in “Catalysis, Spectroscopy, and Structure,” Chemical Institute. Provided instruction in practical exercises and laboratory safety, conducted mandatory educational environment assessments.\nJan. 2000 Teaching Assistant Danmarks Tekniske Universitet\nTeaching Assistant in “Catalysis, Spectroscopy, and Structure,” Chemical Institute. Provided instruction in practical exercises and laboratory safety.\n\n\nDanske Bank\nJun. – aug. 2000 Summer holiday relief, Danske Bank, Gilleleje As in previous temp positions in the financial sector, I manned the teller’s desk, and performed general office work.\n\n\nUnibank\nJun. - Aug. 1999 Summer holiday relief, Unibank, Græsted\n\n\nDen Danske Bank\nJun. - Aug. 1998 Summer holiday relief, Den Danske Bank, Helsinge\nJun. - Aug. 1997 Summer holiday relief, Den Danske Bank, Helsinge\nJun. - Aug. 1996 Summer holiday relief, Den Danske Bank, Helsinge\njun. - Aug. 1995 Summer holiday relief, Den Danske Bank Græsted\n\n\nSchwartz Boghandel\nAug. 1993 - Jan. 1994 Driver, Schwartz Boghandel, Helsinge.\n\n\nM. Løsekraut ApS\nJun. 1988 - jul. 1993 Part-Time worker, M. Løsekraut ApS, Helsinge.\nPerformed miscellaneous tasks after school, including circuit board assembly and production control.\n\n\nJensen Lamp\nAug. 1988 - Jun. 1993 Home Worker, Jensen Lamp, Helsinge. Assembling lighting fixtures."
+    "text": "1+1"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "stuff/index.html",
@@ -53,7 +60,7 @@
     "href": "notes/20240414-floral/index.html",
     "title": "Kosmisk Floræ",
     "section": "",
-    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
+    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\nNice."
   },
   {
     "objectID": "education/index.html",
@@ -103,27 +110,6 @@
     "title": "Education",
     "section": "EdX",
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
   },
   {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
@@ -266,10 +252,24 @@
     "text": "Talks\n8. oktober 2024 Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet “Har du styr på den naturvidenskabelige opgave? (Vest)” ved Vejle Bibliotek. slides\n3. oktober 2024 Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet “Har du styr på den naturvidenskabelige opgave? (Øst)” ved Gentofte Bibliotek. slides\n1. marts 2012 “Fagspecifikke databaser contra Web scale discovery, og om brugen af sidstnævnte kan spores i statistikkerne”. 30 minutters oplæg på temadagen “Alt i ét? Overvejelser og praktiske erfaringer med Web Scale Discovery i Danmark”. Arrangeret af DFs forum for E-ressourcer. Den Sorte Diamant, København\n21. februar 2012 “Causeri over e-bogen og e-bogslæsere”. 1 times foredrag for Bibliotekarforeningens seniorgruppe. Det Kongelige Bibliotek, København.\n27. oktober 2011 oplæg til forskningsbibliotekardag i Helsinki\n2. september 2011 to-timers oplæg og debat på fredericia bibliotek\n24. maj 2011 oplæg til møde i erhversskolernes biblioteksorening - hindsgavl\n11. marts 2011 oplæg om ebøger, CBS biblioteket\n24. februar 2011 oplæg om ebøgernes historie og (u)muligheder. temadag på københavns kommunebiblioteker\n27. januar 2011 DF-vinterinternat om ebøger\n2. december 2010 E-bøger - før og lige nu. Temadag om E-bøger på Gentofte Centralbibliotek, Hellerup\n16. november 2010 E-bøger på KB - hype, men vejen frem? Foredag på forskningsnet konference 2010, Comwell Middelfart\n9. november 2010 - Chair ved debat på uddannelsesforum 2010, bellacenteret (Dorthe Toft)\n27. juli 2010 - indslag om e-bøger i TV-avisen\n15. juni 2010 - oplæg om (e)bøgernes fremtid ved åbning af emedialab på Odense Centralbibliotek\n19. maj 2010 Oplæg om ebogens historie i forbindelse med projektet “Library bypass”, Fredericia (og hvornår var det så at dagen om library bypass blev holdt?)\n6. maj 2010- foredrag om ebøger - gå-hjem-møde på Statsbiblioteket\n9. april 2010 - Ebogserfaringer, oplæg for Faggruppen for medicinsk information. Glostrup Sygehus.\n7. april 2010 - E-bøger, status, muligheder og begrænsninger. Oplæg og paneldebat ved semesterseminar på SDU.\n23. marts 2010 - So Ein Ding, DR2 om vores udbud af ebøger og udlån af ebogslæsere\n12. februar 2010- oplæg for TORS om ebogslæsere, Værløse\n17. november 2009 foredrag om ebøger for minibib, københavn\n26. maj 2009 - foredrag om ebøger - hovedbiblioteket Guldborgsund\n30. marts 2009- foredrag om ebøger, BF, frederiksberg.\nOct. 19 2007 Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København)\nJun. 21 2007 Formidling i nye medier (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”\nNov. 17 2008 Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe (BFs hus) ”Teknik: Software og hardware – læsere”\nOct. 12 2007 Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener”\nTo gange - naturvidenskab for bibliotekarer"
   },
   {
-    "objectID": "test.html",
-    "href": "test.html",
-    "title": "Untitled",
+    "objectID": "work/index.html",
+    "href": "work/index.html",
+    "title": "Work",
     "section": "",
-    "text": "1+1"
+    "text": "Det Kgl. Bibliotek\n\nFeb. 2017 -  Special adviser - Coordinator for Copenhagen University Library Datalab.\n\nJan 2016 - Feb. 2017 Senior adviser in a position split between the University of Copenhagen and the Royal Library.\n\nOct. 2013 - Feb. 2017 Manager - The Pharmaceutical Library.\n\n2008 - Oct. 2013 Special adviser at the staff of the university librarian\n\nMar. 2003 - 2008 Subject specialist for chemistry.\n\n\n\nNovo Nordisk A/S\nSep. 2002 - Temp position, Novo Nordisk A/S, Bagsværd.\nPacking insulin ampoules.\n\n\nDanmarks Tekniske Universitet\nJun. 2002 Teaching Assistant, Danmarks Tekniske Universitet\nTeaching Assistant in “Catalysis, Spectroscopy, and Structure,” Chemical Institute. Provided instruction in practical exercises and laboratory safety, conducted mandatory educational environment assessments.\nJan. 2000 Teaching Assistant Danmarks Tekniske Universitet\nTeaching Assistant in “Catalysis, Spectroscopy, and Structure,” Chemical Institute. Provided instruction in practical exercises and laboratory safety.\n\n\nDanske Bank\nJun. – aug. 2000 Summer holiday relief, Danske Bank, Gilleleje As in previous temp positions in the financial sector, I manned the teller’s desk, and performed general office work.\n\n\nUnibank\nJun. - Aug. 1999 Summer holiday relief, Unibank, Græsted\n\n\nDen Danske Bank\nJun. - Aug. 1998 Summer holiday relief, Den Danske Bank, Helsinge\nJun. - Aug. 1997 Summer holiday relief, Den Danske Bank, Helsinge\nJun. - Aug. 1996 Summer holiday relief, Den Danske Bank, Helsinge\njun. - Aug. 1995 Summer holiday relief, Den Danske Bank Græsted\n\n\nSchwartz Boghandel\nAug. 1993 - Jan. 1994 Driver, Schwartz Boghandel, Helsinge.\n\n\nM. Løsekraut ApS\nJun. 1988 - jul. 1993 Part-Time worker, M. Løsekraut ApS, Helsinge.\nPerformed miscellaneous tasks after school, including circuit board assembly and production control.\n\n\nJensen Lamp\nAug. 1988 - Jun. 1993 Home Worker, Jensen Lamp, Helsinge. Assembling lighting fixtures."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
   }
 ]
