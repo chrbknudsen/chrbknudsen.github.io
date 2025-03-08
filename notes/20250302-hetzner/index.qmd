@@ -47,5 +47,25 @@ You can now make a new project:
 click "Create server":
 ![](hetzner2.png)
 
-Now click "Create server" and 
+And chose a datacenter with a location you like. I like locations
+that are in countries not run baboons on ketamine.
 
+![](hetzner3.png)
+We now need to chose the image we want to install. I prefer
+Ubuntu - that is the same I'm running at home.
+
+![](hetzner4.png)
+
+
+
+
+
+Chose a size. Even with a lower payment, 
+I get more compute, memory and storage with
+the smallest option, than I did at the american
+service I'm leaving.
+![](hetzner6.png)
+Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise 
+you will have to click around to find out 
+where to add it later.
+![](hetzner7.png)
