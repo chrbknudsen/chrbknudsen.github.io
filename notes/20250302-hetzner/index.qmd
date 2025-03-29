@@ -11,61 +11,34 @@ toc: true
 image: ""
 ---
 
-Is it safe to have your website on a service from the US?
-Probably. 
+Is it safe to have your website on a service from the US? Probably.
 
-Is it safe to run it on a service from a country
-led by a... somewhat unpredictable... president. Taking advice
-from people who should either take more Ritalin. Or less
-ketamine. Probably. 
+Is it safe to run it on a service from a country led by a... somewhat unpredictable... president. Taking advice from people who should either take more Ritalin. Or less ketamine. Probably.
 
 Is it a good idea? Probably not.
 
-This site has, and at the time of writing hosted on DigitalOcean.
-Nice service. Affordable. The server is located in Frankfurt 
-(I am here writing to people from the civilised world, so
-it is unnessecary to specify the country).
+This site has, and at the time of writing hosted on DigitalOcean. Nice service. Affordable. The server is located in Frankfurt (I am here writing to people from the civilised world, so it is unnessecary to specify the country).
 
 But, DigitalOcean is an american company.
 
-So I would like to move it to a service based in a civilised
-country. Hubby says it should be Hetzner. So here we go.
+So I would like to move it to a service based in a civilised country. Hubby says it should be Hetzner. So here we go.
 
-Begin by signing up at www.hetzner.com. Remember to save your 
-login and password to recover your 2FA-setup. 
+Begin by signing up at www.hetzner.com. Remember to save your login and password to recover your 2FA-setup.
 
-You might also be asked to verify your identity using a passport,
-drivers license or other document. 
+You might also be asked to verify your identity using a passport, drivers license or other document.
 
-In the upper right hand corner there is the usual small
-person with information about your account. Next to it 
-there are nine small squares. Click that, and chose 
-"cloud"
+In the upper right hand corner there is the usual small person with information about your account. Next to it there are nine small squares. Click that, and chose "cloud"
 
-You can now make a new project:
-![](hetzner1.png)
-click "Create server":
-![](hetzner2.png)
+You can now make a new project: ![](hetzner1.png) click "Create server": ![](hetzner2.png)
 
-And chose a datacenter with a location you like. I like locations
-that are in countries not run baboons on ketamine.
+And chose a datacenter with a location you like. I like locations that are in countries not run baboons on ketamine.
 
-![](hetzner3.png)
-We now need to chose the image we want to install. I prefer
-Ubuntu - that is the same I'm running at home.
+![](hetzner3.png) We now need to chose the image we want to install. I prefer Ubuntu - that is the same I'm running at home.
 
 ![](hetzner4.png)
 
+Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I'm leaving. ![](hetzner6.png) Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise you will have to click around to find out where to add it later. 
 
-
-
-
-Chose a size. Even with a lower payment, 
-I get more compute, memory and storage with
-the smallest option, than I did at the american
-service I'm leaving.
-![](hetzner6.png)
-Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise 
-you will have to click around to find out 
-where to add it later.
 ![](hetzner7.png)
+
+
