@@ -37,8 +37,128 @@ And chose a datacenter with a location you like. I like locations that are in co
 
 ![](hetzner4.png)
 
-Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I'm leaving. ![](hetzner6.png) Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise you will have to click around to find out where to add it later. 
+Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I'm leaving. 
+
+![](hetzner6.png)
+
+Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise you will have to click around to find out where to add it later. 
 
 ![](hetzner7.png)
 
+![](hetzner08.png)
+
+
+![](hetzner09.png)
+
+
+![](hetzner10.png)
+
+![](hetzner11.png)
+
+![](hetzner12.png)
+
+Vi får tilsendt et password, og ssh'er til det ip-nummer vi fik som root.
+Passwordet skal skiftes med det samme. 
+
+Så opretter vi en bruger:
+
+adduser nusse
+Og tilføjer denne bruger til sudo gruppen:
+gpasswd -a nusse sudo 
+
+Og så skifter vi til den bruger:
+
+su - nusse
+
+Så skal der opdateres:
+sudo apt update
+sudo apt upgrade
+
+Og dernæst installerer vi en webserver_
+sudo apt -y install nginx
+
+Det tester vi om virker.
+
+besøg ip-nummeret.
+
+65.108.148.215
+
+Det virker. Vi har en webserver!
+
+Når der laves ændringer i opsætningen kan vi stoppe, starte og genstarte webserveren
+med:
+
+sudo service nginx stop
+sudo service nginx start
+sudo service nginx restart
+
+Så installerer vi R.
+
+sudo apt -y install r-base
+
+Vi tjekker at vi kan køre R:
+
+R
+
+![](R01.png)
+
+Det kan vi. Men det er en ældre version!
+
+sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu focal-cran40/" >> /etc/apt/sources.list'
+
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+
+Verificer nøglen:
+gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+
+
+Vi bør, jf. 
+https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html
+
+
+få dette fingeraftryk:
+E298A3A825C0D65DFD57CBB651716619E084DAB9.
+
+
+Så opgraderer vi.
+
+sudo apt upgrade
+
+hm...
+
+sudo add-apt-repository "deb [arch=arm64] https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
+sudo apt update
+
+sudo apt upgrade
+
+bom. Så kører vi 4.4.3
+
+Det er en god ide at have devtools installeret. Den har dependencies.
+
+sudo apt -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
+
+
+Og så kan vi installere pakker. 
+
+for at sikre at det kommer korrekt ind gør vi det på denne måde.
+
+Det gør at pakker installeres som root - og så er de tilgængelige for alle brugere.
+
+sudo su - -c "R -e \"install.packages('devtools', repos = 'http://cran.rstudio.com/')\""
+
+Vi kan lige så godt tage tidyverse med det samme. Og shiny.
+
+sudo su - -c "R -e \"install.packages('tidyverse', 'shiny')\""
+
+Rstudio server understøtter ikke arm64 - så den installerer vi ikke.
+
+Shinyserver
+
+Hm. der er tilsvarende problemer. arm64 har dårlig understøttelse.
+
+docker?
+
+
+https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
