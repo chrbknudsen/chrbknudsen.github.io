@@ -11,13 +11,13 @@ toc: true
 image: ""
 ---
 
-Is it safe to have your website on a service from the US? Probably.
+Is it safe to have your website on a service from the US? Maybe.
 
-Is it safe to run it on a service from a country led by a... somewhat unpredictable... president. Taking advice from people who should either take more Ritalin. Or less ketamine. Probably.
+Is it safe to run it on a service from a country led by a... somewhat unpredictable... president. Taking advice from people who should either take more Ritalin. Or less ketamine. Perhaps.
 
 Is it a good idea? Probably not.
 
-This site has, and at the time of writing hosted on DigitalOcean. Nice service. Affordable. The server is located in Frankfurt (I am here writing to people from the civilised world, so it is unnessecary to specify the country).
+This site has, and at the time of writing is, hosted on DigitalOcean. Nice service. Affordable. The server is located in Frankfurt (I am here writing to people from the civilised world, so it is unnessecary to specify the country).
 
 But, DigitalOcean is an american company.
 
@@ -37,7 +37,11 @@ And chose a datacenter with a location you like. I like locations that are in co
 
 ![](hetzner4.png)
 
+
 Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I'm leaving. 
+
+Og så skal vi have amd - for vi får lyst til at installere rstudio, og den er kun tilgængelig
+i experimentelle daily builds for arm64. Så... Lidt dyrere. Men
 
 ![](hetzner6.png)
 
@@ -104,8 +108,7 @@ R
 
 Det kan vi. Men det er en ældre version!
 
-sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu focal-cran40/" >> /etc/apt/sources.list'
-
+Vi starter med at tilføje den nøgle med hvilken vi forventer at R-installationer signeres:
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 
 Verificer nøglen:
@@ -120,12 +123,8 @@ få dette fingeraftryk:
 E298A3A825C0D65DFD57CBB651716619E084DAB9.
 
 
-Så opgraderer vi.
 
-sudo apt upgrade
-
-hm...
-
+Så tilføjer vi det repo som har 
 sudo add-apt-repository "deb [arch=arm64] https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 
 sudo apt update
@@ -137,8 +136,8 @@ bom. Så kører vi 4.4.3
 Det er en god ide at have devtools installeret. Den har dependencies.
 
 sudo apt -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
-
-
+den her anbefales også.
+sudo apt-get install r-base-dev
 Og så kan vi installere pakker. 
 
 for at sikre at det kommer korrekt ind gør vi det på denne måde.
@@ -151,13 +150,7 @@ Vi kan lige så godt tage tidyverse med det samme. Og shiny.
 
 sudo su - -c "R -e \"install.packages('tidyverse', 'shiny')\""
 
-Rstudio server understøtter ikke arm64 - så den installerer vi ikke.
-
-Shinyserver
-
-Hm. der er tilsvarende problemer. arm64 har dårlig understøttelse.
-
-docker?
+Vi får sikkert brug for rstudio server. Og for shinyserver. 
 
 
 https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
