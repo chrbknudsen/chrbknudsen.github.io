@@ -161,5 +161,31 @@ sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'))\""
 Vi får sikkert brug for rstudio server. Og for shinyserver. 
 
 
+Så en dependency først:
+sudo apt-get -y install gdebi-core
+
+Vi skal selvfølgelig have seneste version. Den finder vi på
+https://posit.co/download/rstudio-server/
+
+pt er det 
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.12.1-563-amd64.deb
+
+efterfulgt af 
+sudo gdebi rstudio-server-2024.12.1-563-amd64.deb
+
+Og så shinyserver.
+Vi har installeret shiny. Og gdebi. 
+Så vi går itl 
+https://posit.co/download/shiny-server/
+og finder
+
+wget https://download3.rstudio.org/ubuntu-20.04/x86_64/shiny-server-1.5.23.1030-amd64.deb
+
+og
+
+sudo gdebi shiny-server-1.5.23.1030-amd64.deb
+
+
+Og så er vi nået til ca. 8.1 i 
 https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
