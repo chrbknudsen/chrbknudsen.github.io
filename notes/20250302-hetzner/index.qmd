@@ -144,11 +144,19 @@ for at sikre at det kommer korrekt ind gør vi det på denne måde.
 
 Det gør at pakker installeres som root - og så er de tilgængelige for alle brugere.
 
+Inden er det dog en god ide at installere andree ting. Som 
+er nødvendige for at vi overhovedet kan installere devtools.
+libfontconfig1-dev
+libharfbuzz-dev
+libfribidi-dev
+
+libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev 
+
 sudo su - -c "R -e \"install.packages('devtools', repos = 'http://cran.rstudio.com/')\""
 
 Vi kan lige så godt tage tidyverse med det samme. Og shiny.
 
-sudo su - -c "R -e \"install.packages('tidyverse', 'shiny')\""
+sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'))\""
 
 Vi får sikkert brug for rstudio server. Og for shinyserver. 
 
