@@ -189,3 +189,46 @@ sudo gdebi shiny-server-1.5.23.1030-amd64.deb
 Og så er vi nået til ca. 8.1 i 
 https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
+
+
+
+Opdatering af ting - 
+hent_repos.sh placeres i /usr/local/bin og køres i crontab
+
+#!/bin/bash
+
+# Hent hjemmesiden                                                                                                     
+REPO_URL="https://github.com/chrbknudsen/chrbknudsen.github.io.git"                                                     
+LOCAL_REPO_PATH="/srv/git/chrbknudsen.github.io"                                                                        
+NGINX_PATH="/var/www/html" # eller hvor det nu er den skal være...                                                                                                                                                                              
+# Tjek om lokal kopi eksisterer                                                                                         
+if [ ! -d "$LOCAL_REPO_PATH/.git" ]; then                                    
+echo "Lokalt repo findes ikke - der klones..."
+/usr/bin/git clone $REPO_URL $LOCAL_REPO_PATH
+else
+echo "Opdaterer lokalt repo..."                                            
+cd $LOCAL_REPO_PATH            
+/usr/bin/git pull origin main                                                
+fi                                                                          
+
+# Synkroniserer filer fra mappen til nginx' rodmappe                                                                    
+rsync -av --delete  $LOCAL_REPO_PATH/docs/ $NGINX_PATH                                                                                                                                                                                          
+echo "Opdatering fuldført."                                                                                                                                                                                                                     
+# Hent shiny-apps                                                                                                                                                                                                                               
+REPO_URL_SHINY="https://github.com/chrbknudsen/shiny.git"                                                               
+LOCAL_REPO_PATH_SHINY="/srv/git/shiny"                                                                                  
+SHINY_PATH="/srv/shiny-server"
+# Tjek om lokal kopi eksisterer
+if [ ! -d "$LOCAL_REPO_PATH_SHINY/.git" ]; then
+echo "Lokalt shiny repo findes ikke - der klones..."
+/usr/bin/git clone $REPO_URL_SHINY $LOCAL_REPO_PATH_SHINY
+else                                                                                                          
+echo "Opdaterer lokalt shiny repo..."
+echo "skifter katalog"
+cd $LOCAL_REPO_PATH_SHINY
+echo "katalog skiftet"
+/usr/bin/git pull origin main
+fi                              
+# Synkroniserer filer fra mappen til shiny-servers rodmappe                                                             
+sudo -u shinyuser rsync -av --delete --exclude '.git' --exclude '.*' $LOCAL_REPO_PATH_SHINY/ $SHINY_PATH/    
+
