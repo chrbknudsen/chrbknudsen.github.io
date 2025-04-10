@@ -194,7 +194,7 @@ https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
 Opdatering af ting - 
 hent_repos.sh placeres i /usr/local/bin og køres i crontab
-
+```
 #!/bin/bash
 # Hent hjemmesiden
 REPO_URL="https://github.com/chrbknudsen/chrbknudsen.github.io.git"
@@ -230,3 +230,5 @@ echo "katalog skiftet"
 fi                              
 # Synkroniserer filer fra mappen til shiny-servers rodmappe
 sudo -u shinyuser rsync -av --delete --exclude '.git' --exclude '.*' $LOCAL_REPO_PATH_SHINY/ $SHINY_PATH/
+```
+
