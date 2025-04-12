@@ -231,4 +231,49 @@ fi
 # Synkroniserer filer fra mappen til shiny-servers rodmappe
 sudo -u shinyuser rsync -av --delete --exclude '.git' --exclude '.*' $LOCAL_REPO_PATH_SHINY/ $SHINY_PATH/
 ```
+Den skal også gøres eksekverbar, ellers der det lidt op ad bakke.
+Det gør vi med chmod.
 
+sudo chmod +x hent_repos.sh
+
+As I just mentioned, dealing with which user is running an app and user permissions can be a bit annoying. It took me a very long time to figure our how to set up the users in a way that works well for me, and this is the setup I came up with. I’m not saying it’s necessarily the most correct way to work, but it works for me and has worked for hundreds of others who have followed this article. Feel free to do t e same.
+
+Currently, assuming you’re logged in as user dean, when you create a folder in the Shiny Server folder (/srv/shiny-server/), dean will be considered the only owner of that folder, and nobody else (except root) will be able to write files there. Why is this a problem? It means that if a Shiny app is trying to write a file to the filesystem, the app will crash because shiny user does not have those permissions! One option is to add run_as dean; to the shiny server config, but I don’t like that because then when I want to see which user is using up the server’s resources, I won’t be able to differentiate between a shiny app running under my name vs me running R code myself.
+
+So my solution is to create a user group called shiny-apps and add both dean and shiny users to it. Then I’ll make sure that the whole /srv/shiny-server folder has read+write permissions for this group. (Again, disclaimer: I’m not a sysadmin so I’m learning all this as I go. Don’t treat this as a work of god).
+
+
+Pæne urls - det skal håndteres i webserveren
+
+sudo nano /etc/nginx/sites-enabled/default
+
+sudo nano /etc/nginx/sites-enabled/default
+
+(I’m assuming you know how to use nano. If not, then just Google for “how to edit a file with nano”. In short: use the arrow keys to move aroud, press Ctrl+O followed by Enter to save, and press Ctrl+X to exit.)
+
+Add the following lines above the line that reads server {
+
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}
+
+der tilføjes yderligere ting for at få pæne urls.
+sudo groupadd shiny-apps
+sudo usermod -aG shiny-apps dean
+sudo usermod -aG shiny-apps shiny
+cd /srv/shiny-server
+sudo chown -R dean:shiny-apps .
+sudo chmod g+w .
+sudo chmod g+s .
+
+
+postgresql installeres:
+sudo apt-get update && sudo apt-get install postgresql postgresql-contrib
+
+Og webinterfacet hertil:
+curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
+sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+sudo apt-get update
+sudo apt-get install pgadmin4-web
+sudo /usr/pgadmin4/bin/setup-web.sh
