@@ -183,10 +183,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Is it safe to have your website on a service from the US? Probably.</p>
-<p>Is it safe to run it on a service from a country led by a… somewhat unpredictable… president. Taking advice from people who should either take more Ritalin. Or less ketamine. Probably.</p>
+<p>Is it safe to have your website on a service from the US? Maybe.</p>
+<p>Is it safe to run it on a service from a country led by a… somewhat unpredictable… president. Taking advice from people who should either take more Ritalin. Or less ketamine. Perhaps.</p>
 <p>Is it a good idea? Probably not.</p>
-<p>This site has, and at the time of writing hosted on DigitalOcean. Nice service. Affordable. The server is located in Frankfurt (I am here writing to people from the civilised world, so it is unnessecary to specify the country).</p>
+<p>This site has, and at the time of writing is, hosted on DigitalOcean. Nice service. Affordable. The server is located in Frankfurt.</p>
 <p>But, DigitalOcean is an american company.</p>
 <p>So I would like to move it to a service based in a civilised country. Hubby says it should be Hetzner. So here we go.</p>
 <p>Begin by signing up at www.hetzner.com. Remember to save your login and password to recover your 2FA-setup.</p>
@@ -196,8 +196,238 @@ ul.task-list li input[type="checkbox"] {
 <p>And chose a datacenter with a location you like. I like locations that are in countries not run baboons on ketamine.</p>
 <p><img src="hetzner3.png" class="img-fluid"> We now need to chose the image we want to install. I prefer Ubuntu - that is the same I’m running at home.</p>
 <p><img src="hetzner4.png" class="img-fluid"></p>
-<p>Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I’m leaving. <img src="hetzner6.png" class="img-fluid"> Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise you will have to click around to find out where to add it later.</p>
+<p>Chose a size. Even with a lower payment, I get more compute, memory and storage with the smallest option, than I did at the american service I’m leaving.</p>
+<p>Og så skal vi have amd - for vi får lyst til at installere rstudio, og den er kun tilgængelig i experimentelle daily builds for arm64. Så… Lidt dyrere. Men</p>
+<p><img src="hetzner6.png" class="img-fluid"></p>
+<p>Here you should opt in to pay a little bit more for the IPv4-address from the start. Otherwise you will have to click around to find out where to add it later.</p>
 <p><img src="hetzner7.png" class="img-fluid"></p>
+<p><img src="hetzner08.png" class="img-fluid"></p>
+<p><img src="hetzner09.png" class="img-fluid"></p>
+<p><img src="hetzner10.png" class="img-fluid"></p>
+<p><img src="hetzner11.png" class="img-fluid"></p>
+<p><img src="hetzner12.png" class="img-fluid"></p>
+<p>We get a password and an ip-number by mail, and ssh to it.</p>
+<pre><code>ssh root@123.456.789.012</code></pre>
+<p>The root password have to be changed immediately.</p>
+<p>Having done that, we add a user:</p>
+<pre><code>adduser nusse</code></pre>
+<p>and add this user to the sudo group:</p>
+<pre><code>gpasswd -a nusse sudo </code></pre>
+<p>We then change to that user:</p>
+<pre><code>su - nusse</code></pre>
+<p>It is now time to update the system:</p>
+<pre><code>sudo apt update
+sudo apt upgrade</code></pre>
+<p>Next we install a webserver. I prefer nginx.</p>
+<pre><code>sudo apt -y install nginx</code></pre>
+<p>We can test that it’s working by visiting the ip-adress we got in a browser</p>
+<p>Now we have a webserver running!</p>
+<p>When we make changes in the setup of the server, and we will, we can stop, start, restart and reload it running one of these commands:</p>
+<pre><code>sudo service nginx stop
+sudo service nginx start
+sudo service nginx restart
+sudo service nginx reload</code></pre>
+<p>Next I would like to install R.</p>
+<p>When doing that, the install files are signed with a key. We begin by retrieving it, and adding it to our package manager:</p>
+<pre><code>wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</code></pre>
+<p>We can verify the key:</p>
+<pre><code>gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</code></pre>
+<p>And according to: https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html</p>
+<p>We should get this fingerprint:</p>
+<pre><code>E298A3A825C0D65DFD57CBB651716619E084DAB9.</code></pre>
+<p>From the R-project website, we get an url to the repository from where we are going to download R. We add it to our packagemanager:</p>
+<pre><code>sudo add-apt-repository "deb [arch=arm64] https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"</code></pre>
+<p>We now update and upgrade the system (again):</p>
+<pre><code>sudo apt update
+sudo apt upgrade</code></pre>
+<p>And can now install R:</p>
+<pre><code>sudo apt -y install r-base</code></pre>
+<p>We check that R is actually running:</p>
+<pre><code>R</code></pre>
+<p><img src="R01.png" class="img-fluid"> It is! (never mind the screenshot the actual result at time of writing is R v. 4.5.0)</p>
+<p>Its nice to have devtools installed in R. That comes with a set of dependencies.</p>
+<pre><code>sudo apt -y install libfontconfig1-dev libharfbuzz-dev libfribidi-dev
+sudo apt -y install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev 
+sudo apt -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
+sudo apt -y install r-base-dev</code></pre>
+<p>Now it’s time to install some R packages.</p>
+<p>We can either install them in R. In that case, they will be installed in the current user-home directory, and only be available to him.</p>
+<p>If we install it as root, they will be available to every user on the system.</p>
+<p>Begin by installing devtools</p>
+<pre><code>sudo su - -c "R -e \"install.packages('devtools', repos = 'http://cran.rstudio.com/')\""</code></pre>
+<p>Take a cup of coffee. This takes time!</p>
+<p>We are going to use tidyverse a lot. And the shiny package:</p>
+<pre><code>sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'))\""</code></pre>
+<p>I would like to get both rstudio and shiny servers installed.</p>
+<p>There is yet another dependency, or rather, we need to install gdebi in order to even be able to install them:</p>
+<pre><code>sudo apt-get -y install gdebi-core</code></pre>
+<p>First, R-studio. We would like the latest version, and can find that at</p>
+<p>https://posit.co/download/rstudio-server/</p>
+<p>So - run:</p>
+<pre><code>wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.12.1-563-amd64.deb</code></pre>
+<p>to download the rstudio-installation package.</p>
+<p>And then install it with:</p>
+<pre><code>sudo gdebi rstudio-server-2024.12.1-563-amd64.deb</code></pre>
+<p>Next, the shinyserver. The latest version can be found at: https://posit.co/download/shiny-server/</p>
+<p>So we run:</p>
+<pre><code>wget https://download3.rstudio.org/ubuntu-20.04/x86_64/shiny-server-1.5.23.1030-amd64.deb</code></pre>
+<p>And then:</p>
+<pre><code>sudo gdebi shiny-server-1.5.23.1030-amd64.deb</code></pre>
+<p>We can check that stuff is working by visiting the server, at port 3838 and 8787:</p>
+<p>´´´ 123.456.789.012:3838 123.456.789.012:8787 ´´´</p>
+<p>Which should bring you to the shinyserver and the rstudioserver respectively.</p>
+<p>So - now you have your own server, located in a civilized country, running rstudio and shinyserver.</p>
+<p>Whats next?</p>
+<p>Well, the actual goal was to move my website to this server. It is currently maintained on Github (another site that might have to be moved in the future)</p>
+<p>So lets make a script that clones the repos containing my website, and my shiny-apps to this server from github.</p>
+<p>Save this to “get_repos.sh” in “/usr/local/bin”. Make the file with:</p>
+<pre><code>sudo nano /usr/local/bin/get_repos.sh</code></pre>
+<p>and then copy-paste this. Remember to change the paths…</p>
+<pre><code>#!/bin/bash
+# Get website:
+REPO_URL="https://github.com/chrbknudsen/chrbknudsen.github.io.git"
+LOCAL_REPO_PATH="/srv/git/chrbknudsen.github.io"
+NGINX_PATH="/var/www/christianknudsen.info" # 
+
+
+# Check if local copy exists
+# if not, clone the repo, Else, pull to update:
+if [ ! -d "$LOCAL_REPO_PATH/.git" ]; then
+echo "Local repo not found - cloning..."
+/usr/bin/git clone $REPO_URL $LOCAL_REPO_PATH
+else
+echo "Updating local repo..."
+cd $LOCAL_REPO_PATH
+/usr/bin/git pull origin main                                                
+fi
+# Having cloned/updated, we syncronise the files to the 
+# path where the webserver expects to find stuff:
+rsync -av --delete  $LOCAL_REPO_PATH/docs/ $NGINX_PATH                       
+echo "Update done."
+
+# Next the shiny apps
+REPO_URL_SHINY="https://github.com/chrbknudsen/shiny.git"
+LOCAL_REPO_PATH_SHINY="/srv/git/shiny"
+SHINY_PATH="/srv/shiny-server"
+# Check if local copy exists
+if [ ! -d "$LOCAL_REPO_PATH_SHINY/.git" ]; then
+echo "Local shiny repo not found - cloning..."
+/usr/bin/git clone $REPO_URL_SHINY $LOCAL_REPO_PATH_SHINY
+else
+echo "Updating local shiny repo..."
+echo "Changing directory"
+cd $LOCAL_REPO_PATH_SHINY
+echo "Directory changed"
+/usr/bin/git pull origin main
+fi
+# Synchronising files to the root-folder of the shiny server.
+sudo -u shiny rsync -av --delete --exclude '.git' --exclude '.*' $LOCAL_REPO_PATH_SHINY/ $SHINY_PATH/</code></pre>
+<p>This needs to be executable:</p>
+<pre><code>sudo chmod +x get_repos.sh</code></pre>
+<p>Add it as a cron job:</p>
+<pre><code>sudo crontab -e</code></pre>
+<p>And add this line:</p>
+<p>´´´ 0 * * * * /usr/local/bin/get_repos.sh ´´´</p>
+<p>But don’t expect it to actually work. Note the final line where we sync the shiny apps. There is a user that needs to have the correct rights.</p>
+<p>We create a group, “shinyuser”, and andd both my default username, and the “shiny” user to that group. Next we change the rights for the shiny-server app folder, in order for those users to have the correct rights:</p>
+<pre><code>sudo groupadd shinyuser
+sudo usermod -aG shinyuser nusse
+sudo usermod -aG shinyuser shiny
+cd /srv/shiny-server
+sudo chown -R nusse:shinyuser .
+sudo chmod g+w .
+sudo chmod g+s .</code></pre>
+<p>Now we can expect the cron-job to run correctly. Lets try by running</p>
+<pre><code>sudo /usr/local/bin/get_repos.sh</code></pre>
+<p>We would now like a nicer url. Having to enter an IP-number every time we want to run something is not nice.</p>
+<p>This require us to setup different sites to be served by the webserver. nginx does this by having a file in the folder /etc/nginx/sites-available defining the server.</p>
+<p>There is a default setup, but we will not use that.</p>
+<p>Run this to edit a setup file:</p>
+<pre><code>sudo nano /etc/nginx/sites-available/your-domain.tld</code></pre>
+<p>and paste this into it:</p>
+<pre><code>server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/your_domain/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name your_domain www.your_domain;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}</code></pre>
+<p>Remember to change the values after “server_name” to match your domain.</p>
+<p>Also change the line “root /var/www/your_domain/html” to match where the files you want served is. In this case it should be “/var/www/christianknudsen.info”</p>
+<p>When we have done that, we have a site that is available for the server. But it is not enabled. We do that by making a sym-link in the folder</p>
+<p>/etc/nginx/sites-enabled/</p>
+<p>With this command</p>
+<pre><code>sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/</code></pre>
+<p>We now check that the setup is correct by running</p>
+<pre><code>sudo nginx -t</code></pre>
+<p>And can then restart the server with:</p>
+<pre><code>sudo service nginx restart</code></pre>
+<p>If we setup more than one server name, we can run into problems unless we adjust a single value in the /etc/nginx/nginx.conf file.</p>
+<p>Open the file:</p>
+<pre><code>sudo nano /etc/nginx/nginx.conf</code></pre>
+<p>Locate the line “server_names_hash_bucket_size” and remove the “#” symbol to uncomment the line.</p>
+<p>This, however does not make it possible to enter the name of your domain. Go to whoever manages your domain, and change the A-records to point to the IP-adress you got from Hetzner.</p>
+<p>After that - it works, but there are still two issues. First of all any modern browser will tell you that you are visiting an unsafe site, because you have not set up an ssl-certificate. That is what give you a https adress. Also - we do not have nice urls to rstudio and shinyserver.</p>
+<p>We begin with nicer urls.</p>
+<p>Open the file defining your server:</p>
+<pre><code>sudo nano /etc/nginx/sites-available/you-domain.tld</code></pre>
+<p>and add this at the top - before the line “server”</p>
+<pre><code>map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}</code></pre>
+<p>Next, add this, inside the server parentheses:</p>
+<pre><code>        location /shiny/ {
+                proxy_pass http://127.0.0.1:3838/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection $connection_upgrade;
+                rewrite ^(/shiny/[^/]+)$ $1/ permanent;
+        }
+
+        location /rstudio/ {
+                proxy_pass http://127.0.0.1:8787/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection $connection_upgrade;
+        }</code></pre>
+<p>Now your-domain.tld/rstudio will point to your rstudio server. And /shiny to the shiny-server. Still not with a secure connection.</p>
+<p>Run</p>
+<pre><code>sudo nginx -t</code></pre>
+<p>to test that you did it correctly, and then reload the settings:</p>
+<pre><code>sudo systemctl reload nginx</code></pre>
+<p>Now we have to get ssl setup.</p>
+<p>We have to install certbot, and this comes from another package manager, snap. Run this to install snap:</p>
+<pre><code>sudo snap install core; sudo snap refresh core</code></pre>
+<p>And now we can install it:</p>
+<pre><code>sudo snap install --classic certbot</code></pre>
+<p>It’s nice to just be able to type certbot to run it. We ensure that by:</p>
+<pre><code>sudo ln -s /snap/bin/certbot /usr/bin/certbot</code></pre>
+<p>Before actually making the certificates, we setup a firewall that can handle https traffic: run</p>
+<pre><code>sudo ufw status</code></pre>
+<p>to see the status of the firewall. In my case, it was not enabled. Enable it by:</p>
+<pre><code>sudo ufw enable</code></pre>
+<p>And then add a couple of profiles to allow https traffic:</p>
+<pre><code>sudo ufw allow 'OpenSSH'
+sudo ufw allow 'Nginx Full'</code></pre>
+<p>Now we can run certbot and get our certificates:</p>
+<pre><code>sudo certbot --nginx -d your-domain.tld -d www.your-domain.tld</code></pre>
+<p>It is important that you somewhere in the sites-enabled folder have a file with at server block matching the name of the domain you request a certificate for. Otherwise certbot will add stuff to your default server setup, and that makes it difficult to administrated later.</p>
+<p>Check that stuff is correctly setup:</p>
+<pre><code>sudo nginx -t</code></pre>
+<p>And realod the server settings:</p>
+<pre><code>sudo systemctl reload nginx</code></pre>
+<p>By default the certificate is only valid for 90 days. So we check that certbot has setup renewal for us:</p>
+<pre><code>sudo systemctl status snap.certbot.renew.service</code></pre>
+<p>And do a dry-run of the renewal:</p>
+<pre><code>sudo certbot renew --dry-run</code></pre>
+<p>Thats it!</p>
 
 
 
