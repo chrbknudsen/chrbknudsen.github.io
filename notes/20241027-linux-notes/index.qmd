@@ -62,4 +62,6 @@ permanent.
 Ctrl+c and ctrl+v is not working on the console. But ctrl-shift-c/v is.
 
 
-s
+## Symbolic links
+
+ln -s path/to/filename newpath/to/newfilename
