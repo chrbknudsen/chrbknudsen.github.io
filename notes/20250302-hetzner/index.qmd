@@ -2,9 +2,9 @@
 title: "Setup RStudio and Shiny server on your own"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - linux
   - kategori 2
 date: 2025-03-02
 toc: true
@@ -202,7 +202,7 @@ There is yet another dependency, or rather, we need to install gdebi
 in order to even be able to install them:
 
 ```
-sudo apt-get -y install gdebi-core
+sudo apt -y install gdebi-core
 ```
 
 First, R-studio. We would like the latest version, and can find that
