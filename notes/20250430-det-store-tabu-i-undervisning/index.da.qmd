@@ -1,0 +1,26 @@
+---
+title: "Det store undervisningstabu"
+subtitle: "Vi ved det godt. Men det taler vi ikke om."
+author: "Christian Knudsen"
+visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-04-30
+toc: true
+image: ""
+---
+
+## Tabuet
+
+Vi ved det godt. Alle os der underviser. Men det er ikke pænt at sige højt.
+
+Så det gør vi ikke.
+
+Men det får ikke virkeligheden til at gå væk eller blive bedre. 
+
+Dyb vejrtrækning...
+
+Der er simpelthen nogen af vores studerende eller elever der, i mangel
+af bedre ord. Er dumme. Eller mere pænt, mangler den kognitive kapacitet
+til at kunne gøre det de gerne vil. Kan
