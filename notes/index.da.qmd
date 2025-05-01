@@ -19,5 +19,8 @@ toc: true
 ---
 <!-- https://beamilz.com/posts/en  for yderligere struktur. -->
 
+Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage
+fra 2003
+
 ::: {#notes}
 :::
