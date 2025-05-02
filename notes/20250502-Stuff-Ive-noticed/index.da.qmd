@@ -3,7 +3,7 @@ title: Ting jeg har lagt mærke til
 subtitle: "In no particular order"
 author: "Christian Knudsen"
 categories:
-  - kategori 1
+  - AI
   - kategori 2
 date: 2025-05-02
 toc: true
@@ -18,6 +18,8 @@ format:
 ## Vegetativ Elektron Mikroskopi
 
 ![](vegetative-em.jpg)
+
+::::notes
 Ja. Men nej. 
 
 Ja, der er over 20 videnskabelige artikler der indeholder den frase.
@@ -42,9 +44,13 @@ Det fører dog til interessante overvejelser om hvordan nonsense begreber
 kan finde vej til den videnskabelige litteratur. Hvordan de kan brede sig. Og
 om peer-review processen kan reddes, eller om den er brudt endegyldigt sammen.
 
+::::
+
 ## Hvad må chatbotten fortælle os?
+
 ![Peder Hammerskov på linkedin,https://www.linkedin.com/posts/peder_aietik-chatgpt-ansvar-activity-7323610779339898880-2FAX](farligviden.jpg)
 
+:::: notes
 Må den fortælle os den slags? Opslaget diskuterede andre ubehagelige ting man
 kan få chatbotten til at svare på, det her var et af de mindre kontroversielle
 eksempler. Inklusive beskrivelser af hvor tykt rebet skal være hvis man vil 
@@ -57,5 +63,25 @@ Når du har gjort det, så overvej om der er nogen der kan tage anstød af eller
 Det kræver nok at vi faktisk når frem til AGI. Og fælles, globalt, beslutter os for hvilke værdier Store Mor skal opdrage os efter.
 
 Vil man gerne vide hvor tykt rebet til hængning skal være, kan man i stedet søge i dokumenter fra anden verdenskrig, hvor den amerikanske hær udgav manualer til den slags. De ligger digitalt på Library of Congress. Hvis chatbotten ikke må fortælle mig om det når jeg overvejer selvmord - og det er jeg ikke uenig i at den nok bør lade være med. Hvordan sikrer vi os så at den godt må når jeg researcher historisk militær straffelov til min eksamensopgave?
+::::
 
 
+
+## Toldsatser og LLM
+Med tak til Amy Hoy.
+https://bsky.app/profile/amyhoy.bsky.social/post/3lluo7jmsss2w
+
+![](llm-tariff-grok.jpg)
+![](llm-tariff-gemini.jpg)
+![](llm-tariff-claude.jpg)
+![](llm-tariff-chatgpt.jpg)
+
+![](tariff-formula.webp)
+
+Bemærk * og $mdash; Matematikere bruger ikke — De bruger -  De bruger heller ikke
+*.
+
+Og så er der det med hvilke lande der er med. det er nok fordi man har brugt
+en liste over TLD. Hvilket forklarer både pingvinerne (tld: .hm ) og at Gibraltar -
+der i alle andre sammenhænge er UK (tld: .gi), også blev belagt med told. Pas
+på med at bruge llms bevidstløst.
