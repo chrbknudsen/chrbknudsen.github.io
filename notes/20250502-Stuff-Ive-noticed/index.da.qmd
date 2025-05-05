@@ -87,6 +87,12 @@ der i alle andre sammenhænge er UK (tld: .gi), også blev belagt med told. Pas
 på med at bruge llms bevidstløst.
 
 
+Men husk, det er ikke givet at fordi der er mdashes, så er det
+kunstigt genereret. Selv bruger jeg dem hele tiden når jeg skriver.
+Der er mange tankestreger i mine skriv. Og jeg indtaster det
+jo som en -, men i word og outlook laves der autokorrektur til
+mdash.
+
 ## Mønstre hvor ingen er
 
 Vores tilbøjelighed til at se mønstre hvor der ikke nødvendigvis er mønstre.
