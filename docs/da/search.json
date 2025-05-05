@@ -263,7 +263,14 @@
     "href": "notes/20250502-Stuff-Ive-noticed/index.html#toldsatser-og-llm",
     "title": "Ting jeg har lagt mærke til",
     "section": "Toldsatser og LLM",
-    "text": "Toldsatser og LLM\nMed tak til Amy Hoy. https://bsky.app/profile/amyhoy.bsky.social/post/3lluo7jmsss2w\n   \n\nBemærk * og $mdash; Matematikere bruger ikke — De bruger - De bruger heller ikke *.\nOg så er der det med hvilke lande der er med. det er nok fordi man har brugt en liste over TLD. Hvilket forklarer både pingvinerne (tld: .hm ) og at Gibraltar - der i alle andre sammenhænge er UK (tld: .gi), også blev belagt med told. Pas på med at bruge llms bevidstløst."
+    "text": "Toldsatser og LLM\nMed tak til Amy Hoy. https://bsky.app/profile/amyhoy.bsky.social/post/3lluo7jmsss2w\n   \n\nBemærk * og $mdash; Matematikere bruger ikke — De bruger - De bruger heller ikke *.\nOg så er der det med hvilke lande der er med. det er nok fordi man har brugt en liste over TLD. Hvilket forklarer både pingvinerne (tld: .hm ) og at Gibraltar - der i alle andre sammenhænge er UK (tld: .gi), også blev belagt med told. Pas på med at bruge llms bevidstløst.\nMen husk, det er ikke givet at fordi der er mdashes, så er det kunstigt genereret. Selv bruger jeg dem hele tiden når jeg skriver. Der er mange tankestreger i mine skriv. Og jeg indtaster det jo som en -, men i word og outlook laves der autokorrektur til mdash."
+  },
+  {
+    "objectID": "notes/20250502-Stuff-Ive-noticed/index.html#mønstre-hvor-ingen-er",
+    "href": "notes/20250502-Stuff-Ive-noticed/index.html#mønstre-hvor-ingen-er",
+    "title": "Ting jeg har lagt mærke til",
+    "section": "Mønstre hvor ingen er",
+    "text": "Mønstre hvor ingen er\nVores tilbøjelighed til at se mønstre hvor der ikke nødvendigvis er mønstre.\n  \n ::::notes\nMønstre der er der - som vi ikke ser.\nMåske fordi vi ikke bryder os om at se dem. Eller det er upopulært at gøre opmærksom på dem.\n::::"
   },
   {
     "objectID": "organisations/index.html",
