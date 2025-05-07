@@ -1,0 +1,21 @@
+---
+title: "Interessante artikler"
+subtitle: "Som viser noget der helt åbenlyst må være forkert"
+author: "Christian Knudsen"
+visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-05-07
+toc: true
+image: ""
+---
+
+Blot en samling af links til rapporter, artikler og andet godt.
+Det de har til fælles er at alle deres konklusioner må være meget forkerte.
+
+[Ændringer i prøveformer giver øget kønsforskel i folkeskolens eksamener](https://rockwoolfonden.dk/udgivelser/aendringer-i-proeveformer-giver-oeget-koensforskel-i-folkeskolens-eksamener/). Der ses ingen kønsforskel i hvad eleverne
+faktisk kan. Men prøveformen favoriserer pigerne, der får systematisk højere 
+karakterer end de ligeså kvalificerede drenge.
+
+
