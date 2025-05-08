@@ -23,10 +23,10 @@ Dyb vejrtrækning...
 
 Der er simpelthen nogen af vores studerende eller elever der, i mangel
 af bedre ord. Er dumme. Eller mere pænt, mangler den kognitive kapacitet
-til at kunne gøre det de gerne vil. Kan man ikke finde " på sit tastatur, er 
-man ikke i stand til at gennemskue at gennemsnittet af værdier i en kolonne
+til at kunne gøre det de gerne vil. Kan man ikke finde " på sit tastatur. Eller er 
+man ude af stand til at gennemskue at gennemsnittet af værdier i en kolonne
 i en tabel nok skal beregnes på samme måde som gennemsnittet af en anden
-kolonne i samme tabel. Blot fordi kolonnen har et andet navn.
+kolonne i samme tabel. Og hvis det er svært, fordi kolonnerne har forskellige navne.
 
 Så skal man nok ikke give sig i kast med uddannelser, studier eller andre aktiviteter
 der kræver det niveau af "tekniske" kompetencer. 
@@ -35,7 +35,8 @@ Er det ikke bare fordi underviseren ikke har forklaret det godt nok? Måske.
 Men hvis underviserens første forklaring gør at 90% af eleverne _har_ forstået
 det. Og underviserens anden forklaring bringer tallet op på 95%. Og den tredie
 op på 97%. Og eleven først fanger det efter 6. forklaring. Men har glemt alt
-om det næste uge. Så er det nok ikke underviserens fejl. 
+om det næste uge. Så kan man nok ikke fuldstændigt afvise at det også handler
+om andet end underviserens kompetencer.. 
 
 I det tilfælde kan det være at man som studerende skal overveje om det måske. 
 Hypotetisk. Eventuelt. Kunne være at det ikke helt kan udelukkes at problemet
@@ -43,12 +44,21 @@ ikke er at emnet er svært. Eller at underviseren er dårlig. Men at man bare er
 i mangel af bedre ord, for dum til at forstå det her emne. 
 
 Man er sikkert god til mange andre ting, og vi har opfundet helt nye og hidtil
-ukendte former for intelligens for at sikrer alle er kloge. Men det her specifikke
+ukendte former for intelligens for at sikre alle er kloge. Men det her specifikke
 emne. Det er man altså for dum til at fatte.
 
 Sådan havde jeg det selv med kvantekemi. Det hjalp ikke at der blev forudsat 
 matematik som ingen af de studerende på kurset nogensinde havde haft. Og ved et
 rent lykketræf fik jeg et 8-tal på den gamle skala. Men konklusionen stod nu
-fortsat klar. Jeg er for dum til at skulle arbejde med kvantekemi. Så det lod 
+fortsat klar. Jeg var og er for dum til at skulle arbejde med kvantekemi. Så det lod 
 jeg være med. 
 
+Og nu vi er ved det. Det er meget trist med studerende der har dårligt psykisk
+helbred. De fortjener virkelig hjælp. Og det bør de nok få _før_ de starter på
+studierne. Jeg vil i hvert fald meget gerne have mig frabedt at have en læge
+der er for ængstelig til at række hånden op i en undervisningssituation. Hun får
+nemlig svært ved at finde et speciale hvor der ikke er risiko for at skulle give
+en patient meget kedelige beskeder. Jeg har
+heller ikke meget brug for en advokat der skal have sin hund med for at føle
+sig tryg i retten. Og den betjent der skal assistere ved voldsepisoder vil jeg
+foretrække ikke er angst for skydevåben eller bange for blod. 
