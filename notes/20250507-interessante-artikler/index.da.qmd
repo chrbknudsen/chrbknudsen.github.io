@@ -12,7 +12,8 @@ image: ""
 ---
 
 Blot en samling af links til rapporter, artikler og andet godt.
-Det de har til fælles er at alle deres konklusioner er åbenlyst fejlbehæftede.
+Det de har til fælles er at alle deres konklusioner er åbenlyst fejlbehæftede. Og jeg vil gerne understrege: Hvis du ikke bryder dig om
+konklusionerne, kan du tage det helt roligt. De er jo netop forkerte.
 
 [Ændringer i prøveformer giver øget kønsforskel i folkeskolens eksamener](https://rockwoolfonden.dk/udgivelser/aendringer-i-proeveformer-giver-oeget-koensforskel-i-folkeskolens-eksamener/). Fra Rockwool fonden. Der ses ingen kønsforskel i hvad eleverne
 faktisk kan. Men prøveformen favoriserer pigerne, der får systematisk højere 
