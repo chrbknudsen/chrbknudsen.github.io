@@ -1,6 +1,6 @@
 ---
 title: Ting jeg har lagt mærke til
-subtitle: "In no particular order"
+subtitle: In no particular order
 author: "Christian Knudsen"
 categories:
   - AI
@@ -112,4 +112,6 @@ opmærksom på dem.
 ::::
 
 
+## Gell-Mann hukommelsestab
 
+The Gell-Mann amnesia effect is a cognitive bias describing the tendency of individuals to critically assess media reports in a domain they are knowledgeable about, yet continue to trust reporting in other areas despite recognizing similar potential inaccuracies.
