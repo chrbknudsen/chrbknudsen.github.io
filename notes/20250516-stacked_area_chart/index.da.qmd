@@ -27,6 +27,7 @@ Og vi skal have trukket tabellen ud.
  det er der vist en funktion til et sted.
  
 ```{r eval = FALSE}
+
 library(httr)
 library(tidyverse)
 library(xml2)
@@ -37,6 +38,7 @@ html <- read_html(GET(url, user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 
 
 ```{r eval = FALSE}
+
 ua <- user_agent("Mozilla/5.0")
 
 res <- httr::GET(url, ua, config = httr::config(http_version = 1.1))
