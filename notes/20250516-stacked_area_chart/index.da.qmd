@@ -1,0 +1,43 @@
+---
+title: "Stakket barchart"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-05-16
+toc: true
+image: ""
+---
+
+Det er ofte lidt vanskeligt at aflæse. Men hvordan?
+
+Vi skal bruge noget data.
+
+
+https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data
+
+Og vi skal have trukket tabellen ud.
+
+ det er der vist en funktion til et sted.
+ 
+```{r}
+library(httr)
+library(tidyverse)
+library(xml2)
+library(rvest)
+url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
+html <- read_html(GET(url, user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")))
+```
+
+
+```{r}
+ua <- user_agent("Mozilla/5.0")
+
+res <- httr::GET(url, ua, config = httr::config(http_version = 1.1))
+
+html <- read_html(res)
+
+```
+
