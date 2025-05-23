@@ -115,3 +115,16 @@ opmærksom på dem.
 ## Gell-Mann hukommelsestab
 
 The Gell-Mann amnesia effect is a cognitive bias describing the tendency of individuals to critically assess media reports in a domain they are knowledgeable about, yet continue to trust reporting in other areas despite recognizing similar potential inaccuracies.
+
+
+## Explainable AI
+
+Det er jo ikke fordi jeg ikke mener at vi bør kunne forklare hvorfor en 
+AI eller ML-model når et bestemt resultat. Men vi bør nok tænke lidt over
+hvordan vi definerer "explanation" i den kontekst. Ja vi vil gerne vide 
+hvorfor computeren siger at billedet forestiller en kat. Kan vi forklare 
+hvorfor _jeg_ siger at billedet forestiller en kat?
+Ja, vi vil gerne vide hvorfor en amerikansk algoritme konkluderer at en 
+straffefange ikke skal prøveløslades. 
+Kan vi forklare hvorfor en dommer konkluderer at en straffefange ikke skal
+prøveløslades.
