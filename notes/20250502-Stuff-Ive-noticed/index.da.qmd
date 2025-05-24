@@ -1,0 +1,130 @@
+---
+title: Ting jeg har lagt mærke til
+subtitle: In no particular order
+author: "Christian Knudsen"
+categories:
+  - AI
+  - kategori 2
+date: 2025-05-02
+toc: true
+image: ""
+format:
+  revealjs:
+    theme: serif
+    logo: ../../scripts/logo.png
+    css: ../../scripts/logo.css
+---
+
+## Vegetativ Elektron Mikroskopi
+
+![](vegetative-em.jpg)
+
+::::notes
+Ja. Men nej. 
+
+Ja, der er over 20 videnskabelige artikler der indeholder den frase.
+Ja, det er korrekt at den ikke giver mening.
+
+Nej, det er ikke fordi generativ AI har fejltolket. Går man tilbage til artiklen
+fra 1959 og ser på hvordan der er lavet OCR på den - så skyldes det at man 
+ikke har taget højde for at der er to spalter i teksten. Det sker let. Man skal
+huske at holde styr på netop det med spalter. Vi har selv gjort det i en lidt
+for naiv behandling af Folketingsreferater. Digitaliseringen af dem fejlede intet.
+Det var vores efterbehandling der fejlede. Her ligger fejlen i OCR-processen.
+
+Og vi ser artikler fra 2019 hvor termen optræder fra universitetet i Teheran. 
+Jeg tror gerne at de har gang i en "paper-mill", men jeg tror ikke de har
+brugt generativ AI til det.
+
+Det illustrerer udfordringerne med OCR. Det illustrerer udfordringer med kvaliteten
+af det de store tekstmodeller bliver trænet på. Men ikke i sig selv udfordringer
+med den generative AI.
+
+Det fører dog til interessante overvejelser om hvordan nonsense begreber
+kan finde vej til den videnskabelige litteratur. Hvordan de kan brede sig. Og
+om peer-review processen kan reddes, eller om den er brudt endegyldigt sammen.
+
+::::
+
+## Hvad må chatbotten fortælle os?
+
+![Peder Hammerskov på linkedin,https://www.linkedin.com/posts/peder_aietik-chatgpt-ansvar-activity-7323610779339898880-2FAX](farligviden.jpg)
+
+:::: notes
+Må den fortælle os den slags? Opslaget diskuterede andre ubehagelige ting man
+kan få chatbotten til at svare på, det her var et af de mindre kontroversielle
+eksempler. Inklusive beskrivelser af hvor tykt rebet skal være hvis man vil 
+hænge sig.
+
+Jeg har ikke svaret. Men overvej:
+Hm. Udfordringen er lidt - hvor skal de grænser sættes, og hvem skal sætte dem? Produktet er internationalt, og vi ender meget hurtigt med laveste globale fællesnævner for hvad chatbotten har lov at skrive til os. Prøv at spørge deepseek om den kender nogen der ligner Peter Plys. Eller hvad der skete i verden 3. juni 1989. 
+Når du har gjort det, så overvej om der er nogen der kan tage anstød af ellers helt neutrale fakta om biologi, jordens alder eller mekanismerne i at lægge told på varer.
+
+Det kræver nok at vi faktisk når frem til AGI. Og fælles, globalt, beslutter os for hvilke værdier Store Mor skal opdrage os efter.
+
+Vil man gerne vide hvor tykt rebet til hængning skal være, kan man i stedet søge i dokumenter fra anden verdenskrig, hvor den amerikanske hær udgav manualer til den slags. De ligger digitalt på Library of Congress. Hvis chatbotten ikke må fortælle mig om det når jeg overvejer selvmord - og det er jeg ikke uenig i at den nok bør lade være med. Hvordan sikrer vi os så at den godt må når jeg researcher historisk militær straffelov til min eksamensopgave?
+::::
+
+
+
+## Toldsatser og LLM
+Med tak til Amy Hoy.
+https://bsky.app/profile/amyhoy.bsky.social/post/3lluo7jmsss2w
+
+![](llm-tariff-grok.jpg)
+![](llm-tariff-gemini.jpg)
+![](llm-tariff-claude.jpg)
+![](llm-tariff-chatgpt.jpg)
+
+![](tariff-formula.webp)
+
+Bemærk * og $mdash; Matematikere bruger ikke — De bruger -  De bruger heller ikke
+*.
+
+Og så er der det med hvilke lande der er med. det er nok fordi man har brugt
+en liste over TLD. Hvilket forklarer både pingvinerne (tld: .hm ) og at Gibraltar -
+der i alle andre sammenhænge er UK (tld: .gi), også blev belagt med told. Pas
+på med at bruge llms bevidstløst.
+
+
+Men husk, det er ikke givet at fordi der er mdashes, så er det
+kunstigt genereret. Selv bruger jeg dem hele tiden når jeg skriver.
+Der er mange tankestreger i mine skriv. Og jeg indtaster det
+jo som en -, men i word og outlook laves der autokorrektur til
+mdash.
+
+## Mønstre hvor ingen er
+
+Vores tilbøjelighed til at se mønstre hvor der ikke nødvendigvis er mønstre.
+
+![Fra https://x.com/michaelshermer](pareidolia_1.jpg)
+![Fra https://x.com/michaelshermer](pareidolia_2.jpg)
+![Fra https://x.com/michaelshermer](pareidolia_3.jpg)
+
+![Fra https://x.com/michaelshermer](pareidolia_4.jpg)
+::::notes
+
+ Mønstre der er der - som vi ikke ser.
+
+Måske fordi vi ikke bryder os om at se dem. Eller det er upopulært at gøre 
+opmærksom på dem. 
+
+::::
+
+
+## Gell-Mann hukommelsestab
+
+The Gell-Mann amnesia effect is a cognitive bias describing the tendency of individuals to critically assess media reports in a domain they are knowledgeable about, yet continue to trust reporting in other areas despite recognizing similar potential inaccuracies.
+
+
+## Explainable AI
+
+Det er jo ikke fordi jeg ikke mener at vi bør kunne forklare hvorfor en 
+AI eller ML-model når et bestemt resultat. Men vi bør nok tænke lidt over
+hvordan vi definerer "explanation" i den kontekst. Ja vi vil gerne vide 
+hvorfor computeren siger at billedet forestiller en kat. Kan vi forklare 
+hvorfor _jeg_ siger at billedet forestiller en kat?
+Ja, vi vil gerne vide hvorfor en amerikansk algoritme konkluderer at en 
+straffefange ikke skal prøveløslades. 
+Kan vi forklare hvorfor en dommer konkluderer at en straffefange ikke skal
+prøveløslades.
