@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
-<head>
-<link rel="alternate" hreflang="en" href="/notes/index.html" />
-<link rel="alternate" hreflang="da" href="/da/notes/index.da.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da"><head>
+
+<link rel="alternate" hreflang="en" href="/notes/20250516-stacked_area_chart/index.html" />
+<link rel="alternate" hreflang="da" href="/da/notes/20250516-stacked_area_chart/index.da.html" />
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Notes – Christian Knudsen</title>
+
+<meta name="author" content="Christian Knudsen">
+
+<title>Stakket barchart – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,12 +23,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script><script src="../site_libs/quarto-listing/quarto-listing.js"></script><script src="../site_libs/quarto-html/quarto.js"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -52,73 +102,26 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Indsend",
     "search-label": "Søg"
   }
-}</script><script>
+}</script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script><link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Notes – Christian Knudsen">
-<meta property="og:description" content="description in da">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Stakket barchart – Christian Knudsen">
+<meta property="og:description" content="indsæt subtitle">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Notes – Christian Knudsen">
-<meta name="twitter:description" content="description in da">
+<meta name="twitter:title" content="Stakket barchart – Christian Knudsen">
+<meta name="twitter:description" content="indsæt subtitle">
 <meta name="twitter:card" content="summary">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
@@ -128,181 +131,123 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/notes/index.html" id="language-link-en">English</a></li></ul>
-</div></li>
-<li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cv" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">CV</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">
-<li>
-    <a class="dropdown-item" href="../work">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">    
+        <li>
+    <a class="dropdown-item" href="../../work">
  <span class="dropdown-text">Work</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../education">
+    <a class="dropdown-item" href="../../education">
  <span class="dropdown-text">Education</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../organisations">
+    <a class="dropdown-item" href="../../organisations">
  <span class="dropdown-text">Organisations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../other">
+    <a class="dropdown-item" href="../../other">
  <span class="dropdown-text">Other</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../publications">
+    <a class="dropdown-item" href="../../publications">
  <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../stuff"> 
+    <a class="nav-link" href="../../stuff"> 
 <span class="menu-text">External Stuff</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notes"> 
+    <a class="nav-link" href="../../notes"> 
 <span class="menu-text">Notes and stuff</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Kategorier</h5>
-<div class="quarto-listing-category category-cloud">
-<div class="category" data-category="AI"><span class="quarto-category-count category-cloud-7">AI</span></div>
-<div class="category" data-category="Generative aRt"><span class="quarto-category-count category-cloud-4">Generative aRt</span></div>
-<div class="category" data-category="R"><span class="quarto-category-count category-cloud-4">R</span></div>
-<div class="category" data-category="kategori 2"><span class="quarto-category-count category-cloud-4">kategori 2</span></div>
-<div class="category" data-category="talks"><span class="quarto-category-count category-cloud-4">talks</span></div>
-</div>
-</div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Notes</h1>
-</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stakket barchart</h1>
+<p class="subtitle lead">indsæt subtitle</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">kategori 1</div>
+    <div class="quarto-category">kategori 2</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Forfatter</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christian Knudsen </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Udgivet</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16. maj 2025</p>
+    </div>
+  </div>
   
     
   </div>
   
 
 
-</header><!-- https://beamilz.com/posts/en  for yderligere struktur. --><p>Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage fra 2003</p>
-<div id="notes">
-
-</div>
+</header>
 
 
+<p>Det er ofte lidt vanskeligt at aflæse. Men hvordan?</p>
+<p>Vi skal bruge noget data.</p>
+<p>https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data</p>
+<p>Og vi skal have trukket tabellen ud.</p>
+<p>det er der vist en funktion til et sted.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xml2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="fu">GET</span>(url, <span class="fu">user_agent</span>(<span class="st">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"</span>)))</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ua <span class="ot">&lt;-</span> <span class="fu">user_agent</span>(<span class="st">"Mozilla/5.0"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(url, ua, <span class="at">config =</span> httr<span class="sc">::</span><span class="fu">config</span>(<span class="at">http_version =</span> <span class="fl">1.1</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(res)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-talks">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-talks-sort" class="form-select" aria-label="Sorter ved" onchange="window['quarto-listings']['listing-talks'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})"><option value="" disabled selected hidden="">Sorter ved</option>
-<option value="index" data-direction="asc">Standard</option>
-<option value="listing-title" data-direction="asc">
-          Overskrift
-        </option>
-<option value="listing-date-sort" data-direction="asc">
-          Dato - Ældste
-        </option>
-<option value="listing-date-sort" data-direction="desc">
-          Dato - Nyeste
-        </option></select>
-</div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-</div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="AI,kategori 2" data-listing-date-sort="1746136800000" data-listing-file-modified-sort="1748247246690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1358">
-<a href="../notes/20250502-Stuff-Ive-noticed/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../notes/20250502-Stuff-Ive-noticed" class="thumbnail-image card-img" style="height: 150px;"></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Ting jeg har lagt mærke til
-</h5>
-<div class="card-subtitle listing-subtitle">
-In no particular order
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-2. maj 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="talks,AI" data-listing-date-sort="1732575600000" data-listing-file-modified-sort="1740473094076" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1023">
-<a href="../notes/20241126-robots-reading-licenser/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../notes/20241126-robots-reading-licenser/robots-reading-licenses.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Robots reading licenser
-</h5>
-<div class="card-subtitle listing-subtitle">
-Og afrunding af dagen
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-26. nov. 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Generative aRt,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1740490366582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="217">
-<a href="../notes/20240414-floral/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../notes/20240414-floral/Kosmisk_Florae-1.png" class="thumbnail-image card-img" style="height: 150px;"></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Kosmisk Floræ
-</h5>
-<div class="card-subtitle listing-subtitle">
-Generativ Kunst
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-14. apr. 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Ingen resultater
-</div>
-</div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -723,19 +668,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <ol start="3" type="a">
 <li>Christian Knudsen, 2023 –.</li>
 </ol>
 </div>   
     <div class="nav-footer-center">
-       
+      &nbsp;
     </div>
     <div class="nav-footer-right">
-       
+      &nbsp;
     </div>
   </div>
 </footer>
-</body>
-</html>
+
+
+
+
+</body></html>
