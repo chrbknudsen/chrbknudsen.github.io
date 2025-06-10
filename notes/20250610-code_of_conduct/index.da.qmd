@@ -2,7 +2,7 @@
 title: "Adfærdskodeks"
 subtitle: "Eller: Code of Conduct for voksne"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - kategori 1
   - kategori 2
