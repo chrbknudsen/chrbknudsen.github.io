@@ -187,3 +187,23 @@ Når nu det første screeningsspørgsmål er: "Har du inden for den seneste uge
 spist youghurt?". Hvad bør jeg så svare for at maximere min indtjening?
 Når man får sådan et, er der ofte et antal screeningsspørgsmål. Hvis man falder
 i gruppen der er intereserede i, får man resten af spørgeskemat
+
+
+## Hvad forstår AI?
+
+Forsøget blev lavet 12. juni 2025. Så det kan have ændret sig.
+
+![](mursten-og-fjer.jpg)
+
+## På den anden side...
+
+Vi er bekymrede for at AI bliver klogere end mennesker. Men glemmer at AI,
+sådan bredt forstået, allerede _er_ klogere end mennesker. Eller i hvert fald
+på en del punkter præsterer bedre end mennesker. Den genkender katte bedre 
+end vi gør.
+Og den læser også tekst lige så godt som i hvert fald nogen mennesker:
+
+![](mursten-og-fjer-2.png)
+
+Ikke for at hænge vedkommende ud. Men Chatty laver nøjagtig samme fejl som 
+den person der skrev denne kommentar. 
