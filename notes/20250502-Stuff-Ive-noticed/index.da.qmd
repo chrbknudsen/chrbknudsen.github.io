@@ -207,3 +207,13 @@ Og den læser også tekst lige så godt som i hvert fald nogen mennesker:
 
 Ikke for at hænge vedkommende ud. Men Chatty laver nøjagtig samme fejl som 
 den person der skrev denne kommentar. 
+
+
+## Hvor får AI sin viden fra?
+
+![](nyt-interdimensional-1.png)
+![](nyt-interdimensional-2.png)
+https://nytimes.com/2025/06/13/technology/chatgpt-ai-chatbots-conspiracies.html
+
+Husk nu. De her LLM'er er trænet på ca. hvad som helst man kan finde på
+nettet. Det er styrken. Det er også svagheden. 
