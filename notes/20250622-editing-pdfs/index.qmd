@@ -2,7 +2,7 @@
 title: "Editing pdfs"
 subtitle: "Semi-automatically"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - R
   - PDF
@@ -72,15 +72,15 @@ system(cmd_sed)
 Finally we re-compress the pdf, constructing the command line kommand:
 
 ```{r eval = FALSE}
-cmd_compress <- sprintf(
-  "qpdf '%s' '%s'",
-  temp_pdf, output_pdf
+cmd_compress <- paste0("qpdf '", temp_pdf, "' '", output_pdf)
 )
 ```
-den forventede korrekte:
-[1] "qpdf '/tmp/RtmpaAkgwi/file4165728095199.pdf' 'non-fluffy.pdf'"
 
+And run it. 
 ```{r eval = FALSE}
 system(cmd_compress)
 ```
 
+Hey presto, fluffy text has been removed.
+
+This can now be automated, removing other fluff, and iterating over more than one pdf. This is left as an exercise for the interested student.
