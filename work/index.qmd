@@ -1,18 +1,26 @@
 ---
 title: "Work"
 ---
-
+<!-- NB når der skal linieskift ind i en liste som herunder - uden at det -->
+<!-- kompakte resultat mistes - skal der to mellemrum og et hårdt linieskift til. -->
+<!-- Så kommer der en ny linie. -->
 
 ### Royal Danish Library
-  - **Feb. 2017 - ** Special adviser - Coordinator for Copenhagen University Library Datalab. Coordinating  data services and digital scholarship initiatives across the university library system.
-  - **Jan 2016 - Feb. 2017** Senior adviser in a position split between the University of Copenhagen and the Royal Library.
-  - **Oct. 2013 - Feb. 2017** Manager - The Pharmaceutical Library _(joint position with University of Copenhagen)_ Managed daily operations and strategic development of the pharmaceutical library. Facilitated collaboration on library services across institutional boundaries
-  - **2008 - Oct. 2013** Special adviser at the staff of the university librarian. Provided strategic and administrative support to the university librarian’s staff.
-  - **Mar. 2003 - 2008** Subject specialist for chemistry. Responsible for collection development, research support, and user services in chemistry.
+  - **Feb. 2017 - ** Special adviser - Coordinator for Copenhagen University Library Datalab.  
+  Coordinating  data services and digital scholarship initiatives across the university library system.
+  - **Jan 2016 - Feb. 2017** Senior adviser, manager The Pharmaceutical Library _(joint position with University of Copenhagen)_.
+  - **Oct. 2013 - Feb. 2017** Manager - The Pharmaceutical Library  
+  Managed daily operations and strategic development of the pharmaceutical library. Facilitated collaboration on library services 
+  across institutional boundaries
+  - **2008 - Oct. 2013** Special adviser at the staff of the university librarian.  
+  Provided strategic and administrative support to the university librarian’s staff.
+  - **Mar. 2003 - 2008** Subject specialist for chemistry.  
+  Responsible for collection development, research support, and user services in chemistry.
 
 ### University of Copenhagen
 
-  - **Jan 2016 - Feb. 2017** Senior Adviser _(joint position with the Royal Danish Library)_ See details above under Royal Danish Library.
+  - **Jan 2016 - Feb. 2017** Senior Adviser _(joint position with the Royal Danish Library)_  
+  See details above under Royal Danish Library.
   - **Oct. 2013 - Feb 2017** Manager - The Pharmaceutical Library.  _(joint position with the Royal Danish Library)_ 
   
 
@@ -23,37 +31,33 @@ title: "Work"
 Packing insulin ampoules.
 
 ### Technical University of Denmark
-**Jun. 2002** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
+**Jun. 2002** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.  
 Provided instruction in practical exercises and laboratory safety, conducted mandatory educational environment assessments.
 
-**Jan. 2000** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.
+**Jan. 2000** Teaching Assistant in "Catalysis, Spectroscopy, and Structure," Chemical Institute.  
 Provided instruction in practical exercises and laboratory safety.
 
 ### Danske Bank
-**Jun. -- aug. 2000** Summer holiday relief, Danske Bank, Gilleleje
-As in previous temp positions in the financial sector, I manned the teller's
-desk, and performed general office work.
+**Jun. -- aug. 2000** Summer holiday relief, Danske Bank, Gilleleje  
+As in previous temp positions in the financial sector, I manned the teller's desk, and performed general office work.
 
 ### Unibank
 **Jun. - Aug. 1999** Summer holiday relief, Unibank, Græsted
 
 ### Den Danske Bank
-**Jun. - Aug. 1998** Summer holiday relief, Den Danske Bank, Helsinge
-
-**Jun. - Aug. 1997** Summer holiday relief, Den Danske Bank, Helsinge
-
-**Jun. - Aug. 1996** Summer holiday relief, Den Danske Bank, Helsinge
-
-**jun. - Aug. 1995** Summer holiday relief, Den Danske Bank Græsted
+- **Jun. - Aug. 1998** Summer holiday relief, Den Danske Bank, Helsinge
+- **Jun. - Aug. 1997** Summer holiday relief, Den Danske Bank, Helsinge
+- **Jun. - Aug. 1996** Summer holiday relief, Den Danske Bank, Helsinge 
+- **jun. - Aug. 1995** Summer holiday relief, Den Danske Bank Græsted
 
 ### Schwartz Boghandel
 **Aug. 1993 - Jan. 1994** Driver, Schwartz Boghandel, Helsinge.
 
 
 ### M. Løsekraut ApS
-**Jun. 1988 - jul. 1993** Part-Time worker, M. Løsekraut ApS, Helsinge.  
+**Jun. 1988 - jul. 1993** Part-Time worker, M. Løsekraut ApS, Helsinge.   
 Performed miscellaneous tasks after school, including circuit board assembly and production control.
 
 ### Jensen Lamp
-**Aug. 1988 - Jun. 1993** Home Worker, Jensen Lamp, Helsinge.
+**Aug. 1988 - Jun. 1993** Home Worker, Jensen Lamp, Helsinge.  
 Assembling lighting fixtures.
