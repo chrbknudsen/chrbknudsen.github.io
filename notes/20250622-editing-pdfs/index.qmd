@@ -8,16 +8,23 @@ categories:
   - PDF
 date: 2025-06-22
 toc: true
-image: "fluff-removal.jpg"
+image: "fluff-removal.png"
 ---
 
-You have a pdf. One of the nice, text based ones, where you can copy the text. But for some reason you want to remove some of the text. Without investing in expensive software from Adobe to do that, is there a better way. Maybe even a way that can be scriptet so you can remove unnessecary text from multiple pdfs.
+You have a pdf. One of the nice, text based ones, where you can copy the text. But for some reason you want to remove some of the text. Preferably without investing in expensive software from Adobe.
+
+So, is there a better way. Maybe even a way that can be scriptet so you can remove unnessecary text from multiple pdfs.
 
 Such a way exist. There are some restrictions. Some pdfs are encrypted or password protected. And the solution below will not fix that. 
 
-We are not able to do it directly in R, but need a helper program, qpdf.
-Since it is able to run on the commandline, we can script it. We could
-do that directly in BASH, but I'm an R-kind of guy.
+A program, qpdf, that can perform transformations on PDFs. Without
+changing the content.
+
+This is a command-line program. That is daunting for some. But it means
+that we are able to script it.
+
+We could do that directly in a shell-script. But I'm an R kind of guy.
+
 
 Begin by installing. 
 ```{bash eval = FALSE}
@@ -32,9 +39,9 @@ PDFs are compressed. The process consist of three steps:
 
 1. Decompres
 2. Remove the fluff
-3. Recompres the file
+3. (re)Compres the file
 
-Lets script it. Begin by setting parameters and temporary files:
+Lets script it. Begin by setting parameters and temporary files (and now we're back in R):
 ```{r eval = FALSE}
 input_pdf <- "fluffy.pdf"
 output_pdf <- "non-fluffy.pdf"
@@ -52,7 +59,14 @@ cli_decompress <- paste0(
   "qpdf --qdf --object-streams=disable '", 
   input_pdf, "' ' ", temp_pdf, "'")
 ```
-We send that to the commandline:
+
+The result looks like this:
+
+```{r eval = FALSE}
+cli_decompress
+```
+
+We send it to the commandline:
 ```{r eval = FALSE}
 system(cli_decompress)
 ```
@@ -69,11 +83,12 @@ Send that to the commandline:
 system(cmd_sed)
 ```
 
-Finally we re-compress the pdf, constructing the command line kommand:
+Finally we re-compress the pdf, constructing the command line command:
 
 ```{r eval = FALSE}
 cmd_compress <- paste0("qpdf '", temp_pdf, "' '", output_pdf)
 )
+cmd_compress
 ```
 
 And run it. 
@@ -83,4 +98,4 @@ system(cmd_compress)
 
 Hey presto, fluffy text has been removed.
 
-This can now be automated, removing other fluff, and iterating over more than one pdf. This is left as an exercise for the interested student.
+This can now be automated, removing other kinds fluff, and iterating over more than one pdf. This is left as an exercise for the interested student.
