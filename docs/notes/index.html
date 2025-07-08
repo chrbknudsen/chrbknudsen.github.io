@@ -5,9 +5,9 @@
 <link rel="alternate" hreflang="da" href="/da/notes/index.da.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Christian Knudsen - Notes</title>
+<title>Notes – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-listing/list.min.js"></script><script src="../site_libs/quarto-listing/quarto-listing.js"></script><script src="../site_libs/quarto-html/quarto.js"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -41,6 +47,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -73,75 +80,100 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
-  </script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Christian Knudsen - Notes">
+  </script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Notes – Christian Knudsen">
 <meta property="og:image" content="../notes/20241126-studenter-forventninger/cover.webp">
-<meta property="og:site-name" content="Christian Knudsen">
-<meta name="twitter:title" content="Christian Knudsen - Notes">
+<meta property="og:site_name" content="Christian Knudsen">
+<meta name="twitter:title" content="Notes – Christian Knudsen">
 <meta name="twitter:image" content="../notes/20241126-studenter-forventninger/cover.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/index.html" id="language-link-da">Dansk</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/index.html" id="language-link-da">Dansk</a></li></ul>
 </div></li>
 <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cv" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cv" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">CV</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">
 <li>
-    <a class="dropdown-item" href="../work" rel="" target="">
+    <a class="dropdown-item" href="../work">
  <span class="dropdown-text">Work</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../education" rel="" target="">
+    <a class="dropdown-item" href="../education">
  <span class="dropdown-text">Education</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../organisations" rel="" target="">
+    <a class="dropdown-item" href="../organisations">
  <span class="dropdown-text">Organisations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../other" rel="" target="">
+    <a class="dropdown-item" href="../other">
  <span class="dropdown-text">Other</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../publications" rel="" target="">
+    <a class="dropdown-item" href="../publications">
  <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="../stuff" rel="" target="">
- <span class="menu-text">External Stuff</span></a>
+    <a class="nav-link" href="../stuff"> 
+<span class="menu-text">External Stuff</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notes" rel="" target="">
- <span class="menu-text">Notes and stuff</span></a>
+    <a class="nav-link" href="../notes"> 
+<span class="menu-text">Notes and stuff</span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools ms-auto">
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
@@ -150,16 +182,16 @@ ul.task-list li input[type="checkbox"] {
         
     <h5 class="quarto-listing-category-title">Categories</h5>
 <div class="quarto-listing-category category-cloud">
-<div class="category" data-category="AI"><span class="quarto-category-count category-cloud-1">AI</span></div>
-<div class="category" data-category="Generative aRt"><span class="quarto-category-count category-cloud-3">Generative aRt</span></div>
-<div class="category" data-category="PDF"><span class="quarto-category-count category-cloud-1">PDF</span></div>
-<div class="category" data-category="R"><span class="quarto-category-count category-cloud-5">R</span></div>
-<div class="category" data-category="Talks"><span class="quarto-category-count category-cloud-1">Talks</span></div>
-<div class="category" data-category="ggplot"><span class="quarto-category-count category-cloud-1">ggplot</span></div>
-<div class="category" data-category="kategori 1"><span class="quarto-category-count category-cloud-3">kategori 1</span></div>
-<div class="category" data-category="kategori 2"><span class="quarto-category-count category-cloud-4">kategori 2</span></div>
-<div class="category" data-category="linux"><span class="quarto-category-count category-cloud-2">linux</span></div>
-<div class="category" data-category="talks"><span class="quarto-category-count category-cloud-1">talks</span></div>
+<div class="category" data-category="QUk="><span class="quarto-category-count category-cloud-1">AI</span></div>
+<div class="category" data-category="R2VuZXJhdGl2ZSUyMGFSdA=="><span class="quarto-category-count category-cloud-3">Generative aRt</span></div>
+<div class="category" data-category="UERG"><span class="quarto-category-count category-cloud-1">PDF</span></div>
+<div class="category" data-category="Ug=="><span class="quarto-category-count category-cloud-5">R</span></div>
+<div class="category" data-category="VGFsa3M="><span class="quarto-category-count category-cloud-1">Talks</span></div>
+<div class="category" data-category="Z2dwbG90"><span class="quarto-category-count category-cloud-1">ggplot</span></div>
+<div class="category" data-category="a2F0ZWdvcmklMjAx"><span class="quarto-category-count category-cloud-3">kategori 1</span></div>
+<div class="category" data-category="a2F0ZWdvcmklMjAy"><span class="quarto-category-count category-cloud-4">kategori 2</span></div>
+<div class="category" data-category="bGludXg="><span class="quarto-category-count category-cloud-2">linux</span></div>
+<div class="category" data-category="dGFsa3M="><span class="quarto-category-count category-cloud-1">talks</span></div>
 </div>
 </div>
 <!-- main -->
@@ -169,13 +201,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
     
   </div>
   
+
 
 </header><!-- https://beamilz.com/posts/en  for yderligere struktur. --><div id="notes">
 
@@ -206,11 +239,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="R,PDF" data-listing-date-sort="1750543200000" data-listing-file-modified-sort="1751819821632" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="0" data-categories="UiUyQ1BERg==" data-listing-date-sort="1750543200000" data-listing-file-modified-sort="1751376200933" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="337">
 <a href="../notes/20250622-editing-pdfs/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20250622-editing-pdfs/fluff-removal.jpg" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20250622-editing-pdfs/fluff-removal.jpg" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Editing pdfs
@@ -227,11 +260,11 @@ Jun 22, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="kategori 1,kategori 2" data-listing-date-sort="1749506400000" data-listing-file-modified-sort="1751819821630" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="1" data-categories="a2F0ZWdvcmklMjAxJTJDa2F0ZWdvcmklMjAy" data-listing-date-sort="1749506400000" data-listing-file-modified-sort="1749547379817" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="293">
 <a href="../notes/20250610-code_of_conduct/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20250610-code_of_conduct" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20250610-code_of_conduct" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Code of Conduct
@@ -248,11 +281,11 @@ Jun 10, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="kategori 1,kategori 2" data-listing-date-sort="1745791200000" data-listing-file-modified-sort="1751819821626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="2" data-categories="a2F0ZWdvcmklMjAxJTJDa2F0ZWdvcmklMjAy" data-listing-date-sort="1745791200000" data-listing-file-modified-sort="1745827004836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
 <a href="../notes/20250428-Handling-disrespect/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20250428-Handling-disrespect" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20250428-Handling-disrespect" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Handling Disrespect
@@ -266,11 +299,11 @@ Apr 28, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="linux,kategori 2" data-listing-date-sort="1740870000000" data-listing-file-modified-sort="1751819821626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="g-col-1" data-index="3" data-categories="bGludXglMkNrYXRlZ29yaSUyMDI=" data-listing-date-sort="1740870000000" data-listing-file-modified-sort="1745309544572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1978">
 <a href="../notes/20250302-hetzner/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20250302-hetzner" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20250302-hetzner" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Setup RStudio and Shiny server on your own
@@ -287,11 +320,11 @@ Mar 2, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="talks,AI" data-listing-date-sort="1732575600000" data-listing-file-modified-sort="1751819821623" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="g-col-1" data-index="4" data-categories="dGFsa3MlMkNBSQ==" data-listing-date-sort="1732575600000" data-listing-file-modified-sort="1740473182615" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="730">
 <a href="../notes/20241126-studenter-forventninger/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20241126-studenter-forventninger/cover.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20241126-studenter-forventninger/cover.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Studerendes forventninger til store tekstmodeller
@@ -308,11 +341,11 @@ Nov 26, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="R,ggplot" data-listing-date-sort="1731625200000" data-listing-file-modified-sort="1751819821609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="g-col-1" data-index="5" data-categories="UiUyQ2dncGxvdA==" data-listing-date-sort="1731625200000" data-listing-file-modified-sort="1737458756639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="860">
 <a href="../notes/20241115-stakkede-barcharts/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20241115-stakkede-barcharts/perceptionvsreality.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20241115-stakkede-barcharts/perceptionvsreality.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Stakkede barcharts
@@ -329,11 +362,11 @@ Nov 15, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="linux" data-listing-date-sort="1729980000000" data-listing-file-modified-sort="1751819821609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="6" data-categories="bGludXg=" data-listing-date-sort="1729980000000" data-listing-file-modified-sort="1745309544571" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="137">
 <a href="../notes/20241027-linux-notes/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20241027-linux-notes/linux-notes.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20241027-linux-notes/linux-notes.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Linux Notes
@@ -350,11 +383,11 @@ Oct 27, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Talks" data-listing-date-sort="1727906400000" data-listing-file-modified-sort="1751819821604" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="g-col-1" data-index="7" data-categories="VGFsa3M=" data-listing-date-sort="1727906400000" data-listing-file-modified-sort="1740472984021" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1870">
 <a href="../notes/20241003-natvid-lit-search/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20241003-natvid-lit-search/cover.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20241003-natvid-lit-search/cover.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Naturvidenskabelig litteratursøgning
@@ -371,11 +404,11 @@ Oct 3, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="kategori 1,kategori 2" data-listing-date-sort="1724018400000" data-listing-file-modified-sort="1751819821598" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="g-col-1" data-index="8" data-categories="a2F0ZWdvcmklMjAxJTJDa2F0ZWdvcmklMjAy" data-listing-date-sort="1724018400000" data-listing-file-modified-sort="1737458756585" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2390">
 <a href="../notes/20240819-parade-ruter/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240819-parade-ruter/ai-parade-illustration.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240819-parade-ruter/ai-parade-illustration.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Parade ruter
@@ -392,11 +425,11 @@ Aug 19, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="kategori 1,kategori 2" data-listing-date-sort="1723759200000" data-listing-file-modified-sort="1751819821596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="g-col-1" data-index="9" data-categories="a2F0ZWdvcmklMjAxJTJDa2F0ZWdvcmklMjAy" data-listing-date-sort="1723759200000" data-listing-file-modified-sort="1740472730048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1480">
 <a href="../notes/20240816-sex-distribution-ucph/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240816-sex-distribution-ucph/koensfordeling.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240816-sex-distribution-ucph/koensfordeling.webp" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Kønsfordelingen på KU
@@ -413,11 +446,11 @@ Aug 16, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Generative aRt,R" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1751819821596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="10" data-categories="R2VuZXJhdGl2ZSUyMGFSdCUyQ1I=" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1737458756574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
 <a href="../notes/20240709-voronoi-2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240709-voronoi-2/Blue_Vorontex-47.2.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240709-voronoi-2/Blue_Vorontex-47.2.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Blue Vorontex #47.2
@@ -434,11 +467,11 @@ Jul 9, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="Generative aRt,R" data-listing-date-sort="1717884000000" data-listing-file-modified-sort="1751819821595" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="11" data-categories="R2VuZXJhdGl2ZSUyMGFSdCUyQ1I=" data-listing-date-sort="1717884000000" data-listing-file-modified-sort="1737458756571" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
 <a href="../notes/20240609-voronoi/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240609-voronoi/Blue_Vorontex-47.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240609-voronoi/Blue_Vorontex-47.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Blue Vorontex #47
@@ -455,11 +488,11 @@ Jun 9, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="R,Generative aRt" data-listing-date-sort="1714168800000" data-listing-file-modified-sort="1751819821593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="12" data-categories="UiUyQ0dlbmVyYXRpdmUlMjBhUnQ=" data-listing-date-sort="1714168800000" data-listing-file-modified-sort="1737458756562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
 <a href="../notes/20240427-piwalk/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240427-piwalk/piwalk.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240427-piwalk/piwalk.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Pi-walk
@@ -476,11 +509,11 @@ Apr 27, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="Generative aRt,R" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1751819821593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="13" data-categories="R2VuZXJhdGl2ZSUyMGFSdCUyQ1I=" data-listing-date-sort="1713045600000" data-listing-file-modified-sort="1740490364389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
 <a href="../notes/20240414-floral/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../notes/20240414-floral/Kosmisk_Florae-1.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img loading="lazy" src="../notes/20240414-floral/Kosmisk_Florae-1.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Kosmisk Floræ
@@ -536,18 +569,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -579,11 +601,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -593,8 +652,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -606,7 +674,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -650,6 +840,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -675,6 +866,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -736,7 +953,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">(c) Christian Knudsen, 2023 –.</div>   
+    <div class="nav-footer-left">
+<ol start="3" type="a">
+<li>Christian Knudsen, 2023 –.</li>
+</ol>
+</div>   
     <div class="nav-footer-center">
        
     </div>
