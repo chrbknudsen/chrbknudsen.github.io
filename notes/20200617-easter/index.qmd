@@ -1,0 +1,26 @@
+---
+title: "Easter in Excel"
+subtitle: "Danish Excel that is"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2022-06-17
+toc: true
+image: ""
+---
+
+How do we calculate easter in Excel? For a spreadsheet a colleague is making for our vacation planning at work.
+
+There are several ways. The best place I've found is [here](https://www.contextures.com/exceleastercalculation.html). A site that I'm definitely gonna study closer.
+
+One of the formulas - translated into a danish excel-context:
+
+```{eval = FALSE}
+=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6
+```
+
+Place the year you what easter sunday for in cell A2, and it will return the 
+date - in the numeric representation used by Excel.
+
