@@ -8,7 +8,7 @@ categories:
   - kategori 2
 date: 2022-06-17
 toc: true
-image: ""
+image: "easter_excel.png"
 ---
 
 How do we calculate easter in Excel? For a spreadsheet a colleague is making for our vacation planning at work.
