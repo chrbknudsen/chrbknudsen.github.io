@@ -8,7 +8,7 @@ categories:
   - kategori 2
 date: 2025-06-10
 toc: true
-image: ""
+image: "coac.png"
 ---
 
 In a lot of settings a code of conduct is apparently needed. I believe 

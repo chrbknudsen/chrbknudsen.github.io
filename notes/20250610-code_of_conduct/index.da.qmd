@@ -8,12 +8,12 @@ categories:
   - kategori 2
 date: 2025-06-10
 toc: true
-image: ""
+image: "coac.png"
 ---
 
 I mange sammenhænge er der åbenbart brug for en adfærdskodeks. Jeg tror, det i 
 bund og grund handler om at behandle folks egne usikkerheder, og en generel 
-måde at tilbyde ro til folk der er for usikre til simpelthen at bede 
+måde at tilbyde ro til folk, der er for usikre til simpelthen at bede 
 (andre) folk om at opføre sig ordentligt.
 
 Adfærdskodekser har tendens til at være meget lange, og de bliver kun længere. 
