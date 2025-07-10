@@ -147,6 +147,27 @@
     "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "education/index.html",
     "href": "education/index.html",
     "title": "Education",
@@ -196,25 +217,11 @@
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
+    "objectID": "notes/20220415-rpi_ssd/index.html",
+    "href": "notes/20220415-rpi_ssd/index.html",
+    "title": "Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk",
     "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+    "text": "Det skulle være utroligt enkelt. Nettet fortæller at en Raspberry Pi 3 (og 4) per automatik kan boote fra usb-devices. Og hvis ikke den kan, så skal man bare sætte et særligt sd-kort i, der piller ved en bit i et eller andet, og så virker det.\nDet gør det bare ikke, og at dømme efter de frustrerede opslag på nettet, er det ikke kun mig der har problemet.\nSå skal man bare have et SD-kort med filen bootcode.bin, og så kører det, får man at vide på nettet. Det gør det også. Hver tiende gang.\nDet man gør er at man placerer hele boot-partitionen på sd-kortet. Og så kører det 9 ud af 10 gange. Derefter skriver man boot_delay=2 (hvor de 2 dækker over to sekunder, det kan være det virker med 1 for dig), i config.txt. Og så virker det! Hver gang!"
   },
   {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",

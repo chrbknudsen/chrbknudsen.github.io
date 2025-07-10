@@ -329,25 +329,39 @@
     "text": "Or:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBased on the butterfly curve, defined, in polar coordinates, by:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Let’s write a function for that:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nPrepping data for plot:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA contains a sequence of numbers from 0 to 12 times pi. In r we have the matching coordinates. Together they give us the butterfly curve. B is a shorter sequence of numbers. And in C we subtract each value in B from all values in A. The last two lines basically rotates the curve.\nNow we plot:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Floræ-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
+    "objectID": "notes/20180911-waffle_charts/index.html",
+    "href": "notes/20180911-waffle_charts/index.html",
+    "title": "Waffle charts",
     "section": "",
-    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+    "text": "A rather popular chart type. Not really my favorite, but I can see how it makes things easier to understand for people who are not used to read and understand charts. The reason for my less than favourable view on waffle charts are probably linked to its overuse in meaningless infographics.\nA waffle chart is a grid with squares/cells/icons/whatever, where each cell represents a number of something.\nLets make an example:\nlibrary(ggplot2) library(waffle)\nvec &lt;- c(Category 1 (10)= 10 , Category 2 (20)= 20, Category 3 (25)= 24, Category 4 (16) = 16)\nwaffle(vec/2, rows=3, size=0.1, colors=c(“#c7d4b6”, “#a3aabd”, “#a0d0de”, “#97b5cf”), title=“Four different categories of something”, xlab=“1 square = 2 somethings”)\nOne annoyance: waffle wants you to spell colours wrong.\nwaffle takes a named vector of values, rows sets the number of rows of blocks. Default is 10.\nOne standard way, is to show a 10x10 grid, where each cell represents 1% of the total:\nwaffle(vec/sum(vec)*100)\nBloody annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to manipulate your vector to get to 100. Well, actually it is probably a minor annoyance.\nWhat if you want something else than coloured squares?\nThe arguments “use_glyph” and “glyph_size” makes that possible. First, we’ll need the library extrafont\nlibrary(extrafont)\nWe’ll also need to have the “awesomefonts” installed. It can be downloaded from:\nhttp://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf\nThis should be easier if you are on a desktop machine. As I’m running this through my own installation of RStudio on a remote server, it was a bit more difficult.\nI needed to place the “fontawesome.ttf” file in the “/usr/share/fonts/truetype/fontawesome” directory.\nThen, running R as superuser on the commandline, I imported the extrafont library, and then ran “font_import()”.\nBut then it worked!\nThere is now a long list of 593 different icons, that can be used. If you want a list, just run fa_list().\nAnd now, we can make a waffle chart with the glyph of our choice.\nwaffle(vec/2, rows=4, use_glyph = “wifi”)"
   },
   {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+    "objectID": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.",
+    "href": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.",
+    "title": "Waffle charts",
+    "section": "Warning: Removed 1 rows containing missing values (geom_text).",
+    "text": "Warning: Removed 1 rows containing missing values (geom_text).\nWe can change the colours:\nlibrary(RColorBrewer) waffle(vec/2, rows=4, use_glyph = “wifi”, colors=brewer.pal(4,“Set1”))"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "objectID": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-1",
+    "href": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-1",
+    "title": "Waffle charts",
+    "section": "Warning: Removed 1 rows containing missing values (geom_text).",
+    "text": "Warning: Removed 1 rows containing missing values (geom_text).\nAdjust the size\nwaffle(vec/2, rows=4, use_glyph = “wifi”, colors=brewer.pal(6,“Set1”), glyph_size=5)"
+  },
+  {
+    "objectID": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-2",
+    "href": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-2",
+    "title": "Waffle charts",
+    "section": "Warning: Removed 1 rows containing missing values (geom_text).",
+    "text": "Warning: Removed 1 rows containing missing values (geom_text).\nBut that does not look very good.\nwaffle is based on ggplot, so we have access to the full range of functionality. But not all of them are going to look good in this context:\nwaffle(vec/2, rows=4, use_glyph = “wifi”, colors=brewer.pal(4,“Set1”)) + geom_label(label=“42”, size = 3)"
+  },
+  {
+    "objectID": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-3",
+    "href": "notes/20180911-waffle_charts/index.html#warning-removed-1-rows-containing-missing-values-geom_text.-3",
+    "title": "Waffle charts",
+    "section": "Warning: Removed 1 rows containing missing values (geom_text).",
+    "text": "Warning: Removed 1 rows containing missing values (geom_text).\nIf we install a font that supports it, we even get access to the large number of UTF-8 glyphs. Here is a favorite of mine:\nwaffle(vec/2, rows=4, colors=brewer.pal(4,“Set1”)) + geom_label(label=sprintf(“F427”), size = 8)\nWhich of course requires you to have a font on your computer that supports penguins.\nHere is one: http://users.teilar.gr/~g1951d/Symbola.zip"
   },
   {
     "objectID": "education/index.html",
@@ -397,6 +411,27 @@
     "title": "Education",
     "section": "EdX",
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Born and raised in the cheap part of northern Zealand, I moved to Nærum just north of Copenhagen as soon as I got tired of commuting to DTU. It took me an inordinate amount of time to graduate - mainly due to my intense involvement in the local student organisation.\nAfter graduating, the plans for a ph.d. were thwarted by cutbacks on environmental research and I ended up at the National Library for Science and Medicine as a subject specialist for chemistry staying there through a couple of mergers with other libraries. Currently that means I ended up in Copenhagen University Library, a part of the Danish Royal Library. I have held a number of positions, including at the staff of the university librarian, managing the pharmaceutical library and currently coordinating the activities in the library Datalab.\nI live in Rødovre, Denmark, with my husband Kristian, who works in IT.\nIn my spare time I love tinkering with digital electronics and LEGO, experimenting with molecular gastronomy and trying to hit a piece of cardboard with a Walther GSP cal. .22."
   },
   {
     "objectID": "notes/20200617-easter/index.html",
