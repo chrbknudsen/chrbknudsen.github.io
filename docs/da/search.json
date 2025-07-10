@@ -126,6 +126,97 @@
     "text": "Hvor får AI sin viden fra?\n  https://nytimes.com/2025/06/13/technology/chatgpt-ai-chatbots-conspiracies.html\nHusk nu. De her LLM’er er trænet på ca. hvad som helst man kan finde på nettet. Det er styrken. Det er også svagheden."
   },
   {
+    "objectID": "notes/20250428-Handling-disrespect/index.html",
+    "href": "notes/20250428-Handling-disrespect/index.html",
+    "title": "Handling Disrespect",
+    "section": "",
+    "text": "A copy-pasta from somewhere on the interwebs\n\nToss it back with a question: “What exactly were you hoping to gain by saying that?”\nGive them the Death Stare: Nothing says ‘not cool’ like silent judgment.\nPlay it cool: “Sorry, what was that? I want to make sure I understand you correctly!”\nDraw the line: “Talk to me like that again, and I’m gone!”\nPut it on pause: “Hit me up when you’re ready to talk respectfully!”\nLay down the law: “Let’s get one thing straight: that’s not okay. Don’t ever speak to me like that again!”\nKill them with kindness: Smile, say ‘Thank you’, and just walk away. Sometimes, grace wins the day.\nFlip the script: “Would you be okay if someone said that to you?”\nSet the vibe: “I don’t do disrespect. Let’s keep this respectful or not at all.”\nExit with power: “This convo’s over until you come correct.”"
+  },
+  {
+    "objectID": "notes/20250428-Handling-disrespect/index.html#how-to-respond-to-being-disrespected-with-confidence",
+    "href": "notes/20250428-Handling-disrespect/index.html#how-to-respond-to-being-disrespected-with-confidence",
+    "title": "Handling Disrespect",
+    "section": "",
+    "text": "A copy-pasta from somewhere on the interwebs\n\nToss it back with a question: “What exactly were you hoping to gain by saying that?”\nGive them the Death Stare: Nothing says ‘not cool’ like silent judgment.\nPlay it cool: “Sorry, what was that? I want to make sure I understand you correctly!”\nDraw the line: “Talk to me like that again, and I’m gone!”\nPut it on pause: “Hit me up when you’re ready to talk respectfully!”\nLay down the law: “Let’s get one thing straight: that’s not okay. Don’t ever speak to me like that again!”\nKill them with kindness: Smile, say ‘Thank you’, and just walk away. Sometimes, grace wins the day.\nFlip the script: “Would you be okay if someone said that to you?”\nSet the vibe: “I don’t do disrespect. Let’s keep this respectful or not at all.”\nExit with power: “This convo’s over until you come correct.”"
+  },
+  {
+    "objectID": "notes/20240414-floral/index.html",
+    "href": "notes/20240414-floral/index.html",
+    "title": "Kosmisk Floræ",
+    "section": "",
+    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
+  },
+  {
+    "objectID": "education/index.html",
+    "href": "education/index.html",
+    "title": "Education",
+    "section": "",
+    "text": "August 2023: Introduction to Social Data Science. Summer school at the Department of Economics.\n\n\n\nSep. – Oct. 2019  Administrative law\nJan. – Jun. 2013 Economics\nJan. – Apr. 2010 Business Law II\nAug. – dec. 2009 Business Law I\nAug. – dec. 2008 Statistics 1\n\n\n\nFeb. – mar. 2005 Gaschromatografi. AMU course in the practical use of capillary gas chromatography.\nJan. – feb. 2005 HPLC operatør. AMU course in the practical use of HPLC.\n\n\n\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\n\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\n\nAug. 1980 – Juni 1990"
+  },
+  {
+    "objectID": "education/index.html#formal-eduction",
+    "href": "education/index.html#formal-eduction",
+    "title": "Education",
+    "section": "",
+    "text": "August 2023: Introduction to Social Data Science. Summer school at the Department of Economics.\n\n\n\nSep. – Oct. 2019  Administrative law\nJan. – Jun. 2013 Economics\nJan. – Apr. 2010 Business Law II\nAug. – dec. 2009 Business Law I\nAug. – dec. 2008 Statistics 1\n\n\n\nFeb. – mar. 2005 Gaschromatografi. AMU course in the practical use of capillary gas chromatography.\nJan. – feb. 2005 HPLC operatør. AMU course in the practical use of HPLC.\n\n\n\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\n\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\n\nAug. 1980 – Juni 1990"
+  },
+  {
+    "objectID": "education/index.html#certifications",
+    "href": "education/index.html#certifications",
+    "title": "Education",
+    "section": "Certifications",
+    "text": "Certifications\nFEANI\nBasic GMP\nIsotopteknik\nCarpentries"
+  },
+  {
+    "objectID": "education/index.html#not-so-formal-education",
+    "href": "education/index.html#not-so-formal-education",
+    "title": "Education",
+    "section": "Not so formal education",
+    "text": "Not so formal education\nSep. 2000 – dec. 2000 Studieophold i Grækenland\nKemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske (Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte svovlsyrekatalysatorer, med henblik på opnåelse af viden om komplekskemien og redox-forholdene i disse modeller."
+  },
+  {
+    "objectID": "education/index.html#kurser",
+    "href": "education/index.html#kurser",
+    "title": "Education",
+    "section": "Kurser",
+    "text": "Kurser\nMar. 2005 Kvalificering og validering af produktionsudstyr\nTre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nNov. 2003 Patentdag for kemikere\nFagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 2003 GMP grundkursus\nKursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC.\nIT projektlederuddannelse - Mannas, KB.\nExcelkurser fra 4D\nJun. 2024 QGIS\nGIS-kursus ved SC Datalab ved Københavns Universitet.\nMay-Jun. 2024 Førsteårspædagogik"
+  },
+  {
+    "objectID": "education/index.html#cognitive-class",
+    "href": "education/index.html#cognitive-class",
+    "title": "Education",
+    "section": "Cognitive Class",
+    "text": "Cognitive Class\n\nBadges\n        \n\n\nCertificates\nJul. 2024 Getting started with MySQL command line\nSep 2018 Data Visualization with R\nSep 2018 Data Science Methodology\nAug 2018 Data Science Hands-On With Open Source Tools\nAug 2018 Data Privacy Fundamentals\nJan 2018 Introduction to Data Science\nJan 2018 R 101"
+  },
+  {
+    "objectID": "education/index.html#edx",
+    "href": "education/index.html#edx",
+    "title": "Education",
+    "section": "EdX",
+    "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
     "objectID": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
     "href": "notes/20241126-robots-reading-licenser/index.html#robotter-læser-licenser",
     "title": "Robots reading licenser",
@@ -229,83 +320,6 @@
     "title": "Robots reading licenser",
     "section": "The end",
     "text": "The end\nFor af en eller anden årsag bliver billedet på den sidste slide altid enshittificeret, så der skal lige være en til sidst…"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "education/index.html",
-    "href": "education/index.html",
-    "title": "Education",
-    "section": "",
-    "text": "August 2023: Introduction to Social Data Science. Summer school at the Department of Economics.\n\n\n\nSep. – Oct. 2019  Administrative law\nJan. – Jun. 2013 Economics\nJan. – Apr. 2010 Business Law II\nAug. – dec. 2009 Business Law I\nAug. – dec. 2008 Statistics 1\n\n\n\nFeb. – mar. 2005 Gaschromatografi. AMU course in the practical use of capillary gas chromatography.\nJan. – feb. 2005 HPLC operatør. AMU course in the practical use of HPLC.\n\n\n\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\n\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\n\nAug. 1980 – Juni 1990"
-  },
-  {
-    "objectID": "education/index.html#formal-eduction",
-    "href": "education/index.html#formal-eduction",
-    "title": "Education",
-    "section": "",
-    "text": "August 2023: Introduction to Social Data Science. Summer school at the Department of Economics.\n\n\n\nSep. – Oct. 2019  Administrative law\nJan. – Jun. 2013 Economics\nJan. – Apr. 2010 Business Law II\nAug. – dec. 2009 Business Law I\nAug. – dec. 2008 Statistics 1\n\n\n\nFeb. – mar. 2005 Gaschromatografi. AMU course in the practical use of capillary gas chromatography.\nJan. – feb. 2005 HPLC operatør. AMU course in the practical use of HPLC.\n\n\n\nFebruary 1994 – February 2002: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry\n\n\n\nAugust 1990 – Juni 1993: Matematisk studentereksamen.\n\n\n\nAug. 1980 – Juni 1990"
-  },
-  {
-    "objectID": "education/index.html#certifications",
-    "href": "education/index.html#certifications",
-    "title": "Education",
-    "section": "Certifications",
-    "text": "Certifications\nFEANI\nBasic GMP\nIsotopteknik\nCarpentries"
-  },
-  {
-    "objectID": "education/index.html#not-so-formal-education",
-    "href": "education/index.html#not-so-formal-education",
-    "title": "Education",
-    "section": "Not so formal education",
-    "text": "Not so formal education\nSep. 2000 – dec. 2000 Studieophold i Grækenland\nKemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske (Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte svovlsyrekatalysatorer, med henblik på opnåelse af viden om komplekskemien og redox-forholdene i disse modeller."
-  },
-  {
-    "objectID": "education/index.html#kurser",
-    "href": "education/index.html#kurser",
-    "title": "Education",
-    "section": "Kurser",
-    "text": "Kurser\nMar. 2005 Kvalificering og validering af produktionsudstyr\nTre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.\nNov. 2003 Patentdag for kemikere\nFagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.\nJun. 2003 GMP grundkursus\nKursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion, validering, dokumentation og QA/QC.\nIT projektlederuddannelse - Mannas, KB.\nExcelkurser fra 4D\nJun. 2024 QGIS\nGIS-kursus ved SC Datalab ved Københavns Universitet.\nMay-Jun. 2024 Førsteårspædagogik"
-  },
-  {
-    "objectID": "education/index.html#cognitive-class",
-    "href": "education/index.html#cognitive-class",
-    "title": "Education",
-    "section": "Cognitive Class",
-    "text": "Cognitive Class\n\nBadges\n        \n\n\nCertificates\nJul. 2024 Getting started with MySQL command line\nSep 2018 Data Visualization with R\nSep 2018 Data Science Methodology\nAug 2018 Data Science Hands-On With Open Source Tools\nAug 2018 Data Privacy Fundamentals\nJan 2018 Introduction to Data Science\nJan 2018 R 101"
-  },
-  {
-    "objectID": "education/index.html#edx",
-    "href": "education/index.html#edx",
-    "title": "Education",
-    "section": "EdX",
-    "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
-  },
-  {
-    "objectID": "notes/20240414-floral/index.html",
-    "href": "notes/20240414-floral/index.html",
-    "title": "Kosmisk Floræ",
-    "section": "",
-    "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
   },
   {
     "objectID": "notes/20250430-det-store-tabu-i-undervisning/index.html",
