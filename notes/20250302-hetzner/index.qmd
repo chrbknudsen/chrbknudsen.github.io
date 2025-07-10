@@ -5,10 +5,11 @@ author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - linux
-  - kategori 2
+  - R
+  - Shiny
 date: 2025-03-02
 toc: true
-image: ""
+image: "rstudio_server.png"
 ---
 
 Is it safe to have your website on a service from the US? Maybe.
