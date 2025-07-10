@@ -1,0 +1,21 @@
+---
+title: "Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2022-04-15
+toc: true
+image: ""
+---
+
+
+Det skulle være utroligt enkelt. Nettet fortæller at en Raspberry Pi 3 (og 4) per automatik kan boote fra usb-devices. Og hvis ikke den kan, så skal man bare sætte et særligt sd-kort i, der piller ved en bit i et eller andet, og så virker det.
+
+Det gør det bare ikke, og at dømme efter de frustrerede opslag på nettet, er det ikke kun mig der har problemet.
+
+Så skal man bare have et SD-kort med filen bootcode.bin, og så kører det, får man at vide på nettet. Det gør det også. Hver tiende gang.
+
+Det man gør er at man placerer hele boot-partitionen på sd-kortet. Og så kører det 9 ud af 10 gange. Derefter skriver man boot_delay=2 (hvor de 2 dækker over to sekunder, det kan være det virker med 1 for dig), i config.txt. Og så virker det! Hver gang!
