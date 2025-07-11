@@ -1,5 +1,5 @@
 ---
-title: "Handling Disrespect"
+title: "Håndter manglende respekt"
 author: "Christian Knudsen"
 visible: "false"
 categories:
