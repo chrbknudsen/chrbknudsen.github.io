@@ -3,8 +3,8 @@ title: "Parade ruter"
 subtitle: "Den der oplevelse når aviserne skriver om noget du faktisk ved noget om."
 author: "Christian Knudsen"
 categories:
-  - kategori 1
-  - kategori 2
+  - Pride
+  - Myter
 date: 2024-08-19
 toc: true
 image: "ai-parade-illustration.webp"
@@ -61,8 +61,9 @@ det diplomatisk... narrative justeringer efter
 hvad man politisk har syntes lød bedst. 
 Det var eksempelvis ikke kun fordi New Yorks politi ikke kunne lide 
 bøsser at baren regelmæssigt blev raidet. Det havde vist også en del at gøre med 
-at den blev drevet af mafiaen. Og det første der blev kastet blev kastet af 
+at den blev drevet af mafiaen. Og det første der blev kastet, blev kastet af 
 den lesbiske [Stormé DeLarverie](https://en.wikipedia.org/wiki/Storm%C3%A9_DeLarverie).
+Og i hvert fald ikke af personer, der selv fortalte at de slet ikke var tilstede.
 
 Anyway, traditionen spredte sig. Også til Danmark. Og undervejs blev der 
 etableret mere formelle organisationer, der organiserede "World Pride" og "Europride",
@@ -74,7 +75,7 @@ byen. Det var min første pride, jeg lærte armbevægelserne til "YMCA" til en
 koncert med The Village People, og nogle måneder senere havde jeg en overraskelse 
 til mine forældre.
 
-Vi skulle til en konfirmation i den indremissionske del af familien dagen efter,
+Vi skulle til en familiekomsammen i den indremissionske del af familien dagen efter,
 så jeg overværede ikke paraden, og husker ikke ruten. 
 
 Men fra 1999 har jeg styr på det:
