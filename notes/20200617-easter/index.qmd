@@ -17,7 +17,7 @@ There are several ways. The best place I've found is [here](https://www.contextu
 One of the formulas - translated into a danish excel-context:
 
 ```{R eval = FALSE}
-=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6
+=ROUND(DATE(A2,4,1)/7+MOD(19*MOD(A2,19)-7,30)*14%,0)*7-6
 ```
 
 Place the year you want easter sunday for in cell A2, and it will return the 

@@ -1,0 +1,33 @@
+---
+title: "Påske in Excel"
+subtitle: ""
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - Excel
+date: 2022-06-17
+toc: true
+image: "easter_excel.png"
+---
+
+Påske. Det er en forskydelig helligdag. Påskesøndag falder søndagen efter 
+første fuldmåne efter forårsjævndøgn. 
+
+Hvordan finder vi så ud af hvornår den falder et givet år? Eller, hvordan
+beregner vi det i Excel. For en kollega er ved at lave et regneark til
+vores ferieplanlægning.
+
+Der er flere måder. Det sted jeg har fundet der giver en opskrift 
+[ligger her](https://www.contextures.com/exceleastercalculation.html). En 
+hjemmeside med andre gode Excel tricks
+
+En af måderne, oversat til dansk Excel:
+
+
+```{R eval = FALSE}
+=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6
+```
+
+Skriv året du vil kende datoen for påskesøndag i celle A2. Og så får du 
+datoen leveret - i Excels numeriske dato repræsentation.
+
