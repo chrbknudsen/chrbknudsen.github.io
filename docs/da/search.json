@@ -46,7 +46,7 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage fra 2003\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Sorter ved\n       Standard\n         \n          Overskrift\n        \n         \n          Dato - Ældste\n        \n         \n          Dato - Nyeste\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAdfærdskodeks\n\n\nEller: Code of Conduct for voksne\n\n\n\n10. jun. 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTing jeg har lagt mærke til\n\n\nIn no particular order\n\n\n\n2. maj 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\n26. nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n14. apr. 2024\n\n\n\n\n\n\n\n\nIngen resultater"
+    "text": "Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage fra 2003\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Sorter ved\n       Standard\n         \n          Overskrift\n        \n         \n          Dato - Ældste\n        \n         \n          Dato - Nyeste\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAdfærdskodeks\n\n\nEller: Code of Conduct for voksne\n\n\n\n10. jun. 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTing jeg har lagt mærke til\n\n\nIn no particular order\n\n\n\n2. maj 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\n26. nov. 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n14. apr. 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPåske in Excel\n\n\n\n\n\n\n17. jun. 2022\n\n\n\n\n\n\n\n\nIngen resultater"
   },
   {
     "objectID": "notes/20250516-stacked_area_chart/index.html",
@@ -128,14 +128,14 @@
   {
     "objectID": "notes/20250428-Handling-disrespect/index.html",
     "href": "notes/20250428-Handling-disrespect/index.html",
-    "title": "Handling Disrespect",
+    "title": "Håndter manglende respekt",
     "section": "",
     "text": "A copy-pasta from somewhere on the interwebs\n\nToss it back with a question: “What exactly were you hoping to gain by saying that?”\nGive them the Death Stare: Nothing says ‘not cool’ like silent judgment.\nPlay it cool: “Sorry, what was that? I want to make sure I understand you correctly!”\nDraw the line: “Talk to me like that again, and I’m gone!”\nPut it on pause: “Hit me up when you’re ready to talk respectfully!”\nLay down the law: “Let’s get one thing straight: that’s not okay. Don’t ever speak to me like that again!”\nKill them with kindness: Smile, say ‘Thank you’, and just walk away. Sometimes, grace wins the day.\nFlip the script: “Would you be okay if someone said that to you?”\nSet the vibe: “I don’t do disrespect. Let’s keep this respectful or not at all.”\nExit with power: “This convo’s over until you come correct.”"
   },
   {
     "objectID": "notes/20250428-Handling-disrespect/index.html#how-to-respond-to-being-disrespected-with-confidence",
     "href": "notes/20250428-Handling-disrespect/index.html#how-to-respond-to-being-disrespected-with-confidence",
-    "title": "Handling Disrespect",
+    "title": "Håndter manglende respekt",
     "section": "",
     "text": "A copy-pasta from somewhere on the interwebs\n\nToss it back with a question: “What exactly were you hoping to gain by saying that?”\nGive them the Death Stare: Nothing says ‘not cool’ like silent judgment.\nPlay it cool: “Sorry, what was that? I want to make sure I understand you correctly!”\nDraw the line: “Talk to me like that again, and I’m gone!”\nPut it on pause: “Hit me up when you’re ready to talk respectfully!”\nLay down the law: “Let’s get one thing straight: that’s not okay. Don’t ever speak to me like that again!”\nKill them with kindness: Smile, say ‘Thank you’, and just walk away. Sometimes, grace wins the day.\nFlip the script: “Would you be okay if someone said that to you?”\nSet the vibe: “I don’t do disrespect. Let’s keep this respectful or not at all.”\nExit with power: “This convo’s over until you come correct.”"
   },
@@ -147,25 +147,11 @@
     "text": "Eller:\n\nCosmic Florae\nFlores Cosmiques\nKosmische Florae\n\n\nlibrary(tidyverse)\n\nBaseret på sommerfugle kurven, der i polære koordinater er defineret ved:\n\\[\nr = \\exp^{\\sin\\theta} - 2\\cos(4\\theta) + 5 \\sin^5(\\frac{2\\theta - \\pi}{24})\n\\] Det skriver vi en funktion til:\n\ncalc &lt;- function(theta){\n  exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5\n}\n\nSå prepper vi noget data:\n\nA &lt;- seq(0,12*pi, 0.1)\nr &lt;-  calc(A)\nB &lt;- seq(0,12*pi, 2.1*pi)\nC &lt;- lapply(B, function(x) A - x) %&gt;%  unlist()\n\nA giver os en række tal fra 0 til 12 gange pi. I r har vi så de matchende koordinater der giver sommerfuglekurven. B giver os også en række tal, men med andre step end vi havde i A. Og i C trækker vi værdierne fra B fra værdierne i A - som i, den første værdi i B trækkes fra alle værdier i A, den anden værdi i B trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.\nSå plotter vi:\n\ntibble(theta = C, r = rep(r, times = length(C)/length(r))) %&gt;% \n    ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +\n  geom_point() +\n  coord_polar() +\n  theme_void()+\n  theme(legend.position = \"none\",\n        plot.background = element_rect(fill = \"black\")) +\n  scale_color_gradientn(colours  = c(\"red\", \"blue\", \"green\")) \n  ggsave(\"Kosmisk_Florae-1.png\")\n\n\n\n\n\n\n\n\n\n\nNice."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
+    "objectID": "notes/20200617-easter/index.html",
+    "href": "notes/20200617-easter/index.html",
+    "title": "Påske in Excel",
     "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+    "text": "Påske. Det er en forskydelig helligdag. Påskesøndag falder søndagen efter første fuldmåne efter forårsjævndøgn.\nHvordan finder vi så ud af hvornår den falder et givet år? Eller, hvordan beregner vi det i Excel. For en kollega er ved at lave et regneark til vores ferieplanlægning.\nDer er flere måder. Det sted jeg har fundet der giver en opskrift ligger her. En hjemmeside med andre gode Excel tricks\nEn af måderne, oversat til dansk Excel:\n\n=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6\n\nSkriv året du vil kende datoen for påskesøndag i celle A2. Og så får du datoen leveret - i Excels numeriske dato repræsentation."
   },
   {
     "objectID": "education/index.html",
@@ -215,6 +201,27 @@
     "title": "Education",
     "section": "EdX",
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
   },
   {
     "objectID": "notes/20220415-rpi_ssd/index.html",
