@@ -1,0 +1,18 @@
+---
+title: "Robot Proces Automation"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-07-08
+toc: true
+image: ""
+---
+
+Vi skal lære RPA skal vi ja vi skal.
+
+Det kommer til at foregå i python. og jeg skal til en start se om jeg 
+overhovedet kan få kørt pip install rpa
+
