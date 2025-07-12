@@ -4,8 +4,8 @@ subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - R
+  - Visualisation
 date: 2018-09-11
 toc: true
 image: ""
