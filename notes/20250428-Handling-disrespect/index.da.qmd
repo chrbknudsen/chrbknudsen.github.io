@@ -1,5 +1,6 @@
 ---
-title: "Håndter manglende respekt"
+title: "Svar på respektløshed med selvtillid"
+subtitle: "Hvis du aldrig fortæller hvor grænsen går - kan du ikke forvente at folk ved den eksisterer."
 author: "Christian Knudsen"
 visible: "false"
 categories:
