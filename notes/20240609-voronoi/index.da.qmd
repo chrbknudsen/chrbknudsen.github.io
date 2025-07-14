@@ -1,0 +1,75 @@
+---
+title: "Blue Vorontex #47"
+subtitle: "Polar Voronoi Tesselation"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - Generativ Kunst
+  - R
+date: 2024-06-09
+toc: true
+image: "Blue_Vorontex-47.png"
+---
+
+```{r out.width="100%",echo  =F}
+knitr::include_graphics("Blue_Vorontex-47.png")
+```
+
+A Voronoi tesselation with 100 tiles in polar coordinates.
+
+Basically - select 100 random points in a plane and then draw polygons around
+those points, such that all points closest to a given point, are included in 
+the polygon associated with that point.
+
+Those tesselations have practical uses in a number of subjects. City planning,
+trying to place facilities maximising access for the population.
+Modelling of territorial behaviour of animal populations.
+
+It is also found at the core of certain clustering algorithms, eg k-means clustering.
+
+As always we need the tidyverse, and in this case the deldir package, 
+that does the actual tesselation.
+```{r eval = FALSE}
+library(tidyverse)
+library(deldir)
+```
+
+Generate random points, making sure that we can reproduce them.
+
+```{r eval = FALSE}
+set.seed(47)
+tiler <- 100
+x <- rnorm(tiler)
+y <- rnorm(tiler)
+```
+
+Next, calculate the tiles, and collect them in a dataframe:
+```{r eval = FALSE}
+tesselation <- deldir(x, y)
+tiles <- tile.list(tesselation)
+points <- data.frame(x=x, y=y)
+tiles_df <- lapply(tiles, function(tile){
+  data.frame(x=tile$x, y = tile$y)
+}) %>% 
+  bind_rows(.id = "tile_id")
+```
+
+Finally, plot it:
+```{r eval = FALSE}
+tiles_df %>% 
+  ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +
+  geom_polygon() +
+  theme_minimal() +
+  coord_polar(start = 0.47) +
+  theme(legend.position = "none" ,
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank()) +
+        scale_fill_manual(values = hcl.colors(tiler, "Blues 3")) +
+        theme(legend.position = "none")
+
+ggsave("Blue_Vorontex-47.png")
+```
+
