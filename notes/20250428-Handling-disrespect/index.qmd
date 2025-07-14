@@ -3,8 +3,7 @@ title: "Handling Disrespect"
 author: "Christian Knudsen"
 visible: "true"
 categories:
-  - kategori 1
-  - kategori 2
+  - Work
 date: 2025-04-28
 toc: true
 image: "disrespect.png"
