@@ -3,8 +3,7 @@ title: "Håndter manglende respekt"
 author: "Christian Knudsen"
 visible: "false"
 categories:
-  - kategori 1
-  - kategori 2
+  - Arbejde
 date: 2025-04-28
 toc: true
 image: "disrespect.png"
