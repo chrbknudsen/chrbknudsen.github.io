@@ -1,5 +1,6 @@
 ---
 title: "Handling Disrespect"
+subtitle: "If you dont tell there is a line - dont expect people to know it exist."
 author: "Christian Knudsen"
 visible: "true"
 categories:
