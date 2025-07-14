@@ -19,7 +19,7 @@ Heavily inspired by the talented
 
 The idea is:
 
-Begin somewhere in the coordinate system. Take the first digit of pi, and take 
+Begin somewhere in the coordinate system. Look at the first digit of pi, and take 
 a step in a direction specified by that digit. Take the next digit of i. And take
 a new step i a direction specified by that digit.
 
@@ -32,7 +32,7 @@ x <- cos(5/2*pi - digit/5*pi)
 y <- sin(5/2*pi - digit/5*pi)
 ```
 
-This should return the x,y step, based on a digit.
+This will return the x,y step, based on a digit.
 
 If we take two steps, the x-position at the end will be the sum of the two
 x-steps. Similar with the y-position.
