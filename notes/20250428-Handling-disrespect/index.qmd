@@ -1,10 +1,10 @@
 ---
 title: "Handling Disrespect"
+subtitle: "If you dont tell there is a line - dont expect people to know it exist."
 author: "Christian Knudsen"
 visible: "true"
 categories:
-  - kategori 1
-  - kategori 2
+  - Work
 date: 2025-04-28
 toc: true
 image: "disrespect.png"

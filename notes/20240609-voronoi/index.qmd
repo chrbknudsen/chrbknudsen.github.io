@@ -17,12 +17,11 @@ knitr::include_graphics("Blue_Vorontex-47.png")
 A Voronoi tesselation with 100 tiles in polar coordinates.
 
 Basically - select 100 random points in a plane and then draw polygons around
-those points, such that all points closet to a given point, are included in 
+those points, such that all points closest to a given point, are included in 
 the polygon associated with that point.
 
 Those tesselations have practical uses in a number of subjects. City planning,
 trying to place facilities maximising access for the population.
-
 Modelling of territorial behaviour of animal populations.
 
 It is also found at the core of certain clustering algorithms, eg k-means clustering.
@@ -54,7 +53,7 @@ tiles_df <- lapply(tiles, function(tile){
   bind_rows(.id = "tile_id")
 ```
 
-Next, plot it:
+Finally, plot it:
 ```{r eval = FALSE}
 tiles_df %>% 
   ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +

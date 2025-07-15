@@ -1,21 +1,21 @@
 ---
-title: "Håndter manglende respekt"
+title: "Svar på respektløshed med selvtillid"
+subtitle: "Hvis du aldrig fortæller hvor grænsen går - kan du ikke forvente at folk ved den eksisterer."
 author: "Christian Knudsen"
 visible: "false"
 categories:
-  - kategori 1
-  - kategori 2
+  - Arbejde
 date: 2025-04-28
 toc: true
 image: "disrespect.png"
 ---
 
-## How to respond to being disrespected with confidence:
+## Mulige svar på respektløshed:
 
-A copy-pasta from somewhere on the interwebs
+Fundet på engelsk et sted på internettet. Egen oversættelse.
 
-1.	Toss it back with a question: “What exactly were you hoping to gain by saying that?”
-2.	Give them the Death Stare: Nothing says ‘not cool’ like silent judgment.
+1.	Svar med et spørgsmål: "Hvad håber du egentlig at opnå ved at sige det?"
+2.	Giv dem dræberblikket: Nothing says ‘not cool’ like silent judgment.
 3.	Play it cool: “Sorry, what was that? I want to make sure I understand you correctly!”
 4.	Draw the line: “Talk to me like that again, and I’m gone!”
 5.	Put it on pause: “Hit me up when you’re ready to talk respectfully!”
