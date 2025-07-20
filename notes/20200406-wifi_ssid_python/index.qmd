@@ -8,7 +8,7 @@ categories:
   - kategori 2
 date: 2020-04-06
 toc: true
-image: ""
+image: "wifi_image.png"
 ---
 
 
