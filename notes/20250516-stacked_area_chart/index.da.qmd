@@ -1,6 +1,6 @@
 ---
 title: "Stakket barchart"
-subtitle: "indsæt subtitle"
+subtitle: "Og en måde at få ram på en besværlig hjemmeside"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -10,6 +10,10 @@ date: 2025-05-16
 toc: true
 image: ""
 ---
+
+Nu var det egentlig bare et stakket areachart jeg ville lave.
+Der skulle bruges noget data. Og jeg fandt en fin
+side med sundhedsdata fra australien. Og så var siden bøvlet...
 
 Det er ofte lidt vanskeligt at aflæse. Men hvordan?
 
