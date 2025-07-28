@@ -1,0 +1,13 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-07-28
+toc: true
+image: ""
+---
+https://trumpexcel.com/picture-lookup-in-excel-using-named-ranges/
