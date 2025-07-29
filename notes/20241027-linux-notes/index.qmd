@@ -70,3 +70,4 @@ ln -s path/to/filename newpath/to/newfilename
 I have a Raspberry Pi Zero w, have connected to it using SSH from a laptop running Ubuntu. Now I want to transfer a file from the laptop, to the Raspberry Pi.
 
 sudo rsync /path/to/local/file pi@raspberrypi.local:/home/pi
+
