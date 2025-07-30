@@ -1,0 +1,36 @@
+---
+title: "Visualising your models"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-07-30
+toc: true
+image: ""
+---
+
+```{r}
+install.packages("reshape")
+install.packages("ggstats")
+library(reshape)
+library(ggstats)
+```
+
+```{r}
+model <- lm(tip ~ day + time + total_bill, data = tips)
+library(dplyr)
+```
+
+
+```{r}
+model %>% summary()
+```
+
+
+```{r}
+model %>% ggcoef_model(intercept = TRUE)
+
+```
+
