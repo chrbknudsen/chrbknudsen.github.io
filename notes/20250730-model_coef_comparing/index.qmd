@@ -16,7 +16,22 @@ install.packages("reshape")
 install.packages("ggstats")
 library(reshape)
 library(ggstats)
+install.packages("titanic")
+library(titanic)
+
+titanic_train %>% str()
+model <- glm(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare, data = titanic_train, family = binomial)
+
+model$coefficients %>% exp()
+
+ggcoef_model(model, exponentiate = TRUE)
 ```
+Forskellen i OR for mænd er så voldsom at 
+chatty mener at det er mistænkeligt. Man bør overveje
+om køn er kodet korrekt, om reference kategorien er 
+korrekt, og om overlevelse er korrekt kodet. 
+
+
 
 ```{r}
 model <- lm(tip ~ day + time + total_bill, data = tips)
