@@ -10,17 +10,34 @@ date: 2025-07-30
 toc: true
 image: ""
 ---
+ 
+You have built a model. Or maybe you are analysing 
+data, and have made a regression. Which is the same
+as building a model. More or less.
+
+You can make a with the parameters.
+
+
+
 
 ```{r}
 install.packages("reshape")
 install.packages("ggstats")
 library(reshape)
 library(ggstats)
-install.packages("titanic")
+install.packages("caret")
 library(titanic)
 
-titanic_train %>% str()
-model <- glm(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare, data = titanic_train, family = binomial)
+library(randomForest)
+library(caret)
+titanic_train %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Survived = factor(Survived),
+         Pclass = factor(Pclass),
+         Sex = factor(Sex)) %>% 
+  randomForest(formula = Survived ~ .) %>% 
+ggstats::ggcoef_model()
+model <- glm(Survived ~ Pclass*Sex + Age  + Fare, data = titanic_train, family = binomial)
 
 model$coefficients %>% exp()
 
