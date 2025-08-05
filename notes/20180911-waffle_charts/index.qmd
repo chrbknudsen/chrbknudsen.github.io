@@ -15,10 +15,12 @@ A rather popular chart type. Not really my favorite, but I can see how it makes 
 A waffle chart is a grid with squares/cells/icons/whatever, where each cell represents a number of something.
 
 Lets make an example:
-
+```{r}
 library(ggplot2)
 library(waffle)
+```
 
+```{r}
 vec <- c(`Category 1 (10)`= 10 , `Category 2 (20)`= 20,
               `Category 3 (25)`= 24, `Category 4 (16)` = 16)
 
@@ -26,6 +28,10 @@ waffle(vec/2, rows=3, size=0.1,
        colors=c("#c7d4b6", "#a3aabd", "#a0d0de", "#97b5cf"), 
        title="Four different categories of something", 
        xlab="1 square = 2 somethings")
+
+```
+
+
 
 
 
@@ -35,17 +41,23 @@ waffle takes a named vector of values, rows sets the number of rows of blocks. D
 
 One standard way, is to show a 10x10 grid, where each cell represents 1% of the total:
 
+```{r}
 waffle(vec/sum(vec)*100)
+```
 
 
-Bloody annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to manipulate your vector to get to 100. Well, actually it is probably a minor annoyance.
+
+A bit annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to manipulate your vector to get to 100. Well, actually it is probably a minor annoyance.
 
 What if you want something else than coloured squares?
 
 The arguments “use_glyph” and “glyph_size” makes that possible.
 First, we'll need the library extrafont
-
+```{r}
 library(extrafont)
+extrafont::font_import()
+```
+
 
 
 We'll also need to have the “awesomefonts” installed. It can be downloaded from:
@@ -63,8 +75,11 @@ But then it worked!
 There is now a long list of 593 different icons, that can be used. If you want a list, just run fa_list().
 
 And now, we can make a waffle chart with the glyph of our choice.
-
+```{r}
 waffle(vec/2, rows=4, use_glyph = "wifi")
+
+```
+
 
 ## Warning: Removed 1 rows containing missing values (geom_text).
 
