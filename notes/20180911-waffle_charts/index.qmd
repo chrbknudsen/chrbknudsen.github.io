@@ -56,6 +56,7 @@ First, we'll need the library extrafont
 ```{r}
 library(extrafont)
 extrafont::font_import()
+loadfonts()
 ```
 
 
@@ -76,8 +77,15 @@ There is now a long list of 593 different icons, that can be used. If you want a
 
 And now, we can make a waffle chart with the glyph of our choice.
 ```{r}
+font_add("fa", "/usr/share/fonts/truetype/font-awesome/fontawesome-webfont.ttf")
 waffle(vec/2, rows=4, use_glyph = "wifi")
 
+```
+```{r}
+install.packages("showtext")
+library(showtext)
+font_add("fa", "/usr/share/fonts/truetype/fontawesome/fontawesome-webfont.ttf")
+showtext_auto(FALSE)
 ```
 
 
