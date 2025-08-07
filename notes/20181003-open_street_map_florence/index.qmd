@@ -1,0 +1,137 @@
+---
+title: "Openstreetmap data - for Florence"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2018-10-03
+toc: true
+image: ""
+---
+Not that advanced, but I wanted to play around a bit with plotting the raw data from Openstreetmap.
+
+We're going to Florence this fall. It's been five years since we last visited the fair city, that has played such an important role in western history.
+
+Openstreetmaps is, as the name implies, open.
+
+I'm going to need some libraries
+
+#library(OpenStreetMap)
+library(osmar)
+library(ggplot2)
+library(broom)
+library(geosphere)
+library(dplyr)
+
+
+osmar provides functions to interact with Openstreetmap. ggplot2 is used for the plots, broom for making some objects tidy and dplyr for manipulating data.
+
+Getting the raw data, requires me to define a boundary box, encompassing the part of Florence I would like to work with. Looking at https://www.openstreetmap.org/export#map=13/43.7715/11.2717, I choose these coordinates:
+
+top <- 43.7770
+bottom <- 43.7642
+left <- 11.2443
+right <- 11.2661
+
+
+After that, I can define the bounding box, tell the osmar functions at what URL we can find the relevant API (this is just the default). And then I can retrieve the data via get_osm(). I immediately save it to disc. This takes some time to download, and there is no reason to do that more than once.
+
+box <- corner_bbox(left, bottom, right, top)
+src <- osmsource_api(url = "https://api.openstreetmap.org/api/0.6/")
+florence <- get_osm(box, source=src)
+saveRDS(florence, "florence.rda")
+
+
+Lets begin by making a quick plot:
+
+plot(florence, xlim=c(left,right),ylim=c(bottom,top) )
+
+
+Note that what we get a plot of, is, among other things, of all lines that are partly in the box. If a line extends beyond the box, we get it as well.
+
+Looking at the data:
+
+summary(florence$ways)
+
+## osmar$ways object
+## 6707 ways, 9689 tags, 59052 refs 
+## 
+## ..$attrs data.frame: 
+##     id, visible, timestamp, version, changeset, user, uid 
+## ..$tags data.frame: 
+##     id, k, v 
+## ..$refs data.frame: 
+##     id, ref 
+##  
+## Key-Value contingency table:
+##         Key         Value Freq
+## 1  building           yes 4157
+## 2    oneway           yes  456
+## 3   highway    pedestrian  335
+## 4   highway   residential  317
+## 5   bicycle           yes  316
+## 6       psv           yes  122
+## 7   highway  unclassified  108
+## 8   highway       footway  101
+## 9   barrier          wall   98
+## 10  surface paving_stones   87
+
+
+I would like to plot the roads and buildings. For some reason there are a lot of highways, of a kind I would probably not call highways.
+
+Anyway, lets make a list of tags. tags() finds the elements that have a key in the tag_list, way finds the lines that are represented by these elements, and find, finds the ID of the objects in “florence” matching this.
+find_down() finds all the elements related to these id's. And finally we take the subset of the large florence data-set, which have id's matching the id's we have in from before.
+
+tag_list <- c("highway", "bicycle", "oneway", "building")
+dat <- find(florence, way(tags(k %in% tag_list)))
+dat <- find_down(florence, way(dat))
+dat <- subset(florence, ids = dat)
+
+
+Now, in a couple of lines, I'm gonna tidy the data. That removes the information of the type of line. As I would like to be able to color highways differently from buildings, I need to keep the information.
+Saving the key-part of the tags, and the id:
+
+types <- data.frame(dat$ways$tags$k, dat$ways$tags$id)
+names(types) <- c("type", "id")
+
+
+This gives me all the key-parts of all the tags. And I'm only interested in a subset of them:
+
+types <- types %>% 
+  filter(type %in% tag_list)
+
+types$id <- as.character(types$id)
+
+
+Next as_sp() converts the osmar object to a spatial object (just taking the lines):
+
+dat <- as_sp(dat, "lines")
+
+
+tidy (from the library broom), converts it to a tidy tibble
+
+dat <- tidy(dat)
+
+
+That tibble is missing the types - those are added.
+
+new_df <- left_join(dat, types, by="id")
+
+
+And now we can plot:
+
+new_df %>% 
+  ggplot(aes(x=long, y=lat, group=group)) +
+  geom_path(aes(color=type)) +
+  scale_color_brewer() +
+    xlim(left,right) +
+  ylim(bottom,top) +
+  theme_void() +
+theme(legend.position="none")
+
+
+Nice.
+
+Whats next? Someting like what is on this page: https://github.com/ropensci/osmplotr

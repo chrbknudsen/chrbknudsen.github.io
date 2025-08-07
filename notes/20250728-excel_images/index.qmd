@@ -1,0 +1,137 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-07-28
+toc: true
+image: ""
+---
+https://trumpexcel.com/picture-lookup-in-excel-using-named-ranges/
+
+
+
+
+Home » How to do a Picture Lookup in Excel – A Step-by-step Guide
+
+How to do a Picture Lookup in Excel – A Step-by-step Guide
+
+    Picture of Sumit Bansal Sumit Bansal
+
+FREE EXCEL TIPS EBOOK - Click here to get your copy
+
+There are many lookup functions in Excel (such as VLOOKUP, LOOKUP, INDEX/MATCH, XLOOKUP) that can go and fetch a value from a list.
+
+But you can’t look-up images using these formulas.
+
+For example. if I have a list of team names and their logos, and I want to look up the logo based on the name, I can’t do that using the inbuilt Excel function.
+
+But that doesn’t mean it can’t be done.
+
+In this tutorial, I will show you how to do a picture lookup in Excel.
+
+It’s simple yet it’ll make you look like an Excel Magician (all you need is this tutorial and sleight of hands-on your keyboard).
+
+Click here to download the example file.
+
+Below is a video of the picture lookup technique (in case you prefer watching a video over reading).
+
+Picture Lookup in Excel
+
+I have a list of the 20 teams in English Premier league (arranged in an alphabetical order) along with the club logo in the adjacent cell.
+
+Picture Lookup in Excel - Dataset alphabetical
+
+Now what I want is to be able to select a team name from the drop-down, and the logo of that selected team should appear.
+
+Something as shown below:
+
+Image Picture Lookup in Excel - Demo
+
+There are four parts to creating this picture lookup in Excel:
+
+    Getting the data set ready.
+    Creating a drop-down list to show item names (club names in this example).
+    Creating a Named Range
+    Creating a Linked Picture.
+
+Let’s go through these steps in detail now.
+Getting the data ready
+
+    Have the names of all the items (team names) in a column.
+    In the adjacent column, insert the picture for the item (club logo in this example).
+
+Make sure the logos fit nicely within the cell. You can resize the images so that these are within the cell, or you can expand the cells.
+Creating the Drop-down list
+
+    Select the cell in which you want the drop-down (E3 in this example).
+    Click the Data tab.
+    Click on the Data Validation option (it’s in the data tools category).Picture Lookup in Excel - Drop Down List Data Validation
+    In the Data Validation dialog box, within the Settings tab, make sure List is selected in the Allow drop-down (if not selected already).Picture Lookup in Excel - Select List from Vlidation Criteria drop down
+    In the Source field, click on the upward-pointing arrow icon. This will allow you to select the cells in which you have the list for the dropdown.Picture Lookup in Excel - select data validation range
+    Select the range that has the club names (B3:B22 in this example).
+    Hit Enter.
+    Click OK.
+
+The above steps would give you a drop-down list in cell E3.
+
+Picture Lookup in Excel - drop down list in cell E3
+Creating a Linked Picture
+
+In this part, we create a linked picture using any of the existing images/logos.
+
+Here are the steps to create a linked picture:
+
+    Select any cell that has the logo. Make sure you have selected the cell, not the logo/image.
+    Copy the cell (use Control + C or right-click and select copy). Image Lookup in Excel - copy a cell
+    Right-click on the cell where you want to get the linked picture (it can be any cell as we can adjust this later).
+    Go to the Paste Special option and click on the small right-pointing arrow to get more options.
+    Click on the Paste Linked Picture icon.Image Lookup in Excel - paste as linked picture
+
+The above steps would give you a linked picture of the cell that you copied. This means that if any changes happen in the cell that you copied, it will also be reflected in the linked picture).
+
+Image Lookup in Excel - Linked Picture when copied
+
+In the above image, since I copied the cell C3 and pasted a linked picture. Note that this is not connected to the drop down as of now.
+
+Also, when you paste the linked picture, it creates an image. So you can move it anywhere in the worksheet.
+Creating a Named Range
+
+Now we have everything in place, and the last step is to make sure that the linked picture updates when the selection is changed. As of now, the linked picture is linked to only one cell.
+
+We can connect it to the drop-down selection by using a named range.
+
+Here are the steps to do this:
+
+    Go to the Formulas tab.
+    Click on the Define Name option. This will open the ‘New Name’ dialog box.Image Lookup in Excel - define Name
+    In the New Name dialog box, make the following entries:
+        Name: ClubLogoLookup
+        Refers to: =INDEX($C$3:$C$22,MATCH($E$3,$B$3:$B$22,0))Image Lookup in Excel - New Name Dialog box
+    Click OK.
+    Select the linked image that we created in the previous step. You will notice a cell reference in the formula bar (for example =$C$3). Delete this cell reference and type =ClubLogoLookup.Image Lookup in Excel Name in the formula bar
+
+That’s it!! Change the club name from the drop-down and it will change the picture accordingly.
+
+How does this Picture Lookup Technique work?
+
+When we created a linked picture, it was referring to the original cell from which it was copied. We changed that reference with the named range.
+
+This named range is dependent on the drop-down and when we change the selection in the drop-down, it returns the reference of the cell next to the selected team’s name. For example, if I select Arsenal, it returns, C3 and when I select Chelsea, it returns C6.
+
+Since we have assigned the named range to the linked picture (by changing the reference to =ClubLogoLookup), it now refers to the new cell references, and hence returns an image of that cell.
+
+For this trick to work, the defined name should return a cell reference only. This is achieved by using the combination of INDEX and MATCH functions.
+
+Here is the formula:
+
+=INDEX($C$3:$C$22,MATCH($E$3,$B$3:$B$22,0)).
+
+The MATCH part in the formula returns the position of the club name in the drop-down. For example, if it’s Arsenal, MATCH formula would return 1, if its Chelsea then 4. The INDEX function locates the cell reference that has the logo (based on the position returned by MATCH).
+
+Try it yourself.. Download the Example file from here
+Picture Lookup Example File
+

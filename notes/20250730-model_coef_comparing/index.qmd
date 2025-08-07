@@ -1,0 +1,68 @@
+---
+title: "Visualising your models"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-07-30
+toc: true
+image: ""
+---
+ 
+You have built a model. Or maybe you are analysing 
+data, and have made a regression. Which is the same
+as building a model. More or less.
+
+You can make a with the parameters.
+
+
+
+
+```{r}
+install.packages("reshape")
+install.packages("ggstats")
+library(reshape)
+library(ggstats)
+install.packages("caret")
+library(titanic)
+
+library(randomForest)
+library(caret)
+titanic_train %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Survived = factor(Survived),
+         Pclass = factor(Pclass),
+         Sex = factor(Sex)) %>% 
+  randomForest(formula = Survived ~ .) %>% 
+ggstats::ggcoef_model()
+model <- glm(Survived ~ Pclass*Sex + Age  + Fare, data = titanic_train, family = binomial)
+
+model$coefficients %>% exp()
+
+ggcoef_model(model, exponentiate = TRUE)
+```
+Forskellen i OR for mænd er så voldsom at 
+chatty mener at det er mistænkeligt. Man bør overveje
+om køn er kodet korrekt, om reference kategorien er 
+korrekt, og om overlevelse er korrekt kodet. 
+
+
+
+```{r}
+model <- lm(tip ~ day + time + total_bill, data = tips)
+library(dplyr)
+```
+
+
+```{r}
+model %>% summary()
+```
+
+
+```{r}
+model %>% ggcoef_model(intercept = TRUE)
+
+```
+

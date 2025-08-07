@@ -5,7 +5,7 @@ author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget er færdigt
 categories:
   - linux
-date: 2024-10-27
+date: 2018-03-18
 toc: true
 image: "linux-notes.webp"
 ---
@@ -65,3 +65,59 @@ Ctrl+c and ctrl+v is not working on the console. But ctrl-shift-c/v is.
 ## Symbolic links
 
 ln -s path/to/filename newpath/to/newfilename
+
+## rsync
+I have a Raspberry Pi Zero w, have connected to it using SSH from a laptop running Ubuntu. Now I want to transfer a file from the laptop, to the Raspberry Pi.
+
+sudo rsync /path/to/local/file pi@raspberrypi.local:/home/pi
+
+## grep
+Searches files for lines matching a regular expression. Useful parameters (or at least parameters I have a regular use for):
+
+-c returns a count of the lines matching.
+
+-n returns the linenumber (in the file) of the matching line.
+
+## tail
+
+Returns the last part of a file
+
+-n 6 returns the last 6 lines of the file (standard 10)
+
+## head 
+Returns the first part of a file
+
+-n 6 returns the first 6 lines of the file (standard 10)
+
+## cut 
+Removes sections of lines in a file (or other input)
+
+-d x. Splits the line at x. Use ' ' for space
+-f 1. Select the first field.
+
+## wc 
+Counts stuff in files.
+
+-l. counts the lines in the file (or other input)
+-w count the words in the file (or other input)
+
+## |
+Piping. Takes the result of the command in front of it, and pass it to the command after it (and that is the direction. If you find examples on Stackoverflow that will only give the desired result if the direction is reversed, don't be surprised if it does not work...)
+
+## cat
+
+Prints one or more files to standard output (your screen).
+
+But if we print to another output, eg with "> file.name", we can concatenate several files.
+
+## find
+Searches for files. "find ." finds everything. Pipe it to grep to search for something specific. eg "find . | grep 'acta'" to find all files containing the string "acta".
+
+- print prints the complete filename.
+- print0 prints the complete filename even if it includes a newline.
+
+## csvsql
+Commandline tool for analysing csv-files using sql-syntax
+
+## csvstat 
+Commandline tool for analysing csv-files

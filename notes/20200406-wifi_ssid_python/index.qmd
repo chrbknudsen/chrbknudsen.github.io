@@ -1,0 +1,21 @@
+---
+title: "Get current wifi ssid in python"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2020-04-06
+toc: true
+image: "wifi_image.png"
+---
+
+
+Just a quick note. How do we get the name of the current ssid name of the wifi-connection a Linux-running computer (like a Raspberry Pi running Raspbian) is connected to:'
+
+```{bash}
+import subprocess 
+ssid = subprocess.check_output("iwgetid -r", shell=True) 
+print(ssid)
+```

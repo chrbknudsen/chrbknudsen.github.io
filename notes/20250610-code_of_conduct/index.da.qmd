@@ -24,35 +24,34 @@ Noli turbare circulos meos. Eller nogen andres.
 
 Hvis du gør det, vil vi udslette, slette, låse, lukke, forbyde eller hvad der nu er nødvendigt, for at have uforstyrrede cirkler.
 
-Men jeg har fundet en lidt længere version, der pænt kombinerer "den gyldne regel" og en stoisk tilgang til projekter:
+Men jeg har fundet en lidt længere version, der pænt kombinerer "den gyldne regel" og en stoisk tilgang til projekter, her i min oversættelse til dansk:
 
 # Adfærdskodeks for Voksne
 
 ## 1. Velviljeprincippet
 
 Når du interagerer med mennesker omkring dette projekt, så prøv at antage det 
-bedste om dem. Hvis noget virker stødende, så start med at antage, at du har 
-misforstået. Behandl andre, som du ville ønske, at de behandlede dig.
+bedste om dem. Hvis noget virker stødende, så start med at gå ud fra, at du har 
+misforstået noget. Behandl andre, som du ønsker, at de behandler dig.
 
 ## 2. Handlingsprincippet
 
-Vi har alle evnen til at vælge, hvordan vi føler, samt hvordan vi reagerer. 
+Vi kan allevælge, hvordan vi føler, og hvordan vi reagerer. 
 Andre mennesker kan ikke "gøre" dig ked af det eller "såre" dine følelser, 
-medmindre du lader dem. Vælg at tage ansvar for din egen mentale tilstand og 
-udøv din handlefrihed. Giv ikke andre mennesker magt over dig, som de ikke har; 
+medmindre du tillader dem at gøre det . Vælg at tage ansvar for din egen mentale tilstand og følelser og 
+udøv din handlefrihed. Giv ikke andre mennesker en magt over dig, som de ikke har; 
 magten til at udløse en følelsesmæssig reaktion i dig. 
 Du har evnen til at ignorere det meste. Brug den.
 
 ## 3. Fokusprincippet
 
-Dette er ikke stedet for social eller politisk aktivisme. Når du interagerer med 
-mennesker omkring dette projekt, så hold dig til emnet. Mens du er her, er den 
+Det her er ikke stedet for aktivistme, hverken social eller politisk. Når du interagerer med 
+mennesker omkring dette projekt, så hold dig til emnet for projektet. Mens du er her, er den 
 eneste sag, du skal kæmpe for, projektets succes. Ingen distraktioner.
 
 ## Håndhævelse
 
-En eller flere advarsler hurtigt opfulgt af midlertidige eller permanente forbud 
-for at minimere forstyrrelser af fokus på det meritokratiske projekt med softwareudvikling.
+En eller flere advarsler hurtigt efterfulgt af midlertidige eller permanente forbud mhp at minimere forstyrrelser af fokus på det meritokratiske projekt.
 
 ##### Kilde
 Forfatter: Not Governor
