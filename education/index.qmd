@@ -59,6 +59,8 @@ komplekskemien og redox-forholdene i disse modeller.
 
 
 ## Kurser
+
+  - **Aug. 2025** Datamodellering - SU-780 Superusers https://www.superusers.dk/kursus/su0780/
   - **Mar. 2005**  Kvalificering og validering af produktionsudstyr
 
 Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
