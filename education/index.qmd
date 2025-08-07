@@ -16,7 +16,7 @@ title: "Education"
  - **Aug. - Dec. 2009** Business Law I
  - **Aug. - Dec. 2008** Statistics 1
 
-### AMU
+### AMU (Adult Vocational Training programme in Denmark)
 
   - **Feb. - Mar. 2005** Gaschromatography. AMU course in the practical use of capillary gas chromatography. 
   - **Jan. - Feb.  2005**  HPLC technician. AMU course in the practical use of  HPLC.
@@ -54,8 +54,8 @@ komplekskemien og redox-forholdene i disse modeller.
 ## Courses
 
   - **Aug. 2025** Datamodellering - SU-780 Superusers https://www.superusers.dk/kursus/su0780/
-  - **Oct. 2017** SU0236 R Programming Grundkursus 
   - **Feb. 2018** SU0237  R Programmering videregående
+  - **Oct. 2017** SU0236 R Programming Grundkursus 
   - **Mar. 2005**  Kvalificering og validering af produktionsudstyr  
   Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
 
