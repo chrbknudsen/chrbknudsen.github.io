@@ -50,39 +50,34 @@ title: "Education"
 
 ## Not so formal education
 
-  - **Sep. 2000 - Dec. 2000**  Studieophold i Grækenland
-
-Kemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
+  - **Sep. 2000 - Dec. 2000**  Studieophold i Grækenland  
+  Kemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
 (Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte
 svovlsyrekatalysatorer, med henblik på opnåelse af viden om
 komplekskemien og redox-forholdene i disse modeller.
 
 
-## Kurser
+## Courses
 
   - **Aug. 2025** Datamodellering - SU-780 Superusers https://www.superusers.dk/kursus/su0780/
-  - **Mar. 2005**  Kvalificering og validering af produktionsudstyr
-
-Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
+  - **Oct. 2017** SU0236 R Programming Grundkursus 
+  - **Feb. 2018** SU0237  R Programmering videregående
+  - **Mar. 2005**  Kvalificering og validering af produktionsudstyr  
+  Tre dages kursus på Pharmakon. Udstyrskvalificering, valideringsplanlægning, dokumentation og myndighedsinspektioner.
 
  
-  - **Nov. 2003**  Patentdag for kemikere
+  - **Nov. 2003**  Patentdag for kemikere  
+  Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.
 
-Fagligt møde om patentering og patenter udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark.
-
-  - **Jun. 2003** GMP grundkursus
-
-Kursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset 
-gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion,
+  - **Jun. 2003** GMP grundkursus  Kursus udbudt af Kemiingeniørgruppen under Ingeniørforeningen i Danmark. Kurset gennemgik ved forelæsning og øvelser principperne for GMP herunder produktion,
 validering, dokumentation og QA/QC.
 
 IT projektlederuddannelse - Mannas, KB.
 
 Excelkurser fra 4D
 
-  - **Jun. 2024** QGIS
-
-GIS-kursus ved SC Datalab ved Københavns Universitet.
+  - **Jun. 2024** QGIS  
+  GIS-kursus ved SC Datalab ved Københavns Universitet.
 
   - **May-Jun. 2024** Førsteårspædagogik
 
