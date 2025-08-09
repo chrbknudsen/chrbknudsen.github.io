@@ -1,6 +1,6 @@
 ---
-title: "Editing pdfs"
-subtitle: "Semi-automatically"
+title: "Redigering af PDF'er"
+subtitle: "Semi-automatisk"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -11,37 +11,46 @@ toc: false
 image: "fluff-removal.png"
 ---
 
-You have a pdf. One of the nice, text based ones, where you can copy the text. But for some reason you want to remove some of the text. Preferably without investing in expensive software from Adobe.
+Du har en pdf. En af de rare, tekstbaserede, hvor du kan kopiere teksten. Men
+af en eller anden årsag vil du gerne kunne fjerne noget af teksten. Helst uden
+at skulle investere i dyr software fra Adobe.
 
-So, is there a better way. Maybe even a way that can be scriptet so you can remove unnessecary text from multiple pdfs.
+Så - er der en bedre måde? Måske endda en måde der kan scriptes, så du kan fjerne
+overflødig tekst fra flere pdf'er.
 
-Such a way exist. There are some restrictions. Some pdfs are encrypted or password protected. And the solution below will not fix that. 
+Sådan en måde eksisterer. Der er lidt begrænsninger. Nogle pdf'er er krypterede
+eller passwordbeskyttede. Og nedenstående løsning kan ikke hjælpe med det.
 
-A program, qpdf, that can perform transformations on PDFs. Without
-changing the content.
+Der findes et program, `qpdf`, der kan foretage transformationer af pdf'er. Uden at 
+ændre på indholdet.
 
-This is a command-line program. That is daunting for some. But it means
-that we are able to script it.
+Det er et kommando-linie program. Det er skræmmende for nogen. Men det betyder ogs
+at vi kan scripte hvad det gør.
 
-We could do that directly in a shell-script. But I'm an R kind of guy.
+Vi kunne gøre det direkte i et shell-script. Det ville være elegant. Men jeg er 
+en R-fyr.
 
+Start med installere. 
 
-Begin by installing. 
 ```{bash eval = FALSE}
 sudo apt update
 sudo apt install qpdf
 ```
 
-There is some documentation on the [repo of qpdf](https://github.com/qpdf/qpdf) that might be useful if 
-you are on a windows macine. 
+Vi antager her at vi er på en linux platform, der bruger apt som pakke-manager.
 
-PDFs are compressed. The process consist of three steps:
+qpdfs [repo of qpdf](https://github.com/qpdf/qpdf) har noget dokumentation, der 
+kan være nyttig hvis du er på en windows maskine.
 
-1. Decompres
-2. Remove the fluff
-3. (re)Compres the file
+PDF'er er komprimerede. Så processen består af tre trin:
 
-Lets script it. Begin by setting parameters and temporary files (and now we're back in R):
+1. Dekomprimer filen
+2. Fjern det fjollede
+3. (gen)komprimer filen
+
+Lad os scripte det. Start med at sætte parametre og midlertidige filer (og nu ver 
+vi tilbage i R):
+
 ```{r eval = FALSE}
 input_pdf <- "fluffy.pdf"
 output_pdf <- "non-fluffy.pdf"
@@ -49,10 +58,10 @@ fluff <- "\\(he/him\\)"
 temp_pdf <- tempfile(fileext = ".pdf")
 ```
 
-Note that `fluff` is a regular expression, and since we are in R, we need to
-double-escape the parentheses.
+Bemærk at `fluff` er et regulært udtryk, og da vi er i R, skal vi dobbelt-escape
+paranteserne.
 
-Next, we construct the string we need to run to decompress the file:
+Dernæst konstruerer vi den streng vi skal køre for at dekomprimere filen:
 
 ```{r eval = FALSE}
 cli_decompress <- paste0(
@@ -60,30 +69,31 @@ cli_decompress <- paste0(
   input_pdf, "' ' ", temp_pdf, "'")
 ```
 
-The result looks like this:
+Resultatet ser således ud:
 
 ```{r eval = FALSE}
 cli_decompress
 ```
 
-We send it to the commandline:
+Det sender vi til styresystemet:
 ```{r eval = FALSE}
 system(cli_decompress)
 ```
 
-Now construct what we should send to the commandline to do a case-insentive search and 
-replace, using `sed`:
+Nu konstruerer vi det vi skal sende til kommandolinien for at køre en 
+case-insensitiv søg-og-erstat. Vi bruger `sed`:
+
 
 ```{r eval = FALSE}
 cmd_sed <- paste0("sed -i 's/", fluff, "//Ig' '", temp_pdf, "'")
 ```
 
-Send that to the commandline:
+Det sender vi også til kommandolinien:
 ```{r eval = FALSE}
 system(cmd_sed)
 ```
 
-Finally we re-compress the pdf, constructing the command line command:
+Endelig gen-komprimerer vi pdf'en, ved at konstruere kommandolinie kommandoen:
 
 ```{r eval = FALSE}
 cmd_compress <- paste0("qpdf '", temp_pdf, "' '", output_pdf)
@@ -91,11 +101,12 @@ cmd_compress <- paste0("qpdf '", temp_pdf, "' '", output_pdf)
 cmd_compress
 ```
 
-And run it. 
+Og kører det:
 ```{r eval = FALSE}
 system(cmd_compress)
 ```
 
-Hey presto, fluffy text has been removed.
+Hep - overflødig tekst er blevet fjernet.
 
-This can now be automated, removing other kinds fluff, and iterating over more than one pdf. This is left as an exercise for the interested student.
+Det kan vi nu automatisere, eksempelvis fjerne andet fjol fra filerne, og fra
+mere end end pdf. Dette overlades til den interesserede studerende.

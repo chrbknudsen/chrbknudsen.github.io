@@ -11,11 +11,15 @@ toc: true
 image: "fluff-removal.png"
 ---
 
-You have a pdf. One of the nice, text based ones, where you can copy the text. But for some reason you want to remove some of the text. Preferably without investing in expensive software from Adobe.
+You have a pdf. One of the nice, text based ones, where you can copy the text. 
+But for some reason you want to remove some of the text. Preferably without 
+investing in expensive software from Adobe.
 
-So, is there a better way. Maybe even a way that can be scriptet so you can remove unnessecary text from multiple pdfs.
+So, is there a better way. Maybe even a way that can be scripted so you can 
+remove unnecessary text from multiple pdfs.
 
-Such a way exist. There are some restrictions. Some pdfs are encrypted or password protected. And the solution below will not fix that. 
+Such a way exist. There are some restrictions. Some pdfs are encrypted or 
+password protected. And the solution below will not fix that. 
 
 A program, qpdf, that can perform transformations on PDFs. Without
 changing the content.
@@ -33,7 +37,7 @@ sudo apt install qpdf
 ```
 
 There is some documentation on the [repo of qpdf](https://github.com/qpdf/qpdf) that might be useful if 
-you are on a windows macine. 
+you are on a windows machine. 
 
 PDFs are compressed. The process consist of three steps:
 

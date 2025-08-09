@@ -1,0 +1,27 @@
+---
+title: "Merging PDF-files"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2018-03-22
+toc: true
+image: ""
+---
+You may need to merge several pdf-files into one.
+
+There are several tools. Some of them you have to pay for.
+
+If you are in a linux environment, try this:
+
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=final.pdf filea.pdf fileb.pdf
+
+continue with filec.pdf etc.
+
+Some say it is slow.
+
+Others say, yes it is slow, but it produces smaller final files, and are able to handle "difficult pdfs".
+
+I say it is nice that it can be done from the command line.

@@ -53,10 +53,12 @@ What if you want something else than coloured squares?
 
 The arguments “use_glyph” and “glyph_size” makes that possible.
 First, we'll need the library extrafont
+
 ```{r}
 # library(extrafont)
 # extrafont::font_import()
 # loadfonts()
+
 ```
 
 
@@ -76,12 +78,12 @@ But then it worked!
 There is now a long list of 593 different icons, that can be used. If you want a list, just run fa_list().
 
 And now, we can make a waffle chart with the glyph of our choice.
-```{r}
-# font_add("fa", "/usr/share/fonts/truetype/font-awesome/fontawesome-webfont.ttf")
+
+
+```{r eval = FALSE}
+font_add("fa", "/usr/share/fonts/truetype/font-awesome/fontawesome-webfont.ttf")
 waffle(vec/2, rows=4, use_glyph = "wifi")
 
-```
-```{r}
 install.packages("showtext")
 library(showtext)
 font_add("fa", "/usr/share/fonts/truetype/fontawesome/fontawesome-webfont.ttf")

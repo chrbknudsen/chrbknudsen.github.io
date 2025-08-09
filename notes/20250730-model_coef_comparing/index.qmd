@@ -20,12 +20,13 @@ You can make a with the parameters.
 
 
 
-```{r}
-install.packages("reshape")
-install.packages("ggstats")
+```{r setup}
+# install.packages("reshape")
+# install.packages("ggstats")
 library(reshape)
 library(ggstats)
-install.packages("caret")
+library(tidyverse)
+# install.packages("caret")
 library(titanic)
 
 library(randomForest)
@@ -35,8 +36,8 @@ titanic_train %>%
   mutate(Survived = factor(Survived),
          Pclass = factor(Pclass),
          Sex = factor(Sex)) %>% 
-  randomForest(formula = Survived ~ .) %>% 
-ggstats::ggcoef_model()
+  randomForest(formula = Survived ~ .)
+# ggstats::ggcoef_model()
 model <- glm(Survived ~ Pclass*Sex + Age  + Fare, data = titanic_train, family = binomial)
 
 model$coefficients %>% exp()
@@ -50,18 +51,18 @@ korrekt, og om overlevelse er korrekt kodet.
 
 
 
-```{r}
+```{r lm-byg}
 model <- lm(tip ~ day + time + total_bill, data = tips)
 library(dplyr)
 ```
 
 
-```{r}
+```{r summary}
 model %>% summary()
 ```
 
 
-```{r}
+```{r plot}
 model %>% ggcoef_model(intercept = TRUE)
 
 ```
