@@ -47,27 +47,70 @@ waffle(vec/sum(vec)*100)
 
 
 
-A bit annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to manipulate your vector to get to 100. Well, actually it is probably a minor annoyance.
+A bit annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to make sure your values sum to 100 on your own.
 
 What if you want something else than coloured squares?
 
-The arguments “use_glyph” and “glyph_size” makes that possible.
-First, we'll need the library extrafont
+A selection of fonts with a lot of icons or "glyphs" can be found in
+"awesomefonts". `waffle` includes int, but you will have to install them on
+your system on your own.
+
+Run
+
+```{r eval = FALSE}
+waffle::install_fa_fonts()
+```
+Which, on my current system returns, amongst other stuff:
+
+`The TTF font files for Font Awesome 5 fonts are in:
+
+/home/christian/R/aarch64-unknown-linux-gnu-library/4.4/waffle/fonts
+
+Please navigate to that directory and install them on your system.`
+
+I navigate there (and get the fonts found there):
+
+```{eval = FALSE}
+cd "/home/christian/R/aarch64-unknown-linux-gnu-library/4.4/waffle/fonts"
+ls
+```
+
+We should get something like this, depending on specific version:
+
+```{eval = FALSE}
+Font Awesome 5 Brands-Regular-400.ttf
+Font Awesome 5 Free-Regular-400.ttf
+Font Awesome 5 Free-Solid-900.ttf
+```
+
+Copy those files to the folder containing your fonts. Begin by making the folder:
 
 ```{r}
-# library(extrafont)
-# extrafont::font_import()
-# loadfonts()
+sudo mkdir -p /usr/share/fonts/truetype/fontawesome5
+sudo cp "/home/christian/R/aarch64-unknown-linux-gnu-library/4.4/waffle/fonts/"*.ttf /usr/share/fonts/truetype/fontawesome5/
+sudo chmod 644 /usr/share/fonts/truetype/fontawesome5/*.ttf
+sudo fc-cache -f -v
+```
 
+We also adjust permissions, and update the font info cache
+
+Back in R, we load the library `extrafont`, and import the new fonts to R:
+```{r eval = FALSE}
+library(extrafont)
+font_import(paths = "/usr/share/fonts/truetype/fontawesome5", prompt = FALSE)
+loadfonts()
+
+```
+
+Just to make sure it actually worked:
+```{r eval = FALSE}
+"Font Awesome 5 Free Solid" %in% fonts()
 ```
 
 
 
-We'll also need to have the “awesomefonts” installed. It can be downloaded from:
 
-http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf
 
-This should be easier if you are on a desktop machine. As I'm running this through my own installation of RStudio on a remote server, it was a bit more difficult.
 
 I needed to place the “fontawesome.ttf” file in the “/usr/share/fonts/truetype/fontawesome” directory.
 
