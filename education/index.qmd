@@ -22,7 +22,7 @@ title: "Education"
   - **Jan. - Feb.  2005**  HPLC technician. AMU course in the practical use of  HPLC.
 
 
-### DTU
+### Technical University of Denmark
 
   - **Feb. 1994 - Feb. 2002**: Cand. Polyt. (M.Sci.Eng) specialization: Pure and Applied Chemistry
 
@@ -31,7 +31,7 @@ title: "Education"
   - **Aug. 1990 -- Jun. 1993**: Mathematics A-level equivalent.
 
 ### Helsinge Realskole
-**Aug. 1980 -- Juni 1990**
+**Aug. 1980 -- Juni 1990** Primay school K-9.
 
 ## Certifications
 
@@ -40,6 +40,7 @@ title: "Education"
   - <a href="/documentation/isotopteknik.pdf" target="_blank">Isotopteknik</a>
   - <a href="/documentation/carpentries.pdf" target="_blank">Carpentries</a>
 
+juni 2003 basic gmp
 
 
 ## Not so formal education
@@ -68,12 +69,27 @@ validering, dokumentation og QA/QC.
 
 IT projektlederuddannelse - Mannas, KB.
 
+MSPRoject
+
+nov 1998 - Tillidsrepræsentantuddannelsen, IDA, Forhandling.
+
+May 2005 Kommunikation på nettet. Århus Købmandsskole
+
+marts 2012 brugerundersøgelser (opfølgningskursus)
+
+nov 2011 Brugerundersøgelser
+
+**Feb. 2021** Excel VBA Avanceret
 Excelkurser fra 4D
+
+**nov 2020** Ecel vba programmering udvidet
 
   - **Jun. 2024** QGIS  
   GIS-kursus ved SC Datalab ved Københavns Universitet.
 
   - **May-Jun. 2024** Førsteårspædagogik
+
+**marts 2005** Kvalificering og validering af produktionsudstyr
 
 ## Cognitive Class
 
