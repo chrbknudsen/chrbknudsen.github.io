@@ -1,0 +1,85 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-08-12
+toc: true
+image: ""
+---
+
+Så ofte sker det ikke, men når jeg bliver bedt om at moderere paneldebatter
+er dette skemaet for forberedelsen.
+
+
+
+## 1. Forberedelsesfasen
+
+Det er ikke altid man får mulighed for at forberede optimalt. Jo højere profileret
+debatten er, jo vanskeligere er det ofte. Hvorfor? En højt profileret debat 
+kendetegnes ved at debattørerne er højt profilerede. De har prøvet det før, 
+hvorimod folk der ikke har prøvet det før er mere usikre, og derfor lettere at få
+til at forberede sig. Højt profilerede debattører har også mindre tid, så det er
+ikke (kun) fordi de sjusker at de ikke prioriterer tiden til forberedelse. De har 
+den heller ikke.
+
+Men. 
+Tema og formål: Hvad skal publikum have ud af debatten? Skal det være vidensdeling, holdningsudveksling eller problemløsning?
+
+Paneldeltagere: 3–5 personer er ideelt. De bør have forskellige perspektiver på emnet for at skabe dynamik.
+
+Moderator: Skal kunne styre tid, sikre lige taletid og holde samtalen på sporet.
+
+Format: Skal det være en klassisk paneldebat, Q&A-baseret, eller med publikumsinvolvering undervejs?
+
+2. Tidsstruktur (eksempel: 60 minutter)
+Introduktion (5 min)
+
+Moderator byder velkommen, præsenterer tema og format.
+
+Kort præsentation af paneldeltagerne (enten af moderator eller af deltagerne selv, max 30 sek hver).
+
+Åbningsrunder (10 min)
+
+Moderator stiller et bredt åbningsspørgsmål til hver deltager for at få deres hovedsynspunkt frem.
+
+Giver publikum et hurtigt overblik over de forskellige positioner.
+
+Tematiske runder (30 min)
+
+2–3 temaer/spørgsmål, som moderator styrer igennem.
+
+Skift mellem korte, fokuserede svar (1–2 min) og interaktion mellem paneldeltagere.
+
+Moderator kan stille opfølgende spørgsmål og opfordre panelister til at reagere på hinandens pointer.
+
+Publikumsspørgsmål (10 min)
+
+Spørgsmål kan komme fra salen eller via chat/seddel.
+
+Moderator filtrerer, så de passer til tidsrammen og emnet.
+
+Afslutning (5 min)
+
+Hver paneldeltager får 1 minut til en afsluttende bemærkning.
+
+Moderator opsummerer de vigtigste pointer og takker deltagere og publikum.
+
+3. Tips til afviklingen
+Hold tiden stramt – brug klokke, kort eller håndtegn til at signalere, når taletid er ved at løbe ud.
+
+Skab interaktion – stil spørgsmål direkte mellem panelister for at undgå, at det bliver en række monologer.
+
+Variation – skift mellem fakta, eksempler og meninger for at holde publikum engageret.
+
+Publikumsinddragelse – overvej afstemninger, korte håndsoprækninger eller live polls for at bryde formatet.
+
+4. Ekstra greb for mere energi
+Start med et kort, provokerende spørgsmål eller statistik for at fange opmærksomheden.
+
+Lad deltagerne forholde sig til en konkret case i stedet for kun at tale abstrakt.
+
+Indfør “lynrunde”-spørgsmål (fx ja/nej eller max 10 ord) for tempo.
