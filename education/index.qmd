@@ -10,7 +10,7 @@ title: "Education"
 
 ### Copenhagen Business School
 
- - **Sep. - Oct. 2019 ** Administrative law
+ - **Sep. - Oct. 2019** Administrative law
  - **Jan. - Jun. 2013** Economics
  - **Jan. - Apr. 2010** Business Law II
  - **Aug. - Dec. 2009** Business Law I
@@ -24,7 +24,10 @@ title: "Education"
 
 ### Technical University of Denmark
 
-  - **Feb. 1994 - Feb. 2002**: Cand. Polyt. (M.Sci.Eng) specialization: Pure and Applied Chemistry
+  - **Feb. 1994 - Feb. 2002**: Cand. Polyt. (M.Sci.Eng) specialization: Pure and Applied Chemistry  
+  My master thesis had the title "Electrochemical Investigations of Vanadium based Sulphuric Acid Catalyts". My studies ranged from Management and Organization to Advanced Quantum Chemistry.
+  - **Sep. 2000 - Dec. 2000**  Study abroad in Greece, Department of Chemistry at University of Patra.  
+  I conducted spectroscopic (Raman & VIS/NIR) studies on models of industrially relevant sulphuric acid catalysts with the aim of gaining knowledge about the complex chemistry and redox conditions. 
 
 ### Helsinge Amts Gymnasium
 
@@ -45,11 +48,6 @@ juni 2003 basic gmp
 
 ## Not so formal education
 
-  - **Sep. 2000 - Dec. 2000**  Studieophold i Grækenland  
-  Kemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
-(Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte
-svovlsyrekatalysatorer, med henblik på opnåelse af viden om
-komplekskemien og redox-forholdene i disse modeller.
 
 
 ## Courses
