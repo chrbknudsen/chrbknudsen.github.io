@@ -44,3 +44,20 @@ for (stroke in stroke_list) {
 p +
   coord_fixed(ratio = 0.2) +
   theme_void()
+
+
+
+install.packages("ggfx")
+library(tidyverse)
+library(ggfx)
+
+
+x <- c(runif(10, 0, 0.01), runif(10, 1, 1.01))
+y <- c(runif(10, 0, 0.01), runif(10, 1, 1.01))
+group <- c(1:10, 1:10)
+tibble(x = x, y = y, group = group)%>% 
+  ggplot(aes(x,y, group = group)) +
+  ggfx::with_blur(
+    geom_line(), sigma = 2
+  )
+

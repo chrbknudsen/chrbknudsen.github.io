@@ -20,7 +20,7 @@ library(ggplot2)
 library(waffle)
 ```
 
-```{r}
+```{r ,eval =FALSE}
 vec <- c(`Category 1 (10)`= 10 , `Category 2 (20)`= 20,
               `Category 3 (25)`= 24, `Category 4 (16)` = 16)
 
@@ -41,7 +41,7 @@ waffle takes a named vector of values, rows sets the number of rows of blocks. D
 
 One standard way, is to show a 10x10 grid, where each cell represents 1% of the total:
 
-```{r}
+```{r, eval = FALSE}
 waffle(vec/sum(vec)*100)
 ```
 
@@ -57,7 +57,7 @@ your system on your own.
 
 Run
 
-```{r eval = FALSE}
+```{r, eval = FALSE}
 waffle::install_fa_fonts()
 ```
 Which, on my current system returns, amongst other stuff:
@@ -70,14 +70,14 @@ Please navigate to that directory and install them on your system.`
 
 I navigate there (and get the fonts found there):
 
-```{eval = FALSE}
+```{bash, eval = FALSE}
 cd "/home/christian/R/aarch64-unknown-linux-gnu-library/4.4/waffle/fonts"
 ls
 ```
 
 We should get something like this, depending on specific version:
 
-```{eval = FALSE}
+```{bash, eval = FALSE}
 Font Awesome 5 Brands-Regular-400.ttf
 Font Awesome 5 Free-Regular-400.ttf
 Font Awesome 5 Free-Solid-900.ttf
@@ -85,7 +85,7 @@ Font Awesome 5 Free-Solid-900.ttf
 
 Copy those files to the folder containing your fonts. Begin by making the folder:
 
-```{r}
+```{bash, eval = FALSE}
 sudo mkdir -p /usr/share/fonts/truetype/fontawesome5
 sudo cp "/home/christian/R/aarch64-unknown-linux-gnu-library/4.4/waffle/fonts/"*.ttf /usr/share/fonts/truetype/fontawesome5/
 sudo chmod 644 /usr/share/fonts/truetype/fontawesome5/*.ttf
@@ -95,7 +95,7 @@ sudo fc-cache -f -v
 We also adjust permissions, and update the font info cache
 
 Back in R, we load the library `extrafont`, and import the new fonts to R:
-```{r eval = FALSE}
+```{r, eval = FALSE}
 library(extrafont)
 font_import(paths = "/usr/share/fonts/truetype/fontawesome5", prompt = FALSE)
 loadfonts()
@@ -103,7 +103,7 @@ loadfonts()
 ```
 
 Just to make sure it actually worked:
-```{r eval = FALSE}
+```{r, eval = FALSE}
 "Font Awesome 5 Free Solid" %in% fonts()
 ```
 
@@ -123,7 +123,7 @@ There is now a long list of 593 different icons, that can be used. If you want a
 And now, we can make a waffle chart with the glyph of our choice.
 
 
-```{r eval = FALSE}
+```{r, eval = FALSE}
 font_add("fa", "/usr/share/fonts/truetype/font-awesome/fontawesome-webfont.ttf")
 waffle(vec/2, rows=4, use_glyph = "wifi")
 

@@ -1,6 +1,6 @@
 ---
 title: "Blue Vorontex #47"
-subtitle: "Polar Voronoi Tesselation"
+subtitle: "Polær Voronoi Tesselering"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -15,26 +15,29 @@ image: "Blue_Vorontex-47.png"
 knitr::include_graphics("Blue_Vorontex-47.png")
 ```
 
-A Voronoi tesselation with 100 tiles in polar coordinates.
+En voronoi tesselering med 100 celler i polære koordinater
 
-Basically - select 100 random points in a plane and then draw polygons around
-those points, such that all points closest to a given point, are included in 
-the polygon associated with that point.
+Grundlæggende: Vælg 100 tilfældige punkter i et plan. Tegn derefter polygoner 
+omkring disse punkter, således at alle punkter i planet der er tættest på et bestemt
+af de 100 tilfældige punkter, er indeholdt i polygonen der hører til punktet.
 
-Those tesselations have practical uses in a number of subjects. City planning,
-trying to place facilities maximising access for the population.
-Modelling of territorial behaviour of animal populations.
+Den slags har praktisk anvendelse i en del sammenhænge. Byplanlægning, hvor man 
+eksempelvis forsøger at maksimere befolkningens adgang til faciliteter. Biologer
+bruger det når de modellerer territorial adfærd hos dyr.
 
-It is also found at the core of certain clustering algorithms, eg k-means clustering.
+Den gemmer sig også i kerne af visse algoritmer til clustering, blandt andet k-means.
 
-As always we need the tidyverse, and in this case the deldir package, 
-that does the actual tesselation.
+Som altid skal jeg bruge `tidyverse`, og dertil `deldir` pakken, der håndterer den
+egentlige tesselering.
+
+
 ```{r eval = FALSE}
 library(tidyverse)
 library(deldir)
 ```
 
-Generate random points, making sure that we can reproduce them.
+
+Så genererer jeg tilfældige punkter. Men ikke mere tilfældige end at jeg kan reproducere dem:
 
 ```{r eval = FALSE}
 set.seed(47)
@@ -43,7 +46,7 @@ x <- rnorm(tiler)
 y <- rnorm(tiler)
 ```
 
-Next, calculate the tiles, and collect them in a dataframe:
+Tesseleringerne kaldes på engelsk "tiles". Dem beregner jeg, og samler dem i en dataframe:
 ```{r eval = FALSE}
 tesselation <- deldir(x, y)
 tiles <- tile.list(tesselation)
@@ -54,7 +57,7 @@ tiles_df <- lapply(tiles, function(tile){
   bind_rows(.id = "tile_id")
 ```
 
-Finally, plot it:
+Endelig plotter jeg det. Bemækr at jeg transformerer koordinatsystemet til polære koordinater:
 ```{r eval = FALSE}
 tiles_df %>% 
   ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +

@@ -1,0 +1,36 @@
+---
+title: "Hide rows, based on value of cell - in Excel"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2018-03-12
+toc: true
+image: ""
+---
+
+
+So - you want to hide some rows on a worksheet, based on the value in a cell. Or more than one.
+Here's how to do that with VBA
+Find the last row of the range that you want to apply the hiding to.
+Get a range of rows, in this case starting at A7, and ending at "LastRow".
+For each value in that range, if the value i column A is equal to the value in cell G1 (that is Cells(1,7), And the value three columns over, eg in colum D (that is c.Offset(0,3)), is equal to the value in cell G2 (Cells(2,7), then set the entire row to be hidden, else set it to be shown.
+
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+Dim LastRow As Long, c As Range
+Application.EnableEvents = False
+LastRow = Application.WorksheetFunction.CountA(Range("A7:A100000")) + 6
+On Error Resume Next
+For Each c In Range("A7:A" & LastRow)
+If (c.Value = Cells(1, 7).Value And c.Offset(0, 3).Value = Cells(2, 7).Value) Then
+c.EntireRow.Hidden = False
+Else
+c.EntireRow.Hidden = True
+End If
+Next
+On Error GoTo 0
+Application.EnableEvents = True
+End Sub

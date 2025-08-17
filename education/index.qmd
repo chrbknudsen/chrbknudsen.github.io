@@ -10,7 +10,7 @@ title: "Education"
 
 ### Copenhagen Business School
 
- - **Sep. - Oct. 2019 ** Administrative law
+ - **Sep. - Oct. 2019** Administrative law
  - **Jan. - Jun. 2013** Economics
  - **Jan. - Apr. 2010** Business Law II
  - **Aug. - Dec. 2009** Business Law I
@@ -22,16 +22,19 @@ title: "Education"
   - **Jan. - Feb.  2005**  HPLC technician. AMU course in the practical use of  HPLC.
 
 
-### DTU
+### Technical University of Denmark
 
-  - **Feb. 1994 - Feb. 2002**: Cand. Polyt. (M.Sci.Eng) specialization: Pure and Applied Chemistry
+  - **Feb. 1994 - Feb. 2002**: Cand. Polyt. (M.Sci.Eng) specialization: Pure and Applied Chemistry  
+  My master thesis had the title "Electrochemical Investigations of Vanadium based Sulphuric Acid Catalyts". My studies ranged from Management and Organization to Advanced Quantum Chemistry.
+  - **Sep. 2000 - Dec. 2000**  Study abroad in Greece, Department of Chemistry at University of Patra.  
+  I conducted spectroscopic (Raman & VIS/NIR) studies on models of industrially relevant sulphuric acid catalysts with the aim of gaining knowledge about the complex chemistry and redox conditions. 
 
 ### Helsinge Amts Gymnasium
 
   - **Aug. 1990 -- Jun. 1993**: Mathematics A-level equivalent.
 
 ### Helsinge Realskole
-**Aug. 1980 -- Juni 1990**
+**Aug. 1980 -- Juni 1990** Primay school K-9.
 
 ## Certifications
 
@@ -40,15 +43,11 @@ title: "Education"
   - <a href="/documentation/isotopteknik.pdf" target="_blank">Isotopteknik</a>
   - <a href="/documentation/carpentries.pdf" target="_blank">Carpentries</a>
 
+juni 2003 basic gmp
 
 
 ## Not so formal education
 
-  - **Sep. 2000 - Dec. 2000**  Studieophold i Grækenland  
-  Kemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske
-(Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte
-svovlsyrekatalysatorer, med henblik på opnåelse af viden om
-komplekskemien og redox-forholdene i disse modeller.
 
 
 ## Courses
@@ -68,12 +67,27 @@ validering, dokumentation og QA/QC.
 
 IT projektlederuddannelse - Mannas, KB.
 
+MSPRoject
+
+nov 1998 - Tillidsrepræsentantuddannelsen, IDA, Forhandling.
+
+May 2005 Kommunikation på nettet. Århus Købmandsskole
+
+marts 2012 brugerundersøgelser (opfølgningskursus)
+
+nov 2011 Brugerundersøgelser
+
+**Feb. 2021** Excel VBA Avanceret
 Excelkurser fra 4D
+
+**nov 2020** Ecel vba programmering udvidet
 
   - **Jun. 2024** QGIS  
   GIS-kursus ved SC Datalab ved Københavns Universitet.
 
   - **May-Jun. 2024** Førsteårspædagogik
+
+**marts 2005** Kvalificering og validering af produktionsudstyr
 
 ## Cognitive Class
 
