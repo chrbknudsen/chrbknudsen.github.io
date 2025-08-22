@@ -14,6 +14,25 @@ make_transparent <- function(sti, fuzz = 50){
   image_write(path = sti)
 }
 
+# project-euler
+imgurl <- "img/org/euler.png"
+hexSticker::sticker(imgurl, package = "", 
+                    p_color =  "black",
+                    p_y = 1.6,
+                    h_fill = "white",
+                    h_color = "darkgrey",
+                    s_x = 1.0,
+                    s_y = 1.0,
+                    s_width = 1.1,
+                    url = "Project Euler",
+                    u_color = "black",
+                    u_size = 11,
+                    u_x = 0.95,
+                    u_y = 0.11,
+                    #        u_angle = 45,
+                    white_around_sticker = TRUE,
+                    filename = "img/project-euler.png")
+make_transparent("img/project-euler.png", fuzz = 20)
 
 # tvangshygge
 imgurl <- "img/org/tvangshygge.svg"
