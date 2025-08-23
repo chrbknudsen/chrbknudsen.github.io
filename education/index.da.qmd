@@ -1,16 +1,16 @@
 ---
-title: "Education"
+title: "Uddannelse"
 ---
 
-## Formal Eduction
+## Formel uddannelse
 
-### University of Copenhagen
+### Københavns Universitet
 
 **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summer school at the Department of Economics.
 
 ### Copenhagen Business School
 
-- **Sep. -- Oct. 2019** [Forvaltningsret](https://web.archive.org/web/20190411073906/https://kursuskatalog.cbs.dk/2019-2020/DIP-D1FMV2024U.aspx)
+- **Sep. -- Oct. 2019** [Forvaltningsret](http://kursuskatalog.cbs.dk/2019-2020/DIP-D1FMV2024U.aspx)
 - **Jan. -- Jun. 2013** Economics
 - **Jan. -- Apr. 2010** Business Law II
 - **Aug. -- dec. 2009** Business Law I
@@ -24,9 +24,10 @@ title: "Education"
 **Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
 
 
-### DTU
+### Danmarks Tekniske universitet
 
-**February 1994 -- February 2002**: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
+**February 1994 -- February 2002**: Civilingeniør (Cand. Polyt.) med en fagprofil i fundamental og anvendt kemi.  
+  Mit speciale havde title "Elektrokemiske undersøgelser af vanadiumbaserede svovlsyrekatalysatorer. Mine studier strakte sig fra Ledelse og Organisation, til Videregående Kvantekemi.
 
 ### Helsinge Amts Gymnasium
 
@@ -48,7 +49,7 @@ title: "Education"
 
 
 
-## Not so formal education
+## Knap så formel uddannelse
 
 **Sep. 2000 -- dec. 2000**  Studieophold i Grækenland
 
