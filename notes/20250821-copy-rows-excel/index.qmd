@@ -1,0 +1,64 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2018-03-17
+toc: true
+image: ""
+---
+And handling images while you're at it.
+
+Given: We have some data in a sheet - lets call it Source. Based on some values in another sheet - lets call that Condition - we want to copy rows from Source to a third sheet. We'll call that Target.
+To complicate things, we want to copy images as well.
+
+Set some variables to Target, Source and Condition.
+Delete the content of the existing target sheet. First alle the images, and then the rest. Note that I'm not deleting everything, just from row 6 and down.
+Then for each something (d) in column B (adjust ranges - here I'm only looking at the rows from 2 to 9), check if the relevant row in Source matches, then copy to Target.
+
+There's a small detail here, I needed to insert an identifier in Target, defined by a value in Condition. Instead of trying to insert in Column B, I'm just searching and replacing a placeholder - "£$", a string I was pretty certain would not show up anywhere.
+
+
+Sub CopyYes()
+Dim c As Range
+Dim j As Integer
+Dim Source As Worksheet
+Dim Target As Worksheet
+Dim Condition As Worksheet
+Dim k As String
+Dim fnd As Variant
+Dim rplc As Variant
+fnd = "£$"
+
+Set Source = ActiveWorkbook.Worksheets("Ark4") 'Note that ranges in Souce and Condition below should be adjusted. We're not quite there yet.
+Set Target = ActiveWorkbook.Worksheets("Ark3")
+Set Condition = ActiveWorkbook.Worksheets("Ark1")
+
+' Start by clearing target sheet
+' begin with images
+Target.Pictures.Delete
+' Then we'll delete the rest
+'
+With Target
+.Rows(6 & ":" & .Rows.Count).Delete
+End With
+
+j = 7 'This will start copying data to Target sheet at row 1
+For Each d In Condition.Range("B2:B9") 'Ark1
+k = d.Offset(0, -1)
+rplc = k
+For Each c In Source.Range("B2:B52") 'Ark2
+If d = c Then
+Source.Rows(c.row).Copy Target.Rows(j)
+j = j + 1
+End If
+Next c
+Target.Cells.Replace what:=fnd, Replacement:=rplc
+
+Next d
+'we'll end by hiding some columns
+Target.Columns("A:E").Hidden = True
+End Sub
