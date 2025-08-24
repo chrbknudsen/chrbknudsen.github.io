@@ -11,10 +11,10 @@ title: "Uddannelse"
 ### Copenhagen Business School
 
 - **Sep. -- Oct. 2019** [Forvaltningsret](http://kursuskatalog.cbs.dk/2019-2020/DIP-D1FMV2024U.aspx)
-- **Jan. -- Jun. 2013** Economics
-- **Jan. -- Apr. 2010** Business Law II
-- **Aug. -- dec. 2009** Business Law I
-- **Aug. -- dec. 2008** Statistics 1
+- **Jan. -- Jun. 2013** [Samfundsøkonomi](https://kursuskatalog.cbs.dk/2013-2014/DIP-HD1_SOE13.aspx)
+- **Jan. -- Apr. 2010** [Udvidet erhvervsret](https://kursuskatalog.cbs.dk/2010-2011/DIP-UE.aspx)
+- **Aug. -- dec. 2009** [Erhvervsret](https://kursuskatalog.cbs.dk/2010-2011/DIP-ER.aspx)
+- **Aug. -- dec. 2008** [Dataanalyse](https://kursuskatalog.cbs.dk/2010-2011/DIP-DA.aspx)
 
 ### AMU
 
