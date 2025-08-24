@@ -10,3 +10,33 @@ date: 2025-08-01
 toc: true
 image: ""
 ---
+
+
+
+```{r}
+library(tidyverse)
+n <- 200 # antal punkter
+theta <- seq(0, pi, length.out = n)
+cx <- 0 #x-koordinat for origo
+cy <- 0 # y-koordinat for origo
+r <- 1 # radius
+
+x <- cx + r*cos(theta)
+y <- cy + r*sin(theta)
+df <- data.frame(x = x, y = y, group  ="low")
+
+cx <- 0 #x-koordinat for origo
+cy <- 2 # y-koordinat for origo
+r <- -1 # radius
+
+x <- cx + r*cos(theta)
+y <- cy + r*sin(theta)
+df2 <- data.frame(x = x, y = y, group  ="upp")
+
+df <- bind_rows(df, df2)
+ggplot(df, aes(x, y)) +
+  geom_polygon(fill = "skyblue", color = "black")
+  geom_path(size = 1.2, colour = "blue") +   # kun buen
+  coord_equal() +
+  theme_minimal()
+```
