@@ -18,10 +18,8 @@ title: "Uddannelse"
 
 ### AMU
 
-**Feb. -- mar. 2005** Gaschromatografi. AMU course in the practical use of capillary gas chromatography. 
-
-
-**Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
+- **Feb. -- mar. 2005** Gaschromatografi. AMU course in the practical use of capillary gas chromatography. 
+- **Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
 
 
 ### Danmarks Tekniske universitet
