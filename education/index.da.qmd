@@ -1,32 +1,31 @@
 ---
-title: "Education"
+title: "Uddannelse"
 ---
 
-## Formal Eduction
+## Formel uddannelse
 
-### University of Copenhagen
+### Københavns Universitet
 
 **August 2023:** [Introduction to Social Data Science](https://web.archive.org/web/20240112121316/https://kurser.ku.dk/course/a%C3%98kk08216u/). Summer school at the Department of Economics.
 
 ### Copenhagen Business School
 
-- **Sep. -- Oct. 2019 ** Administrative law
-- **Jan. -- Jun. 2013** Economics
-- **Jan. -- Apr. 2010** Business Law II
-- **Aug. -- dec. 2009** Business Law I
-- **Aug. -- dec. 2008** Statistics 1
+- **Sep. -- Oct. 2019** [Forvaltningsret](http://kursuskatalog.cbs.dk/2019-2020/DIP-D1FMV2024U.aspx)
+- **Jan. -- Jun. 2013** [Samfundsøkonomi](https://kursuskatalog.cbs.dk/2013-2014/DIP-HD1_SOE13.aspx)
+- **Jan. -- Apr. 2010** [Udvidet erhvervsret](https://kursuskatalog.cbs.dk/2010-2011/DIP-UE.aspx)
+- **Aug. -- dec. 2009** [Erhvervsret](https://kursuskatalog.cbs.dk/2010-2011/DIP-ER.aspx)
+- **Aug. -- dec. 2008** [Dataanalyse](https://kursuskatalog.cbs.dk/2010-2011/DIP-DA.aspx)
 
 ### AMU
 
-**Feb. -- mar. 2005** Gaschromatografi. AMU course in the practical use of capillary gas chromatography. 
+- **Feb. -- mar. 2005** Gaschromatografi. AMU course in the practical use of capillary gas chromatography. 
+- **Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
 
 
-**Jan. -- feb.  2005**  HPLC operatør. AMU course in the practical use of  HPLC.
+### Danmarks Tekniske universitet
 
-
-### DTU
-
-**February 1994 -- February 2002**: Cand. Polyt. (M.Sci.Eng) fagprofil Pure and Applied Chemistry
+**February 1994 -- February 2002**: Civilingeniør (Cand. Polyt.) med en fagprofil i fundamental og anvendt kemi.  
+  Mit speciale havde title "Elektrokemiske undersøgelser af vanadiumbaserede svovlsyrekatalysatorer. Mine studier strakte sig fra Ledelse og Organisation, til Videregående Kvantekemi.
 
 ### Helsinge Amts Gymnasium
 
@@ -48,7 +47,7 @@ title: "Education"
 
 
 
-## Not so formal education
+## Knap så formel uddannelse
 
 **Sep. 2000 -- dec. 2000**  Studieophold i Grækenland
 
