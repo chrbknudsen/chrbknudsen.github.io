@@ -24,7 +24,7 @@ Here's how to do that with VBA.
 value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entrie
 row to be hidden, else, set it to be shown.
 
-```{bash}
+```{r eval = FALSE}
 Private Sub Worksheet_Change(ByVal Target As Range)
 Dim LastRow As Long, c As Range
 Application.EnableEvents = False
