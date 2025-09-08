@@ -1,5 +1,5 @@
 ---
-title: "Notes"
+title: "Noter"
 listing:
   - id: talks
     contents: "**/*/index.qmd"
