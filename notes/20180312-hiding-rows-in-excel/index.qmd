@@ -1,24 +1,30 @@
 ---
-title: "Hide rows, based on value of cell - in Excel"
-subtitle: "indsæt subtitle"
+title: "Hide rows, based on value of cell"
+subtitle: "In Excel"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - Excel
+  - VBA
 date: 2018-03-12
 toc: true
-image: ""
+image: "hidden_excel.png"
 ---
 
+So - you want to hide some rows in a worksheet, based on the value in a cell. Or more than one cell.
 
-So - you want to hide some rows on a worksheet, based on the value in a cell. Or more than one.
-Here's how to do that with VBA
-Find the last row of the range that you want to apply the hiding to.
-Get a range of rows, in this case starting at A7, and ending at "LastRow".
-For each value in that range, if the value i column A is equal to the value in cell G1 (that is Cells(1,7), And the value three columns over, eg in colum D (that is c.Offset(0,3)), is equal to the value in cell G2 (Cells(2,7), then set the entire row to be hidden, else set it to be shown.
+We do that with VBA.
+
+Here's how to do that with VBA.
 
 
+* Get the range of rows, in this example from A7 to A100000.
+* Adjust (here, by adding 6) to get the actual last row.
+* For each value in that range - if the value in column A is equal to the value in cell G1 (`Cells(1,7)`), and the 
+value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entrie
+row to be hidden, else, set it to be shown.
+
+```{r eval = FALSE}
 Private Sub Worksheet_Change(ByVal Target As Range)
 Dim LastRow As Long, c As Range
 Application.EnableEvents = False
@@ -34,3 +40,5 @@ Next
 On Error GoTo 0
 Application.EnableEvents = True
 End Sub
+```
+

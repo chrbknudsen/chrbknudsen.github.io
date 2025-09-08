@@ -11,7 +11,7 @@
 <meta name="author" content="Christian Knudsen">
 <meta name="dcterms.date" content="2018-03-12">
 
-<title>Christian Knudsen - Hide rows, based on value of cell - in Excel</title>
+<title>Hide rows, based on value of cell – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Christian Knudsen - Hide rows, based on value of cell - in Excel">
-<meta property="og:description" content="indsæt subtitle">
-<meta property="og:image" content="">
-<meta property="og:site-name" content="Christian Knudsen">
-<meta name="twitter:title" content="Christian Knudsen - Hide rows, based on value of cell - in Excel">
-<meta name="twitter:description" content="indsæt subtitle">
-<meta name="twitter:image" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Hide rows, based on value of cell – Christian Knudsen">
+<meta property="og:description" content="In Excel">
+<meta property="og:image" content="hidden_excel.png">
+<meta property="og:site_name" content="Christian Knudsen">
+<meta name="twitter:title" content="Hide rows, based on value of cell – Christian Knudsen">
+<meta name="twitter:description" content="In Excel">
+<meta name="twitter:image" content="hidden_excel.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -151,11 +186,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hide rows, based on value of cell - in Excel</h1>
-<p class="subtitle lead">indsæt subtitle</p>
+<h1 class="title">Hide rows, based on value of cell</h1>
+<p class="subtitle lead">In Excel</p>
   <div class="quarto-categories">
-    <div class="quarto-category">kategori 1</div>
-    <div class="quarto-category">kategori 2</div>
+    <div class="quarto-category">Excel</div>
+    <div class="quarto-category">VBA</div>
   </div>
   </div>
 
@@ -183,8 +218,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>So - you want to hide some rows on a worksheet, based on the value in a cell. Or more than one. Here’s how to do that with VBA Find the last row of the range that you want to apply the hiding to. Get a range of rows, in this case starting at A7, and ending at “LastRow”. For each value in that range, if the value i column A is equal to the value in cell G1 (that is Cells(1,7), And the value three columns over, eg in colum D (that is c.Offset(0,3)), is equal to the value in cell G2 (Cells(2,7), then set the entire row to be hidden, else set it to be shown.</p>
-<p>Private Sub Worksheet_Change(ByVal Target As Range) Dim LastRow As Long, c As Range Application.EnableEvents = False LastRow = Application.WorksheetFunction.CountA(Range(“A7:A100000”)) + 6 On Error Resume Next For Each c In Range(“A7:A” &amp; LastRow) If (c.Value = Cells(1, 7).Value And c.Offset(0, 3).Value = Cells(2, 7).Value) Then c.EntireRow.Hidden = False Else c.EntireRow.Hidden = True End If Next On Error GoTo 0 Application.EnableEvents = True End Sub</p>
+
+<p>So - you want to hide some rows in a worksheet, based on the value in a cell. Or more than one cell.</p>
+<p>We do that with VBA.</p>
+<p>Here’s how to do that with VBA.</p>
+<ul>
+<li>Get the range of rows, in this example from A7 to A100000.</li>
+<li>Adjust (here, by adding 6) to get the actual last row.</li>
+<li>For each value in that range - if the value in column A is equal to the value in cell G1 (<code>Cells(1,7)</code>), and the value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entrie row to be hidden, else, set it to be shown.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Private Sub <span class="fu">Worksheet_Change</span>(ByVal Target As Range)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Dim LastRow As Long, c As Range</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Application.EnableEvents <span class="ot">=</span> False</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>LastRow <span class="ot">=</span> <span class="fu">Application.WorksheetFunction.CountA</span>(<span class="fu">Range</span>(<span class="st">"A7:A100000"</span>)) <span class="sc">+</span> <span class="dv">6</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>On Error Resume Next</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>For Each c In <span class="fu">Range</span>(<span class="st">"A7:A"</span> <span class="sc">&amp;</span> LastRow)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">If</span> (<span class="at">c.Value =</span> <span class="fu">Cells</span>(<span class="dv">1</span>, <span class="dv">7</span>).Value And <span class="fu">c.Offset</span>(<span class="dv">0</span>, <span class="dv">3</span>)<span class="at">.Value =</span> <span class="fu">Cells</span>(<span class="dv">2</span>, <span class="dv">7</span>).Value) Then</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>c.EntireRow.Hidden <span class="ot">=</span> False</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Else</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>c.EntireRow.Hidden <span class="ot">=</span> True</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>End If</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Next</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>On Error GoTo <span class="dv">0</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Application.EnableEvents <span class="ot">=</span> True</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>End Sub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 

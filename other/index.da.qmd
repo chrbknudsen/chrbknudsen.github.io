@@ -4,22 +4,19 @@ title: "Andet CV relateret"
 
 ## Sprog
 
-- Dansk: Modersmål
-
-- Engelsk: Amerikanere tror jeg er brite. Det kab briterne godt høre jeg ikke er.
-- Tysk: Læser og forstår tysk godt, særligt teknisk litteratur. Forstår talt tysk hvis der tales langsomt "Hochdeutsch". Kan bestille mad på restauranter og spørge om vej.
-- Fransk: Læser og forstår kemisk litteratur. Tør ikke bestille mad på fransk.
+- **Dansk** Modersmål
+- **Engelsk** Amerikanere tror jeg er brite. Det kab briterne godt høre jeg ikke er.
+- **Tysk** Læser og forstår tysk godt, særligt teknisk litteratur. Forstår talt tysk hvis der tales langsomt "Hochdeutsch". Kan bestille mad på restauranter og spørge om vej.
+- **Fransk** Læser og forstår kemisk litteratur. Tør ikke bestille mad på fransk.
 
 ## IT 
 
 - I den traditionelle forstand af ordet, er jeg superbruger af Microsoft Office pakken.
-
 - Jeg underviser i programmering i R og har grundlæggende kendskab til Python.
-
-- Jeg er daglig bruger af Linux, kender regulære udtryk og SQL. Jeg kører min egen webserver.
+- Jeg er daglig bruger af Linux, kender regulære udtryk og SQL. Jeg kører min egen webserver, som leveres via GitHub
 
 
 ## Privat
 Født 20. juni 1974, gift med Kristian, bor i Rødovre.
 
-Mine interesser inkluderer politik og samfundsforhold generelt, molekylær gastronomi, digital elektronik, videnskabshistorie, skydning, svøming, science fiktion i almindelighed og Star Trek i særdeleshed.
+Mine interesser inkluderer politik og samfundsforhold generelt, molekylær gastronomi, digital elektronik, videnskabshistorie, skydning, svøming, science fiction i almindelighed og Star Trek i særdeleshed.
