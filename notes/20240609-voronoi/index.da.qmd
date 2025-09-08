@@ -2,7 +2,7 @@
 title: "Blue Vorontex #47"
 subtitle: "Polær Voronoi Tesselering"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" 
 categories:
   - Generativ Kunst
   - R
@@ -57,7 +57,7 @@ tiles_df <- lapply(tiles, function(tile){
   bind_rows(.id = "tile_id")
 ```
 
-Endelig plotter jeg det. Bemækr at jeg transformerer koordinatsystemet til polære koordinater:
+Endelig plotter jeg det. Bemærk at jeg transformerer koordinatsystemet til polære koordinater:
 ```{r eval = FALSE}
 tiles_df %>% 
   ggplot(aes(x = x, y = y, group = tile_id, fill = tile_id)) +
