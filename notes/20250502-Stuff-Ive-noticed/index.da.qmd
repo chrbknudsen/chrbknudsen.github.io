@@ -1,13 +1,13 @@
 ---
 title: Ting jeg har lagt mærke til
-subtitle: In no particular order
+subtitle: Noter til oplæg om AI
 author: "Christian Knudsen"
 categories:
   - AI
   - kategori 2
 date: 2025-05-02
 toc: true
-image: ""
+image: "stuff.png"
 format:
   revealjs:
     theme: serif
