@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
 <head>
 <link rel="alternate" hreflang="en" href="/notes/20180312-hiding-rows-in-excel/index.html" />
 <link rel="alternate" hreflang="da" href="/da/notes/20180312-hiding-rows-in-excel/index.da.html" />
@@ -8,8 +8,7 @@
 <meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Christian Knudsen">
-<meta name="dcterms.date" content="2018-03-12">
-<title>Hide rows, based on value of cell – Christian Knudsen</title>
+<title>Skjul rækker - baseret på værdi af celle – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,25 +76,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Ingen resultater",
+    "search-matching-documents-text": "Matchende dokumenter",
+    "search-copy-link-title": "Kopier link for at søge",
+    "search-hide-matches-text": "Skjul yderligere resultater",
+    "search-more-match-text": "andet resultat i dette dokument",
+    "search-more-matches-text": "andre resultater i dette dokument",
+    "search-clear-button-title": "Ryd",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Fortryd",
+    "search-submit-button-title": "Indsend",
+    "search-label": "Søg"
   }
 }</script><link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Hide rows, based on value of cell – Christian Knudsen">
-<meta property="og:description" content="In Excel">
+<meta property="og:title" content="Skjul rækker - baseret på værdi af celle – Christian Knudsen">
+<meta property="og:description" content="I Excel">
 <meta property="og:image" content="hidden_excel.png">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Hide rows, based on value of cell – Christian Knudsen">
-<meta name="twitter:description" content="In Excel">
+<meta name="twitter:title" content="Skjul rækker - baseret på værdi af celle – Christian Knudsen">
+<meta name="twitter:description" content="I Excel">
 <meta name="twitter:image" content="hidden_excel.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -108,14 +107,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Søg"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skift navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/20180312-hiding-rows-in-excel/index.html" id="language-link-da">Dansk</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Dansk</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/notes/20180312-hiding-rows-in-excel/index.html" id="language-link-en">English</a></li></ul>
 </div></li>
 <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
@@ -169,8 +168,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Hide rows, based on value of cell</h1>
-<p class="subtitle lead">In Excel</p>
+<h1 class="title">Skjul rækker - baseret på værdi af celle</h1>
+<p class="subtitle lead">I Excel</p>
   <div class="quarto-categories">
     <div class="quarto-category">Excel</div>
     <div class="quarto-category">VBA</div>
@@ -182,16 +181,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Forfatter</div>
     <div class="quarto-title-meta-contents">
              <p>Christian Knudsen </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Udgivet</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 12, 2018</p>
+      <p class="date">12. marts 2018</p>
     </div>
   </div>
   
@@ -200,12 +199,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>So - you want to hide some rows in a worksheet, based on the value in a cell. Or more than one cell.</p>
-<p>We do that with VBA, here’s how.</p>
+</header><p>Du ønsker at skjule visse rækker i et regneark - baseret på værdien i en celle. Eller mere end en celle.</p>
+<p>Det kan vi gøre med VBA, sådan gør man:</p>
 <ul>
-<li>Get the range of rows, in this example from A7 to A100000.</li>
-<li>Adjust (here, by adding 6) to get the actual last row.</li>
-<li>For each value in that range - if the value in column A is equal to the value in cell G1 (<code>Cells(1,7)</code>), and the value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entire row to be hidden, else, set it to be shown.</li>
+<li>Find <code>range</code> af rækkerne, i dette eksempel er det <code>A7</code> til <code>A100000</code>
+</li>
+<li>Juster (her gør vi det ved at tilføje 6 rækker), den reelle sidste række.</li>
+<li>For hver værdi i det <code>range</code>: Hvis værdien i kolonne A er lig med værdien i celle G1 (<code>Cells(1,7)</code>), og værdien tre kolonner længere henne (kolonne D, c.Offset(0,3)), er lig med værdien i celle G2 (Cells(2,7)), sæt hele rækken til <code>hidden</code>, ellers, sæt den til <code>shown</code>
+</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Private Sub <span class="fu">Worksheet_Change</span>(ByVal Target As Range)</span>
@@ -222,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Next</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>On Error GoTo <span class="dv">0</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Application.EnableEvents <span class="ot">=</span> True</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>End Sub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>End Sub</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -252,12 +253,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopieret!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopieret!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

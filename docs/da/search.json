@@ -46,7 +46,7 @@
     "href": "notes/index.html",
     "title": "Noter",
     "section": "",
-    "text": "Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage fra 2003\n\n\n\n\n\n\n\n   \n    \n    \n      Sorter ved\n      Standard\n      \n        Overskrift\n      \n      \n        Dato - Ældste\n      \n      \n        Dato - Nyeste\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRedigering af PDF’er\n\n\nSemi-automatisk\n\n\n\n\njun. 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nAdfærdskodeks\n\n\nEller: Code of Conduct for voksne\n\n\n\n\njun. 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nTing jeg har lagt mærke til\n\n\nNoter til oplæg om AI\n\n\n\n\nmaj 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\n\nnov. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nStakkede barcharts\n\n\nAf kønsopdelt tidsforbrug i Danmark\n\n\n\n\nnov. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nParade ruter\n\n\nDen der oplevelse når aviserne skriver om noget du faktisk ved noget om.\n\n\n\n\naug. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolær Voronoi Tesselering\n\n\n\n\njun. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n\napr. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nPåske in Excel\n\n\n\n\n\n\n\njun. 2022\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nggbiplot\n\n\nFordi github kan være træls\n\n\n\n\nsep. 2020\n\n\n\n:::\n\n:::\n:::\nIngen resultater\n:::\n:::"
+    "text": "Mange af disse noter har deres oprindelse på ældre blogs, enkelte helt tilbage fra 2003\n\n\n\n\n\n\n\n   \n    \n    \n      Sorter ved\n      Standard\n      \n        Overskrift\n      \n      \n        Dato - Ældste\n      \n      \n        Dato - Nyeste\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRedigering af PDF’er\n\n\nSemi-automatisk\n\n\n\n\njun. 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nAdfærdskodeks\n\n\nEller: Code of Conduct for voksne\n\n\n\n\njun. 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nTing jeg har lagt mærke til\n\n\nNoter til oplæg om AI\n\n\n\n\nmaj 2025\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nRobots reading licenser\n\n\nOg afrunding af dagen\n\n\n\n\nnov. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nStakkede barcharts\n\n\nAf kønsopdelt tidsforbrug i Danmark\n\n\n\n\nnov. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nParade ruter\n\n\nDen der oplevelse når aviserne skriver om noget du faktisk ved noget om.\n\n\n\n\naug. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolær Voronoi Tesselering\n\n\n\n\njun. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerativ Kunst\n\n\n\n\napr. 2024\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nPåske in Excel\n\n\n\n\n\n\n\njun. 2022\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nggbiplot\n\n\nFordi github kan være træls\n\n\n\n\nsep. 2020\n\n\n\n:::\n\n:::\n\n\n\n\n\n\n\n\nSkjul rækker - baseret på værdi af celle\n\n\nI Excel\n\n\n\n\nmar. 2018\n\n\n\n:::\n\n:::\n:::\nIngen resultater\n:::\n:::"
   },
   {
     "objectID": "notes/20250728-excel_images/index.html",
@@ -287,25 +287,11 @@
     "text": "Warning: Removed 1 rows containing missing values (geom_text).\nIf we install a font that supports it, we even get access to the large number of UTF-8 glyphs. Here is a favorite of mine:\nwaffle(vec/2, rows=4, colors=brewer.pal(4,“Set1”)) + geom_label(label=sprintf(“F427”), size = 8)\nWhich of course requires you to have a font on your computer that supports penguins.\nHere is one: http://users.teilar.gr/~g1951d/Symbola.zip"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christian Knudsen",
+    "objectID": "notes/20180312-hiding-rows-in-excel/index.html",
+    "href": "notes/20180312-hiding-rows-in-excel/index.html",
+    "title": "Skjul rækker - baseret på værdi af celle",
     "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Christian Knudsen",
-    "section": "",
-    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+    "text": "Du ønsker at skjule visse rækker i et regneark - baseret på værdien i en celle. Eller mere end en celle.\nDet kan vi gøre med VBA, sådan gør man:\n\nFind range af rækkerne, i dette eksempel er det A7 til A100000\nJuster (her gør vi det ved at tilføje 6 rækker), den reelle sidste række.\nFor hver værdi i det range: Hvis værdien i kolonne A er lig med værdien i celle G1 (Cells(1,7)), og værdien tre kolonner længere henne (kolonne D, c.Offset(0,3)), er lig med værdien i celle G2 (Cells(2,7)), sæt hele rækken til hidden, ellers, sæt den til shown\n\n\nPrivate Sub Worksheet_Change(ByVal Target As Range)\nDim LastRow As Long, c As Range\nApplication.EnableEvents = False\nLastRow = Application.WorksheetFunction.CountA(Range(\"A7:A100000\")) + 6\nOn Error Resume Next\nFor Each c In Range(\"A7:A\" & LastRow)\nIf (c.Value = Cells(1, 7).Value And c.Offset(0, 3).Value = Cells(2, 7).Value) Then\nc.EntireRow.Hidden = False\nElse\nc.EntireRow.Hidden = True\nEnd If\nNext\nOn Error GoTo 0\nApplication.EnableEvents = True\nEnd Sub"
   },
   {
     "objectID": "education/index.html",
@@ -355,6 +341,27 @@
     "title": "Uddannelse",
     "section": "EdX",
     "text": "EdX\nJun 2020 STATSX0001: Statistical Learning \nApr. 2019 POPX3.1: Star Trek: Inspiring Culture and Technology \nOct. 2020 PH125.3x: Data Science: Probability \nAug. 2020 PH125.6x: Data Science: Wrangling \nSep. 2020 PH125.2x: Data Science: Visualization \nSep. 2020 PH125.1x: Data Science: R Basics \nNov. 2020 PH125.4x: Data Science: Inference and Modeling \nDec. 2020 PH125.5x: Data Science: Productivity Tools \nFeb. 2021 PH125.7x: Data Science: Linear Regression \nMay 2021 PH125.8x: Data Science: Machine Learning"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Om dette site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Christian Knudsen",
+    "section": "",
+    "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
   },
   {
     "objectID": "notes/20180322-merging-pdfs/index.html",
