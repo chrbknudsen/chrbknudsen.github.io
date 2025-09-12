@@ -13,15 +13,13 @@ image: "hidden_excel.png"
 
 So - you want to hide some rows in a worksheet, based on the value in a cell. Or more than one cell.
 
-We do that with VBA.
-
-Here's how to do that with VBA.
+We do that with VBA, here's how.
 
 
 * Get the range of rows, in this example from A7 to A100000.
 * Adjust (here, by adding 6) to get the actual last row.
 * For each value in that range - if the value in column A is equal to the value in cell G1 (`Cells(1,7)`), and the 
-value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entrie
+value three columns over (column D, c.Offset(0,3)) is equal to the value in cell G2 (Cells(2,7)), set the entire
 row to be hidden, else, set it to be shown.
 
 ```{r eval = FALSE}
