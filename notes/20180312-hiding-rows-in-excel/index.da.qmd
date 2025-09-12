@@ -1,0 +1,39 @@
+---
+title: "Skjul rækker - baseret på værdi af celle"
+subtitle: "I Excel"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - Excel
+  - VBA
+date: 2018-03-12
+toc: true
+image: "hidden_excel.png"
+---
+
+Du ønsker at skjule visse rækker i et regneark - baseret på værdien i en celle. Eller mere end en celle.
+
+Det kan vi gøre med VBA, sådan gør man:
+
+* Find `range` af rækkerne, i dette eksempel er det `A7` til `A100000` 
+* Juster (her gør vi det ved at tilføje 6 rækker), den reelle sidste række.
+* For hver værdi i det `range`: Hvis værdien i kolonne A er lig med værdien i celle G1 (`Cells(1,7)`), og værdien tre kolonner længere henne (kolonne D, c.Offset(0,3)), er lig med værdien i celle G2 (Cells(2,7)), sæt hele rækken til `hidden`, ellers, sæt den til `shown` 
+
+```{r eval = FALSE}
+Private Sub Worksheet_Change(ByVal Target As Range)
+Dim LastRow As Long, c As Range
+Application.EnableEvents = False
+LastRow = Application.WorksheetFunction.CountA(Range("A7:A100000")) + 6
+On Error Resume Next
+For Each c In Range("A7:A" & LastRow)
+If (c.Value = Cells(1, 7).Value And c.Offset(0, 3).Value = Cells(2, 7).Value) Then
+c.EntireRow.Hidden = False
+Else
+c.EntireRow.Hidden = True
+End If
+Next
+On Error GoTo 0
+Application.EnableEvents = True
+End Sub
+```
+
