@@ -8,7 +8,7 @@ categories:
   - kategori 2
 date: 2018-03-22
 toc: true
-image: ""
+image: "merging_pdfs.png"
 ---
 You may need to merge several pdf-files into one.
 
