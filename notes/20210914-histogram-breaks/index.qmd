@@ -1,14 +1,14 @@
 ---
-title: "indsæt title"
+title: "Breaks in histograms"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - R
+  - Visualisation
 date: 2021-09-14
 toc: true
-image: ""
+image: "histbreaks.png"
 ---
 We have a rather bright medical student frequenting our datalab. He is studying the health of patients trying to commit suicide using paracetamol.
 Spoiler - that is a really bad idea. If you absolutely have to kill yourself, find a method that will kill you faster than by destroying your liver. Better yet, dont, google “suicide prevention line” and call them instead.
