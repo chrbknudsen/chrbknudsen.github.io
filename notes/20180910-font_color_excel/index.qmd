@@ -4,11 +4,11 @@ subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - Excel
   - kategori 2
 date: 2018-09-10
 toc: true
-image: ""
+image: "excel_font_color.png"
 ---
 
 
