@@ -1,0 +1,43 @@
+---
+title: "Get the font color of a cell in Excel"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - Excel
+  - kategori 2
+date: 2018-09-10
+toc: true
+image: "excel_font_color.png"
+---
+
+
+People do weird and wonderful things in Excel.
+
+Other people then have to pull out the data from those spreadsheets.
+
+"Other people"  tend to spend a lot of time crying into their coffee.
+
+At the moment, I am trying to pull out data of a spreadsheet, where "something" can have a value of 1, 2 or 3. That is of course marked by an "x" in a cell. I need to convert that x to a number.
+
+That is rather simple. What is not so simple, is that there can be two x'es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.
+
+So - I need a way to get the color of an x. VBA can do that:
+
+Function GetColour(ByVal Target As Range) As Single
+Application.Volatile
+GetColour = Target.Font.Color
+End Function
+
+And if I need a logical test:
+
+Function IsBlack(ByVal Target As Range) As Boolean
+Application.Volatile
+If Target.Font.Color = 0 Then
+IsBlack = True
+Else
+IsBlack = False
+End If
+End Function
+
+
