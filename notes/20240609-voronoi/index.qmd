@@ -2,7 +2,7 @@
 title: "Blue Vorontex #47"
 subtitle: "Polar Voronoi Tesselation"
 author: "Christian Knudsen"
-visible: "true"
+          visible: "true"
 categories:
   - Generative aRt
   - R
