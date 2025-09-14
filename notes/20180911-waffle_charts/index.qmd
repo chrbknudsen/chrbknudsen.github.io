@@ -8,7 +8,7 @@ categories:
   - Visualisation
 date: 2018-09-11
 toc: true
-image: ""
+image: "waffles.png"
 ---
 A rather popular chart type. Not really my favorite, but I can see how it makes things easier to understand for people who are not used to read and understand charts. The reason for my less than favourable view on waffle charts are probably linked to its overuse in meaningless infographics.
 
