@@ -18,7 +18,7 @@ Remember that you also have to change "," to ";"
 
 
 
-```{r echo = FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(reactable)
 dict <- tribble(~Dansk, ~Engelsk,
@@ -388,5 +388,5 @@ dict <- tribble(~Dansk, ~Engelsk,
 "FJERN.OVERFLØDIGE.BLANKE",	"TRIM",
 "STORE.BOGSTAVER",	"UPPER",
 "VÆRDI",	"VALUE")
-reactable(dict)
+reactable(dict, searchable = TRUE, defaultPageSize = 20 )
 ```
