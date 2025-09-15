@@ -245,11 +245,18 @@
     "text": "Det skulle være utroligt enkelt. Nettet fortæller at en Raspberry Pi 3 (og 4) per automatik kan boote fra usb-devices. Og hvis ikke den kan, så skal man bare sætte et særligt sd-kort i, der piller ved en bit i et eller andet, og så virker det.\nDet gør det bare ikke, og at dømme efter de frustrerede opslag på nettet, er det ikke kun mig der har problemet.\nSå skal man bare have et SD-kort med filen bootcode.bin, og så kører det, får man at vide på nettet. Det gør det også. Hver tiende gang.\nDet man gør er at man placerer hele boot-partitionen på sd-kortet. Og så kører det 9 ud af 10 gange. Derefter skriver man boot_delay=2 (hvor de 2 dækker over to sekunder, det kan være det virker med 1 for dig), i config.txt. Og så virker det! Hver gang!"
   },
   {
-    "objectID": "notes/20200617-easter/index.html",
-    "href": "notes/20200617-easter/index.html",
-    "title": "Påske in Excel",
+    "objectID": "notes/20200903-ggbiplot/index.html",
+    "href": "notes/20200903-ggbiplot/index.html",
+    "title": "ggbiplot",
     "section": "",
-    "text": "Påske. Det er en forskydelig helligdag. Påskesøndag falder søndagen efter første fuldmåne efter forårsjævndøgn.\nHvordan finder vi så ud af hvornår den falder et givet år? Eller, hvordan beregner vi det i Excel. For en kollega er ved at lave et regneark til vores ferieplanlægning.\nDer er flere måder. Det sted jeg har fundet der giver en opskrift ligger her. En hjemmeside med andre gode Excel tricks\nEn af måderne, oversat til dansk Excel:\n\n=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6\n\nSkriv året du vil kende datoen for påskesøndag i celle A2. Og så får du datoen leveret - i Excels numeriske dato repræsentation."
+    "text": "Bare fordi. ggbiplot er en lækker pakke. Det kan bare være en lidt frustrerende oplevelse at få den installeret. Der er bøvl med forskellige versioner af R, og når 60 studerende på et kursus alle prøver at installere fra github samtidig, støder man næsen mod begrænsninger i githubs api. Så. Kopier nedenstående, kør det i R, og funktionen ggbiplot er tilgængelig.\n\nggbiplot &lt;- function (pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE, \n    obs.scale = 1 - scale, var.scale = scale, groups = NULL, \n    ellipse = FALSE, ellipse.prob = 0.68, labels = NULL, labels.size = 3, \n    alpha = 1, var.axes = TRUE, circle = FALSE, circle.prob = 0.69, \n    varname.size = 3, varname.adjust = 1.5, varname.abbrev = FALSE, \n    ...) \n{\n    library(ggplot2)\n    library(plyr)\n    library(scales)\n    library(grid)\n    stopifnot(length(choices) == 2)\n    if (inherits(pcobj, \"prcomp\")) {\n        nobs.factor &lt;- sqrt(nrow(pcobj$x) - 1)\n        d &lt;- pcobj$sdev\n        u &lt;- sweep(pcobj$x, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- pcobj$rotation\n    }\n    else if (inherits(pcobj, \"princomp\")) {\n        nobs.factor &lt;- sqrt(pcobj$n.obs)\n        d &lt;- pcobj$sdev\n        u &lt;- sweep(pcobj$scores, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- pcobj$loadings\n    }\n    else if (inherits(pcobj, \"PCA\")) {\n        nobs.factor &lt;- sqrt(nrow(pcobj$call$X))\n        d &lt;- unlist(sqrt(pcobj$eig)[1])\n        u &lt;- sweep(pcobj$ind$coord, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- sweep(pcobj$var$coord, 2, sqrt(pcobj$eig[1:ncol(pcobj$var$coord), \n            1]), FUN = \"/\")\n    }\n    else if (inherits(pcobj, \"lda\")) {\n        nobs.factor &lt;- sqrt(pcobj$N)\n        d &lt;- pcobj$svd\n        u &lt;- predict(pcobj)$x/nobs.factor\n        v &lt;- pcobj$scaling\n        d.total &lt;- sum(d^2)\n    }\n    else {\n        stop(\"Expected a object of class prcomp, princomp, PCA, or lda\")\n    }\n    choices &lt;- pmin(choices, ncol(u))\n    df.u &lt;- as.data.frame(sweep(u[, choices], 2, d[choices]^obs.scale, \n        FUN = \"*\"))\n    v &lt;- sweep(v, 2, d^var.scale, FUN = \"*\")\n    df.v &lt;- as.data.frame(v[, choices])\n    names(df.u) &lt;- c(\"xvar\", \"yvar\")\n    names(df.v) &lt;- names(df.u)\n    if (pc.biplot) {\n        df.u &lt;- df.u * nobs.factor\n    }\n    r &lt;- sqrt(qchisq(circle.prob, df = 2)) * prod(colMeans(df.u^2))^(1/4)\n    v.scale &lt;- rowSums(v^2)\n    df.v &lt;- r * df.v/sqrt(max(v.scale))\n    if (obs.scale == 0) {\n        u.axis.labs &lt;- paste(\"standardized PC\", choices, sep = \"\")\n    }\n    else {\n        u.axis.labs &lt;- paste(\"PC\", choices, sep = \"\")\n    }\n    u.axis.labs &lt;- paste(u.axis.labs, sprintf(\"(%0.1f%% explained var.)\", \n        100 * pcobj$sdev[choices]^2/sum(pcobj$sdev^2)))\n    if (!is.null(labels)) {\n        df.u$labels &lt;- labels\n    }\n    if (!is.null(groups)) {\n        df.u$groups &lt;- groups\n    }\n    if (varname.abbrev) {\n        df.v$varname &lt;- abbreviate(rownames(v))\n    }\n    else {\n        df.v$varname &lt;- rownames(v)\n    }\n    df.v$angle &lt;- with(df.v, (180/pi) * atan(yvar/xvar))\n    df.v$hjust = with(df.v, (1 - varname.adjust * sign(xvar))/2)\n    g &lt;- ggplot(data = df.u, aes(x = xvar, y = yvar)) + xlab(u.axis.labs[1]) + \n        ylab(u.axis.labs[2]) + coord_equal()\n    if (var.axes) {\n        if (circle) {\n            theta &lt;- c(seq(-pi, pi, length = 50), seq(pi, -pi, \n                length = 50))\n            circle &lt;- data.frame(xvar = r * cos(theta), yvar = r * \n                sin(theta))\n            g &lt;- g + geom_path(data = circle, color = muted(\"white\"), \n                size = 1/2, alpha = 1/3)\n        }\n        g &lt;- g + geom_segment(data = df.v, aes(x = 0, y = 0, \n            xend = xvar, yend = yvar), arrow = arrow(length = unit(1/2, \n            \"picas\")), color = muted(\"red\"))\n    }\n    if (!is.null(df.u$labels)) {\n        if (!is.null(df.u$groups)) {\n            g &lt;- g + geom_text(aes(label = labels, color = groups), \n                size = labels.size)\n        }\n        else {\n            g &lt;- g + geom_text(aes(label = labels), size = labels.size)\n        }\n    }\n    else {\n        if (!is.null(df.u$groups)) {\n            g &lt;- g + geom_point(aes(color = groups), alpha = alpha)\n        }\n        else {\n            g &lt;- g + geom_point(alpha = alpha)\n        }\n    }\n    if (!is.null(df.u$groups) && ellipse) {\n        theta &lt;- c(seq(-pi, pi, length = 50), seq(pi, -pi, length = 50))\n        circle &lt;- cbind(cos(theta), sin(theta))\n        ell &lt;- ddply(df.u, \"groups\", function(x) {\n            if (nrow(x) &lt;= 2) {\n                return(NULL)\n            }\n            sigma &lt;- var(cbind(x$xvar, x$yvar))\n            mu &lt;- c(mean(x$xvar), mean(x$yvar))\n            ed &lt;- sqrt(qchisq(ellipse.prob, df = 2))\n            data.frame(sweep(circle %*% chol(sigma) * ed, 2, \n                mu, FUN = \"+\"), groups = x$groups[1])\n        })\n        names(ell)[1:2] &lt;- c(\"xvar\", \"yvar\")\n        g &lt;- g + geom_path(data = ell, aes(color = groups, group = groups))\n    }\n    if (var.axes) {\n        g &lt;- g + geom_text(data = df.v, aes(label = varname, \n            x = xvar, y = yvar, angle = angle, hjust = hjust), \n            color = \"darkred\", size = varname.size)\n    }\n    return(g)\n}"
+  },
+  {
+    "objectID": "notes/20200406-wifi_ssid_python/index.html",
+    "href": "notes/20200406-wifi_ssid_python/index.html",
+    "title": "Get current wifi ssid in python",
+    "section": "",
+    "text": "Just a quick note. How do we get the name of the current ssid name of the wifi-connection a Linux-running computer (like a Raspberry Pi running Raspbian) is connected to:’\nimport subprocess ssid = subprocess.check_output(“iwgetid -r”, shell=True) print(ssid)"
   },
   {
     "objectID": "notes/20180911-waffle_charts/index.html",
@@ -285,6 +292,13 @@
     "title": "Waffle charts",
     "section": "Warning: Removed 1 rows containing missing values (geom_text).",
     "text": "Warning: Removed 1 rows containing missing values (geom_text).\nIf we install a font that supports it, we even get access to the large number of UTF-8 glyphs. Here is a favorite of mine:\nwaffle(vec/2, rows=4, colors=brewer.pal(4,“Set1”)) + geom_label(label=sprintf(“F427”), size = 8)\nWhich of course requires you to have a font on your computer that supports penguins.\nHere is one: http://users.teilar.gr/~g1951d/Symbola.zip"
+  },
+  {
+    "objectID": "notes/20180322-merging-pdfs/index.html",
+    "href": "notes/20180322-merging-pdfs/index.html",
+    "title": "Merging PDF-files",
+    "section": "",
+    "text": "You may need to merge several pdf-files into one.\nThere are several tools. Some of them you have to pay for.\nIf you are in a linux environment, try this:\ngs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=final.pdf filea.pdf fileb.pdf\ncontinue with filec.pdf etc.\nSome say it is slow.\nOthers say, yes it is slow, but it produces smaller final files, and are able to handle “difficult pdfs”.\nI say it is nice that it can be done from the command line."
   },
   {
     "objectID": "notes/20180312-hiding-rows-in-excel/index.html",
@@ -364,25 +378,186 @@
     "text": "Efter at være født og opvokset i den billige del af Nordsjælland, flyttede jeg til Nærum lige nord for København så snart jeg var blevet træt af at pendle til DTU. Det tog mig utroligt lang tid at færdiggøre min uddannelse dér, primært fordi jeg kom til at involvere mig ret kraftigt i den lokale studenterforening.\nEfter jeg blev civilingeniør var det egentlig planen at jeg skulle tage en ph.d. Men nogen lukkede for de miljøfonde der skulle have finansieret det. I stedet endte jeg på Danmarks Natur- og Lægevidenskabelige Bibliotek som fagreferent for kemi. Der er jeg blevet, og efter et større antal fusioner med andre biblioteker, er jeg nu beskæftiget på Det Kongelige Bibliotek, den del der hedder Københavns Universitetsbibliotek. Jeg har lavet lidt af hvert, inklusive at sidde i universitetsbibliotekarens stab og være afdelingsleder på det Farmaceutiske Fakultetsbibliotek. Lige nu bruger jeg det meste af min tid på at koordinere bibliotekets datalab.\nJeg bor i Rødovre, sammen med min mand Kristian, der (også) arbejder med IT.\nNår jeg ikke arbejder, leger jeg med digital elektronik og LEGO. Og så eksperimenterer jeg med molekylær gastronomi og forsøger, en gang om ugen, at ramme et stykke pap med en kaliber .22 Walther GSP."
   },
   {
-    "objectID": "notes/20180322-merging-pdfs/index.html",
-    "href": "notes/20180322-merging-pdfs/index.html",
-    "title": "Merging PDF-files",
+    "objectID": "notes/20180314-excel_dk_en_dict/index.html",
+    "href": "notes/20180314-excel_dk_en_dict/index.html",
+    "title": "Dansk-engelsk excel ordbog",
     "section": "",
-    "text": "You may need to merge several pdf-files into one.\nThere are several tools. Some of them you have to pay for.\nIf you are in a linux environment, try this:\ngs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=final.pdf filea.pdf fileb.pdf\ncontinue with filec.pdf etc.\nSome say it is slow.\nOthers say, yes it is slow, but it produces smaller final files, and are able to handle “difficult pdfs”.\nI say it is nice that it can be done from the command line."
+    "text": "Because you often find the solution to your excel problem on an english language site. But have to solve the problem in a danish version of Excel. Remember that you also have to change “,” to “;”\nTILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER ADD-IN AND AUTOMATION FUNCTIONS KALD CALL EUROKONVERTER EUROCONVERT HENTPIVOTDATA GETPIVOTDATA REGISTER.ID REGISTER.ID SQL.REQUEST SQL.REQUEST KUBEFUNKTIONER CUBE FUNCTIONS KUBE.KPI.MEDLEM CUBEKPIMEMBER KUBE.MEDLEM CUBEMEMBER KUBEMEDLEM.EGENSKAB CUBEMEMBERPROPERTY KUBEMEDLEM.RANG CUBERANKEDMEMBER KUBESÆT CUBESET KUBESÆT.TÆL CUBESETCOUNT KUBEVÆRDI CUBEVALUE DATABASEFUNKTIONER DATABASE FUNCTIONS DMIDDEL DAVERAGE DTÆL DCOUNT DTÆLV DCOUNTA DHENT DGET DMAKS DMAX DMIN DMIN DPRODUKT DPRODUCT DSTDAFV DSTDEV DSTDAFVP DSTDEVP DSUM DSUM DVARIANS DVAR DVARIANSP DVARP DATO- OG KLOKKESLÆTSFUNKTIONER DATE AND TIME FUNCTIONS DATO DATE DATOVÆRDI DATEVALUE DAG DAY DAGE360 DAYS360 EDATO EDATE SLUT.PÅ.MÅNED EOMONTH TIME HOUR MINUT MINUTE MÅNED MONTH ANTAL.ARBEJDSDAGE NETWORKDAYS NU NOW SEKUND SECOND KLOKKESLÆT TIME TIDSVÆRDI TIMEVALUE IDAG TODAY UGEDAG WEEKDAY UGE.NR WEEKNUM ARBEJDSDAG WORKDAY ÅR YEAR ÅR.BRØK YEARFRAC TEKNISKE FUNKTIONER ENGINEERING FUNCTIONS BESSELI BESSELI BESSELJ BESSELJ BESSELK BESSELK BESSELY BESSELY BIN.TIL.DEC BIN2DEC BIN.TIL.HEX BIN2HEX BIN.TIL.OKT BIN2OCT KOMPLEKS COMPLEX KONVERTER CONVERT DEC.TIL.BIN DEC2BIN DEC.TIL.HEX DEC2HEX DEC.TIL.OKT DEC2OCT DELTA DELTA FEJLFUNK ERF FEJLFUNK.KOMP ERFC GETRIN GESTEP HEX.TIL.BIN HEX2BIN HEX.TIL.DEC HEX2DEC HEX.TIL.OKT HEX2OCT IMAGABS IMABS IMAGINÆR IMAGINARY IMAGARGUMENT IMARGUMENT IMAGKONJUGERE IMCONJUGATE IMAGCOS IMCOS IMAGDIV IMDIV IMAGEKSP IMEXP IMAGLN IMLN IMAGLOG10 IMLOG10 IMAGLOG2 IMLOG2 IMAGPOTENS IMPOWER IMAGPRODUKT IMPRODUCT IMAGREELT IMREAL IMAGSIN IMSIN IMAGKVROD IMSQRT IMAGSUB IMSUB IMAGSUM IMSUM OKT.TIL.BIN OCT2BIN OKT.TIL.DEC OCT2DEC OKT.TIL.HEX OCT2HEX FINANSIELLE FUNKTIONER FINANCIAL FUNCTIONS PÅLØBRENTE ACCRINT PÅLØBRENTE.UDLØB ACCRINTM AMORDEGRC AMORDEGRC AMORLINC AMORLINC KUPONDAGE.SA COUPDAYBS KUPONDAGE.A COUPDAYS KUPONDAGE.ANK COUPDAYSNC KUPONDAG.NÆSTE COUPNCD KUPONBETALINGER COUPNUM KUPONDAG.FORRIGE COUPPCD AKKUM.RENTE CUMIPMT AKKUM.HOVEDSTOL CUMPRINC DB DB DSA DDB DISKONTO DISC KR.DECIMAL DOLLARDE KR.BRØK DOLLARFR VARIGHED DURATION EFFEKTIV.RENTE EFFECT FV FV FVTABEL FVSCHEDULE RENTEFOD INTRATE R.YDELSE IPMT IA IRR ISPMT ISPMT MVARIGHED MDURATION MIA MIRR NOMINEL NOMINAL NPER NPER NUTIDSVÆRDI NPV ULIGE.KURS.PÅLYDENDE ODDFPRICE ULIGE.FØRSTE.AFKAST ODDFYIELD ULIGE.SIDSTE.KURS ODDLPRICE ULIGE.SIDSTE.AFKAST ODDLYIELD YDELSE PMT H.YDELSE PPMT KURS PRICE KURS.DISKONTO PRICEDISC KURS.UDLØB PRICEMAT NV PV RENTE RATE MODTAGET.VED.UDLØB RECEIVED LA SLN ÅRSAFSKRIVNING SYD STATSOBLIGATION TBILLEQ STATSOBLIGATION.KURS TBILLPRICE STATSOBLIGATION.AFKAST TBILLYIELD VSA VDB INTERN.RENTE XIRR NETTO.NUTIDSVÆRDI XNPV AFKAST YIELD AFKAST.DISKONTO YIELDDISC AFKAST.UDLØBSDATO YIELDMAT INFORMATIONSFUNKTIONER INFORMATION FUNCTIONS CELLE CELL FEJLTYPE ERROR.TYPE INFO INFO ER.TOM ISBLANK ER.FJL ISERR ER.FEJL ISERROR ER.LIGE ISEVEN ER.LOGISK ISLOGICAL ER.IKKE.TILGÆNGELIG ISNA ER.IKKE.TEKST ISNONTEXT ER.TAL ISNUMBER ER.ULIGE ISODD ER.REFERENCE ISREF ER.TEKST ISTEXT TAL N IKKE.TILGÆNGELIG NA VÆRDITYPE TYPE LOGISKE FUNKTIONER LOGICAL FUNCTIONS OG AND FALSK FALSE HVIS IF HVIS.FEJL IFERROR IKKE NOT ELLER OR SAND TRUE OPSLAGS- OG REFERENCEFUNKTIONER LOOKUP AND REFERENCE FUNCTIONS ADRESSE ADDRESS OMRÅDER AREAS VÆLG CHOOSE KOLONNE COLUMN KOLONNER COLUMNS VOPSLAG HLOOKUP HYPERLINK HYPERLINK INDEKS INDEX INDIREKTE INDIRECT SLÅ.OP LOOKUP SAMMENLIGN MATCH FORSKYDNING OFFSET RÆKKE ROW RÆKKER ROWS RTD RTD TRANSPONER TRANSPOSE LOPSLAG VLOOKUP MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER MATH AND TRIGONOMETRY FUNCTIONS ABS ABS ARCCOS ACOS ARCCOSH ACOSH ARCSIN ASIN ARCSINH ASINH ARCTAN ATAN ARCTAN2 ATAN2 ARCTANH ATANH AFRUND.LOFT CEILING KOMBIN COMBIN COS COS COSH COSH GRADER DEGREES LIGE EVEN EKSP EXP FAKULTET FACT DOBBELT.FAKULTET FACTDOUBLE AFRUND.GULV FLOOR STØRSTE.FÆLLES.DIVISOR GCD HELTAL INT MINDSTE.FÆLLES.MULTIPLUM LCM LN LN LOG LOG LOG10 LOG10 MDETERM MDETERM MINVERT MINVERSE MPRODUKT MMULT REST MOD MAFRUND MROUND MULTINOMIAL MULTINOMIAL ULIGE ODD PI PI POTENS POWER PRODUKT PRODUCT KVOTIENT QUOTIENT RADIANER RADIANS SLUMP RAND SLUMP.MELLEM RANDBETWEEN ROMERTAL ROMAN AFRUND ROUND RUND.NED ROUNDDOWN RUND.OP ROUNDUP SERIESUM SERIESSUM FORTEGN SIGN SIN SIN SINH SINH KVROD SQRT KVRODPI SQRTPI SUBTOTAL SUBTOTAL SUM SUM SUM.HVIS SUMIF SUM.HVISER SUMIFS SUMPRODUKT SUMPRODUCT SUMKV SUMSQ SUMX2MY2 SUMX2MY2 SUMX2PY2 SUMX2PY2 SUMXMY2 SUMXMY2 TAN TAN TANH TANH AFKORT TRUNC STATISTISKE FUNKTIONER STATISTICAL FUNCTIONS MAD AVEDEV MIDDEL AVERAGE MIDDELV AVERAGEA MIDDEL.HVIS AVERAGEIF MIDDEL.HVISER AVERAGEIFS BETAFORDELING BETADIST BETAINV BETAINV BINOMIALFORDELING BINOMDIST CHIFORDELING CHIDIST CHIINV CHIINV CHITEST CHITEST KONFIDENSINTERVAL CONFIDENCE KORRELATION CORREL TÆL COUNT TÆLV COUNTA ANTAL.BLANKE COUNTBLANK TÆLHVIS COUNTIF TÆL.HVISER COUNTIF KOVARIANS COVAR KRITBINOM CRITBINOM SAK DEVSQ EKSPFORDELING EXPONDIST FFORDELING FDIST FINV FINV FISHER FISHER FISHERINV FISHERINV PROGNOSE FORECAST FREKVENS FREQUENCY FTEST FTEST GAMMAFORDELING GAMMADIST GAMMAINV GAMMAINV GAMMALN GAMMALN GEOMIDDELVÆRDI GEOMEAN FORØGELSE GROWTH HARMIDDELVÆRDI HARMEAN HYPGEOFORDELING HYPGEOMDIST SKÆRING INTERCEPT TOPSTEJL KURT STOR LARGE LINREGR LINEST LOGREGR LOGEST LOGINV LOGINV LOGNORMFORDELING LOGNORMDIST MAKS MAX MAKSV MAXA MEDIAN MEDIAN MIN MIN MINV MINA HYPPIGST MODE NEGBINOMFORDELING NEGBINOMDIST NORMFORDELING NORMDIST NORMINV NORMINV STANDARDNORMFORDELING NORMSDIST STANDARDNORMINV NORMSINV PEARSON PEARSON FRAKTIL PERCENTILE PROCENTPLADS PERCENTRANK PERMUT PERMUT POISSON POISSON SANDSYNLIGHED PROB KVARTIL QUARTILE PLADS RANK FORKLARINGSGRAD RSQ SKÆVHED SKEW HÆLDNING SLOPE MINDSTE SMALL STANDARDISER STANDARDIZE STDAFV STDEV STDAFVV STDEVA STDAFVP STDEVP STDAFVPV STDEVPA STFYX STEYX TFORDELING TDIST TINV TINV TENDENS TREND TRIMMIDDELVÆRDI TRIMMEAN TTEST TTEST VARIANS VAR VARIANSV VARA VARIANSP VARP VARIANSPV VARPA WEIBULL WEIBULL ZTEST ZTEST TEKSTFUNKTIONER TEXT FUNCTIONS ASC ASC BAHTTEKST BAHTTEXT TEGN CHAR RENS CLEAN KODE CODE SAMMENKÆDNING CONCATENATE KR DOLLAR EKSAKT EXACT FIND, FINDB FIND, FINDB FAST FIXED JIS JIS VENSTRE, VENSTREB LEFT, LEFTB LÆNGDE, LÆNGDEB LEN, LENB SMÅ.BOGSTAVER LOWER MIDT, MIDTB MID, MIDB FONETISK PHONETIC STORT.FORBOGSTAV PROPER ERSTAT, ERSTATB REPLACE, REPLACEB GENTAG REPT HØJRE, HØJREB RIGHT, RIGHTB SØG, SØGB SEARCH, SEARCHB UDSKIFT SUBSTITUTE T T TEKST TEXT FJERN.OVERFLØDIGE.BLANKE TRIM STORE.BOGSTAVER UPPER VÆRDI VALUE"
   },
   {
-    "objectID": "notes/20200406-wifi_ssid_python/index.html",
-    "href": "notes/20200406-wifi_ssid_python/index.html",
-    "title": "Get current wifi ssid in python",
+    "objectID": "notes/20180910-font_color_excel/index.html",
+    "href": "notes/20180910-font_color_excel/index.html",
+    "title": "Get the font color of a cell in Excel",
     "section": "",
-    "text": "Just a quick note. How do we get the name of the current ssid name of the wifi-connection a Linux-running computer (like a Raspberry Pi running Raspbian) is connected to:’\nimport subprocess ssid = subprocess.check_output(“iwgetid -r”, shell=True) print(ssid)"
+    "text": "People do weird and wonderful things in Excel.\nOther people then have to pull out the data from those spreadsheets.\n“Other people”  tend to spend a lot of time crying into their coffee.\nAt the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.\nThat is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.\nSo - I need a way to get the color of an x. VBA can do that:\nFunction GetColour(ByVal Target As Range) As Single Application.Volatile GetColour = Target.Font.Color End Function\nAnd if I need a logical test:\nFunction IsBlack(ByVal Target As Range) As Boolean Application.Volatile If Target.Font.Color = 0 Then IsBlack = True Else IsBlack = False End If End Function"
   },
   {
-    "objectID": "notes/20200903-ggbiplot/index.html",
-    "href": "notes/20200903-ggbiplot/index.html",
-    "title": "ggbiplot",
+    "objectID": "notes/20181003-open_street_map_florence/index.html",
+    "href": "notes/20181003-open_street_map_florence/index.html",
+    "title": "Openstreetmap data - for Florence",
     "section": "",
-    "text": "Bare fordi. ggbiplot er en lækker pakke. Det kan bare være en lidt frustrerende oplevelse at få den installeret. Der er bøvl med forskellige versioner af R, og når 60 studerende på et kursus alle prøver at installere fra github samtidig, støder man næsen mod begrænsninger i githubs api. Så. Kopier nedenstående, kør det i R, og funktionen ggbiplot er tilgængelig.\n\nggbiplot &lt;- function (pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE, \n    obs.scale = 1 - scale, var.scale = scale, groups = NULL, \n    ellipse = FALSE, ellipse.prob = 0.68, labels = NULL, labels.size = 3, \n    alpha = 1, var.axes = TRUE, circle = FALSE, circle.prob = 0.69, \n    varname.size = 3, varname.adjust = 1.5, varname.abbrev = FALSE, \n    ...) \n{\n    library(ggplot2)\n    library(plyr)\n    library(scales)\n    library(grid)\n    stopifnot(length(choices) == 2)\n    if (inherits(pcobj, \"prcomp\")) {\n        nobs.factor &lt;- sqrt(nrow(pcobj$x) - 1)\n        d &lt;- pcobj$sdev\n        u &lt;- sweep(pcobj$x, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- pcobj$rotation\n    }\n    else if (inherits(pcobj, \"princomp\")) {\n        nobs.factor &lt;- sqrt(pcobj$n.obs)\n        d &lt;- pcobj$sdev\n        u &lt;- sweep(pcobj$scores, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- pcobj$loadings\n    }\n    else if (inherits(pcobj, \"PCA\")) {\n        nobs.factor &lt;- sqrt(nrow(pcobj$call$X))\n        d &lt;- unlist(sqrt(pcobj$eig)[1])\n        u &lt;- sweep(pcobj$ind$coord, 2, 1/(d * nobs.factor), FUN = \"*\")\n        v &lt;- sweep(pcobj$var$coord, 2, sqrt(pcobj$eig[1:ncol(pcobj$var$coord), \n            1]), FUN = \"/\")\n    }\n    else if (inherits(pcobj, \"lda\")) {\n        nobs.factor &lt;- sqrt(pcobj$N)\n        d &lt;- pcobj$svd\n        u &lt;- predict(pcobj)$x/nobs.factor\n        v &lt;- pcobj$scaling\n        d.total &lt;- sum(d^2)\n    }\n    else {\n        stop(\"Expected a object of class prcomp, princomp, PCA, or lda\")\n    }\n    choices &lt;- pmin(choices, ncol(u))\n    df.u &lt;- as.data.frame(sweep(u[, choices], 2, d[choices]^obs.scale, \n        FUN = \"*\"))\n    v &lt;- sweep(v, 2, d^var.scale, FUN = \"*\")\n    df.v &lt;- as.data.frame(v[, choices])\n    names(df.u) &lt;- c(\"xvar\", \"yvar\")\n    names(df.v) &lt;- names(df.u)\n    if (pc.biplot) {\n        df.u &lt;- df.u * nobs.factor\n    }\n    r &lt;- sqrt(qchisq(circle.prob, df = 2)) * prod(colMeans(df.u^2))^(1/4)\n    v.scale &lt;- rowSums(v^2)\n    df.v &lt;- r * df.v/sqrt(max(v.scale))\n    if (obs.scale == 0) {\n        u.axis.labs &lt;- paste(\"standardized PC\", choices, sep = \"\")\n    }\n    else {\n        u.axis.labs &lt;- paste(\"PC\", choices, sep = \"\")\n    }\n    u.axis.labs &lt;- paste(u.axis.labs, sprintf(\"(%0.1f%% explained var.)\", \n        100 * pcobj$sdev[choices]^2/sum(pcobj$sdev^2)))\n    if (!is.null(labels)) {\n        df.u$labels &lt;- labels\n    }\n    if (!is.null(groups)) {\n        df.u$groups &lt;- groups\n    }\n    if (varname.abbrev) {\n        df.v$varname &lt;- abbreviate(rownames(v))\n    }\n    else {\n        df.v$varname &lt;- rownames(v)\n    }\n    df.v$angle &lt;- with(df.v, (180/pi) * atan(yvar/xvar))\n    df.v$hjust = with(df.v, (1 - varname.adjust * sign(xvar))/2)\n    g &lt;- ggplot(data = df.u, aes(x = xvar, y = yvar)) + xlab(u.axis.labs[1]) + \n        ylab(u.axis.labs[2]) + coord_equal()\n    if (var.axes) {\n        if (circle) {\n            theta &lt;- c(seq(-pi, pi, length = 50), seq(pi, -pi, \n                length = 50))\n            circle &lt;- data.frame(xvar = r * cos(theta), yvar = r * \n                sin(theta))\n            g &lt;- g + geom_path(data = circle, color = muted(\"white\"), \n                size = 1/2, alpha = 1/3)\n        }\n        g &lt;- g + geom_segment(data = df.v, aes(x = 0, y = 0, \n            xend = xvar, yend = yvar), arrow = arrow(length = unit(1/2, \n            \"picas\")), color = muted(\"red\"))\n    }\n    if (!is.null(df.u$labels)) {\n        if (!is.null(df.u$groups)) {\n            g &lt;- g + geom_text(aes(label = labels, color = groups), \n                size = labels.size)\n        }\n        else {\n            g &lt;- g + geom_text(aes(label = labels), size = labels.size)\n        }\n    }\n    else {\n        if (!is.null(df.u$groups)) {\n            g &lt;- g + geom_point(aes(color = groups), alpha = alpha)\n        }\n        else {\n            g &lt;- g + geom_point(alpha = alpha)\n        }\n    }\n    if (!is.null(df.u$groups) && ellipse) {\n        theta &lt;- c(seq(-pi, pi, length = 50), seq(pi, -pi, length = 50))\n        circle &lt;- cbind(cos(theta), sin(theta))\n        ell &lt;- ddply(df.u, \"groups\", function(x) {\n            if (nrow(x) &lt;= 2) {\n                return(NULL)\n            }\n            sigma &lt;- var(cbind(x$xvar, x$yvar))\n            mu &lt;- c(mean(x$xvar), mean(x$yvar))\n            ed &lt;- sqrt(qchisq(ellipse.prob, df = 2))\n            data.frame(sweep(circle %*% chol(sigma) * ed, 2, \n                mu, FUN = \"+\"), groups = x$groups[1])\n        })\n        names(ell)[1:2] &lt;- c(\"xvar\", \"yvar\")\n        g &lt;- g + geom_path(data = ell, aes(color = groups, group = groups))\n    }\n    if (var.axes) {\n        g &lt;- g + geom_text(data = df.v, aes(label = varname, \n            x = xvar, y = yvar, angle = angle, hjust = hjust), \n            color = \"darkred\", size = varname.size)\n    }\n    return(g)\n}"
+    "text": "Not that advanced, but I wanted to play around a bit with plotting the raw data from Openstreetmap.\nWe’re going to Florence this fall. It’s been five years since we last visited the fair city, that has played such an important role in western history.\nOpenstreetmaps is, as the name implies, open.\nI’m going to need some libraries\n#library(OpenStreetMap) library(osmar) library(ggplot2) library(broom) library(geosphere) library(dplyr)\nosmar provides functions to interact with Openstreetmap. ggplot2 is used for the plots, broom for making some objects tidy and dplyr for manipulating data.\nGetting the raw data, requires me to define a boundary box, encompassing the part of Florence I would like to work with. Looking at https://www.openstreetmap.org/export#map=13/43.7715/11.2717, I choose these coordinates:\ntop &lt;- 43.7770 bottom &lt;- 43.7642 left &lt;- 11.2443 right &lt;- 11.2661\nAfter that, I can define the bounding box, tell the osmar functions at what URL we can find the relevant API (this is just the default). And then I can retrieve the data via get_osm(). I immediately save it to disc. This takes some time to download, and there is no reason to do that more than once.\nbox &lt;- corner_bbox(left, bottom, right, top) src &lt;- osmsource_api(url = “https://api.openstreetmap.org/api/0.6/”) florence &lt;- get_osm(box, source=src) saveRDS(florence, “florence.rda”)\nLets begin by making a quick plot:\nplot(florence, xlim=c(left,right),ylim=c(bottom,top) )\nNote that what we get a plot of, is, among other things, of all lines that are partly in the box. If a line extends beyond the box, we get it as well.\nLooking at the data:\nsummary(florence$ways)"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame",
+    "href": "notes/20181003-open_street_map_florence/index.html#osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame",
+    "title": "Openstreetmap data - for Florence",
+    "section": "osmar\\(ways object\n## 6707 ways, 9689 tags, 59052 refs\n##\n## ..\\)attrs data.frame:",
+    "text": "osmar\\(ways object\n## 6707 ways, 9689 tags, 59052 refs\n##\n## ..\\)attrs data.frame:"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#id-visible-timestamp-version-changeset-user-uid",
+    "href": "notes/20181003-open_street_map_florence/index.html#id-visible-timestamp-version-changeset-user-uid",
+    "title": "Openstreetmap data - for Florence",
+    "section": "id, visible, timestamp, version, changeset, user, uid",
+    "text": "id, visible, timestamp, version, changeset, user, uid"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#tags-data.frame-id-k-v-..refs-data.frame",
+    "href": "notes/20181003-open_street_map_florence/index.html#tags-data.frame-id-k-v-..refs-data.frame",
+    "title": "Openstreetmap data - for Florence",
+    "section": "..\\(tags data.frame:\n##     id, k, v\n## ..\\)refs data.frame:",
+    "text": "..\\(tags data.frame:\n##     id, k, v\n## ..\\)refs data.frame:"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#id-ref",
+    "href": "notes/20181003-open_street_map_florence/index.html#id-ref",
+    "title": "Openstreetmap data - for Florence",
+    "section": "id, ref",
+    "text": "id, ref"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#key-value-contingency-table",
+    "href": "notes/20181003-open_street_map_florence/index.html#key-value-contingency-table",
+    "title": "Openstreetmap data - for Florence",
+    "section": "Key-Value contingency table:",
+    "text": "Key-Value contingency table:"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#key-value-freq",
+    "href": "notes/20181003-open_street_map_florence/index.html#key-value-freq",
+    "title": "Openstreetmap data - for Florence",
+    "section": "Key Value Freq",
+    "text": "Key Value Freq"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#building-yes-4157",
+    "href": "notes/20181003-open_street_map_florence/index.html#building-yes-4157",
+    "title": "Openstreetmap data - for Florence",
+    "section": "1 building yes 4157",
+    "text": "1 building yes 4157"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#oneway-yes-456",
+    "href": "notes/20181003-open_street_map_florence/index.html#oneway-yes-456",
+    "title": "Openstreetmap data - for Florence",
+    "section": "2 oneway yes 456",
+    "text": "2 oneway yes 456"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#highway-pedestrian-335",
+    "href": "notes/20181003-open_street_map_florence/index.html#highway-pedestrian-335",
+    "title": "Openstreetmap data - for Florence",
+    "section": "3 highway pedestrian 335",
+    "text": "3 highway pedestrian 335"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#highway-residential-317",
+    "href": "notes/20181003-open_street_map_florence/index.html#highway-residential-317",
+    "title": "Openstreetmap data - for Florence",
+    "section": "4 highway residential 317",
+    "text": "4 highway residential 317"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#bicycle-yes-316",
+    "href": "notes/20181003-open_street_map_florence/index.html#bicycle-yes-316",
+    "title": "Openstreetmap data - for Florence",
+    "section": "5 bicycle yes 316",
+    "text": "5 bicycle yes 316"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#psv-yes-122",
+    "href": "notes/20181003-open_street_map_florence/index.html#psv-yes-122",
+    "title": "Openstreetmap data - for Florence",
+    "section": "6 psv yes 122",
+    "text": "6 psv yes 122"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#highway-unclassified-108",
+    "href": "notes/20181003-open_street_map_florence/index.html#highway-unclassified-108",
+    "title": "Openstreetmap data - for Florence",
+    "section": "7 highway unclassified 108",
+    "text": "7 highway unclassified 108"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#highway-footway-101",
+    "href": "notes/20181003-open_street_map_florence/index.html#highway-footway-101",
+    "title": "Openstreetmap data - for Florence",
+    "section": "8 highway footway 101",
+    "text": "8 highway footway 101"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#barrier-wall-98",
+    "href": "notes/20181003-open_street_map_florence/index.html#barrier-wall-98",
+    "title": "Openstreetmap data - for Florence",
+    "section": "9 barrier wall 98",
+    "text": "9 barrier wall 98"
+  },
+  {
+    "objectID": "notes/20181003-open_street_map_florence/index.html#surface-paving_stones-87",
+    "href": "notes/20181003-open_street_map_florence/index.html#surface-paving_stones-87",
+    "title": "Openstreetmap data - for Florence",
+    "section": "10 surface paving_stones 87",
+    "text": "10 surface paving_stones 87\nI would like to plot the roads and buildings. For some reason there are a lot of highways, of a kind I would probably not call highways.\nAnyway, lets make a list of tags. tags() finds the elements that have a key in the tag_list, way finds the lines that are represented by these elements, and find, finds the ID of the objects in “florence” matching this. find_down() finds all the elements related to these id’s. And finally we take the subset of the large florence data-set, which have id’s matching the id’s we have in from before.\ntag_list &lt;- c(“highway”, “bicycle”, “oneway”, “building”) dat &lt;- find(florence, way(tags(k %in% tag_list))) dat &lt;- find_down(florence, way(dat)) dat &lt;- subset(florence, ids = dat)\nNow, in a couple of lines, I’m gonna tidy the data. That removes the information of the type of line. As I would like to be able to color highways differently from buildings, I need to keep the information. Saving the key-part of the tags, and the id:\ntypes &lt;- data.frame(dat\\(ways\\)tags\\(k, dat\\)ways\\(tags\\)id) names(types) &lt;- c(“type”, “id”)\nThis gives me all the key-parts of all the tags. And I’m only interested in a subset of them:\ntypes &lt;- types %&gt;% filter(type %in% tag_list)\ntypes\\(id &lt;- as.character(types\\)id)\nNext as_sp() converts the osmar object to a spatial object (just taking the lines):\ndat &lt;- as_sp(dat, “lines”)\ntidy (from the library broom), converts it to a tidy tibble\ndat &lt;- tidy(dat)\nThat tibble is missing the types - those are added.\nnew_df &lt;- left_join(dat, types, by=“id”)\nAnd now we can plot:\nnew_df %&gt;% ggplot(aes(x=long, y=lat, group=group)) + geom_path(aes(color=type)) + scale_color_brewer() + xlim(left,right) + ylim(bottom,top) + theme_void() + theme(legend.position=“none”)\nNice.\nWhats next? Someting like what is on this page: https://github.com/ropensci/osmplotr"
+  },
+  {
+    "objectID": "notes/20200617-easter/index.html",
+    "href": "notes/20200617-easter/index.html",
+    "title": "Påske in Excel",
+    "section": "",
+    "text": "Påske. Det er en forskydelig helligdag. Påskesøndag falder søndagen efter første fuldmåne efter forårsjævndøgn.\nHvordan finder vi så ud af hvornår den falder et givet år? Eller, hvordan beregner vi det i Excel. For en kollega er ved at lave et regneark til vores ferieplanlægning.\nDer er flere måder. Det sted jeg har fundet der giver en opskrift ligger her. En hjemmeside med andre gode Excel tricks\nEn af måderne, oversat til dansk Excel:\n\n=AFRUND(DATO(A2;4;1)/7+REST(19*REST(A2;19)-7;30)*14%;0)*7-6\n\nSkriv året du vil kende datoen for påskesøndag i celle A2. Og så får du datoen leveret - i Excels numeriske dato repræsentation."
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html",
+    "href": "notes/20210914-histogram-breaks/index.html",
+    "title": "Breaks i histogrammer",
+    "section": "",
+    "text": "We have a rather bright medical student frequenting our datalab. He is studying the health of patients trying to commit suicide using paracetamol. Spoiler - that is a really bad idea. If you absolutely have to kill yourself, find a method that will kill you faster than by destroying your liver. Better yet, dont, google “suicide prevention line” and call them instead.\nAnyway. He had to make a histogram. And he had to adjust the breaks. As a first step: Where are the breaks actually in your histogram? Second: How do you adjust them?\nLets make a histogram of the islands of the world. R comes with a dataset containing the areas, in thousands of square miles, of the landmasses of Earth, that has an area exceeding 10.000 square miles. The build-in function to make a histogram makes this extremely easy:\nhist(islands)\nIt is a bit misleading. All the continents are considered islands. Granted, there is water all around them. But I would not call Asia an island.\nAnyway. There are breaks at 2000, 4000, 6000 etc. How does hist() choose those? We get a hint in the help-file, that tells us this:\nhist(x, breaks = “Sturges”, freq = NULL, probability = !freq, include.lowest = TRUE, right = TRUE, density = NULL, angle = 45, col = NULL, border = NULL, main = paste(“Histogram of” , xname), xlim = range(breaks), ylim = NULL, xlab = xname, ylab, axes = TRUE, plot = TRUE, labels = FALSE, nclass = NULL, warn.unused = TRUE, …)\nWe can set breaks manually, but hist uses something called “Sturges” to calculate it as default.\nWe are also told that:\nbreaks one of: a vector giving the breakpoints between histogram cells, a function to compute the vector of breakpoints, a single number giving the number of cells for the histogram, a character string naming an algorithm to compute the number of cells (see ‘Details’), a function to compute the number of cells.\nSturges appears to be a function calculating the breaks.\nGoogling a bit, we find out that the flow is actually: use nclass.Sturges() to calculate the number of cells that should be in the histogram. Then use the number from nclass.Sturges(), and the data, to calculate the actual breaks. That part uses the function pretty()\n(n_breaks &lt;- nclass.Sturges(islands))"
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html#section",
+    "href": "notes/20210914-histogram-breaks/index.html#section",
+    "title": "Breaks i histogrammer",
+    "section": "[1] 7",
+    "text": "[1] 7\n(actual_breaks &lt;- pretty(islands, n_breaks))"
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html#section-1",
+    "href": "notes/20210914-histogram-breaks/index.html#section-1",
+    "title": "Breaks i histogrammer",
+    "section": "[1] 0 2000 4000 6000 8000 10000 12000 14000 16000 18000",
+    "text": "[1] 0 2000 4000 6000 8000 10000 12000 14000 16000 18000\nThere you go, 7 breaks, and the 8 values we need to pass to hist() to get the breaks. Pretty is af neat function, that calculate a sequence of n+1 (here n is 7), equally spaced, “round” values covering the data we input to it. Round in this case means that they are powers of 10.\nWe can now plot again:\nhist(islands, actual_breaks)\nAnd we get the same plot as before.\nAdjust actual_breaks to fit what you want. In this case we wanted all values below the limit of detection for something to be grouped in one cell of the histogram:\nactual_breaks[2] &lt;- 130 actual_breaks"
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html#section-2",
+    "href": "notes/20210914-histogram-breaks/index.html#section-2",
+    "title": "Breaks i histogrammer",
+    "section": "[1] 0 130 4000 6000 8000 10000 12000 14000 16000 18000",
+    "text": "[1] 0 130 4000 6000 8000 10000 12000 14000 16000 18000\nAnd the new plot:\nhist(islands, actual_breaks)\nHorrible plot. But setting the first break to end at 130 is more meaningfull looking at bloodchemistry, than sizes of landmasses on Earth.\nnclass.Sturges() is actually pretty simple: ceiling(log2(length(x)) + 1). There are two other built-in functions:\nnclass.FD(islands)"
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html#section-3",
+    "href": "notes/20210914-histogram-breaks/index.html#section-3",
+    "title": "Breaks i histogrammer",
+    "section": "[1] 190",
+    "text": "[1] 190\nnclass.scott(islands)"
+  },
+  {
+    "objectID": "notes/20210914-histogram-breaks/index.html#section-4",
+    "href": "notes/20210914-histogram-breaks/index.html#section-4",
+    "title": "Breaks i histogrammer",
+    "section": "[1] 6",
+    "text": "[1] 6\nUse one that makes sense given your data."
   },
   {
     "objectID": "notes/20240414-floral/index.html",

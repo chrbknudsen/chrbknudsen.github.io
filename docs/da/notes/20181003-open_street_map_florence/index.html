@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
 <head>
-<link rel="alternate" hreflang="en" href="/notes/20180910-font_color_excel/index.html" />
-<link rel="alternate" hreflang="da" href="/da/notes/20180910-font_color_excel/index.da.html" />
+<link rel="alternate" hreflang="en" href="/notes/20181003-open_street_map_florence/index.html" />
+<link rel="alternate" hreflang="da" href="/da/notes/20181003-open_street_map_florence/index.da.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Christian Knudsen">
-<meta name="dcterms.date" content="2018-09-10">
-<title>Get the font color of a cell in Excel – Christian Knudsen</title>
+<title>Openstreetmap data - for Florence – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,26 +41,51 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Ingen resultater",
+    "search-matching-documents-text": "Matchende dokumenter",
+    "search-copy-link-title": "Kopier link for at søge",
+    "search-hide-matches-text": "Skjul yderligere resultater",
+    "search-more-match-text": "andet resultat i dette dokument",
+    "search-more-matches-text": "andre resultater i dette dokument",
+    "search-clear-button-title": "Ryd",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Fortryd",
+    "search-submit-button-title": "Indsend",
+    "search-label": "Søg"
   }
-}</script><link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Openstreetmap data - for Florence – Christian Knudsen">
 <meta property="og:description" content="indsæt subtitle">
-<meta property="og:image" content="excel_font_color.png">
+<meta property="og:image" content="firenze.png">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+<meta name="twitter:title" content="Openstreetmap data - for Florence – Christian Knudsen">
 <meta name="twitter:description" content="indsæt subtitle">
-<meta name="twitter:image" content="excel_font_color.png">
+<meta name="twitter:image" content="firenze.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed quarto-light">
@@ -73,14 +97,14 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Søg"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skift navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/20180910-font_color_excel/index.html" id="language-link-da">Dansk</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Dansk</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/notes/20181003-open_street_map_florence/index.html" id="language-link-en">English</a></li></ul>
 </div></li>
 <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
@@ -129,15 +153,40 @@ ul.task-list li input[type="checkbox"] {
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">På denne side</h2>
+   
+  <ul>
+<li><a href="#osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame" id="toc-osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame" class="nav-link active" data-scroll-target="#osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame">osmar<span class="math inline">\(ways object
+  ## 6707 ways, 9689 tags, 59052 refs
+  ##
+  ## ..\)</span>attrs data.frame:</a></li>
+  <li><a href="#id-visible-timestamp-version-changeset-user-uid" id="toc-id-visible-timestamp-version-changeset-user-uid" class="nav-link" data-scroll-target="#id-visible-timestamp-version-changeset-user-uid">id, visible, timestamp, version, changeset, user, uid</a></li>
+  <li><a href="#tags-data.frame-id-k-v-..refs-data.frame" id="toc-tags-data.frame-id-k-v-..refs-data.frame" class="nav-link" data-scroll-target="#tags-data.frame-id-k-v-..refs-data.frame">..<span class="math inline">\(tags data.frame:
+  ##     id, k, v
+  ## ..\)</span>refs data.frame:</a></li>
+  <li><a href="#id-ref" id="toc-id-ref" class="nav-link" data-scroll-target="#id-ref">id, ref</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#key-value-contingency-table" id="toc-key-value-contingency-table" class="nav-link" data-scroll-target="#key-value-contingency-table">Key-Value contingency table:</a></li>
+  <li><a href="#key-value-freq" id="toc-key-value-freq" class="nav-link" data-scroll-target="#key-value-freq">Key Value Freq</a></li>
+  <li><a href="#building-yes-4157" id="toc-building-yes-4157" class="nav-link" data-scroll-target="#building-yes-4157">1 building yes 4157</a></li>
+  <li><a href="#oneway-yes-456" id="toc-oneway-yes-456" class="nav-link" data-scroll-target="#oneway-yes-456">2 oneway yes 456</a></li>
+  <li><a href="#highway-pedestrian-335" id="toc-highway-pedestrian-335" class="nav-link" data-scroll-target="#highway-pedestrian-335">3 highway pedestrian 335</a></li>
+  <li><a href="#highway-residential-317" id="toc-highway-residential-317" class="nav-link" data-scroll-target="#highway-residential-317">4 highway residential 317</a></li>
+  <li><a href="#bicycle-yes-316" id="toc-bicycle-yes-316" class="nav-link" data-scroll-target="#bicycle-yes-316">5 bicycle yes 316</a></li>
+  <li><a href="#psv-yes-122" id="toc-psv-yes-122" class="nav-link" data-scroll-target="#psv-yes-122">6 psv yes 122</a></li>
+  <li><a href="#highway-unclassified-108" id="toc-highway-unclassified-108" class="nav-link" data-scroll-target="#highway-unclassified-108">7 highway unclassified 108</a></li>
+  <li><a href="#highway-footway-101" id="toc-highway-footway-101" class="nav-link" data-scroll-target="#highway-footway-101">8 highway footway 101</a></li>
+  <li><a href="#barrier-wall-98" id="toc-barrier-wall-98" class="nav-link" data-scroll-target="#barrier-wall-98">9 barrier wall 98</a></li>
+  <li><a href="#surface-paving_stones-87" id="toc-surface-paving_stones-87" class="nav-link" data-scroll-target="#surface-paving_stones-87">10 surface paving_stones 87</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Get the font color of a cell in Excel</h1>
+<h1 class="title">Openstreetmap data - for Florence</h1>
 <p class="subtitle lead">indsæt subtitle</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Excel</div>
+    <div class="quarto-category">kategori 1</div>
     <div class="quarto-category">kategori 2</div>
   </div>
   </div>
@@ -147,16 +196,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Forfatter</div>
     <div class="quarto-title-meta-contents">
              <p>Christian Knudsen </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Udgivet</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2018</p>
+      <p class="date">3. oktober 2018</p>
     </div>
   </div>
   
@@ -165,19 +214,64 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>People do weird and wonderful things in Excel.</p>
-<p>Other people then have to pull out the data from those spreadsheets.</p>
-<p>“Other people”  tend to spend a lot of time crying into their coffee.</p>
-<p>At the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.</p>
-<p>That is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.</p>
-<p>So - I need a way to get the color of an x. VBA can do that:</p>
-<p>Function GetColour(ByVal Target As Range) As Single Application.Volatile GetColour = Target.Font.Color End Function</p>
-<p>And if I need a logical test:</p>
-<p>Function IsBlack(ByVal Target As Range) As Boolean Application.Volatile If Target.Font.Color = 0 Then IsBlack = True Else IsBlack = False End If End Function</p>
+</header><p>Not that advanced, but I wanted to play around a bit with plotting the raw data from Openstreetmap.</p>
+<p>We’re going to Florence this fall. It’s been five years since we last visited the fair city, that has played such an important role in western history.</p>
+<p>Openstreetmaps is, as the name implies, open.</p>
+<p>I’m going to need some libraries</p>
+<p>#library(OpenStreetMap) library(osmar) library(ggplot2) library(broom) library(geosphere) library(dplyr)</p>
+<p>osmar provides functions to interact with Openstreetmap. ggplot2 is used for the plots, broom for making some objects tidy and dplyr for manipulating data.</p>
+<p>Getting the raw data, requires me to define a boundary box, encompassing the part of Florence I would like to work with. Looking at https://www.openstreetmap.org/export#map=13/43.7715/11.2717, I choose these coordinates:</p>
+<p>top &lt;- 43.7770 bottom &lt;- 43.7642 left &lt;- 11.2443 right &lt;- 11.2661</p>
+<p>After that, I can define the bounding box, tell the osmar functions at what URL we can find the relevant API (this is just the default). And then I can retrieve the data via get_osm(). I immediately save it to disc. This takes some time to download, and there is no reason to do that more than once.</p>
+<p>box &lt;- corner_bbox(left, bottom, right, top) src &lt;- osmsource_api(url = “https://api.openstreetmap.org/api/0.6/”) florence &lt;- get_osm(box, source=src) saveRDS(florence, “florence.rda”)</p>
+<p>Lets begin by making a quick plot:</p>
+<p>plot(florence, xlim=c(left,right),ylim=c(bottom,top) )</p>
+<p>Note that what we get a plot of, is, among other things, of all lines that are partly in the box. If a line extends beyond the box, we get it as well.</p>
+<p>Looking at the data:</p>
+<p>summary(florence$ways)</p>
+<section id="osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame" class="level2"><h2 class="anchored" data-anchor-id="osmarways-object-6707-ways-9689-tags-59052-refs-..attrs-data.frame">osmar<span class="math inline">\(ways object
+## 6707 ways, 9689 tags, 59052 refs
+##
+## ..\)</span>attrs data.frame:</h2>
+</section><section id="id-visible-timestamp-version-changeset-user-uid" class="level2"><h2 class="anchored" data-anchor-id="id-visible-timestamp-version-changeset-user-uid">id, visible, timestamp, version, changeset, user, uid</h2>
+</section><section id="tags-data.frame-id-k-v-..refs-data.frame" class="level2"><h2 class="anchored" data-anchor-id="tags-data.frame-id-k-v-..refs-data.frame">..<span class="math inline">\(tags data.frame:
+##     id, k, v
+## ..\)</span>refs data.frame:</h2>
+</section><section id="id-ref" class="level2"><h2 class="anchored" data-anchor-id="id-ref">id, ref</h2>
+</section><section id="section" class="level2"><h2 class="anchored" data-anchor-id="section"></h2>
+</section><section id="key-value-contingency-table" class="level2"><h2 class="anchored" data-anchor-id="key-value-contingency-table">Key-Value contingency table:</h2>
+</section><section id="key-value-freq" class="level2"><h2 class="anchored" data-anchor-id="key-value-freq">Key Value Freq</h2>
+</section><section id="building-yes-4157" class="level2"><h2 class="anchored" data-anchor-id="building-yes-4157">1 building yes 4157</h2>
+</section><section id="oneway-yes-456" class="level2"><h2 class="anchored" data-anchor-id="oneway-yes-456">2 oneway yes 456</h2>
+</section><section id="highway-pedestrian-335" class="level2"><h2 class="anchored" data-anchor-id="highway-pedestrian-335">3 highway pedestrian 335</h2>
+</section><section id="highway-residential-317" class="level2"><h2 class="anchored" data-anchor-id="highway-residential-317">4 highway residential 317</h2>
+</section><section id="bicycle-yes-316" class="level2"><h2 class="anchored" data-anchor-id="bicycle-yes-316">5 bicycle yes 316</h2>
+</section><section id="psv-yes-122" class="level2"><h2 class="anchored" data-anchor-id="psv-yes-122">6 psv yes 122</h2>
+</section><section id="highway-unclassified-108" class="level2"><h2 class="anchored" data-anchor-id="highway-unclassified-108">7 highway unclassified 108</h2>
+</section><section id="highway-footway-101" class="level2"><h2 class="anchored" data-anchor-id="highway-footway-101">8 highway footway 101</h2>
+</section><section id="barrier-wall-98" class="level2"><h2 class="anchored" data-anchor-id="barrier-wall-98">9 barrier wall 98</h2>
+</section><section id="surface-paving_stones-87" class="level2"><h2 class="anchored" data-anchor-id="surface-paving_stones-87">10 surface paving_stones 87</h2>
+<p>I would like to plot the roads and buildings. For some reason there are a lot of highways, of a kind I would probably not call highways.</p>
+<p>Anyway, lets make a list of tags. tags() finds the elements that have a key in the tag_list, way finds the lines that are represented by these elements, and find, finds the ID of the objects in “florence” matching this. find_down() finds all the elements related to these id’s. And finally we take the subset of the large florence data-set, which have id’s matching the id’s we have in from before.</p>
+<p>tag_list &lt;- c(“highway”, “bicycle”, “oneway”, “building”) dat &lt;- find(florence, way(tags(k %in% tag_list))) dat &lt;- find_down(florence, way(dat)) dat &lt;- subset(florence, ids = dat)</p>
+<p>Now, in a couple of lines, I’m gonna tidy the data. That removes the information of the type of line. As I would like to be able to color highways differently from buildings, I need to keep the information. Saving the key-part of the tags, and the id:</p>
+<p>types &lt;- data.frame(dat<span class="math inline">\(ways\)</span>tags<span class="math inline">\(k, dat\)</span>ways<span class="math inline">\(tags\)</span>id) names(types) &lt;- c(“type”, “id”)</p>
+<p>This gives me all the key-parts of all the tags. And I’m only interested in a subset of them:</p>
+<p>types &lt;- types %&gt;% filter(type %in% tag_list)</p>
+<p>types<span class="math inline">\(id &lt;- as.character(types\)</span>id)</p>
+<p>Next as_sp() converts the osmar object to a spatial object (just taking the lines):</p>
+<p>dat &lt;- as_sp(dat, “lines”)</p>
+<p>tidy (from the library broom), converts it to a tidy tibble</p>
+<p>dat &lt;- tidy(dat)</p>
+<p>That tibble is missing the types - those are added.</p>
+<p>new_df &lt;- left_join(dat, types, by=“id”)</p>
+<p>And now we can plot:</p>
+<p>new_df %&gt;% ggplot(aes(x=long, y=lat, group=group)) + geom_path(aes(color=type)) + scale_color_brewer() + xlim(left,right) + ylim(bottom,top) + theme_void() + theme(legend.position=“none”)</p>
+<p>Nice.</p>
+<p>Whats next? Someting like what is on this page: https://github.com/ropensci/osmplotr</p>
 
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -202,12 +296,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopieret!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopieret!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

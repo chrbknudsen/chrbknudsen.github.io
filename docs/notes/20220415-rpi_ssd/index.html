@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="/notes/20180910-font_color_excel/index.html" />
-<link rel="alternate" hreflang="da" href="/da/notes/20180910-font_color_excel/index.da.html" />
+<link rel="alternate" hreflang="en" href="/notes/20220415-rpi_ssd/index.html" />
+<link rel="alternate" hreflang="da" href="/da/notes/20220415-rpi_ssd/index.da.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Christian Knudsen">
-<meta name="dcterms.date" content="2018-09-10">
-<title>Get the font color of a cell in Excel – Christian Knudsen</title>
+<meta name="dcterms.date" content="2022-04-15">
+<title>Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,13 +55,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script><link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+<meta property="og:title" content="Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk – Christian Knudsen">
 <meta property="og:description" content="indsæt subtitle">
-<meta property="og:image" content="excel_font_color.png">
+<meta property="og:image" content="rpissd.png">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+<meta name="twitter:title" content="Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk – Christian Knudsen">
 <meta name="twitter:description" content="indsæt subtitle">
-<meta name="twitter:image" content="excel_font_color.png">
+<meta name="twitter:image" content="rpissd.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed quarto-light">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/20180910-font_color_excel/index.html" id="language-link-da">Dansk</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/20220415-rpi_ssd/index.html" id="language-link-da">Dansk</a></li></ul>
 </div></li>
 <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
@@ -134,10 +134,10 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Get the font color of a cell in Excel</h1>
+<h1 class="title">Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk</h1>
 <p class="subtitle lead">indsæt subtitle</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Excel</div>
+    <div class="quarto-category">kategori 1</div>
     <div class="quarto-category">kategori 2</div>
   </div>
   </div>
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2018</p>
+      <p class="date">April 15, 2022</p>
     </div>
   </div>
   
@@ -165,15 +165,10 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>People do weird and wonderful things in Excel.</p>
-<p>Other people then have to pull out the data from those spreadsheets.</p>
-<p>“Other people”  tend to spend a lot of time crying into their coffee.</p>
-<p>At the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.</p>
-<p>That is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.</p>
-<p>So - I need a way to get the color of an x. VBA can do that:</p>
-<p>Function GetColour(ByVal Target As Range) As Single Application.Volatile GetColour = Target.Font.Color End Function</p>
-<p>And if I need a logical test:</p>
-<p>Function IsBlack(ByVal Target As Range) As Boolean Application.Volatile If Target.Font.Color = 0 Then IsBlack = True Else IsBlack = False End If End Function</p>
+</header><p>Det skulle være utroligt enkelt. Nettet fortæller at en Raspberry Pi 3 (og 4) per automatik kan boote fra usb-devices. Og hvis ikke den kan, så skal man bare sætte et særligt sd-kort i, der piller ved en bit i et eller andet, og så virker det.</p>
+<p>Det gør det bare ikke, og at dømme efter de frustrerede opslag på nettet, er det ikke kun mig der har problemet.</p>
+<p>Så skal man bare have et SD-kort med filen bootcode.bin, og så kører det, får man at vide på nettet. Det gør det også. Hver tiende gang.</p>
+<p>Det man gør er at man placerer hele boot-partitionen på sd-kortet. Og så kører det 9 ud af 10 gange. Derefter skriver man boot_delay=2 (hvor de 2 dækker over to sekunder, det kan være det virker med 1 for dig), i config.txt. Og så virker det! Hver gang!</p>
 
 
 

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
 <head>
-<link rel="alternate" hreflang="en" href="/notes/20180910-font_color_excel/index.html" />
-<link rel="alternate" hreflang="da" href="/da/notes/20180910-font_color_excel/index.da.html" />
+<link rel="alternate" hreflang="en" href="/notes/20210914-histogram-breaks/index.html" />
+<link rel="alternate" hreflang="da" href="/da/notes/20210914-histogram-breaks/index.da.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Christian Knudsen">
-<meta name="dcterms.date" content="2018-09-10">
-<title>Get the font color of a cell in Excel – Christian Knudsen</title>
+<title>Breaks i histogrammer – Christian Knudsen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,26 +41,26 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Ingen resultater",
+    "search-matching-documents-text": "Matchende dokumenter",
+    "search-copy-link-title": "Kopier link for at søge",
+    "search-hide-matches-text": "Skjul yderligere resultater",
+    "search-more-match-text": "andet resultat i dette dokument",
+    "search-more-matches-text": "andre resultater i dette dokument",
+    "search-clear-button-title": "Ryd",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Fortryd",
+    "search-submit-button-title": "Indsend",
+    "search-label": "Søg"
   }
 }</script><link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+<meta property="og:title" content="Breaks i histogrammer – Christian Knudsen">
 <meta property="og:description" content="indsæt subtitle">
-<meta property="og:image" content="excel_font_color.png">
+<meta property="og:image" content="histbreaks.png">
 <meta property="og:site_name" content="Christian Knudsen">
-<meta name="twitter:title" content="Get the font color of a cell in Excel – Christian Knudsen">
+<meta name="twitter:title" content="Breaks i histogrammer – Christian Knudsen">
 <meta name="twitter:description" content="indsæt subtitle">
-<meta name="twitter:image" content="excel_font_color.png">
+<meta name="twitter:image" content="histbreaks.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed quarto-light">
@@ -73,14 +72,14 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Christian Knudsen</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Søg"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skift navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item"><div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/da/notes/20180910-font_color_excel/index.html" id="language-link-da">Dansk</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Dansk</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="/notes/20210914-histogram-breaks/index.html" id="language-link-en">English</a></li></ul>
 </div></li>
 <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
@@ -129,16 +128,24 @@ ul.task-list li input[type="checkbox"] {
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">På denne side</h2>
+   
+  <ul>
+<li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[1] 7</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[1] 0 2000 4000 6000 8000 10000 12000 14000 16000 18000</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[1] 0 130 4000 6000 8000 10000 12000 14000 16000 18000</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[1] 190</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">[1] 6</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Get the font color of a cell in Excel</h1>
+<h1 class="title">Breaks i histogrammer</h1>
 <p class="subtitle lead">indsæt subtitle</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Excel</div>
-    <div class="quarto-category">kategori 2</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Visualisering</div>
   </div>
   </div>
 
@@ -147,16 +154,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Forfatter</div>
     <div class="quarto-title-meta-contents">
              <p>Christian Knudsen </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Udgivet</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2018</p>
+      <p class="date">14. september 2021</p>
     </div>
   </div>
   
@@ -165,19 +172,41 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>People do weird and wonderful things in Excel.</p>
-<p>Other people then have to pull out the data from those spreadsheets.</p>
-<p>“Other people”  tend to spend a lot of time crying into their coffee.</p>
-<p>At the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.</p>
-<p>That is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.</p>
-<p>So - I need a way to get the color of an x. VBA can do that:</p>
-<p>Function GetColour(ByVal Target As Range) As Single Application.Volatile GetColour = Target.Font.Color End Function</p>
-<p>And if I need a logical test:</p>
-<p>Function IsBlack(ByVal Target As Range) As Boolean Application.Volatile If Target.Font.Color = 0 Then IsBlack = True Else IsBlack = False End If End Function</p>
+</header><p>We have a rather bright medical student frequenting our datalab. He is studying the health of patients trying to commit suicide using paracetamol. Spoiler - that is a really bad idea. If you absolutely have to kill yourself, find a method that will kill you faster than by destroying your liver. Better yet, dont, google “suicide prevention line” and call them instead.</p>
+<p>Anyway. He had to make a histogram. And he had to adjust the breaks. As a first step: Where are the breaks actually in your histogram? Second: How do you adjust them?</p>
+<p>Lets make a histogram of the islands of the world. R comes with a dataset containing the areas, in thousands of square miles, of the landmasses of Earth, that has an area exceeding 10.000 square miles. The build-in function to make a histogram makes this extremely easy:</p>
+<p>hist(islands)</p>
+<p>It is a bit misleading. All the continents are considered islands. Granted, there is water all around them. But I would not call Asia an island.</p>
+<p>Anyway. There are breaks at 2000, 4000, 6000 etc. How does hist() choose those? We get a hint in the help-file, that tells us this:</p>
+<p>hist(x, breaks = “Sturges”, freq = NULL, probability = !freq, include.lowest = TRUE, right = TRUE, density = NULL, angle = 45, col = NULL, border = NULL, main = paste(“Histogram of” , xname), xlim = range(breaks), ylim = NULL, xlab = xname, ylab, axes = TRUE, plot = TRUE, labels = FALSE, nclass = NULL, warn.unused = TRUE, …)</p>
+<p>We can set breaks manually, but hist uses something called “Sturges” to calculate it as default.</p>
+<p>We are also told that:</p>
+<p>breaks one of: a vector giving the breakpoints between histogram cells, a function to compute the vector of breakpoints, a single number giving the number of cells for the histogram, a character string naming an algorithm to compute the number of cells (see ‘Details’), a function to compute the number of cells.</p>
+<p>Sturges appears to be a function calculating the breaks.</p>
+<p>Googling a bit, we find out that the flow is actually: use nclass.Sturges() to calculate the number of cells that should be in the histogram. Then use the number from nclass.Sturges(), and the data, to calculate the actual breaks. That part uses the function pretty()</p>
+<p>(n_breaks &lt;- nclass.Sturges(islands))</p>
+<section id="section" class="level2"><h2 class="anchored" data-anchor-id="section">[1] 7</h2>
+<p>(actual_breaks &lt;- pretty(islands, n_breaks))</p>
+</section><section id="section-1" class="level2"><h2 class="anchored" data-anchor-id="section-1">[1] 0 2000 4000 6000 8000 10000 12000 14000 16000 18000</h2>
+<p>There you go, 7 breaks, and the 8 values we need to pass to hist() to get the breaks. Pretty is af neat function, that calculate a sequence of n+1 (here n is 7), equally spaced, “round” values covering the data we input to it. Round in this case means that they are powers of 10.</p>
+<p>We can now plot again:</p>
+<p>hist(islands, actual_breaks)</p>
+<p>And we get the same plot as before.</p>
+<p>Adjust actual_breaks to fit what you want. In this case we wanted all values below the limit of detection for something to be grouped in one cell of the histogram:</p>
+<p>actual_breaks[2] &lt;- 130 actual_breaks</p>
+</section><section id="section-2" class="level2"><h2 class="anchored" data-anchor-id="section-2">[1] 0 130 4000 6000 8000 10000 12000 14000 16000 18000</h2>
+<p>And the new plot:</p>
+<p>hist(islands, actual_breaks)</p>
+<p>Horrible plot. But setting the first break to end at 130 is more meaningfull looking at bloodchemistry, than sizes of landmasses on Earth.</p>
+<p>nclass.Sturges() is actually pretty simple: ceiling(log2(length(x)) + 1). There are two other built-in functions:</p>
+<p>nclass.FD(islands)</p>
+</section><section id="section-3" class="level2"><h2 class="anchored" data-anchor-id="section-3">[1] 190</h2>
+<p>nclass.scott(islands)</p>
+</section><section id="section-4" class="level2"><h2 class="anchored" data-anchor-id="section-4">[1] 6</h2>
+<p>Use one that makes sense given your data.</p>
 
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -202,12 +231,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopieret!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopieret!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
