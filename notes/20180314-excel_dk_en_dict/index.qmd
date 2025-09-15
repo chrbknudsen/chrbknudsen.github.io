@@ -47,7 +47,8 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "DSTDAFVP",	"DSTDEVP",
 "DSUM",	"DSUM",
 "DVARIANS",	"DVAR",
-"DVARIANSP",	"DVARP",
+"DVARIANSP",	"DVARP")
+date_dict <- tribble(~Dansk, ~Engelsk,
 "DATO- OG KLOKKESLÆTSFUNKTIONER",	"DATE AND TIME FUNCTIONS",
 "DATO",	"DATE",
 "DATOVÆRDI",	"DATEVALUE",
@@ -68,7 +69,8 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "UGE.NR",	"WEEKNUM",
 "ARBEJDSDAG",	"WORKDAY",
 "ÅR",	"YEAR",
-"ÅR.BRØK",	"YEARFRAC",
+"ÅR.BRØK",	"YEARFRAC")
+eng_dict <- tribble(~Dansk, ~Engelsk,
 "TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
 "BESSELI",	"BESSELI",
 "BESSELJ",	"BESSELJ",
@@ -108,7 +110,8 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "IMAGSUM",	"IMSUM",
 "OKT.TIL.BIN",	"OCT2BIN",
 "OKT.TIL.DEC",	"OCT2DEC",
-"OKT.TIL.HEX",	"OCT2HEX",
+"OKT.TIL.HEX",	"OCT2HEX")
+fin_dict <- tribble(~Dansk, ~Engelsk,
 "FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
 "PÅLØBRENTE",	"ACCRINT",
 "PÅLØBRENTE.UDLØB",	"ACCRINTM",
@@ -162,7 +165,9 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "NETTO.NUTIDSVÆRDI",	"XNPV",
 "AFKAST",	"YIELD",
 "AFKAST.DISKONTO",	"YIELDDISC",
-"AFKAST.UDLØBSDATO",	"YIELDMAT",
+"AFKAST.UDLØBSDATO",	"YIELDMAT")
+
+inf_dict <- tribble(~Dansk, ~Engelsk,
 "INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
 "CELLE",	"CELL",
 "FEJLTYPE",	"ERROR.TYPE",
@@ -180,7 +185,8 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "ER.TEKST",	"ISTEXT",
 "TAL",	"N",
 "IKKE.TILGÆNGELIG",	"NA",
-"VÆRDITYPE",	"TYPE",
+"VÆRDITYPE",	"TYPE")
+log_dict <- tribble(~Dansk, ~Engelsk,
 "LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
 "OG",	"AND",
 "FALSK",	"FALSE",
@@ -206,7 +212,8 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "RÆKKER",	"ROWS",
 "RTD",	"RTD",
 "TRANSPONER",	"TRANSPOSE",
-"LOPSLAG",	"VLOOKUP",
+"LOPSLAG",	"VLOOKUP")
+mat_dict <- tribble(~Dansk, ~Engelsk,
 "MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
 "ABS",	"ABS",
 "ARCCOS",	"ACOS",
@@ -392,4 +399,34 @@ reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
 
 ```{r}
 reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+```{r}
+reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
