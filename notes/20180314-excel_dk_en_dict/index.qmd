@@ -2,7 +2,7 @@
 title: "Danish-english excel dictionary"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-03-14
@@ -18,8 +18,9 @@ Remember that you also have to change "," to ";"
 
 
 
-```{r}
+```{r echo = FALSE}
 library(tidyverse)
+library(reactable)
 dict <- tribble(~Dansk, ~Engelsk,
 "TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
 "KALD",	"CALL",
@@ -387,4 +388,5 @@ dict <- tribble(~Dansk, ~Engelsk,
 "FJERN.OVERFLØDIGE.BLANKE",	"TRIM",
 "STORE.BOGSTAVER",	"UPPER",
 "VÆRDI",	"VALUE")
+reactable(dict)
 ```
