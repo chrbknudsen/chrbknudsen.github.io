@@ -8,7 +8,7 @@ categories:
   - kategori 2
 date: 2024-10-27
 toc: true
-image: ""
+image: "three-body-illustration.svg"
 ---
 
 
@@ -34,7 +34,7 @@ orbits will they follow?
 
 There is no closed-form solution to that, that is we are not able to write an
 expression that will return the result for time = 2, given initial values at 
-time = 0.
+time = 0. Thats kind of the whole point.
 We will have to do the calculation for time = 1, and then, based on that result
 calculate the next step. The results are rather sensitive to the initial values,
 and exhibits chaotic behavior. Are we able to do these calculations in R, and
