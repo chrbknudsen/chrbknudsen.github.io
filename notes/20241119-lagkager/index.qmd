@@ -1,6 +1,6 @@
 ---
 title: "Lagkagediagrammer"
-subtitle: "inds?t subtitle"
+subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
 visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
 categories:
@@ -10,6 +10,8 @@ date: 2024-11-19
 toc: true
 image: ""
 ---
+
+Træk gerne direkte fra danmarks statistik
 jf https://www.facebook.com/mrapeterhansen/posts/pfbid0dKabAdGWg46Hz7cvdBdEYHLAb74EEteczRg9LKHETEPHLhfMFBfyNRxQfWH42hE2l
 
 # Indlæs nødvendige pakker
