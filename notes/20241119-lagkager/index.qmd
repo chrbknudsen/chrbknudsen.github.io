@@ -11,12 +11,62 @@ toc: true
 image: ""
 ---
 
-Træk gerne direkte fra danmarks statistik
-jf https://www.facebook.com/mrapeterhansen/posts/pfbid0dKabAdGWg46Hz7cvdBdEYHLAb74EEteczRg9LKHETEPHLhfMFBfyNRxQfWH42hE2l
+Jeg er ikke fan af lagkagediagrammer (†). Men lad os kigge på at lave nogen
+alligegel.
 
-# Indlæs nødvendige pakker
-library(ggplot2)
-library(dplyr)
+Vi skal bruge noget data. Og helst noget hvor der ikke er så mange forskellige skiver af lagkagen. To mener jeg er den øvre grænse.
+
+Vi springer til [Danmarks Statistiks statistikbanks api-konsol](https://api.statbank.dk/console#data) og konstruerer et api-kald, hvor vi beder
+om antallet af danskere i ordinær beskæftigelse, for hele landet, i 2023, fordelt på alder - og så på køn:
+
+```{r}
+library(tidyverse)
+data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=M%2CK&ALDER1=*&Tid=2023&SOCIO=021")
+head(data)
+```
+
+
+Grupper efter køn, summer for at få det samlede antal beskæftigede:
+
+```{r}
+tot_data <- data |> 
+  group_by(KOEN) |> 
+  summarise(antal = sum(INDHOLD))
+```
+
+ggplot2 har holdninger til lagkagediagrammer, der ikke er så forskellige fra mine. Så hvis vi skal klare os med 
+vanilla ggplot, og ikke hente pakker er det lidt tricky.
+Vi laver et stakket barchart - og ændrer koordinaterne til at være polære:
+
+```{r}
+tot_data |> 
+  ggplot(aes(x="", y = antal, fill = KOEN)) +
+  geom_bar(stat = "identity", width = 1, color = "black") +
+  coord_polar("y", start = 0)
+```
+
+det kan vi godt gøre pænere:
+```{r}
+tot_data |> 
+  mutate(andel = antal/sum(antal),
+         label = c("♀", "♂")) |> 
+  ggplot(aes(x="", y = antal, fill = KOEN, label = label)) +
+  geom_bar(stat = "identity", width = 1, color = "black") +
+  coord_polar("y", start = 0) +
+  ggtitle("Fordeling af ordinært fuldtidsbeskæftigede 2023") +
+  theme_void() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 14),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10)
+  ) 
+  
+```
+
+
+
+
 
 # Opret datasættet
 data <- data.frame(
@@ -73,3 +123,18 @@ data %>% select(-TID) %>%
   coord_polar("y", start = 0)
 
 
+## (†) Hvorfor hader du lagkagediagrammer? 
+
+Det lagkagediagrammet forsøger at vise er fordelingen - i procent - af et eller andet. Hvis du gerne 
+vil vise den procentvise fordeling af noget. Så gør det, gerne i 
+den undervurderede metode til at visualisere: Tabellen.
+
+Hvis du gerne vil vise udviklingen. Så lav en graf. Det vi reelt gør
+når vi laver et lagkagediagram er at vi mapper en procentvis fordeling
+til et antal grader i en cirkel. Vi tror vi viser det med 
+et areal. Men i virkeligheden repræsenterer vi værdierne med en
+vinkel. Og det er den grafiske variabel vi kan vælge. Som er dårligst
+til at vise forskelle. Der er et par klassiske artikler der 
+viser det. Og en
+nyere, noget større fra Jeffrey Heer og Michael Bostock (og Bostock er
+en af guruerne på det her felt). Du kan [finde den her](http://vis.stanford.edu/files/2010-MTurk-CHI.pdf)
