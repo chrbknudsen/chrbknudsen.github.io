@@ -5,7 +5,6 @@ author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget er færdigt
 categories:
   - R
-  - kategori 2
 date: 2024-10-27
 toc: true
 image: "three-body-illustration.svg"
