@@ -5,7 +5,6 @@ author: "Christian Knudsen"
 visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
 categories:
   - kategori 1
-  - kategori 2
 date: 2024-11-19
 toc: true
 image: ""

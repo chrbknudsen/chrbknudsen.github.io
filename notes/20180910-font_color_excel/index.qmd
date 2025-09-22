@@ -5,7 +5,6 @@ author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
-  - kategori 2
 date: 2018-09-10
 toc: true
 image: "excel_font_color.png"

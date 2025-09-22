@@ -4,7 +4,6 @@ subtitle: "Det går meget godt på Science. Resten... knap så godt"
 author: "Christian Knudsen"
 categories:
   - kategori 1
-  - kategori 2
 date: 2024-08-16
 toc: true
 image: "koensfordeling.webp"
