@@ -46,30 +46,41 @@ tot_data |>
 
 det kan vi godt gøre pænere:
 ```{r}
+# fordi vi skal have en font der kan vise de to kønssymboler og procent med 
+# "normal" fonttykkelse.
+library(showtext)
+font_add("seguisym", "C:/Windows/Fonts/seguisym.ttf")
+showtext_auto()
+
+
 library(glue)
 tot_data |> 
   mutate(andel = antal/sum(antal),
          label = c("♀️", "♂️")) |> 
+         mutate(label = c("\u2640", "\u2642")) |> 
   ggplot(aes(x="", y = antal, fill = KOEN, label = label)) +
-  geom_bar(stat = "identity", width = 1, color = "black") +
+  geom_bar(stat = "identity", width = 1, color = "white", alpha = 0.7) +
   geom_text(aes(label = glue("{label} \n {scales::percent(andel, accuracy = 1)}"))    ,
           position = position_stack(vjust = 0.5),
-          size = 6, color = "black") +
-  coord_polar("y", start = 0) +
-  ggtitle("Fordeling af ordinært fuldtidsbeskæftigede 2023") +
-  theme_void() +
-  theme(
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 14),
-    legend.title = element_text(size = 12),
-    legend.text = element_text(size = 10)
-  ) 
+          size = 6, 
+          family = "seguisym",
+          color = "black") +
+
+  labs(title = "Fordeling af ordinært fuldtidsbeskæftigede",
+       subtitle = "2023",
+       caption = "Danmarks Statistik, Statistikbanken, AMR1") +
+      coord_polar("y", start = 0) +
+  scale_fill_manual(values = c("Kvinder" = "red", "Mænd" = "blue"), guide = "none")
   
 ```
 
 
 
++ theme_minimal(base_family = "seguisym") +
+  theme(
+    
 
+  )
 
 # Opret datasættet
 data <- data.frame(
