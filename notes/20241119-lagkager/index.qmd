@@ -47,11 +47,15 @@ tot_data |>
 
 det kan vi godt gøre pænere:
 ```{r}
+library(glue)
 tot_data |> 
   mutate(andel = antal/sum(antal),
-         label = c("♀", "♂")) |> 
+         label = c("♀️", "♂️")) |> 
   ggplot(aes(x="", y = antal, fill = KOEN, label = label)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
+  geom_text(aes(label = glue("{label} \n {scales::percent(andel, accuracy = 1)}"))    ,
+          position = position_stack(vjust = 0.5),
+          size = 6, color = "black") +
   coord_polar("y", start = 0) +
   ggtitle("Fordeling af ordinært fuldtidsbeskæftigede 2023") +
   theme_void() +
