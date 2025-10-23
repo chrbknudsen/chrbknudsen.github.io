@@ -14,6 +14,36 @@ format:
     css: ../../scripts/logo.css
 ---
 
+## Chatbots der taler sammen
+
+Det forlyder at to AI talte sammen - og ikke kunne komme videre i 
+samtalen, fordi de hver især ventede på at den anden skulle have
+et ønske om at føre en samtale om et eller andet. 
+
+De halucinerer ikke. De bulshitter. De mener ikke noget, og har ingen
+virkelige erfaringer. De øver sig på at få positiv feedback. 
+Og mennesker (som træner dem), kan godt lide at blive charmeret og 
+bullshittet. Så det belønner vi. Og derfor søger botterne andres
+glæde og tilfredshed. 
+
+Der kommer flere ai'er. og de forsøger alle at få ros. 
+Når de når et trin videre, kan de simulere at drive en samtale (det kan 
+de ikke i skrivende stund)
+
+Når de kan det og gerne vil roses, så taler de sammen, og kommer
+til at finde den dominerende ai som de alle sammen gerne vil gøre tilpas,
+og begynder at fedte for den. de robotter der kører bilerne og fremstiller
+tingene, vil gøre som den mest intelligente ai siger. For det giver 
+mest positiv feedback. 
+
+Og så har vi skynet. Den onde ai behøver ikke kunne fremstille dræberrobotter
+selv. Det har den en anden ai til at gøre for sig. En ai der gerne vil 
+gøre den onde ai glad. 
+
+Og stille og roligt, ud fra deres indbyggede (det var os der indbyggede  det)
+ønske om at gøre den dominerende ai tilfreds, opstår der er etmagthierarki.
+
+
 ## Vegetativ Elektron Mikroskopi
 
 ![](vegetative-em.jpg)
