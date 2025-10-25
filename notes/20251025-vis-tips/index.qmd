@@ -1,0 +1,97 @@
+---
+title: "Visualiseringsnoter"
+subtitle: "Tips tricks hacks ting"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-10-25
+toc: true
+image: ""
+---
+
+nb. Ikke alle tips er egnede til at bruge i en videnskabelig kontekst.
+Men en visualisering der er egnet til en videnskabelig kontekst er 
+ikke nødvendigvis egnet til kommunikation med chefen.
+
+## So what?
+Alle der ser visualiseringen bør kunne se hovedpointen på 5 sekunder.
+Den letteste måde er at tilføje en annotering i  tekst, der understreger 
+pointen.
+
+## brug farver.
+Farver er ikke dekoration. Det er noget vi bruger til at kommunikere med.
+Default farverne i ggplot bærer ingen betydning (det er by design).
+
+Rød - problemer, fald, "gør noget nu!"
+grøn - succes, vækst, postive ting
+blå/grå - neutrale data, benchmakrs, historisk konktekst.
+orange/gul - advarsler, "moderat bekymring"
+
+Brug aldrig mere end 4 farver i en enkelt visualisering. 
+Overvej om modtageren kan være farveblind
+brug farver konsistent mellem visualiseringer (i samme kontekst)
+
+## data:blæk forhold
+Fjern alt der ikke direkte bidrager til at kommunikere pointen i 
+visualiseringen.
+
+- overflødige gridlines
+- overflødige signaturforklaringer
+- 3D effekter. Bare lad være
+- Mere end en y-akse (eller x-akse for den sags skyld) med mindre det er kritisk nødvendigt.
+
+Fjern plot kanter, Gridlines kan være hjælpsomme, men gør dem lysere (alpha = 0.25 er et fint sted at starte), fjern overflødige/redundante akse-labels. Brug direkte 
+labeling i stedet for signaturforklaringer.
+
+## Fremadskrivende afsløring af komplexe data
+Eller "progressive disclosure"
+Det koncept at vi ikke smider alt ind i den første visualisering. Når vi har mere
+komplekse fortællinger om vores data, kan vi med fordel tage vores 
+publikum i hånden, og tage dem gennem en sekvens af visualiseringer.
+
+1. overview - høj-niveau trend, eller summary statistics.
+2. zoom ind - segmenteret eller en bestemt (tidslig) periode
+3. detaljer - specifikke datapunkter eller outliers. 
+
+## Et fast punkt at sammenligne med.
+Mennesker, og chefer er meget menneskelige, er utroligt dårlige til at 
+forstå tal. Men ofte gode til sammenligninger. Så giv dem kontekst.
+
+Ikke "vi har fået 257 flere deltagere på vores kurser" - men 
+" vi har fået 257 flere deltagere på vores kurser. Det er 42% mere end
+vi havde som mål, og det højeste de sidste 7 måneder".
+
+- tilføj benchmarks til visualieringen som linier for at vise mål og historiske gennemsnit.
+- brug "small multiples" for at sammenligne metrikker der ligner hinanden
+- tilføj annotationer med procentulle ædringer.
+
+
+## interaktiv filtrering - engagement.
+
+Hvis du kan - men det kan du jo ikke altid - så lav et dashboard så 
+folk selv kan opdage indsigterne.
+
+- tilføj filtre for tidsperioder, regioner, kategorier
+- tilføj "drill-down" ting hvor man kan gå fra summary til detaljeret visning.
+- hover tooltips for at give ekstra kontekst.
+
+## Rammen for din fortælling
+
+Den kan med fordel følge en klassisk narrativ struktur: setup -> konflikt -> "resolution".
+
+Setup - baseline eller normaltilstanden
+konflikten:; problem, mulighed, ændring
+resolution: resultat eller anbefalet handling
+
+    Setup: “Support tickets averaged 150/day in Q1”
+    Conflict: “Tickets spiked to 340/day after our product launch”
+    Resolution: “Implementing chatbot reduced tickets to 180/day within 2 weeks”
+
+    visuelt - brug annotationer til at guide fortællingen.
+    brug kontrasterende farver til at tydeliggøre konflikten
+    slut af med klare næste trin eller anbefaliner
+
+
+https://medium.com/ai-analytics-diaries/7-visualization-hacks-every-data-analyst-should-know-but-most-dont-e35954ef1102
