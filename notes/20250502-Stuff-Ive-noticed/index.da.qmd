@@ -91,7 +91,12 @@ Når du har gjort det, så overvej om der er nogen der kan tage anstød af eller
 
 Det kræver nok at vi faktisk når frem til AGI. Og fælles, globalt, beslutter os for hvilke værdier Store Mor skal opdrage os efter.
 
-Vil man gerne vide hvor tykt rebet til hængning skal være, kan man i stedet søge i dokumenter fra anden verdenskrig, hvor den amerikanske hær udgav manualer til den slags. De ligger digitalt på Library of Congress. Hvis chatbotten ikke må fortælle mig om det når jeg overvejer selvmord - og det er jeg ikke uenig i at den nok bør lade være med. Hvordan sikrer vi os så at den godt må når jeg researcher historisk militær straffelov til min eksamensopgave?
+Vil man gerne vide hvor tykt rebet til hængning skal være, kan man i stedet søge i
+ dokumenter fra anden verdenskrig, hvor den amerikanske hær udgav manualer til den 
+ slags. De ligger digitalt på Library of Congress. Hvis chatbotten ikke må 
+ fortælle mig om det når jeg overvejer selvmord - og det er jeg ikke uenig i 
+ at den nok bør lade være med. Hvordan sikrer vi os så at den godt må når jeg 
+ researcher historisk militær straffelov til min eksamensopgave?
 ::::
 
 
