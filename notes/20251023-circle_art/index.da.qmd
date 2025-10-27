@@ -1,6 +1,6 @@
 ---
 title: "CiRcle aRt 0.5"
-subtitle: "Inspired by Karel Novosad"
+subtitle: "Inspireret af Karel Novosad"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -10,18 +10,18 @@ toc: true
 image: "cirkler.png"
 ---
 
-Inspired by a print by Karel Novosad I saw in a window in Hamburg.
+Inspireret af et tryk af Karel Novosad, som jeg så i et vindue i Hamborg.
 
-A number of straight lines, combined with circles - three colors on a black background.
-
-We need a couple of libraries:
+Et antal rette linier, kombineret med cirkler - i tre farver på en sort baggrund.
+ 
+Der skal bruges et par biblioteker.
 
 ```{r warning = FALSE, message = FALSE}
 library(tidyverse)
 library(ggforce)
 ```
 
-We need a function to place circles 
+Vi skal bruge en funktion til at placere cirkler:
 
 ```{r}
 circles <- function(n = 3, seed = NULL) {
@@ -42,7 +42,7 @@ circles <- function(n = 3, seed = NULL) {
 }
 ```
 
-We need a function for adding lines:
+Og en funktion til at tilføje linier:
 
 ```{r}
 lines <- function(n = 5, seed = NULL){
@@ -62,7 +62,7 @@ lines <- function(n = 5, seed = NULL){
 }
 ```
 
-And then we combine it. 5 circles, 11 lines:
+Og så kombinerer vi dem. 5 cirkler, 11 linier: 
 
 ```{r}
 ggplot() +
@@ -79,4 +79,4 @@ ggplot() +
             color = "white")
 ```
 
-It should probably be refactored, use something different from default colors etc. Thats for version 1.0.
+Det skal nok refaktoriseres, bruge noget andet end default farver osv. Det gemmer vi til version 1.0.
