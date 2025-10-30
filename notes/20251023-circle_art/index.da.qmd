@@ -5,8 +5,8 @@ author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Generative aRt
-date: 2025-10-26
 toc: true
+date: 2025-10-26
 image: "cirkler.png"
 ---
 

@@ -6,7 +6,7 @@ visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - R
   - Visualisation
-date: 2018-09-11
+date: "2018-09-11"
 toc: true
 image: "waffles.png"
 ---

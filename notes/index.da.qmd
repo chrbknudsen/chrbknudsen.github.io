@@ -5,6 +5,7 @@ listing:
     contents: "**/*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle]
+    date-format: "D MMM YYYY"
     sort: "date desc"
     categories: cloud
     sort-ui: true
