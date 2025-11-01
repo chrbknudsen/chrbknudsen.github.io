@@ -34,6 +34,7 @@ Den kan vi indlæse direkte:
 ```{r}
 df <- read_csv(url)
 ```
+
 Specifikationen af kolonner afslører at der er en del af dem vi ikke rigtig 
 har brug for, så dem sorterer vi fra. Vi får tidsforbrug fordelt på køn og total.
 Og totalen er redundant. Lægger vi tallene for "Other" sammen for de to køn,
@@ -96,7 +97,10 @@ justerer på farverne:
 
 
 ```{r}
-df %>% 
+df %>%
+    mutate(Measure = factor(Measure,
+    levels = c("Andet", "Personlig Pleje", 
+     "Fritid", "Ulønnet arbejde", "Lønarbejde eller studier"))) |>
   ggplot(aes(x = Sex, y = time, fill = Measure)) +
   geom_col(position = "stack") +
   labs(
@@ -124,6 +128,7 @@ for at få et plot for hver type aktivitet der bruges tid på:
 
 ```{r}
 df %>% 
+ 
   ggplot(aes(x = Sex, y = time, fill = Measure)) +
   geom_col(position = "dodge") +
   labs(

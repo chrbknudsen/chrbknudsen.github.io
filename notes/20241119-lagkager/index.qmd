@@ -20,7 +20,7 @@ om antallet af danskere i ordinær beskæftigelse, for hele landet, i 2023, ford
 
 ```{r}
 library(tidyverse)
-data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=M%2CK&ALDER1=*&Tid=2023&SOCIO=021")
+data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=*%2CK&ALDER1=*&Tid=2023&SOCIO=021")
 head(data)
 ```
 
@@ -49,7 +49,14 @@ det kan vi godt gøre pænere:
 # fordi vi skal have en font der kan vise de to kønssymboler og procent med 
 # "normal" fonttykkelse.
 library(showtext)
-font_add("seguisym", "SEGUISYM.TTF")
+# Først skal vi have styr på hvor font-filen faktisk ligger.
+if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+} else {
+  script_dir <- dirname(normalizePath(sys.frame(1)$ofile))
+}
+
+font_add("seguisym", file.path(script_dir, "SEGUISYM.TTF"))
 showtext_auto()
 
 
@@ -70,8 +77,33 @@ tot_data |>
        subtitle = "2023",
        caption = "Danmarks Statistik, Statistikbanken, AMR1") +
       coord_polar("y", start = 0) +
-  scale_fill_manual(values = c("Kvinder" = "red", "Mænd" = "blue"), guide = "none")
-  
+  scale_fill_manual(values = c("Kvinder" = "red", "Mænd" = "blue"), guide = "none") +
+  theme_void()
+```
+
+```{r}
+data |> 
+  group_by(ALDER1) |> 
+#  filter(ALDER1 == "16-19 år") |> 
+  mutate(andel = INDHOLD/sum(INDHOLD),
+        label = if_else(KOEN == "Kvinder","\u2640", "\u2642" )) |> 
+  ungroup() |> 
+ggplot(aes(x="", y = andel, fill = KOEN)) +
+  geom_bar(stat = "identity", width = 1, color = "black") +
+  coord_polar("y", start = 0) +
+  facet_wrap(~ALDER1) +
+  geom_text(aes(label = glue("{label} \n {scales::percent(andel, accuracy = 1)}"))    ,
+          position = position_stack(vjust = 0.5),
+          size = 2 , 
+          family = "seguisym",
+          color = "black") +
+
+  labs(title = "Fordeling af ordinært fuldtidsbeskæftigede",
+       subtitle = "2023",
+       caption = "Danmarks Statistik, Statistikbanken, AMR1") +
+      coord_polar("y", start = 0) +
+  scale_fill_manual(values = c("Kvinder" = "red", "Mænd" = "blue"), guide = "none") +
+  theme_void()
 ```
 
 
