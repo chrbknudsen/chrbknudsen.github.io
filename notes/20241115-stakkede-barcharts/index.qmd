@@ -1,0 +1,134 @@
+---
+title: "Stacked barcharts"
+subtitle: "Of gendered time use in Denmark"
+author: "Christian Knudsen"
+visible: "false" 
+categories:
+  - R
+  - ggplot
+date: 2024-11-15
+toc: false
+image: "perceptionvsreality.png"
+---
+
+# How to make a stacked barchart
+
+As usual, we read in tidyverse:
+
+```{r, message = F, warning=F}
+library(tidyverse)
+```
+
+We also need some data. [OECD have data on how people spend their time in different countries.](https://data-explorer.oecd.org/vis?tm=time%20use&pg=0&snb=818&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_TIME_USE%40DF_TIME_USE&df[ag]=OECD.WISE.INE&df[vs]=1.0&dq=..&to[TIME]=false&ly[cl]=MEASURE&ly[rw]=SEX%2CREF_AREA). 
+
+We grab their "Developer API", get the url to a data query, and add "&format=csvfilewithlabels" to get data in a format that is not too difficult to handle.
+
+```{r}
+url <- "https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_TIME_USE@DF_TIME_USE,1.0/all?dimensionAtObservation=AllDimensions&format=csvfilewithlabels"
+```
+
+We can read in that directly:
+
+```{r}
+df <- read_csv(url)
+```
+
+The specification of columns reveals that there are a lot that we do not really need. So we select a more modest selection. That leaves us with time used, on what, sex and a total.
+The total is redundant - we get rid of that as well.
+
+
+```{r}
+df <- df %>% 
+  select(Country = `Reference area`, Measure, Sex = SEX, time = OBS_VALUE) %>% 
+  filter(Sex != "_T")
+```
+
+There are a lot of data, so we are only going to consider 
+Denmark. 
+
+We filter to only leave Denmark and change M and F to ♂ and ♀. :
+
+```{r}
+df <- df %>% 
+  filter(Country == "Denmark") %>% 
+  mutate(Sex = case_when(Sex,
+             "M" ~ "♂", 
+             "F" ~ "♀️",
+             .default =  Sex))
+```
+
+And now we are ready to make the stacked barchart
+
+Og så kan vi lave søjlediagrammet.
+
+
+Vi styrer tingene to steder i koden. I `aes()` fortæller vi hvad der er på
+x- og y-akserne. Farvelægningen styres samme sted (husk `fill` i stedet for `color`),
+og med den får vi samtidig grupperet vores data - og det bruges i `geom_col`.
+Her specificerer vi nemlig at det skal stakkes. Vi kunne også have skrevet "dodge",
+men målet var et stakket søjlediagram, så... 
+
+Hvorfor `geom_col` i stedet for `geom_bar`? `geom_bar` foretager som default en statistisk
+transformation på data, hvor den tæller antallet af observationer. Nu var det 
+ikke antallet af observationer af tidsforbrug vi ville have (de er nemlig ens),
+men tallene selv. `geom_col` laver ingen transformation. Vi kunne også have 
+givet `geom_bar` argumentet `stat = "identity"`, det havde for de fleste praktiske
+formål givet samme resultat.
+
+Og så justerer vi på labels i plottet, fjerner clutter fra default temaet, og 
+justerer på farverne:
+
+
+```{r}
+df %>%
+    mutate(Measure = factor(Measure,
+    levels = c("Andet", "Personlig Pleje", 
+     "Fritid", "Ulønnet arbejde", "Lønarbejde eller studier"))) |>
+  ggplot(aes(x = Sex, y = time, fill = Measure)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "Stakkede søjlediagrammer for de to køns tidsforbrug",
+    x = "",
+    y = "Tid (minutter)",
+    fill = "Aktivitet"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2")
+  
+  
+
+```
+
+Bum. De to søjler er her, helt naturligt, lige høje, for der er ikke forskel
+på hvad de to køn har af tid i løbet af en dag.
+
+Det er dog lidt vanskeligt at sammenligne. Det er en af udfordringerne med 
+stakkede søjler.
+
+I stedet kan vi dele det lidt op. Vi vælger `position = "dodge"` for at få
+søjlerne ved siden af hinanden, ændrer på titlen, og tilføjer `facet_wrap(~Measure)` 
+for at få et plot for hver type aktivitet der bruges tid på:
+
+```{r}
+df %>% 
+  ggplot(aes(x = Sex, y = time, fill = Measure)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Søjlediagrammer for de to køns tidsforbrug",
+    x = "",
+    y = "Tid (minutter)",
+    fill = "Aktivitet"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2") +
+  facet_wrap(~Measure)
+
+
+```
+
+Bum-bum.  
+
+Konklusioner? Den eneste jeg tør drage er, at sammenligninger i stakkede søjlediagrammer
+kan være vanskelige.
+
+
