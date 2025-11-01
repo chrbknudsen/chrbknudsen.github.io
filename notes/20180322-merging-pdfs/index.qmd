@@ -1,10 +1,12 @@
 ---
 title: "Merging PDF-files"
-subtitle: "indsæt subtitle"
+subtitle: "From the command line"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - linux
+  - pdf
+  - CLI
 date: 2018-03-22
 toc: true
 image: "merging_pdfs.png"
@@ -15,9 +17,12 @@ There are several tools. Some of them you have to pay for.
 
 If you are in a linux environment, try this:
 
+```
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=final.pdf filea.pdf fileb.pdf
+```
 
-continue with filec.pdf etc.
+
+You can add as many fileX.pdf as you wish.
 
 Some say it is slow.
 
