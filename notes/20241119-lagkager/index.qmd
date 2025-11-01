@@ -49,7 +49,7 @@ det kan vi godt gøre pænere:
 # fordi vi skal have en font der kan vise de to kønssymboler og procent med 
 # "normal" fonttykkelse.
 library(showtext)
-font_add("seguisym", "C:/Windows/Fonts/seguisym.ttf")
+font_add("seguisym", "SEGUISYM.TTF")
 showtext_auto()
 
 
