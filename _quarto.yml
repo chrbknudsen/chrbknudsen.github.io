@@ -6,6 +6,8 @@ project:
 
 website:
   title: "Christian Knudsen"
+  favicon: "assets/favicon-light.svg"
+  include-in-header: "assets/favicons.html"
   navbar:
     left:
       - href: index.qmd
