@@ -18,7 +18,7 @@ Vi skal bruge noget data. Og helst noget hvor der ikke er så mange forskellige 
 Vi springer til [Danmarks Statistiks statistikbanks api-konsol](https://api.statbank.dk/console#data) og konstruerer et api-kald, hvor vi beder
 om antallet af danskere i ordinær beskæftigelse, for hele landet, i 2023, fordelt på alder - og så på køn:
 
-```{r}
+```{r libraries, message = FALSE}
 library(tidyverse)
 data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=*%2CK&ALDER1=*&Tid=2023&SOCIO=021")
 head(data)
@@ -27,7 +27,7 @@ head(data)
 
 Grupper efter køn, summer for at få det samlede antal beskæftigede:
 
-```{r}
+```{r summarising}
 tot_data <- data |> 
   group_by(KOEN) |> 
   summarise(antal = sum(INDHOLD))
@@ -37,7 +37,7 @@ ggplot2 har holdninger til lagkagediagrammer, der ikke er så forskellige fra mi
 vanilla ggplot, og ikke hente pakker er det lidt tricky.
 Vi laver et stakket barchart - og ændrer koordinaterne til at være polære:
 
-```{r}
+```{r lagkage-1}
 tot_data |> 
   ggplot(aes(x="", y = antal, fill = KOEN)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
@@ -45,21 +45,68 @@ tot_data |>
 ```
 
 det kan vi godt gøre pænere:
-```{r}
-# fordi vi skal have en font der kan vise de to kønssymboler og procent med 
-# "normal" fonttykkelse.
-library(showtext)
-# Først skal vi have styr på hvor font-filen faktisk ligger.
-if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
-  script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
-} else {
-  script_dir <- dirname(normalizePath(sys.frame(1)$ofile))
+```{r fonthåndtering}
+# Find mappen for den AKTUELLE .qmd der knit'es (uanset babelquarto, RStudio, Rscript)
+get_input_dir <- function() {
+  # 1) Quarto kan sætte denne (afhænger af version/invokation)
+  f <- Sys.getenv("QUARTO_INPUT_FILE", "")
+  if (nzchar(f)) {
+    return(dirname(normalizePath(f, winslash = "/", mustWork = FALSE)))
+  }
+
+  # 2) Under knitr/quarto-render: brug den faktiske input-fil
+  if (isTRUE(getOption("knitr.in.progress"))) {
+    inp <- knitr::current_input()
+    if (!is.null(inp) && nzchar(inp)) {
+      # gør relativ sti absolut ift. den aktuelle working dir
+      if (!grepl("^([A-Za-z]:|/)", inp)) inp <- file.path(getwd(), inp)
+      return(dirname(normalizePath(inp, winslash = "/", mustWork = FALSE)))
+    }
+    # som reserve, hvis current_input() er tom men input.dir er sat
+    dir <- knitr::opts_knit$get("input.dir")
+    if (!is.null(dir) && nzchar(dir)) {
+      return(normalizePath(dir, winslash = "/", mustWork = FALSE))
+    }
+  }
+
+  # 3) Interaktivt i RStudio
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    p <- tryCatch(rstudioapi::getActiveDocumentContext()$path, error = function(e) "")
+    if (nzchar(p)) {
+      return(dirname(normalizePath(p, winslash = "/", mustWork = FALSE)))
+    }
+  }
+
+  # 4) Kørsel via Rscript --file=...
+  args <- commandArgs(trailingOnly = FALSE)
+  fa <- sub("^--file=", "", args[grepl("^--file=", args)])
+  if (length(fa)) {
+    return(dirname(normalizePath(fa, winslash = "/", mustWork = FALSE)))
+  }
+
+  # 5) Fallback
+  normalizePath(getwd(), winslash = "/", mustWork = FALSE)
 }
 
-font_add("seguisym", file.path(script_dir, "SEGUISYM.TTF"))
+library(showtext)
+
+script_dir <- get_input_dir()  # <- dette er mappen hvor DIN index.qmd ligger
+font_file  <- file.path(script_dir, "SEGUISYM.TTF")
+
+if (!file.exists(font_file)) {
+  stop("Fandt ikke font: ", font_file,
+       "\n(Tjek at SEGUISYM.TTF ligger i samme mappe som den aktuelle .qmd)")
+}
+
+font_add("seguisym", font_file)
 showtext_auto()
 
 
+
+```
+
+
+```{r}
 library(glue)
 tot_data |> 
   mutate(andel = antal/sum(antal),
@@ -81,7 +128,8 @@ tot_data |>
   theme_void()
 ```
 
-```{r}
+
+```{r facetter}
 data |> 
   group_by(ALDER1) |> 
 #  filter(ALDER1 == "16-19 år") |> 
@@ -108,65 +156,6 @@ ggplot(aes(x="", y = andel, fill = KOEN)) +
 
 
 
-+ theme_minimal(base_family = "seguisym") +
-  theme(
-    
-
-  )
-
-# Opret datasættet
-data <- data.frame(
-  KØN = c("Mænd", "Kvinder", "Mænd", "Kvinder", "Mænd", "Kvinder", "Mænd", "Kvinder"),
-  ALDER = c("35-39 år", "35-39 år", "40-44 år", "40-44 år", "45-49 år", "45-49 år", "50-54 år", "50-54 år"),
-  INDHOLD = c(106117, 131599, 134851, 118063, 151005, 134647, 151143, 132615)
-)
-
-# Tilføj total for hver aldersgruppe
-data <- data %>%
-  group_by(ALDER) %>%
-  mutate(TOTAL = sum(INDHOLD))
-
-# Plot lagkagediagrammer med facetter
-ggplot(data, aes(x = "", y = INDHOLD, fill = KØN)) +
-  geom_bar(stat = "identity", width = 1, color = "black") +
-  coord_polar("y", start = 0) +
-  facet_wrap(~ALDER, ncol = 4) +
-  labs(
-    title = "Tilknytning til arbejdsmarkedet (fuldtidspersoner)",
-    subtitle = "Ordinær beskæftigelse i alt (2022)",
-    fill = "Køn"
-  ) +
-  theme_void() +
-  theme(
-    strip.text = element_text(size = 12, face = "bold"), # Aldergrupper over diagrammerne
-    plot.title = element_text(size = 16, face = "bold"),
-    plot.subtitle = element_text(size = 14),
-    legend.title = element_text(size = 12),
-    legend.text = element_text(size = 10)
-  )
-
-
-library(httr)
-library(tidyplots)
-library(tidyverse)
-
-library(danstat)
-library(ggpie)
-
-danstat::get_table_metadata("AMR2")
-
-variables <- list(list(code = "KØN", values = c("M","K")),
-                  list(code = "SOCIO", values = "021"),
-                  list(code = "ALDER", values = NA),
-                  list(code = "TID", values = 2022))
-
-
-data <- danstat::get_data("AMR2", variables = variables, language = "da")
-data %>% select(-TID) %>% 
-  filter(ALDER == "40-44 år") %>% 
-  ggplot(aes(x = ALDER, y = INDHOLD, fill = KØN)) +
-  geom_bar( stat = "identity") +
-  coord_polar("y", start = 0)
 
 
 ## (†) Hvorfor hader du lagkagediagrammer? 

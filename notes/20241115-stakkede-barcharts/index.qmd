@@ -51,7 +51,7 @@ We filter to only leave Denmark and change M and F to ♂ and ♀. :
 ```{r}
 df <- df %>% 
   filter(Country == "Denmark") %>% 
-  mutate(Sex = case_when(Sex,
+  mutate(Sex = case_switch(Sex,
              "M" ~ "♂", 
              "F" ~ "♀️",
              .default =  Sex))
