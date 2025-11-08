@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .h{fill:none;stroke:#111;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+    .t{font:20px Consolas, "Courier New", monospace; fill:#111; font-weight:700; letter-spacing:-1px}
+  </style>
+  <path class="h" d="M32 4 56 16v32L32 60 8 48V16Z"/>
+  <path class="h" d="M16 46 24 38 32 42 40 34 48 38"/>
+  <text x="50%" y="54%" text-anchor="middle" class="t">CK</text>
+</svg>
+
