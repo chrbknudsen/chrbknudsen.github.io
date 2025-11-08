@@ -14,7 +14,6 @@ Because you often find the solution to your excel problem on an english language
 Remember that you also have to change "," to ";"
 
 
-
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(reactable)
@@ -194,7 +193,9 @@ log_dict <- tribble(~Dansk, ~Engelsk,
 "HVIS.FEJL",	"IFERROR",
 "IKKE",	"NOT",
 "ELLER",	"OR",
-"SAND",	"TRUE",
+"SAND",	"TRUE")
+
+ref_dict <- tribble(~Dansk, ~Engelsk,
 "OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
 "ADRESSE",	"ADDRESS",
 "OMRÅDER",	"AREAS",
@@ -274,7 +275,9 @@ mat_dict <- tribble(~Dansk, ~Engelsk,
 "SUMXMY2",	"SUMXMY2",
 "TAN",	"TAN",
 "TANH",	"TANH",
-"AFKORT",	"TRUNC",
+"AFKORT",	"TRUNC")
+
+stat_dict <- tribble(~Dansk, ~Engelsk,
 "STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
 "MAD",	"AVEDEV",
 "MIDDEL",	"AVERAGE",
@@ -358,7 +361,9 @@ mat_dict <- tribble(~Dansk, ~Engelsk,
 "VARIANSP",	"VARP",
 "VARIANSPV",	"VARPA",
 "WEIBULL",	"WEIBULL",
-"ZTEST",	"ZTEST",
+"ZTEST",	"ZTEST")
+
+text_dict <- tribble(~Dansk, ~Engelsk,
 "TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
 "ASC",	"ASC",
 "BAHTTEKST",	"BAHTTEXT",
@@ -394,39 +399,54 @@ mat_dict <- tribble(~Dansk, ~Engelsk,
 "FJERN.OVERFLØDIGE.BLANKE",	"TRIM",
 "STORE.BOGSTAVER",	"UPPER",
 "VÆRDI",	"VALUE")
+```
+
+
+## ADD-IN AND AUTOMATION FUNCTIONS
+
+```{r}
 reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
+
+## DATABASE FUNCTIONS
+
 
 ```{r}
 reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
+## DATE AND TIME FUNCTIONS
 
-```{r}
+```{r dates, echo = FALSE}
 reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
+## ENGINEERING FUNCTIONS
 
-```{r}
+```{r engineering, echo = FALSE}
 reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
-```{r}
+## FINANCIAL FUNCTIONS
+
+```{r finance, echo = FALSE}
 reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
+## INFORMATION FUNCTIONS
 
-```{r}
+
+```{r information, echo = FALSE}
 reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
-```{r}
+```{r logic, echo = FALSE}
 reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
-```{r}
+```{r math, echo = FALSE}
 reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```

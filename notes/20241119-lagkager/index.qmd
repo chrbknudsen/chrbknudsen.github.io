@@ -18,7 +18,7 @@ Vi skal bruge noget data. Og helst noget hvor der ikke er så mange forskellige 
 Vi springer til [Danmarks Statistiks statistikbanks api-konsol](https://api.statbank.dk/console#data) og konstruerer et api-kald, hvor vi beder
 om antallet af danskere i ordinær beskæftigelse, for hele landet, i 2023, fordelt på alder - og så på køn:
 
-```{r libraries, message = FALSE}
+```{r eval = FALSE}
 library(tidyverse)
 data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=*%2CK&ALDER1=*&Tid=2023&SOCIO=021")
 head(data)
@@ -27,7 +27,7 @@ head(data)
 
 Grupper efter køn, summer for at få det samlede antal beskæftigede:
 
-```{r summarising}
+```{r eval = FALSE}
 tot_data <- data |> 
   group_by(KOEN) |> 
   summarise(antal = sum(INDHOLD))
@@ -37,7 +37,7 @@ ggplot2 har holdninger til lagkagediagrammer, der ikke er så forskellige fra mi
 vanilla ggplot, og ikke hente pakker er det lidt tricky.
 Vi laver et stakket barchart - og ændrer koordinaterne til at være polære:
 
-```{r lagkage-1}
+```{r eval = FALSE}
 tot_data |> 
   ggplot(aes(x="", y = antal, fill = KOEN)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
@@ -45,49 +45,9 @@ tot_data |>
 ```
 
 det kan vi godt gøre pænere:
-```{r fonthåndtering}
-# Find mappen for den AKTUELLE .qmd der knit'es (uanset babelquarto, RStudio, Rscript)
-get_input_dir <- function() {
-  # 1) Quarto kan sætte denne (afhænger af version/invokation)
-  f <- Sys.getenv("QUARTO_INPUT_FILE", "")
-  if (nzchar(f)) {
-    return(dirname(normalizePath(f, winslash = "/", mustWork = FALSE)))
-  }
-
-  # 2) Under knitr/quarto-render: brug den faktiske input-fil
-  if (isTRUE(getOption("knitr.in.progress"))) {
-    inp <- knitr::current_input()
-    if (!is.null(inp) && nzchar(inp)) {
-      # gør relativ sti absolut ift. den aktuelle working dir
-      if (!grepl("^([A-Za-z]:|/)", inp)) inp <- file.path(getwd(), inp)
-      return(dirname(normalizePath(inp, winslash = "/", mustWork = FALSE)))
-    }
-    # som reserve, hvis current_input() er tom men input.dir er sat
-    dir <- knitr::opts_knit$get("input.dir")
-    if (!is.null(dir) && nzchar(dir)) {
-      return(normalizePath(dir, winslash = "/", mustWork = FALSE))
-    }
-  }
-
-  # 3) Interaktivt i RStudio
-  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
-    p <- tryCatch(rstudioapi::getActiveDocumentContext()$path, error = function(e) "")
-    if (nzchar(p)) {
-      return(dirname(normalizePath(p, winslash = "/", mustWork = FALSE)))
-    }
-  }
-
-  # 4) Kørsel via Rscript --file=...
-  args <- commandArgs(trailingOnly = FALSE)
-  fa <- sub("^--file=", "", args[grepl("^--file=", args)])
-  if (length(fa)) {
-    return(dirname(normalizePath(fa, winslash = "/", mustWork = FALSE)))
-  }
-
-  # 5) Fallback
-  normalizePath(getwd(), winslash = "/", mustWork = FALSE)
-}
-
+```{r eval = FALSE}
+# fordi vi skal have en font der kan vise de to kønssymboler og procent med 
+# "normal" fonttykkelse.
 library(showtext)
 
 script_dir <- get_input_dir()  # <- dette er mappen hvor DIN index.qmd ligger
@@ -128,8 +88,7 @@ tot_data |>
   theme_void()
 ```
 
-
-```{r facetter}
+```{r eval = FALSE}
 data |> 
   group_by(ALDER1) |> 
 #  filter(ALDER1 == "16-19 år") |> 
