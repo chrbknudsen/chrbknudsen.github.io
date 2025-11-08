@@ -1,6 +1,6 @@
 ---
 title: "Get the font color of a cell in Excel"
-subtitle: "indsæt subtitle"
+subtitle: "Using VBA"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
