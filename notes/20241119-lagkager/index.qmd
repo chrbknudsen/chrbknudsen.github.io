@@ -18,7 +18,7 @@ Vi skal bruge noget data. Og helst noget hvor der ikke er så mange forskellige 
 Vi springer til [Danmarks Statistiks statistikbanks api-konsol](https://api.statbank.dk/console#data) og konstruerer et api-kald, hvor vi beder
 om antallet af danskere i ordinær beskæftigelse, for hele landet, i 2023, fordelt på alder - og så på køn:
 
-```{r eval = FALSE}
+```{r}
 library(tidyverse)
 data <- read_csv2("https://api.statbank.dk/v1/data/AMR1/CSV?OMR%C3%85DE=000&KOEN=*%2CK&ALDER1=*&Tid=2023&SOCIO=021")
 head(data)
@@ -27,7 +27,7 @@ head(data)
 
 Grupper efter køn, summer for at få det samlede antal beskæftigede:
 
-```{r eval = FALSE}
+```{r}
 tot_data <- data |> 
   group_by(KOEN) |> 
   summarise(antal = sum(INDHOLD))
@@ -37,7 +37,7 @@ ggplot2 har holdninger til lagkagediagrammer, der ikke er så forskellige fra mi
 vanilla ggplot, og ikke hente pakker er det lidt tricky.
 Vi laver et stakket barchart - og ændrer koordinaterne til at være polære:
 
-```{r eval = FALSE}
+```{r}
 tot_data |> 
   ggplot(aes(x="", y = antal, fill = KOEN)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
@@ -45,25 +45,6 @@ tot_data |>
 ```
 
 det kan vi godt gøre pænere:
-```{r eval = FALSE}
-# fordi vi skal have en font der kan vise de to kønssymboler og procent med 
-# "normal" fonttykkelse.
-library(showtext)
-
-script_dir <- get_input_dir()  # <- dette er mappen hvor DIN index.qmd ligger
-font_file  <- file.path(script_dir, "SEGUISYM.TTF")
-
-if (!file.exists(font_file)) {
-  stop("Fandt ikke font: ", font_file,
-       "\n(Tjek at SEGUISYM.TTF ligger i samme mappe som den aktuelle .qmd)")
-}
-
-font_add("seguisym", font_file)
-showtext_auto()
-
-
-
-```
 
 
 ```{r}
