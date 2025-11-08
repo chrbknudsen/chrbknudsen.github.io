@@ -60,14 +60,14 @@
     "href": "notes/20180314-excel_dk_en_dict/index.html#add-in-and-automation-functions",
     "title": "Danish-english excel dictionary",
     "section": "ADD-IN AND AUTOMATION FUNCTIONS",
-    "text": "ADD-IN AND AUTOMATION FUNCTIONS\n\nreactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )"
+    "text": "ADD-IN AND AUTOMATION FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#database-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#database-functions",
     "title": "Danish-english excel dictionary",
     "section": "DATABASE FUNCTIONS",
-    "text": "DATABASE FUNCTIONS\n\nreactable(db_dict, searchable = TRUE, defaultPageSize = 20 )"
+    "text": "DATABASE FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#date-and-time-functions",
@@ -96,6 +96,34 @@
     "title": "Danish-english excel dictionary",
     "section": "INFORMATION FUNCTIONS",
     "text": "INFORMATION FUNCTIONS"
+  },
+  {
+    "objectID": "notes/20180314-excel_dk_en_dict/index.html#noget",
+    "href": "notes/20180314-excel_dk_en_dict/index.html#noget",
+    "title": "Danish-english excel dictionary",
+    "section": "noget",
+    "text": "noget"
+  },
+  {
+    "objectID": "notes/20180314-excel_dk_en_dict/index.html#noget-1",
+    "href": "notes/20180314-excel_dk_en_dict/index.html#noget-1",
+    "title": "Danish-english excel dictionary",
+    "section": "noget",
+    "text": "noget"
+  },
+  {
+    "objectID": "notes/20180314-excel_dk_en_dict/index.html#noget-2",
+    "href": "notes/20180314-excel_dk_en_dict/index.html#noget-2",
+    "title": "Danish-english excel dictionary",
+    "section": "noget",
+    "text": "noget"
+  },
+  {
+    "objectID": "notes/20180314-excel_dk_en_dict/index.html#noget-3",
+    "href": "notes/20180314-excel_dk_en_dict/index.html#noget-3",
+    "title": "Danish-english excel dictionary",
+    "section": "noget",
+    "text": "noget"
   },
   {
     "objectID": "notes/20180910-font_color_excel/index.html",

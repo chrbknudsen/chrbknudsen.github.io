@@ -404,14 +404,14 @@ text_dict <- tribble(~Dansk, ~Engelsk,
 
 ## ADD-IN AND AUTOMATION FUNCTIONS
 
-```{r}
+```{r add_in, echo = FALSE}
 reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## DATABASE FUNCTIONS
 
 
-```{r}
+```{r db, echo = FALSE}
 reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
@@ -441,12 +441,26 @@ reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
 reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
+## noget
 
 ```{r logic, echo = FALSE}
 reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
+## noget
 
 ```{r math, echo = FALSE}
 reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## noget
+
+```{r stat, echo = FALSE}
+reactable(stat_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## noget
+
+```{r text, echo = FALSE}
+reactable(text_dict, searchable = TRUE, defaultPageSize = 20 )
 ```

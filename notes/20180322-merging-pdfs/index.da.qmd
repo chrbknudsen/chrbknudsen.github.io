@@ -1,26 +1,31 @@
 ---
-title: "Merging PDF-files"
-subtitle: "indsæt subtitle"
+title: "Saml PDF-files"
+subtitle: "Fra kommandolinien"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - CLI
+  - Linux
+  - pdf
 date: 2018-03-22
 toc: true
 image: "merging_pdfs.png"
 ---
-You may need to merge several pdf-files into one.
 
-There are several tools. Some of them you have to pay for.
+Måske har du brug for at samle flere pdf-filer til en.
 
-If you are in a linux environment, try this:
+Der er flere værktøjer der kan det. Nogen af dem skal du betale for.
+
+Hvis du er i Linux verdenen, så kan du prøve det her:
+
 
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=final.pdf filea.pdf fileb.pdf
 
-continue with filec.pdf etc.
+Fortsæt med filec.pdf etc.
 
-Some say it is slow.
+Der er de der siger det er langsomt.
 
-Others say, yes it is slow, but it produces smaller final files, and are able to handle "difficult pdfs".
+Andre siger, ja det er langsomt, men det giver mindre filer i sidste ende, og kan håndtere
+besværlige pdf'er.
 
-I say it is nice that it can be done from the command line.
+Selv siger jeg at det er dejligt at det kan gøres fra kommandolinien.

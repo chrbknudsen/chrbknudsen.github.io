@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
 <link href="../../assets/favicon-light.svg" rel="icon" type="image/svg+xml">
@@ -177,6 +143,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#engineering-functions" id="toc-engineering-functions" class="nav-link" data-scroll-target="#engineering-functions">ENGINEERING FUNCTIONS</a></li>
   <li><a href="#financial-functions" id="toc-financial-functions" class="nav-link" data-scroll-target="#financial-functions">FINANCIAL FUNCTIONS</a></li>
   <li><a href="#information-functions" id="toc-information-functions" class="nav-link" data-scroll-target="#information-functions">INFORMATION FUNCTIONS</a></li>
+  <li><a href="#noget" id="toc-noget" class="nav-link" data-scroll-target="#noget">noget</a></li>
+  <li><a href="#noget-1" id="toc-noget-1" class="nav-link" data-scroll-target="#noget-1">noget</a></li>
+  <li><a href="#noget-2" id="toc-noget-2" class="nav-link" data-scroll-target="#noget-2">noget</a></li>
+  <li><a href="#noget-3" id="toc-noget-3" class="nav-link" data-scroll-target="#noget-3">noget</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -213,66 +183,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header><p>Because you often find the solution to your excel problem on an english language site. But have to solve the problem in a danish version of Excel. Remember that you also have to change “,” to “;”</p>
 <section id="add-in-and-automation-functions" class="level2"><h2 class="anchored" data-anchor-id="add-in-and-automation-functions">ADD-IN AND AUTOMATION FUNCTIONS</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">reactable</span>(add_in_dict, <span class="at">searchable =</span> <span class="cn">TRUE</span>, <span class="at">defaultPageSize =</span> <span class="dv">20</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-8b383f7f9d0d2e9f379c" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8b383f7f9d0d2e9f379c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER","KALD","EUROKONVERTER","HENTPIVOTDATA","REGISTER.ID","SQL.REQUEST","KUBEFUNKTIONER","KUBE.KPI.MEDLEM","KUBE.MEDLEM","KUBEMEDLEM.EGENSKAB","KUBEMEDLEM.RANG","KUBESÆT","KUBESÆT.TÆL","KUBEVÆRDI"],"Engelsk":["ADD-IN AND AUTOMATION FUNCTIONS","CALL","EUROCONVERT","GETPIVOTDATA","REGISTER.ID","SQL.REQUEST","CUBE FUNCTIONS","CUBEKPIMEMBER","CUBEMEMBER","CUBEMEMBERPROPERTY","CUBERANKEDMEMBER","CUBESET","CUBESETCOUNT","CUBEVALUE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"d4c82830da39d7959c0973cfbcf98133"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-f9b00a85d85879ce6c7d" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f9b00a85d85879ce6c7d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER","KALD","EUROKONVERTER","HENTPIVOTDATA","REGISTER.ID","SQL.REQUEST","KUBEFUNKTIONER","KUBE.KPI.MEDLEM","KUBE.MEDLEM","KUBEMEDLEM.EGENSKAB","KUBEMEDLEM.RANG","KUBESÆT","KUBESÆT.TÆL","KUBEVÆRDI"],"Engelsk":["ADD-IN AND AUTOMATION FUNCTIONS","CALL","EUROCONVERT","GETPIVOTDATA","REGISTER.ID","SQL.REQUEST","CUBE FUNCTIONS","CUBEKPIMEMBER","CUBEMEMBER","CUBEMEMBERPROPERTY","CUBERANKEDMEMBER","CUBESET","CUBESETCOUNT","CUBEVALUE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"d4c82830da39d7959c0973cfbcf98133"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="database-functions" class="level2"><h2 class="anchored" data-anchor-id="database-functions">DATABASE FUNCTIONS</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">reactable</span>(db_dict, <span class="at">searchable =</span> <span class="cn">TRUE</span>, <span class="at">defaultPageSize =</span> <span class="dv">20</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-e7c94cbb62c3128092d7" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e7c94cbb62c3128092d7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["DATABASEFUNKTIONER","DMIDDEL","DTÆL","DTÆLV","DHENT","DMAKS","DMIN","DPRODUKT","DSTDAFV","DSTDAFVP","DSUM","DVARIANS","DVARIANSP"],"Engelsk":["DATABASE FUNCTIONS","DAVERAGE","DCOUNT","DCOUNTA","DGET","DMAX","DMIN","DPRODUCT","DSTDEV","DSTDEVP","DSUM","DVAR","DVARP"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"26a555f9d0dcfb01c2494c4ab05114e9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-37fedc545872c24e6b71" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-37fedc545872c24e6b71">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["DATABASEFUNKTIONER","DMIDDEL","DTÆL","DTÆLV","DHENT","DMAKS","DMIN","DPRODUKT","DSTDAFV","DSTDAFVP","DSUM","DVARIANS","DVARIANSP"],"Engelsk":["DATABASE FUNCTIONS","DAVERAGE","DCOUNT","DCOUNTA","DGET","DMAX","DMIN","DPRODUCT","DSTDEV","DSTDEVP","DSUM","DVAR","DVARP"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"26a555f9d0dcfb01c2494c4ab05114e9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="date-and-time-functions" class="level2"><h2 class="anchored" data-anchor-id="date-and-time-functions">DATE AND TIME FUNCTIONS</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-1f46683f0560ee72aa63" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1f46683f0560ee72aa63">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["DATO- OG KLOKKESLÆTSFUNKTIONER","DATO","DATOVÆRDI","DAG","DAGE360","EDATO","SLUT.PÅ.MÅNED","TIME","MINUT","MÅNED","ANTAL.ARBEJDSDAGE","NU","SEKUND","KLOKKESLÆT","TIDSVÆRDI","IDAG","UGEDAG","UGE.NR","ARBEJDSDAG","ÅR","ÅR.BRØK"],"Engelsk":["DATE AND TIME FUNCTIONS","DATE","DATEVALUE","DAY","DAYS360","EDATE","EOMONTH","HOUR","MINUTE","MONTH","NETWORKDAYS","NOW","SECOND","TIME","TIMEVALUE","TODAY","WEEKDAY0","WEEKNUM","WORKDAY","YEAR","YEARFRAC"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"786f99480280525c8f30f27d1644a9f2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-898a7b83e31dce94d57c" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-898a7b83e31dce94d57c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["DATO- OG KLOKKESLÆTSFUNKTIONER","DATO","DATOVÆRDI","DAG","DAGE360","EDATO","SLUT.PÅ.MÅNED","TIME","MINUT","MÅNED","ANTAL.ARBEJDSDAGE","NU","SEKUND","KLOKKESLÆT","TIDSVÆRDI","IDAG","UGEDAG","UGE.NR","ARBEJDSDAG","ÅR","ÅR.BRØK"],"Engelsk":["DATE AND TIME FUNCTIONS","DATE","DATEVALUE","DAY","DAYS360","EDATE","EOMONTH","HOUR","MINUTE","MONTH","NETWORKDAYS","NOW","SECOND","TIME","TIMEVALUE","TODAY","WEEKDAY0","WEEKNUM","WORKDAY","YEAR","YEARFRAC"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"786f99480280525c8f30f27d1644a9f2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="engineering-functions" class="level2"><h2 class="anchored" data-anchor-id="engineering-functions">ENGINEERING FUNCTIONS</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-c9a94883b22c744ee5ed" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c9a94883b22c744ee5ed">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["TEKNISKE FUNKTIONER","BESSELI","BESSELJ","BESSELK","BESSELY","BIN.TIL.DEC","BIN.TIL.HEX","BIN.TIL.OKT","KOMPLEKS","KONVERTER","DEC.TIL.BIN","DEC.TIL.HEX","DEC.TIL.OKT","DELTA","FEJLFUNK","FEJLFUNK.KOMP","GETRIN","HEX.TIL.BIN","HEX.TIL.DEC","HEX.TIL.OKT","IMAGABS","IMAGINÆR","IMAGARGUMENT","IMAGKONJUGERE","IMAGCOS","IMAGDIV","IMAGEKSP","IMAGLN","IMAGLOG10","IMAGLOG2","IMAGPOTENS","IMAGPRODUKT","IMAGREELT","IMAGSIN","IMAGKVROD","IMAGSUB","IMAGSUM","OKT.TIL.BIN","OKT.TIL.DEC","OKT.TIL.HEX"],"Engelsk":["ENGINEERING FUNCTIONS","BESSELI","BESSELJ","BESSELK","BESSELY","BIN2DEC","BIN2HEX","BIN2OCT","COMPLEX","CONVERT","DEC2BIN","DEC2HEX","DEC2OCT","DELTA","ERF","ERFC","GESTEP","HEX2BIN","HEX2DEC","HEX2OCT","IMABS","IMAGINARY","IMARGUMENT","IMCONJUGATE","IMCOS","IMDIV","IMEXP","IMLN","IMLOG10","IMLOG2","IMPOWER","IMPRODUCT","IMREAL","IMSIN","IMSQRT","IMSUB","IMSUM","OCT2BIN","OCT2DEC","OCT2HEX"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"5e7523803c1160982d4043fd6f3b8eb4"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-0bb469a8b6b52114d485" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0bb469a8b6b52114d485">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["TEKNISKE FUNKTIONER","BESSELI","BESSELJ","BESSELK","BESSELY","BIN.TIL.DEC","BIN.TIL.HEX","BIN.TIL.OKT","KOMPLEKS","KONVERTER","DEC.TIL.BIN","DEC.TIL.HEX","DEC.TIL.OKT","DELTA","FEJLFUNK","FEJLFUNK.KOMP","GETRIN","HEX.TIL.BIN","HEX.TIL.DEC","HEX.TIL.OKT","IMAGABS","IMAGINÆR","IMAGARGUMENT","IMAGKONJUGERE","IMAGCOS","IMAGDIV","IMAGEKSP","IMAGLN","IMAGLOG10","IMAGLOG2","IMAGPOTENS","IMAGPRODUKT","IMAGREELT","IMAGSIN","IMAGKVROD","IMAGSUB","IMAGSUM","OKT.TIL.BIN","OKT.TIL.DEC","OKT.TIL.HEX"],"Engelsk":["ENGINEERING FUNCTIONS","BESSELI","BESSELJ","BESSELK","BESSELY","BIN2DEC","BIN2HEX","BIN2OCT","COMPLEX","CONVERT","DEC2BIN","DEC2HEX","DEC2OCT","DELTA","ERF","ERFC","GESTEP","HEX2BIN","HEX2DEC","HEX2OCT","IMABS","IMAGINARY","IMARGUMENT","IMCONJUGATE","IMCOS","IMDIV","IMEXP","IMLN","IMLOG10","IMLOG2","IMPOWER","IMPRODUCT","IMREAL","IMSIN","IMSQRT","IMSUB","IMSUM","OCT2BIN","OCT2DEC","OCT2HEX"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"5e7523803c1160982d4043fd6f3b8eb4"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="financial-functions" class="level2"><h2 class="anchored" data-anchor-id="financial-functions">FINANCIAL FUNCTIONS</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-2df8c393ede90abd0e25" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-2df8c393ede90abd0e25">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["FINANSIELLE FUNKTIONER","PÅLØBRENTE","PÅLØBRENTE.UDLØB","AMORDEGRC","AMORLINC","KUPONDAGE.SA","KUPONDAGE.A","KUPONDAGE.ANK","KUPONDAG.NÆSTE","KUPONBETALINGER","KUPONDAG.FORRIGE","AKKUM.RENTE","AKKUM.HOVEDSTOL","DB","DSA","DISKONTO","KR.DECIMAL","KR.BRØK","VARIGHED","EFFEKTIV.RENTE","FV","FVTABEL","RENTEFOD","R.YDELSE","IA","ISPMT","MVARIGHED","MIA","NOMINEL","NPER","NUTIDSVÆRDI","ULIGE.KURS.PÅLYDENDE","ULIGE.FØRSTE.AFKAST","ULIGE.SIDSTE.KURS","ULIGE.SIDSTE.AFKAST","YDELSE","H.YDELSE","KURS","KURS.DISKONTO","KURS.UDLØB","NV","RENTE","MODTAGET.VED.UDLØB","LA","ÅRSAFSKRIVNING","STATSOBLIGATION","STATSOBLIGATION.KURS","STATSOBLIGATION.AFKAST","VSA","INTERN.RENTE","NETTO.NUTIDSVÆRDI","AFKAST","AFKAST.DISKONTO","AFKAST.UDLØBSDATO"],"Engelsk":["FINANCIAL FUNCTIONS","ACCRINT","ACCRINTM","AMORDEGRC","AMORLINC","COUPDAYBS","COUPDAYS","COUPDAYSNC","COUPNCD","COUPNUM","COUPPCD","CUMIPMT","CUMPRINC","DB","DDB","DISC","DOLLARDE","DOLLARFR","DURATION","EFFECT","FV","FVSCHEDULE","INTRATE","IPMT","IRR","ISPMT","MDURATION","MIRR","NOMINAL","NPER","NPV","ODDFPRICE","ODDFYIELD","ODDLPRICE","ODDLYIELD","PMT","PPMT","PRICE","PRICEDISC","PRICEMAT","PV","RATE","RECEIVED","SLN","SYD","TBILLEQ","TBILLPRICE","TBILLYIELD","VDB","XIRR","XNPV","YIELD","YIELDDISC","YIELDMAT"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"425abf266874e590e2c59d4ee1072f44"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-4ac612d30fe3aa8a94e4" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4ac612d30fe3aa8a94e4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["FINANSIELLE FUNKTIONER","PÅLØBRENTE","PÅLØBRENTE.UDLØB","AMORDEGRC","AMORLINC","KUPONDAGE.SA","KUPONDAGE.A","KUPONDAGE.ANK","KUPONDAG.NÆSTE","KUPONBETALINGER","KUPONDAG.FORRIGE","AKKUM.RENTE","AKKUM.HOVEDSTOL","DB","DSA","DISKONTO","KR.DECIMAL","KR.BRØK","VARIGHED","EFFEKTIV.RENTE","FV","FVTABEL","RENTEFOD","R.YDELSE","IA","ISPMT","MVARIGHED","MIA","NOMINEL","NPER","NUTIDSVÆRDI","ULIGE.KURS.PÅLYDENDE","ULIGE.FØRSTE.AFKAST","ULIGE.SIDSTE.KURS","ULIGE.SIDSTE.AFKAST","YDELSE","H.YDELSE","KURS","KURS.DISKONTO","KURS.UDLØB","NV","RENTE","MODTAGET.VED.UDLØB","LA","ÅRSAFSKRIVNING","STATSOBLIGATION","STATSOBLIGATION.KURS","STATSOBLIGATION.AFKAST","VSA","INTERN.RENTE","NETTO.NUTIDSVÆRDI","AFKAST","AFKAST.DISKONTO","AFKAST.UDLØBSDATO"],"Engelsk":["FINANCIAL FUNCTIONS","ACCRINT","ACCRINTM","AMORDEGRC","AMORLINC","COUPDAYBS","COUPDAYS","COUPDAYSNC","COUPNCD","COUPNUM","COUPPCD","CUMIPMT","CUMPRINC","DB","DDB","DISC","DOLLARDE","DOLLARFR","DURATION","EFFECT","FV","FVSCHEDULE","INTRATE","IPMT","IRR","ISPMT","MDURATION","MIRR","NOMINAL","NPER","NPV","ODDFPRICE","ODDFYIELD","ODDLPRICE","ODDLYIELD","PMT","PPMT","PRICE","PRICEDISC","PRICEMAT","PV","RATE","RECEIVED","SLN","SYD","TBILLEQ","TBILLPRICE","TBILLYIELD","VDB","XIRR","XNPV","YIELD","YIELDDISC","YIELDMAT"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"425abf266874e590e2c59d4ee1072f44"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="information-functions" class="level2"><h2 class="anchored" data-anchor-id="information-functions">INFORMATION FUNCTIONS</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-9c2fee1be96bbf4ed9df" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9c2fee1be96bbf4ed9df">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["INFORMATIONSFUNKTIONER","CELLE","FEJLTYPE","INFO","ER.TOM","ER.FJL","ER.FEJL","ER.LIGE","ER.LOGISK","ER.IKKE.TILGÆNGELIG","ER.IKKE.TEKST","ER.TAL","ER.ULIGE","ER.REFERENCE","ER.TEKST","TAL","IKKE.TILGÆNGELIG","VÆRDITYPE"],"Engelsk":["INFORMATION FUNCTIONS","CELL","ERROR.TYPE","INFO","ISBLANK","ISERR","ISERROR","ISEVEN","ISLOGICAL","ISNA","ISNONTEXT","ISNUMBER","ISODD","ISREF","ISTEXT","N","NA","TYPE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"cb4d184fe70b8bc695e19347add792b6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-b21b84eb6d8cc3751f80" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b21b84eb6d8cc3751f80">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["INFORMATIONSFUNKTIONER","CELLE","FEJLTYPE","INFO","ER.TOM","ER.FJL","ER.FEJL","ER.LIGE","ER.LOGISK","ER.IKKE.TILGÆNGELIG","ER.IKKE.TEKST","ER.TAL","ER.ULIGE","ER.REFERENCE","ER.TEKST","TAL","IKKE.TILGÆNGELIG","VÆRDITYPE"],"Engelsk":["INFORMATION FUNCTIONS","CELL","ERROR.TYPE","INFO","ISBLANK","ISERR","ISERROR","ISEVEN","ISLOGICAL","ISNA","ISNONTEXT","ISNUMBER","ISODD","ISREF","ISTEXT","N","NA","TYPE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"cb4d184fe70b8bc695e19347add792b6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
+</section><section id="noget" class="level2"><h2 class="anchored" data-anchor-id="noget">noget</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-e536cf4d0c6da59a5b56" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e536cf4d0c6da59a5b56">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["LOGISKE FUNKTIONER","OG","FALSK","HVIS","HVIS.FEJL","IKKE","ELLER","SAND"],"Engelsk":["LOGICAL FUNCTIONS","AND","FALSE","IF","IFERROR","NOT","OR","TRUE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"df2a8c6777e7259994f383e43dce5721"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-022a388c0472a9b3eeb3" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-022a388c0472a9b3eeb3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["LOGISKE FUNKTIONER","OG","FALSK","HVIS","HVIS.FEJL","IKKE","ELLER","SAND"],"Engelsk":["LOGICAL FUNCTIONS","AND","FALSE","IF","IFERROR","NOT","OR","TRUE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"df2a8c6777e7259994f383e43dce5721"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
+</section><section id="noget-1" class="level2"><h2 class="anchored" data-anchor-id="noget-1">noget</h2>
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="reactable html-widget html-fill-item" id="htmlwidget-01ac19793d627fc47d60" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-01ac19793d627fc47d60">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER","ABS","ARCCOS","ARCCOSH","ARCSIN","ARCSINH","ARCTAN","ARCTAN2","ARCTANH","AFRUND.LOFT","KOMBIN","COS","COSH","GRADER","LIGE","EKSP","FAKULTET","DOBBELT.FAKULTET","AFRUND.GULV","STØRSTE.FÆLLES.DIVISOR","HELTAL","MINDSTE.FÆLLES.MULTIPLUM","LN","LOG","LOG10","MDETERM","MINVERT","MPRODUKT","REST","MAFRUND","MULTINOMIAL","ULIGE","PI","POTENS","PRODUKT","KVOTIENT","RADIANER","SLUMP","SLUMP.MELLEM","ROMERTAL","AFRUND","RUND.NED","RUND.OP","SERIESUM","FORTEGN","SIN","SINH","KVROD","KVRODPI","SUBTOTAL","SUM","SUM.HVIS","SUM.HVISER","SUMPRODUKT","SUMKV","SUMX2MY2","SUMX2PY2","SUMXMY2","TAN","TANH","AFKORT"],"Engelsk":["MATH AND TRIGONOMETRY FUNCTIONS","ABS","ACOS","ACOSH","ASIN","ASINH","ATAN","ATAN2","ATANH","CEILING","COMBIN","COS","COSH","DEGREES","EVEN","EXP","FACT","FACTDOUBLE","FLOOR","GCD","INT","LCM","LN","LOG","LOG10","MDETERM","MINVERSE","MMULT","MOD","MROUND","MULTINOMIAL","ODD","PI","POWER","PRODUCT","QUOTIENT","RADIANS","RAND","RANDBETWEEN","ROMAN","ROUND","ROUNDDOWN","ROUNDUP","SERIESSUM","SIGN","SIN","SINH","SQRT","SQRTPI","SUBTOTAL","SUM","SUMIF","SUMIFS","SUMPRODUCT","SUMSQ","SUMX2MY2","SUMX2PY2","SUMXMY2","TAN","TANH","TRUNC"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"25f2e3162fdfea9e60ca1e6158149e1d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-0fe73321528b3049030b" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0fe73321528b3049030b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER","ABS","ARCCOS","ARCCOSH","ARCSIN","ARCSINH","ARCTAN","ARCTAN2","ARCTANH","AFRUND.LOFT","KOMBIN","COS","COSH","GRADER","LIGE","EKSP","FAKULTET","DOBBELT.FAKULTET","AFRUND.GULV","STØRSTE.FÆLLES.DIVISOR","HELTAL","MINDSTE.FÆLLES.MULTIPLUM","LN","LOG","LOG10","MDETERM","MINVERT","MPRODUKT","REST","MAFRUND","MULTINOMIAL","ULIGE","PI","POTENS","PRODUKT","KVOTIENT","RADIANER","SLUMP","SLUMP.MELLEM","ROMERTAL","AFRUND","RUND.NED","RUND.OP","SERIESUM","FORTEGN","SIN","SINH","KVROD","KVRODPI","SUBTOTAL","SUM","SUM.HVIS","SUM.HVISER","SUMPRODUKT","SUMKV","SUMX2MY2","SUMX2PY2","SUMXMY2","TAN","TANH","AFKORT"],"Engelsk":["MATH AND TRIGONOMETRY FUNCTIONS","ABS","ACOS","ACOSH","ASIN","ASINH","ATAN","ATAN2","ATANH","CEILING","COMBIN","COS","COSH","DEGREES","EVEN","EXP","FACT","FACTDOUBLE","FLOOR","GCD","INT","LCM","LN","LOG","LOG10","MDETERM","MINVERSE","MMULT","MOD","MROUND","MULTINOMIAL","ODD","PI","POWER","PRODUCT","QUOTIENT","RADIANS","RAND","RANDBETWEEN","ROMAN","ROUND","ROUNDDOWN","ROUNDUP","SERIESSUM","SIGN","SIN","SINH","SQRT","SQRTPI","SUBTOTAL","SUM","SUMIF","SUMIFS","SUMPRODUCT","SUMSQ","SUMX2MY2","SUMX2PY2","SUMXMY2","TAN","TANH","TRUNC"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"25f2e3162fdfea9e60ca1e6158149e1d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section><section id="noget-2" class="level2"><h2 class="anchored" data-anchor-id="noget-2">noget</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item" id="htmlwidget-4ce59be03f6460c7ae88" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4ce59be03f6460c7ae88">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["STATISTISKE FUNKTIONER","MAD","MIDDEL","MIDDELV","MIDDEL.HVIS","MIDDEL.HVISER","BETAFORDELING","BETAINV","BINOMIALFORDELING","CHIFORDELING","CHIINV","CHITEST","KONFIDENSINTERVAL","KORRELATION","TÆL","TÆLV","ANTAL.BLANKE","TÆLHVIS","TÆL.HVISER","KOVARIANS","KRITBINOM","SAK","EKSPFORDELING","FFORDELING","FINV","FISHER","FISHERINV","PROGNOSE","FREKVENS","FTEST","GAMMAFORDELING","GAMMAINV","GAMMALN","GEOMIDDELVÆRDI","FORØGELSE","HARMIDDELVÆRDI","HYPGEOFORDELING","SKÆRING","TOPSTEJL","STOR","LINREGR","LOGREGR","LOGINV","LOGNORMFORDELING","MAKS","MAKSV","MEDIAN","MIN","MINV","HYPPIGST","NEGBINOMFORDELING","NORMFORDELING","NORMINV","STANDARDNORMFORDELING","STANDARDNORMINV","PEARSON","FRAKTIL","PROCENTPLADS","PERMUT","POISSON","SANDSYNLIGHED","KVARTIL","PLADS","FORKLARINGSGRAD","SKÆVHED","HÆLDNING","MINDSTE","STANDARDISER","STDAFV","STDAFVV","STDAFVP","STDAFVPV","STFYX","TFORDELING","TINV","TENDENS","TRIMMIDDELVÆRDI","TTEST","VARIANS","VARIANSV","VARIANSP","VARIANSPV","WEIBULL","ZTEST"],"Engelsk":["STATISTICAL FUNCTIONS","AVEDEV","AVERAGE","AVERAGEA","AVERAGEIF","AVERAGEIFS","BETADIST","BETAINV","BINOMDIST","CHIDIST","CHIINV","CHITEST","CONFIDENCE","CORREL","COUNT","COUNTA","COUNTBLANK","COUNTIF","COUNTIF","COVAR","CRITBINOM","DEVSQ","EXPONDIST","FDIST","FINV","FISHER","FISHERINV","FORECAST","FREQUENCY","FTEST","GAMMADIST","GAMMAINV","GAMMALN","GEOMEAN","GROWTH","HARMEAN","HYPGEOMDIST","INTERCEPT","KURT","LARGE","LINEST","LOGEST","LOGINV","LOGNORMDIST","MAX","MAXA","MEDIAN","MIN","MINA","MODE","NEGBINOMDIST","NORMDIST","NORMINV","NORMSDIST","NORMSINV","PEARSON","PERCENTILE","PERCENTRANK","PERMUT","POISSON","PROB","QUARTILE","RANK","RSQ","SKEW","SLOPE","SMALL","STANDARDIZE","STDEV","STDEVA","STDEVP","STDEVPA","STEYX","TDIST","TINV","TREND","TRIMMEAN","TTEST","VAR","VARA","VARP","VARPA","WEIBULL","ZTEST"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"911090852a0cdc01436c9fb2af1a4be5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section><section id="noget-3" class="level2"><h2 class="anchored" data-anchor-id="noget-3">noget</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item" id="htmlwidget-6f98c36b0c1e380ed203" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6f98c36b0c1e380ed203">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Dansk":["TEKSTFUNKTIONER","ASC","BAHTTEKST","TEGN","RENS","KODE","SAMMENKÆDNING","KR","EKSAKT","FIND","FINDB","FAST","JIS","VENSTRE","VENSTREB","LÆNGDE","LÆNGDEB","SMÅ.BOGSTAVER","MIDT","MIDTB","FONETISK","STORT.FORBOGSTAV","ERSTAT","ERSTATB","GENTAG","HØJRE","HØJREB","SØG","SØGB","UDSKIFT","T","TEKST","FJERN.OVERFLØDIGE.BLANKE","STORE.BOGSTAVER","VÆRDI"],"Engelsk":["TEXT FUNCTIONS","ASC","BAHTTEXT","CHAR","CLEAN","CODE","CONCATENATE","DOLLAR","EXACT","FIND","FINDB","FIXED","JIS","LEFT","LEFTB","LEN","LENB","LOWER","MID","MIDB","PHONETIC","PROPER","REPLACE","REPLACEB","REPT","RIGHT","RIGHTB","SEARCH","SEARCHB","SUBSTITUTE","T","TEXT","TRIM","UPPER","VALUE"]},"columns":[{"id":"Dansk","name":"Dansk","type":"character"},{"id":"Engelsk","name":"Engelsk","type":"character"}],"searchable":true,"defaultPageSize":20,"dataKey":"f928403987c2b97845203e407cfa37bb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
