@@ -16,7 +16,7 @@ image: "wifi_image.png"
 Blot en hurtig note. Hvordan får vi fat i navnet på det wifi en computer der kører linux (eksempelvis en Raspberry Pi med Raspbian) er forbundet til? I Python (for heraf fremgår det også hvordan vi får det på
 kommandlinien)
 
-```{bash eval = FALSE}
+```
 import subprocess 
 ssid = subprocess.check_output("iwgetid -r", shell=True) 
 print(ssid)

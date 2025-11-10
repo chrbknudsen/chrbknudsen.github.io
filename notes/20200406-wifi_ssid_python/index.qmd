@@ -16,7 +16,7 @@ image: "wifi_image.png"
 Just a quick note. How do we get the name of the current ssid name of the wifi-connection a
 computer running some Linux-variant (like a Raspberry Pi running Raspbian) is connected to. In Python:
 
-```{bash eval = FALSE}
+```
 import subprocess 
 ssid = subprocess.check_output("iwgetid -r", shell=True) 
 print(ssid)
