@@ -1,0 +1,189 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2025-11-25
+toc: true
+image: ""
+---
+
+
+Dataanalyse på kommandolinien
+
+Givet en csv-fil
+
+# See the first 5 rows (including header)
+head -n 5 messy_data.csv
+
+# See the last 3 rows
+tail -n 3 messy_data.csv
+
+# Count total rows (including header)
+wc -l messy_data.csv
+
+head -n 5 shows the first 5 lines, giving you a quick preview.
+tail -n 3 shows the last 3 lines (useful for checking if data is complete).
+wc -l counts lines — subtract 1 for the header to get your record count.
+
+
+Let's extract only the names and departments.
+
+cut -d',' -f1,4 messy_data.csv
+
+cut is a tool for extracting sections from each line.
+-d',' sets the delimiter to a comma (for CSV files).
+-f1,4 selects fields (columns) 1 and 4.
+You can also use ranges: -f1-3 for columns 1 through 3.
+
+Removing Duplicate Rows with sort and uniq
+ 
+Notice that "John Lee" appears twice in our dataset. Let's fix that.
+
+# Save the header first
+head -n 1 messy_data.csv > cleaned_data.csv
+
+# Remove duplicates from the data (excluding header)
+tail -n +2 messy_data.csv | sort | uniq >> cleaned_data.csv
+
+
+Searching and Filtering with grep
+ 
+Let’s now do some searching and filtering operations. Want to find all engineers or filter out rows with missing data? grep comes in handy for all such tasks.
+
+# Find all engineers
+grep "Engineering" messy_data.csv
+
+# Find rows with empty fields (two consecutive commas)
+grep ",," messy_data.csv
+
+# Exclude rows with missing data
+grep -v ",," messy_data.csv > no_missing.csv
+
+
+Trimming Whitespace with sed
+ 
+See how the record of "Bob Davis" has extra spaces? Let's clean that up.
+
+sed 's/^[ \t]*//; s/[ \t]*$//' messy_data.csv > trimmed_data.csv
+ 
+
+Now let’s understand the command: sed is a stream editor for text transformation. s/pattern/replacement/ is the substitution syntax. ^[ \t]* matches spaces/tabs at the start of a line. [ \t]*$ matches spaces/tabs at the end of a line. The semicolon separates two operations (trim the line start, then trim the line end).
+
+
+Replacing Values with sed
+ 
+Sometimes you need to standardize values or fix typos. Let’s try to replace all occurrences of "Engineering" with "Tech".
+
+# Replace all "Engineering" with "Tech"
+sed 's/Engineering/Tech/g' messy_data.csv
+ 
+
+Next, let’s fill empty email fields (denoted by a comma at the end of the line) with a default email value.
+
+# Replace empty email fields with "no-email@example.com"
+sed 's/,$/,no-email@example.com/' messy_data.csv
+ 
+
+Run the above commands and observe the output. I have excluded the output here to avoid being repetitive.
+
+Breaking it down:
+
+The g flag means "global" — replace all occurrences on each line.
+,$ matches a comma at the end of a line (indicating an empty last field).
+You can chain multiple replacements with ; between them.
+
+
+Counting and Summarizing with awk
+ 
+awk is super useful for field-based operations. Let's do some basic analysis.
+
+# Count records by department
+tail -n +2 messy_data.csv | cut -d',' -f4 | sort | uniq -c
+
+# Calculate average age (excluding header and empty values)
+tail -n +2 messy_data.csv | awk -F',' '{if($2) sum+=$2; if($2) count++} END {print "Average age:", sum/count}'
+
+In this awk command, -F',' sets the field separator to a comma, and $2 refers to the second field (age). The condition if($2) ensures only non-empty values are processed, while sum += $2 accumulates the total. Finally, the END block executes after all lines are read to calculate and print the average age.
+
+ Combining Commands with Pipes
+ 
+You get more useful processing when you chain these command-line tools together.
+
+# Get unique departments, sorted alphabetically
+tail -n +2 messy_data.csv | cut -d',' -f4 | sort | uniq
+
+# Find engineers with salary > 55000
+tail -n +2 messy_data.csv | grep "Engineering" | awk -F',' '$3 > 55000' | cut -d',' -f1,3
+
+# Count employees per department with counts
+tail -n +2 messy_data.csv | cut -d',' -f4 | sort | uniq -c | sort -rn
+
+Converting Data Formats
+ 
+Sometimes you need to work with different delimiters. Here, we try to use a tab as the separator instead of a comma.
+
+
+# Convert CSV to TSV (tab-separated)
+sed 's/,/\t/g' messy_data.csv > data.tsv
+
+# Add a new column with a fixed value
+awk -F',' 'BEGIN{OFS=","} {print $0, "2024"}' messy_data.csv > data_with_year.csv
+ 
+
+In this awk command, BEGIN{OFS=","} sets the output field separator to a comma. $0 represents the entire input line, and print $0, "2024" appends "2024" as a new column to each line of output.
+
+
+A Complete Cleaning Pipeline
+ 
+Let's put it all together into one useful command that cleans our messy data:
+
+# Save header
+head -n 1 messy_data.csv > final_clean.csv
+
+# Clean the data: remove duplicates, trim whitespace, exclude missing values
+tail -n +2 messy_data.csv | \
+  sed 's/^[ \t]*//; s/[ \t]*$//' | \
+  grep -v ",," | \
+  sort | \
+  uniq >> final_clean.csv
+
+echo "Cleaning complete! Check final_clean.csv"
+
+
+curl
+ 
+curl is my go-to for making HTTP requests like GET, POST, or PUT; downloading files; and sending/receiving data over proto
+
+jq
+ 
+jq is a lightweight JSON processor that lets you query, filter, transform, and pretty-print JSON data. 
+
+csvkit
+ 
+csvkit is a suite of CSV-centric command-line utilities for transforming, filtering, aggregating, joining, and exploring C
+
+csvkit
+ 
+csvkit is a suite of CSV-centric command-line utilities for transforming, filtering, aggregating, joining, and exploring C
+
+parallel
+ 
+GNU parallel speeds up workflows by running multiple processes in parallel. Many data tasks are “mappable” across chunks of data. Let’s 
+
+parallel
+ 
+GNU parallel speeds up workflows by running multiple processes in parallel. Many data tasks are “mappable” across chunks of data. Let’s 
+
+
+datamash
+ 
+datamash provides numeric, textual, and statistical operations (sum, mean, median, group-by, etc.) directly in the shell via stdin or files. It’s lightweight and useful for quick aggregations without launching a hea
+
+
+htop
+ 
+htop is an interactive system monitor and process viewer that provides live insights into CPU, memory, and I/O usage per process.
