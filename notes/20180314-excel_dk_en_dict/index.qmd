@@ -2,7 +2,7 @@
 title: "Danish-english excel dictionary"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
-visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-03-14
