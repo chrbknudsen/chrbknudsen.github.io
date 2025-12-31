@@ -251,3 +251,21 @@ https://nytimes.com/2025/06/13/technology/chatgpt-ai-chatbots-conspiracies.html
 
 Husk nu. De her LLM'er er trænet på ca. hvad som helst man kan finde på
 nettet. Det er styrken. Det er også svagheden. 
+
+
+## Konsekvenser af at stole på AI
+
+Vi udliciterer vores skrivning - og dermed indirekte vores tænkning til maskiner.
+Og når man udliciterer en opgave, fører det som regel til at man taber evnen
+til selv at udføre den.
+
+Case in point, Dan Jørgensen julen 2025:
+
+![hvordandan](danjorgensen.jpg)
+
+Dan er en rutineret og erfaren politiker. Og jeg ved jo ikke om det er ham selv 
+der har stået for dette opslag, eller en af hans medarbejdere i kommisionen. 
+Uanset om det er ham selv, eller en der får løn for at arbejde med SoMe, så 
+er der nu nogen der ikke kan forfatte et fire-liniers opslag til Instagram, uden
+at få chatbotten til at gøre det for dem. Hvis man ikke kan skrive en fire-liniers
+julehilsen på egen hånd. Hvad kan man så heller ikke finde ud af at skrive på egen hånd?
