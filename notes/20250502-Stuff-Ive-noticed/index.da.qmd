@@ -269,3 +269,27 @@ Uanset om det er ham selv, eller en der får løn for at arbejde med SoMe, så
 er der nu nogen der ikke kan forfatte et fire-liniers opslag til Instagram, uden
 at få chatbotten til at gøre det for dem. Hvis man ikke kan skrive en fire-liniers
 julehilsen på egen hånd. Hvad kan man så heller ikke finde ud af at skrive på egen hånd?
+
+## Søheste
+
+Findes der en søheste-emoji? Nej. Det gør der ikke. 
+Men sprogmodellerne er - i hvert fald i skrivende 
+stund (januar 2026) fuldt og fast overbeviste om at
+den findes.
+
+Her er en video om emnet. 
+https://www.youtube.com/watch?v=W2xZxYaGlfs
+Har du ikke tid til at 
+se den, handler det om at chatty og de andre llm'er
+jo bare giver det næste mest sandsynlige ord. Det 
+er - baseret på deres trænings materiale: "ja" og
+efterfølges med "og den ser sådan ud". hvorefter det
+går galt, fordi der _ikke_ findes en søheste emoji.
+
+Hvorfor tror chatty det? Der er et gammelt opslag
+på Reddit, der taler om at folk helt klart kan huske
+at der var en søheste emoji. Det har der aldrig været.
+
+Men de tror det. Fænomenet er kendt som 
+"mandela effekten". Det har chatty fanget. og 
+nu insisterer hun på at der findes en søheste emoji.
