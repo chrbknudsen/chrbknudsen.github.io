@@ -15,6 +15,8 @@ PrintBibliography(pubs, .opts = list(style = "html",
 
 ## Talks
 
+https://dm.dk/digi/arrangementer/0004035/
+
 * **8. oktober 2024** Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning
 efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet
 "Har du styr på den naturvidenskabelige opgave? (Vest)" ved Vejle Bibliotek. 
