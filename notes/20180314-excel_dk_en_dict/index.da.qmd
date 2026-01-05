@@ -1,7 +1,7 @@
 ---
 title: "Dansk-Engelsk excel ordbog"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-03-14
@@ -405,75 +405,62 @@ text_dict <- tribble(~Dansk, ~Engelsk,
 ```
 
 
-## ADD-IN AND AUTOMATION FUNCTIONS
-TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER
-ADD-IN AND AUTOMATION FUNCTIONS
+## TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER
+
 ```{r add_in, echo = FALSE}
 reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## DATABASE FUNCTIONS
-DATABASEFUNKTIONER
-DATABASE FUNCTIONS
+## DATABASEFUNKTIONER
 
 ```{r db, echo = FALSE}
 reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## DATE AND TIME FUNCTIONS
-DATO- OG KLOKKESLÆTSFUNKTIONER
-DATE AND TIME FUNCTIONS
+## DATO- OG KLOKKESLÆTSFUNKTIONER
+
 ```{r dates, echo = FALSE}
 reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## ENGINEERING FUNCTIONS
-TEKNISKE FUNKTIONER
-ENGINEERING FUNCTIONS
+## TEKNISKE FUNKTIONER
+
 ```{r engineering, echo = FALSE}
 reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
-## FINANCIAL FUNCTIONS
-FINANSIELLE FUNKTIONER
-FINANCIAL FUNCTIONS
+## FINANSIELLE FUNKTIONER
+
 ```{r finance, echo = FALSE}
 reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## INFORMATION FUNCTIONS
+## INFORMATIONSFUNKTIONER
 
-INFORMATIONSFUNKTIONER
-INFORMATION FUNCTIONS
 ```{r information, echo = FALSE}
 reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-LOGISKE FUNKTIONER
-LOGICAL FUNCTIONS
+## LOGISKE FUNKTIONER
 ```{r logic, echo = FALSE}
 reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER
-MATH AND TRIGONOMETRY FUNCTIONS
+## MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER
+
 ```{r math, echo = FALSE}
 reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-STATISTISKE FUNKTIONER
-STATISTICAL FUNCTIONS
+## STATISTISKE FUNKTIONER
+
 ```{r stat, echo = FALSE}
 reactable(stat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-TEKSTFUNKTIONER
-TEXT FUNCTIONS
+## TEKSTFUNKTIONER
+
 ```{r text, echo = FALSE}
 reactable(text_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
