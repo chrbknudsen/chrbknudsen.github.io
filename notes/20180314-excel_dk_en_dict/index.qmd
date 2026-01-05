@@ -69,6 +69,7 @@ date_dict <- tribble(~Dansk, ~Engelsk,
 "ARBEJDSDAG",	"WORKDAY",
 "ÅR",	"YEAR",
 "ÅR.BRØK",	"YEARFRAC")
+
 eng_dict <- tribble(~Dansk, ~Engelsk,
 # "TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
 "BESSELI",	"BESSELI",
@@ -406,74 +407,56 @@ text_dict <- tribble(~Dansk, ~Engelsk,
 
 
 ## ADD-IN AND AUTOMATION FUNCTIONS
-TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER
-ADD-IN AND AUTOMATION FUNCTIONS
+
 ```{r add_in, echo = FALSE}
-reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(add_in_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## DATABASE FUNCTIONS
-DATABASEFUNKTIONER
-DATABASE FUNCTIONS
 
 ```{r db, echo = FALSE}
-reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(db_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## DATE AND TIME FUNCTIONS
-DATO- OG KLOKKESLÆTSFUNKTIONER
-DATE AND TIME FUNCTIONS
+
 ```{r dates, echo = FALSE}
-reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(date_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## ENGINEERING FUNCTIONS
-TEKNISKE FUNKTIONER
-ENGINEERING FUNCTIONS
 ```{r engineering, echo = FALSE}
-reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(eng_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
 ## FINANCIAL FUNCTIONS
-FINANSIELLE FUNKTIONER
-FINANCIAL FUNCTIONS
 ```{r finance, echo = FALSE}
-reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(fin_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## INFORMATION FUNCTIONS
 
-INFORMATIONSFUNKTIONER
-INFORMATION FUNCTIONS
 ```{r information, echo = FALSE}
-reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(inf_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-LOGISKE FUNKTIONER
-LOGICAL FUNCTIONS
+## LOGICAL FUNCTIONS
 ```{r logic, echo = FALSE}
-reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(log_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER
-MATH AND TRIGONOMETRY FUNCTIONS
+## MATH AND TRIGONOMETRY FUNCTIONS
 ```{r math, echo = FALSE}
-reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(mat_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-STATISTISKE FUNKTIONER
-STATISTICAL FUNCTIONS
+## STATISTICAL FUNCTIONS
 ```{r stat, echo = FALSE}
-reactable(stat_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(stat_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
 
-## noget
-TEKSTFUNKTIONER
-TEXT FUNCTIONS
+## TEXT FUNCTIONS
 ```{r text, echo = FALSE}
-reactable(text_dict, searchable = TRUE, defaultPageSize = 20 )
+reactable(text_dict |> select(2,1), searchable = TRUE, defaultPageSize = 20 )
 ```
