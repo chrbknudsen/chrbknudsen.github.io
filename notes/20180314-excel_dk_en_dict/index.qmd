@@ -17,7 +17,7 @@ Remember that you also have to change "," to ";"
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(reactable)
-add_in_dict <- tribble(~Dansk, ~Engelsk,
+add_in_dict <- tribble(~Danish, ~English,
 # "TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
 "KALD",	"CALL",
 "EUROKONVERTER",	"EUROCONVERT",
@@ -33,7 +33,7 @@ add_in_dict <- tribble(~Dansk, ~Engelsk,
 "KUBESÆT.TÆL",	"CUBESETCOUNT",
 "KUBEVÆRDI",	"CUBEVALUE")
 
-db_dict <- tribble(~Dansk, ~Engelsk,
+db_dict <- tribble(~Danish, ~English,
 # "DATABASEFUNKTIONER",	"DATABASE FUNCTIONS",
 "DMIDDEL",	"DAVERAGE",
 "DTÆL",	"DCOUNT",
@@ -47,8 +47,9 @@ db_dict <- tribble(~Dansk, ~Engelsk,
 "DSUM",	"DSUM",
 "DVARIANS",	"DVAR",
 "DVARIANSP",	"DVARP")
-date_dict <- tribble(~Dansk, ~Engelsk,
-"DATO- OG KLOKKESLÆTSFUNKTIONER",	"DATE AND TIME FUNCTIONS",
+
+date_dict <- tribble(~Danish, ~English,
+# "DATO- OG KLOKKESLÆTSFUNKTIONER",	"DATE AND TIME FUNCTIONS",
 "DATO",	"DATE",
 "DATOVÆRDI",	"DATEVALUE",
 "DAG",	"DAY",
@@ -70,7 +71,7 @@ date_dict <- tribble(~Dansk, ~Engelsk,
 "ÅR",	"YEAR",
 "ÅR.BRØK",	"YEARFRAC")
 
-eng_dict <- tribble(~Dansk, ~Engelsk,
+eng_dict <- tribble(~Danish, ~English,
 # "TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
 "BESSELI",	"BESSELI",
 "BESSELJ",	"BESSELJ",
@@ -112,7 +113,7 @@ eng_dict <- tribble(~Dansk, ~Engelsk,
 "OKT.TIL.DEC",	"OCT2DEC",
 "OKT.TIL.HEX",	"OCT2HEX")
 
-fin_dict <- tribble(~Dansk, ~Engelsk,
+fin_dict <- tribble(~Danish, ~English,
 # "FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
 "PÅLØBRENTE",	"ACCRINT",
 "PÅLØBRENTE.UDLØB",	"ACCRINTM",
@@ -168,7 +169,7 @@ fin_dict <- tribble(~Dansk, ~Engelsk,
 "AFKAST.DISKONTO",	"YIELDDISC",
 "AFKAST.UDLØBSDATO",	"YIELDMAT")
 
-inf_dict <- tribble(~Dansk, ~Engelsk,
+inf_dict <- tribble(~Danish, ~English,
 # "INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
 "CELLE",	"CELL",
 "FEJLTYPE",	"ERROR.TYPE",
@@ -188,7 +189,7 @@ inf_dict <- tribble(~Dansk, ~Engelsk,
 "IKKE.TILGÆNGELIG",	"NA",
 "VÆRDITYPE",	"TYPE")
 
-log_dict <- tribble(~Dansk, ~Engelsk,
+log_dict <- tribble(~Danish, ~English,
 # "LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
 "OG",	"AND",
 "FALSK",	"FALSE",
@@ -198,7 +199,7 @@ log_dict <- tribble(~Dansk, ~Engelsk,
 "ELLER",	"OR",
 "SAND",	"TRUE")
 
-ref_dict <- tribble(~Dansk, ~Engelsk,
+ref_dict <- tribble(~Danish, ~English,
 # "OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
 "ADRESSE",	"ADDRESS",
 "OMRÅDER",	"AREAS",
@@ -218,7 +219,7 @@ ref_dict <- tribble(~Dansk, ~Engelsk,
 "TRANSPONER",	"TRANSPOSE",
 "LOPSLAG",	"VLOOKUP")
 
-mat_dict <- tribble(~Dansk, ~Engelsk,
+mat_dict <- tribble(~Danish, ~English,
 # "MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
 "ABS",	"ABS",
 "ARCCOS",	"ACOS",
@@ -281,7 +282,7 @@ mat_dict <- tribble(~Dansk, ~Engelsk,
 "TANH",	"TANH",
 "AFKORT",	"TRUNC")
 
-stat_dict <- tribble(~Dansk, ~Engelsk,
+stat_dict <- tribble(~Danish, ~English,
 # "STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
 "MAD",	"AVEDEV",
 "MIDDEL",	"AVERAGE",
@@ -367,7 +368,7 @@ stat_dict <- tribble(~Dansk, ~Engelsk,
 "WEIBULL",	"WEIBULL",
 "ZTEST",	"ZTEST")
 
-text_dict <- tribble(~Dansk, ~Engelsk,
+text_dict <- tribble(~Danish, ~English,
 # "TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
 "ASC",	"ASC",
 "BAHTTEKST",	"BAHTTEXT",
