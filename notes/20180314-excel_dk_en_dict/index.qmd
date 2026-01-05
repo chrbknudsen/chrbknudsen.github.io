@@ -18,7 +18,7 @@ Remember that you also have to change "," to ";"
 library(tidyverse)
 library(reactable)
 add_in_dict <- tribble(~Dansk, ~Engelsk,
-"TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
+# "TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
 "KALD",	"CALL",
 "EUROKONVERTER",	"EUROCONVERT",
 "HENTPIVOTDATA",	"GETPIVOTDATA",
@@ -34,7 +34,7 @@ add_in_dict <- tribble(~Dansk, ~Engelsk,
 "KUBEVÆRDI",	"CUBEVALUE")
 
 db_dict <- tribble(~Dansk, ~Engelsk,
-"DATABASEFUNKTIONER",	"DATABASE FUNCTIONS",
+# "DATABASEFUNKTIONER",	"DATABASE FUNCTIONS",
 "DMIDDEL",	"DAVERAGE",
 "DTÆL",	"DCOUNT",
 "DTÆLV",	"DCOUNTA",
@@ -70,7 +70,7 @@ date_dict <- tribble(~Dansk, ~Engelsk,
 "ÅR",	"YEAR",
 "ÅR.BRØK",	"YEARFRAC")
 eng_dict <- tribble(~Dansk, ~Engelsk,
-"TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
+# "TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
 "BESSELI",	"BESSELI",
 "BESSELJ",	"BESSELJ",
 "BESSELK",	"BESSELK",
@@ -110,8 +110,9 @@ eng_dict <- tribble(~Dansk, ~Engelsk,
 "OKT.TIL.BIN",	"OCT2BIN",
 "OKT.TIL.DEC",	"OCT2DEC",
 "OKT.TIL.HEX",	"OCT2HEX")
+
 fin_dict <- tribble(~Dansk, ~Engelsk,
-"FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
+# "FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
 "PÅLØBRENTE",	"ACCRINT",
 "PÅLØBRENTE.UDLØB",	"ACCRINTM",
 "AMORDEGRC",	"AMORDEGRC",
@@ -167,7 +168,7 @@ fin_dict <- tribble(~Dansk, ~Engelsk,
 "AFKAST.UDLØBSDATO",	"YIELDMAT")
 
 inf_dict <- tribble(~Dansk, ~Engelsk,
-"INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
+# "INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
 "CELLE",	"CELL",
 "FEJLTYPE",	"ERROR.TYPE",
 "INFO",	"INFO",
@@ -185,8 +186,9 @@ inf_dict <- tribble(~Dansk, ~Engelsk,
 "TAL",	"N",
 "IKKE.TILGÆNGELIG",	"NA",
 "VÆRDITYPE",	"TYPE")
+
 log_dict <- tribble(~Dansk, ~Engelsk,
-"LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
+# "LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
 "OG",	"AND",
 "FALSK",	"FALSE",
 "HVIS",	"IF",
@@ -196,7 +198,7 @@ log_dict <- tribble(~Dansk, ~Engelsk,
 "SAND",	"TRUE")
 
 ref_dict <- tribble(~Dansk, ~Engelsk,
-"OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
+# "OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
 "ADRESSE",	"ADDRESS",
 "OMRÅDER",	"AREAS",
 "VÆLG",	"CHOOSE",
@@ -214,8 +216,9 @@ ref_dict <- tribble(~Dansk, ~Engelsk,
 "RTD",	"RTD",
 "TRANSPONER",	"TRANSPOSE",
 "LOPSLAG",	"VLOOKUP")
+
 mat_dict <- tribble(~Dansk, ~Engelsk,
-"MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
+# "MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
 "ABS",	"ABS",
 "ARCCOS",	"ACOS",
 "ARCCOSH",	"ACOSH",
@@ -278,7 +281,7 @@ mat_dict <- tribble(~Dansk, ~Engelsk,
 "AFKORT",	"TRUNC")
 
 stat_dict <- tribble(~Dansk, ~Engelsk,
-"STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
+# "STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
 "MAD",	"AVEDEV",
 "MIDDEL",	"AVERAGE",
 "MIDDELV",	"AVERAGEA",
@@ -364,7 +367,7 @@ stat_dict <- tribble(~Dansk, ~Engelsk,
 "ZTEST",	"ZTEST")
 
 text_dict <- tribble(~Dansk, ~Engelsk,
-"TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
+# "TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
 "ASC",	"ASC",
 "BAHTTEKST",	"BAHTTEXT",
 "TEGN",	"CHAR",
@@ -403,64 +406,74 @@ text_dict <- tribble(~Dansk, ~Engelsk,
 
 
 ## ADD-IN AND AUTOMATION FUNCTIONS
-
+TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER
+ADD-IN AND AUTOMATION FUNCTIONS
 ```{r add_in, echo = FALSE}
 reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## DATABASE FUNCTIONS
-
+DATABASEFUNKTIONER
+DATABASE FUNCTIONS
 
 ```{r db, echo = FALSE}
 reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## DATE AND TIME FUNCTIONS
-
+DATO- OG KLOKKESLÆTSFUNKTIONER
+DATE AND TIME FUNCTIONS
 ```{r dates, echo = FALSE}
 reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## ENGINEERING FUNCTIONS
-
+TEKNISKE FUNKTIONER
+ENGINEERING FUNCTIONS
 ```{r engineering, echo = FALSE}
 reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 
 ## FINANCIAL FUNCTIONS
-
+FINANSIELLE FUNKTIONER
+FINANCIAL FUNCTIONS
 ```{r finance, echo = FALSE}
 reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## INFORMATION FUNCTIONS
 
-
+INFORMATIONSFUNKTIONER
+INFORMATION FUNCTIONS
 ```{r information, echo = FALSE}
 reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## noget
-
+LOGISKE FUNKTIONER
+LOGICAL FUNCTIONS
 ```{r logic, echo = FALSE}
 reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## noget
-
+MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER
+MATH AND TRIGONOMETRY FUNCTIONS
 ```{r math, echo = FALSE}
 reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## noget
-
+STATISTISKE FUNKTIONER
+STATISTICAL FUNCTIONS
 ```{r stat, echo = FALSE}
 reactable(stat_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
 
 ## noget
-
+TEKSTFUNKTIONER
+TEXT FUNCTIONS
 ```{r text, echo = FALSE}
 reactable(text_dict, searchable = TRUE, defaultPageSize = 20 )
 ```
