@@ -1,7 +1,7 @@
 ---
 title: "Dansk-Engelsk excel ordbog"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-03-14
@@ -14,12 +14,11 @@ hjemmeside. Men skal løse problemet i en dansk udgave af Excel.
 
 Husk også at du ofte skal ændre "," til ";"
 
-
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(reactable)
-dict <- tribble(~Dansk, ~Engelsk,
-"TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
+add_in_dict <- tribble(~Dansk, ~Engelsk,
+# "TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER",	"ADD-IN AND AUTOMATION FUNCTIONS" ,
 "KALD",	"CALL",
 "EUROKONVERTER",	"EUROCONVERT",
 "HENTPIVOTDATA",	"GETPIVOTDATA",
@@ -32,8 +31,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "KUBEMEDLEM.RANG",	"CUBERANKEDMEMBER",
 "KUBESÆT","CUBESET",
 "KUBESÆT.TÆL",	"CUBESETCOUNT",
-"KUBEVÆRDI",	"CUBEVALUE",
-"DATABASEFUNKTIONER",	"DATABASE FUNCTIONS",
+"KUBEVÆRDI",	"CUBEVALUE")
+
+db_dict <- tribble(~Dansk, ~Engelsk,
+# "DATABASEFUNKTIONER",	"DATABASE FUNCTIONS",
 "DMIDDEL",	"DAVERAGE",
 "DTÆL",	"DCOUNT",
 "DTÆLV",	"DCOUNTA",
@@ -45,7 +46,8 @@ dict <- tribble(~Dansk, ~Engelsk,
 "DSTDAFVP",	"DSTDEVP",
 "DSUM",	"DSUM",
 "DVARIANS",	"DVAR",
-"DVARIANSP",	"DVARP",
+"DVARIANSP",	"DVARP")
+date_dict <- tribble(~Dansk, ~Engelsk,
 "DATO- OG KLOKKESLÆTSFUNKTIONER",	"DATE AND TIME FUNCTIONS",
 "DATO",	"DATE",
 "DATOVÆRDI",	"DATEVALUE",
@@ -66,8 +68,9 @@ dict <- tribble(~Dansk, ~Engelsk,
 "UGE.NR",	"WEEKNUM",
 "ARBEJDSDAG",	"WORKDAY",
 "ÅR",	"YEAR",
-"ÅR.BRØK",	"YEARFRAC",
-"TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
+"ÅR.BRØK",	"YEARFRAC")
+eng_dict <- tribble(~Dansk, ~Engelsk,
+# "TEKNISKE FUNKTIONER",	"ENGINEERING FUNCTIONS",
 "BESSELI",	"BESSELI",
 "BESSELJ",	"BESSELJ",
 "BESSELK",	"BESSELK",
@@ -106,8 +109,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "IMAGSUM",	"IMSUM",
 "OKT.TIL.BIN",	"OCT2BIN",
 "OKT.TIL.DEC",	"OCT2DEC",
-"OKT.TIL.HEX",	"OCT2HEX",
-"FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
+"OKT.TIL.HEX",	"OCT2HEX")
+
+fin_dict <- tribble(~Dansk, ~Engelsk,
+# "FINANSIELLE FUNKTIONER",	"FINANCIAL FUNCTIONS",
 "PÅLØBRENTE",	"ACCRINT",
 "PÅLØBRENTE.UDLØB",	"ACCRINTM",
 "AMORDEGRC",	"AMORDEGRC",
@@ -160,8 +165,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "NETTO.NUTIDSVÆRDI",	"XNPV",
 "AFKAST",	"YIELD",
 "AFKAST.DISKONTO",	"YIELDDISC",
-"AFKAST.UDLØBSDATO",	"YIELDMAT",
-"INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
+"AFKAST.UDLØBSDATO",	"YIELDMAT")
+
+inf_dict <- tribble(~Dansk, ~Engelsk,
+# "INFORMATIONSFUNKTIONER",	"INFORMATION FUNCTIONS",
 "CELLE",	"CELL",
 "FEJLTYPE",	"ERROR.TYPE",
 "INFO",	"INFO",
@@ -178,16 +185,20 @@ dict <- tribble(~Dansk, ~Engelsk,
 "ER.TEKST",	"ISTEXT",
 "TAL",	"N",
 "IKKE.TILGÆNGELIG",	"NA",
-"VÆRDITYPE",	"TYPE",
-"LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
+"VÆRDITYPE",	"TYPE")
+
+log_dict <- tribble(~Dansk, ~Engelsk,
+# "LOGISKE FUNKTIONER",	"LOGICAL FUNCTIONS",
 "OG",	"AND",
 "FALSK",	"FALSE",
 "HVIS",	"IF",
 "HVIS.FEJL",	"IFERROR",
 "IKKE",	"NOT",
 "ELLER",	"OR",
-"SAND",	"TRUE",
-"OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
+"SAND",	"TRUE")
+
+ref_dict <- tribble(~Dansk, ~Engelsk,
+# "OPSLAGS- OG REFERENCEFUNKTIONER",	"LOOKUP AND REFERENCE FUNCTIONS",
 "ADRESSE",	"ADDRESS",
 "OMRÅDER",	"AREAS",
 "VÆLG",	"CHOOSE",
@@ -204,8 +215,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "RÆKKER",	"ROWS",
 "RTD",	"RTD",
 "TRANSPONER",	"TRANSPOSE",
-"LOPSLAG",	"VLOOKUP",
-"MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
+"LOPSLAG",	"VLOOKUP")
+
+mat_dict <- tribble(~Dansk, ~Engelsk,
+# "MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER",	"MATH AND TRIGONOMETRY FUNCTIONS",
 "ABS",	"ABS",
 "ARCCOS",	"ACOS",
 "ARCCOSH",	"ACOSH",
@@ -265,8 +278,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "SUMXMY2",	"SUMXMY2",
 "TAN",	"TAN",
 "TANH",	"TANH",
-"AFKORT",	"TRUNC",
-"STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
+"AFKORT",	"TRUNC")
+
+stat_dict <- tribble(~Dansk, ~Engelsk,
+# "STATISTISKE FUNKTIONER",	"STATISTICAL FUNCTIONS",
 "MAD",	"AVEDEV",
 "MIDDEL",	"AVERAGE",
 "MIDDELV",	"AVERAGEA",
@@ -349,8 +364,10 @@ dict <- tribble(~Dansk, ~Engelsk,
 "VARIANSP",	"VARP",
 "VARIANSPV",	"VARPA",
 "WEIBULL",	"WEIBULL",
-"ZTEST",	"ZTEST",
-"TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
+"ZTEST",	"ZTEST")
+
+text_dict <- tribble(~Dansk, ~Engelsk,
+# "TEKSTFUNKTIONER",	"TEXT FUNCTIONS",
 "ASC",	"ASC",
 "BAHTTEKST",	"BAHTTEXT",
 "TEGN",	"CHAR",
@@ -385,5 +402,65 @@ dict <- tribble(~Dansk, ~Engelsk,
 "FJERN.OVERFLØDIGE.BLANKE",	"TRIM",
 "STORE.BOGSTAVER",	"UPPER",
 "VÆRDI",	"VALUE")
-reactable(dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+## TILFØJELSESPROGRAM- OG AUTOMATISERINGSFUNKTIONER
+
+```{r add_in, echo = FALSE}
+reactable(add_in_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## DATABASEFUNKTIONER
+
+```{r db, echo = FALSE}
+reactable(db_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## DATO- OG KLOKKESLÆTSFUNKTIONER
+
+```{r dates, echo = FALSE}
+reactable(date_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## TEKNISKE FUNKTIONER
+
+```{r engineering, echo = FALSE}
+reactable(eng_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+
+## FINANSIELLE FUNKTIONER
+
+```{r finance, echo = FALSE}
+reactable(fin_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## INFORMATIONSFUNKTIONER
+
+```{r information, echo = FALSE}
+reactable(inf_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## LOGISKE FUNKTIONER
+```{r logic, echo = FALSE}
+reactable(log_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## MATEMATISKE OG TRIGONOMETRISKE FUNKTIONER
+
+```{r math, echo = FALSE}
+reactable(mat_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## STATISTISKE FUNKTIONER
+
+```{r stat, echo = FALSE}
+reactable(stat_dict, searchable = TRUE, defaultPageSize = 20 )
+```
+
+## TEKSTFUNKTIONER
+
+```{r text, echo = FALSE}
+reactable(text_dict, searchable = TRUE, defaultPageSize = 20 )
 ```

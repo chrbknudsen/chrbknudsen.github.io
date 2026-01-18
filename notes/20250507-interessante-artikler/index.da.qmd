@@ -65,4 +65,9 @@ Hvilket ikke burde være kommet som en overraskelse, fordi man i Australien i 20
 [Blind recruitment trial to boost gender equality making things worse, study reveals](https://web.archive.org/web/20170701002727/https://www.abc.net.au/news/2017-06-30/bilnd-recruitment-trial-to-improve-gender-equality-failing-study/8664888)
 
 
+[Boys lag behind: How teachers’ gender biases affect student achievement](https://www.sciencedirect.com/science/article/pii/S0272775718307714). Et dobbeltblindet eksperiment fra Frankring, hvor eksamensbesvarelser blev bedømt uden at examinator kendte elevens køn. Og hvor examinator kendte elevens køn.
+
+[A gender gap in gender gaps: social norms and housework reporting](doi.org/10.1007/s00181-024-02710-z). Den illustrerer hvor vanskeligt det kan være at få data om folks adfærd. Når en interviewer interviewer kvinder om hvor mange timer de bruger på husligt arbejde får man et tal. Det tal er signifikant højere hvis intervieweren er kvinde, end hvis intervieweren er mand. Den forskel optræder ikke når mænd interviewes. Der er der ingen signifikant forskel der afhænger af kønnet på intervieweren. Det er et kendt fænomen - når folk interviewes påvirkes deres svar af hvad de tror intervieweren vil høre. 
+
+
 https://web.archive.org/web/20160602052747/https://www.theguardian.com/technology/2016/may/26/half-of-misogynistic-tweets-sent-by-women-study-finds

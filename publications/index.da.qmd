@@ -15,9 +15,8 @@ PrintBibliography(pubs, .opts = list(style = "html",
 
 ## Foredrag og oplæg
 
-https://dm.dk/digi/arrangementer/0004035/
-
-
+* **3. november 2025** Lær at finde guldet i offentlige data. Morgenmøde i Dansk Magisterforening om brug af offentligt tilgængelige datasæt.
+[slides](https://kubdatalab.github.io/DM-arrangement/#/title-slide)
 * **8. oktober 2024** Naturvidenskabelig informationssøgning. 1½ times oplæg om søgning
 efter naturvidenskabelige informationskilder for folkebibliotekarer ved arrangementet
 "Har du styr på den naturvidenskabelige opgave? (Vest)" ved Vejle Bibliotek. 
@@ -55,10 +54,10 @@ Arrangeret af DFs forum for E-ressourcer. Den Sorte Diamant, København
 * **17. november 2009** foredrag om ebøger for minibib, københavn
 * **26. maj 2009** - foredrag om ebøger - hovedbiblioteket Guldborgsund
 * **30. marts 2009**-  foredrag om ebøger, BF, frederiksberg.
-* **Oct. 19 2007** Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København) 
-* **Jun. 21 2007** Formidling i nye medier (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”
-* **Nov. 17 2008** Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe (BFs hus) ”Teknik: Software og hardware – læsere”
-* **Oct. 12 2007** Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener” 
+* **10. oktober 2007** Folkeuniversitetet, foredragsserie om Science og Science-fiction: ”Kemien mellem stjernerne” (Den sorte diamant, København) 
+* **21. juni 2007** Formidling i nye medier (Den sorte diamant, København), ”InfoGalleriet, Den fremskudte formidling”
+* **17. november 2008** Temadag om e-bøger, møde i Bibliotekar Forbundets Statsgruppe (BFs hus) ”Teknik: Software og hardware – læsere”
+* **12. oktober  2007** Kreativ anvendelse af data, Temadag i DEFF, (CBS, Kilen, frederiksberg): ”Hybride data og Virtuelle verdener” 
 
 
 
