@@ -111,4 +111,35 @@ Derfor bør man ved åbningen af hver runde, have 9 ansøgninger klar.
 
 Hvilke kriterier skal disse ansøgninger opfylde?
 
-1. dur kun i ulige år, hvor 
+tidligst 9 månder før startdato
+5000 kr per kursus dag for kurser,
+max 20000 for kurser/konferencer på fire dage
+max 25000 for kurser/konferencer på fem dage eller derover.
+
+der ydes kun støtte til kurser der varer mere end tre dage. med andre ord, hvis konferencen kun varer 3 dage, gives der ikke støtte. forberedelses- og transporttid tæller ikke med.
+
+useR  - i 2026 varede det 4 dage
+
+superusers lader til at være proaktive på det her, og tilbyder at IT-kurser med en varighed på tre dage eller mindre kan udvides så de lever op til kravet om >3 dage.
+
+IDA har direkte en side med tilbud der lever op til kravene:
+https://ida.dk/arrangementer-og-kurser/kurser/kompetencefonde
+Den mest oplagte er 
+https://ida.dk/arrangementer-og-kurser/kurser/it-sikkerhed/certified-network-defender
+
+som nok stiller lidt flere krav jeg jeg lever op til.
+
+Er det taget, kan man fortsætte med 
+https://ida.dk/arrangementer-og-kurser/kurser/it-sikkerhed/certified-ethical-hacker-v11
+
+
+Teknologisk institut har overvejende kortere kurser - de længere kræver at man har et kortere introduktionskursus
+
+denne kunne være interessant
+https://segment.dk/Kurser/Certificeringer/Microsoft-Certified-Associate-/1588/Data-Analyst-Associate/?gad_source=1&gad_campaignid=1404217416&gbraid=0AAAAAD4v9x1qWYGMityR8NImPtSYsaa4H&gclid=CjwKCAiAssfLBhBDEiwAcLpwfjvXGW348jsajcB63JApF_ijyGFlG3um_4pfDn6WfLexM0GF9jHZERoCqI0QAvD_BwE
+
+
+earl der desværre kun er på tre dage
+
+
+
