@@ -1,0 +1,145 @@
+---
+title: "Den statslige kompetencefond"
+subtitle: "Bruttoliste"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-01-21
+toc: true
+image: ""
+---
+
+
+
+```{r}
+library(tidyverse)
+library(gt)
+
+library(tibble)
+
+fonden <- tribble(
+  ~fra,                  ~til,                 ~ansogninger, ~tilsagn, ~link,                                                                 ~hentet_dato,
+  "6. maj 2025",          "19. september 2025", 2340,          440,     "https://web.archive.org/web/20251116031013/https://kompetenceudvikling.dk/fakta-om-fonden/", "2025-11-16",
+  "14. januar 2025",      "20. januar 2025",    2509,          617,     "https://web.archive.org/web/20250808140230/https://kompetenceudvikling.dk/fakta-om-fonden/", "2025-08-08",
+  "1. juni 2021",         "31. aug. 2022",      5842,         2439,     "https://web.archive.org/web/20221005115027/https://kompetenceudvikling.dk/fakta-om-fonden/", "2022-10-05",
+  "1. juni 2021",         "3. januar 2023",     7402,         3049,     "https://web.archive.org/web/20230331123032/https://kompetenceudvikling.dk/fakta-om-fonden/", "2023-03-31",
+  "1. juni 2021",         "2. maj 2023",       11186,         3595,     "https://web.archive.org/web/20230602182424/https://kompetenceudvikling.dk/fakta-om-fonden/", "2023-06-02",
+  "1. juni 2021",         "5. september 2023", 13328,         4149,     "https://web.archive.org/web/20231004062602/https://kompetenceudvikling.dk/fakta-om-fonden/", "2023-10-04",
+  "1. juni 2021",         "1. december 2023",  16189,         5302,     "https://web.archive.org/web/20240227165230/https://kompetenceudvikling.dk/fakta-om-fonden/", "2024-02-27",
+  "22. maj 2024",         "28. maj 2024",       2075,          488,     "https://web.archive.org/web/20240813181844/https://kompetenceudvikling.dk/fakta-om-fonden/", "2024-08-13",
+  "24. september 2024",   "27. november 2024",  1724,          491,     "https://web.archive.org/web/20250424000822/https://kompetenceudvikling.dk/fakta-om-fonden/", "2025-04-24",
+  "14. januar 2025",      "5. maj 2025",        2509,          617,     "https://web.archive.org/web/20250808140230/https://kompetenceudvikling.dk/fakta-om-fonden/", "2025-08-08",
+  "23. september 2025",   "12. januar 2026",    2165,          663,     "https://web.archive.org/web/20260121084626/https://kompetenceudvikling.dk/fakta-om-fonden/", "2026-01-21"
+)
+
+fonden |> 
+  select(fra, til, ansogninger, tilsagn) |> 
+  mutate(sandsynlighed = tilsagn/ansogninger)
+
+```
+
+Det vil sige at sandsynligheden for en succesfuld ansøgning er mellem:
+
+
+```{r}
+fonden |> 
+  select(fra, til, ansogninger, tilsagn) |> 
+  mutate(sandsynlighed = tilsagn/ansogninger) |> 
+  slice(
+    which.min(sandsynlighed),
+    which.max(sandsynlighed)
+  ) 
+```
+
+Hvor mange gange skal man så søge for at være sikker på at få tilsagn i en given runde?
+
+Sandsynligheden for ikke at få tilsagn hvis man sender n ansøgninger er:
+
+$$(1-p)^n$$
+
+Og sandsynligheden for mindst et tilsagn er derfor:
+
+$$1-1(-p)^n$$
+
+Hvor sikker vil jeg være på at få tilsagn - angivet som procent?
+
+Lad os kalde det s. Det betyder at jeg er ude efter:
+
+$$1-(1-p)^n >= s$$
+
+Lad os løse den:
+
+$$1-(1-p)^n >= s$$
+$$(1-p)^n <= 1-s$$
+$$ln((1-p)^n) <= ln(1-s)$$
+$$n ln((1-p)) <= ln(1-s)$$
+
+$$n >= \frac{ln(1-s)}{ln(1-p)}$$
+
+Og så runder vi op med `ceiling`.
+
+Vi ønsker at beregne for flere forskellige ønskede sandsynligheder for mindst en succes (s). Så det laver vi som en funktion:
+
+```{r}
+antal_forsøg <- function(s,ssh){
+  ceiling(log(1-s)/log(1-ssh))
+}
+antal_forsøg(0.)
+
+```
+
+```{r}
+fonden |> 
+  select(fra, til, ansogninger, tilsagn) |> 
+  mutate(sandsynlighed = tilsagn/ansogninger) |> 
+  mutate(s_50 = antal_forsøg(0.5, sandsynlighed),
+         s_75 = antal_forsøg(0.75, sandsynlighed),
+         s_90 = antal_forsøg(0.9, sandsynlighed),
+         s_95 = antal_forsøg(0.95, sandsynlighed),
+         s_99 = antal_forsøg(0.99, sandsynlighed),
+         s_999 = antal_forsøg(0.999, sandsynlighed)) 
+```
+
+
+Heraf ses det, at hvis man vil være 95% sikker på at få mindst et tilsagn, bør man sende 15 ansøgninger.
+
+det er nok lidt overdrevet, for det er for den runde hvor det var sværest at få et enkelt tilsagn. Så lad os bare sige 9.
+
+Derfor bør man ved åbningen af hver runde, have 9 ansøgninger klar. 
+
+Hvilke kriterier skal disse ansøgninger opfylde?
+
+tidligst 9 månder før startdato
+5000 kr per kursus dag for kurser,
+max 20000 for kurser/konferencer på fire dage
+max 25000 for kurser/konferencer på fem dage eller derover.
+
+der ydes kun støtte til kurser der varer mere end tre dage. med andre ord, hvis konferencen kun varer 3 dage, gives der ikke støtte. forberedelses- og transporttid tæller ikke med.
+
+useR  - i 2026 varede det 4 dage
+
+superusers lader til at være proaktive på det her, og tilbyder at IT-kurser med en varighed på tre dage eller mindre kan udvides så de lever op til kravet om >3 dage.
+
+IDA har direkte en side med tilbud der lever op til kravene:
+https://ida.dk/arrangementer-og-kurser/kurser/kompetencefonde
+Den mest oplagte er 
+https://ida.dk/arrangementer-og-kurser/kurser/it-sikkerhed/certified-network-defender
+
+som nok stiller lidt flere krav jeg jeg lever op til.
+
+Er det taget, kan man fortsætte med 
+https://ida.dk/arrangementer-og-kurser/kurser/it-sikkerhed/certified-ethical-hacker-v11
+
+
+Teknologisk institut har overvejende kortere kurser - de længere kræver at man har et kortere introduktionskursus
+
+denne kunne være interessant
+https://segment.dk/Kurser/Certificeringer/Microsoft-Certified-Associate-/1588/Data-Analyst-Associate/?gad_source=1&gad_campaignid=1404217416&gbraid=0AAAAAD4v9x1qWYGMityR8NImPtSYsaa4H&gclid=CjwKCAiAssfLBhBDEiwAcLpwfjvXGW348jsajcB63JApF_ijyGFlG3um_4pfDn6WfLexM0GF9jHZERoCqI0QAvD_BwE
+
+
+earl der desværre kun er på tre dage
+
+
+
