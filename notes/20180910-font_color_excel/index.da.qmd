@@ -2,7 +2,7 @@
 title: "Get the font color of a cell in Excel"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-09-10
@@ -19,8 +19,8 @@ os til at græde er hvis der bruges farver til at gemme data i et regneark.
 
 Lad mig forklare ud fra et konkret eksempel.
 
-Jeg skulle trække data ud af et regne, hvor "noget" kunne have en værdi
-1, 2 eller 3. Det blev selvfølgelig angivet med et "x" i en celle. Det "x" skulle konverteres til et tal (1-3). 
+Jeg skulle trække data ud af et regneark, hvor "noget" kunne have en værdi;
+1, 2 eller 3. Det blev selvfølgelig angivet med et "x". "x" i kolonnen med overskriven "1" hvis værdien var 1 osv. Det "x" skulle konverteres til et tal (1-3). 
 
 Det var let nok. Hvad der var en større udfordring var at der kunne være to "x"'er. Et - med sort skriftfarve, der angav den nuværende tilstand. Og et andet
 "x" med rød skriftfarve, der angav hvad en fremtidig, ønsket, tilstand, skulle være.
@@ -49,4 +49,5 @@ End Function
 ```
 
 Og hvordan skulle det så have været gjort rigtigt? Hvis værdien skal være 1, 2 eller 3, så lader man være med at have en kolonne for hver værdi, med mulighed for at sætte et "x". I stedet har man en kolonne hvor man skriver 1, 2 eller 3.
+
 Hvad så med den potentielle ønskede fremtidige tilstand? Det er yderligere en variabel for en given observation, og skal derfor have sin egen kolonne. Med indholdet 1, 2 eller 3.
