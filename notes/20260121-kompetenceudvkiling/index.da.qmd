@@ -86,7 +86,6 @@ Vi ønsker at beregne for flere forskellige ønskede sandsynligheder for mindst 
 antal_forsøg <- function(s,ssh){
   ceiling(log(1-s)/log(1-ssh))
 }
-antal_forsøg(0.)
 
 ```
 
