@@ -2,7 +2,7 @@
 title: "Get the font color of a cell in Excel"
 subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - Excel
 date: 2018-09-10
@@ -10,26 +10,34 @@ toc: true
 image: "excel_font_color.png"
 ---
 
+Folk gør fantastiske ting i Excel. 
 
-People do weird and wonderful things in Excel.
+Og undertiden skal andre folk pille data ud af de regneark.
 
-Other people then have to pull out the data from those spreadsheets.
+Disse "andre folk" bruger meget tid på at græde... Og en af de ting der får
+os til at græde er hvis der bruges farver til at gemme data i et regneark.
 
-"Other people"  tend to spend a lot of time crying into their coffee.
+Lad mig forklare ud fra et konkret eksempel.
 
-At the moment, I am trying to pull out data of a spreadsheet, where "something" can have a value of 1, 2 or 3. That is of course marked by an "x" in a cell. I need to convert that x to a number.
+Jeg skulle trække data ud af et regneark, hvor "noget" kunne have en værdi;
+1, 2 eller 3. Det blev selvfølgelig angivet med et "x". "x" i kolonnen med overskriven "1" hvis værdien var 1 osv. Det "x" skulle konverteres til et tal (1-3). 
 
-That is rather simple. What is not so simple, is that there can be two x'es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.
+Det var let nok. Hvad der var en større udfordring var at der kunne være to "x"'er. Et - med sort skriftfarve, der angav den nuværende tilstand. Og et andet
+"x" med rød skriftfarve, der angav hvad en fremtidig, ønsket, tilstand, skulle være.
 
-So - I need a way to get the color of an x. VBA can do that:
+Så det var nødvendigt at kunne identificere farven på et givet x. 
+Det kan gøres med VBA:
 
+```default
 Function GetColour(ByVal Target As Range) As Single
 Application.Volatile
 GetColour = Target.Font.Color
 End Function
+```
 
-And if I need a logical test:
+Og hvis vi skal bruge en logisk test:
 
+```default
 Function IsBlack(ByVal Target As Range) As Boolean
 Application.Volatile
 If Target.Font.Color = 0 Then
@@ -38,5 +46,8 @@ Else
 IsBlack = False
 End If
 End Function
+```
 
+Og hvordan skulle det så have været gjort rigtigt? Hvis værdien skal være 1, 2 eller 3, så lader man være med at have en kolonne for hver værdi, med mulighed for at sætte et "x". I stedet har man en kolonne hvor man skriver 1, 2 eller 3.
 
+Hvad så med den potentielle ønskede fremtidige tilstand? Det er yderligere en variabel for en given observation, og skal derfor have sin egen kolonne. Med indholdet 1, 2 eller 3.
