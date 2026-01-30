@@ -108,3 +108,21 @@ tables <- html %>% html_elements("table") %>% html_table(fill = TRUE)
 
 length(tables)  # hvor mange tabeller blev fundet
 head(tables[[1]])
+
+
+## det her virker på min arbejdskomputer
+link <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
+
+
+
+html <- read_html(link)
+library(curl)
+library(xml2)
+library(rvest)
+curl_download(link, destfile = "data/test1.txt")
+html <- read_html("data/test1.txt")
+
+tables <- html_elements(html, "table")
+length(tables)
+dfs <- html_table(tables, fill = TRUE)
+dfs[[3]]
