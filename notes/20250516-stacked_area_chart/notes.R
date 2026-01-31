@@ -128,4 +128,356 @@ curl::curl_options()
 library(curl)
 curl::curl_download("https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data", destfile = "test.txt")
 
-curl_version()
+
+
+på hindbærtærten:
+
+> curl::curl_options()
+      abstract_unix_socket           accepttimeout_ms 
+                     10264                        212 
+           accept_encoding              address_scope 
+                     10102                        171 
+                    altsvc                altsvc_ctrl 
+                     10287                        286 
+                    append                autoreferer 
+                        50                         58 
+                 aws_sigv4                 buffersize 
+                     10305                         98 
+                    cainfo                cainfo_blob 
+                     10065                      40309 
+                    capath           ca_cache_timeout 
+                     10097                        321 
+                  certinfo         chunk_bgn_function 
+                       172                      20198 
+                chunk_data         chunk_end_function 
+                     10201                      20199 
+           closesocketdata        closesocketfunction 
+                     10209                      20208 
+            connecttimeout          connecttimeout_ms 
+                        78                        156 
+              connect_only                 connect_to 
+                       141                      10243 
+conv_from_network_function    conv_from_utf8_function 
+                     20142                      20144 
+  conv_to_network_function                     cookie 
+                     20143                      10022 
+                cookiefile                  cookiejar 
+                     10031                      10082 
+                cookielist              cookiesession 
+                     10135                         96 
+            copypostfields                       crlf 
+                     10165                         27 
+                   crlfile                      curlu 
+                     10169                      10282 
+             customrequest                  debugdata 
+                     10036                      10095 
+             debugfunction           default_protocol 
+                     20094                      10238 
+               dirlistonly   disallow_username_in_url 
+                        48                        278 
+         dns_cache_timeout              dns_interface 
+                        92                      10221 
+             dns_local_ip4              dns_local_ip6 
+                     10222                      10223 
+               dns_servers      dns_shuffle_addresses 
+                     10211                        275 
+      dns_use_global_cache         doh_ssl_verifyhost 
+                        91                        307 
+        doh_ssl_verifypeer       doh_ssl_verifystatus 
+                       306                        308 
+                   doh_url                        ech 
+                     10279                      10325 
+                 egdsocket                errorbuffer 
+                     10077                      10010 
+     expect_100_timeout_ms                failonerror 
+                       227                         45 
+                  filetime               fnmatch_data 
+                        69                      10202 
+          fnmatch_function             followlocation 
+                     20200                         52 
+              forbid_reuse              fresh_connect 
+                        75                         74 
+                   ftpport                 ftpsslauth 
+                     10017                        129 
+               ftp_account    ftp_alternative_to_user 
+                     10134                      10147 
+   ftp_create_missing_dirs             ftp_filemethod 
+                       110                        138 
+          ftp_skip_pasv_ip                ftp_ssl_ccc 
+                       137                        154 
+              ftp_use_eprt               ftp_use_epsv 
+                       106                         85 
+              ftp_use_pret          gssapi_delegation 
+                       188                        210 
+ happy_eyeballs_timeout_ms            haproxyprotocol 
+                       271                        274 
+         haproxy_client_ip                     header 
+                     10323                         42 
+                headerdata             headerfunction 
+                     10029                      20079 
+                 headeropt                       hsts 
+                       229                      10300 
+              hstsreaddata           hstsreadfunction 
+                     10302                      20301 
+             hstswritedata          hstswritefunction 
+                     10304                      20303 
+                 hsts_ctrl             http09_allowed 
+                       299                        285 
+            http200aliases                   httpauth 
+                     10104                        107 
+                   httpget                 httpheader 
+                        80                      10023 
+                  httppost            httpproxytunnel 
+                     10024                         61 
+     http_content_decoding     http_transfer_decoding 
+                       158                        157 
+              http_version      ignore_content_length 
+                        84                        136 
+                infilesize           infilesize_large 
+                        14                      30115 
+                 interface             interleavedata 
+                     10062                      10195 
+        interleavefunction                  ioctldata 
+                     20196                      10131 
+             ioctlfunction                  ipresolve 
+                     20130                        113 
+                issuercert            issuercert_blob 
+                     10170                      40295 
+     keep_sending_on_error                  keypasswd 
+                       245                      10026 
+                  krblevel                  localport 
+                     10063                        139 
+            localportrange              login_options 
+                       140                      10224 
+           low_speed_limit             low_speed_time 
+                        19                         20 
+                 mail_auth                  mail_from 
+                     10217                      10186 
+                 mail_rcpt       mail_rcpt_allowfails 
+                     10187                        290 
+               maxage_conn                maxconnects 
+                       288                         71 
+               maxfilesize          maxfilesize_large 
+                       114                      30117 
+          maxlifetime_conn                  maxredirs 
+                       314                         68 
+      max_recv_speed_large       max_send_speed_large 
+                     30146                      30145 
+                  mimepost               mime_options 
+                     10269                        315 
+                     netrc                 netrc_file 
+                        51                      10118 
+       new_directory_perms             new_file_perms 
+                       160                        159 
+                    nobody                 noprogress 
+                        44                         43 
+                   noproxy                   nosignal 
+                     10177                         99 
+            opensocketdata         opensocketfunction 
+                     10164                      20163 
+                  password                 path_as_is 
+                     10174                        234 
+           pinnedpublickey                   pipewait 
+                     10230                        237 
+                      port                       post 
+                         3                         47 
+                postfields              postfieldsize 
+                     10015                         60 
+       postfieldsize_large                  postquote 
+                     30120                      10039 
+                 postredir                   prequote 
+                       161                      10093 
+                prereqdata             prereqfunction 
+                     10313                      20312 
+                 pre_proxy                    private 
+                     10262                      10103 
+          progressfunction                  protocols 
+                     20056                        181 
+             protocols_str                      proxy 
+                     10318                      10004 
+                 proxyauth                proxyheader 
+                       111                      10228 
+             proxypassword                  proxyport 
+                     10176                         59 
+                 proxytype              proxyusername 
+                       101                      10175 
+              proxyuserpwd               proxy_cainfo 
+                     10006                      10246 
+         proxy_cainfo_blob               proxy_capath 
+                     40310                      10247 
+             proxy_crlfile           proxy_issuercert 
+                     10260                      10296 
+     proxy_issuercert_blob            proxy_keypasswd 
+                     40297                      10258 
+     proxy_pinnedpublickey         proxy_service_name 
+                     10263                      10235 
+             proxy_sslcert          proxy_sslcerttype 
+                     10254                      10255 
+        proxy_sslcert_blob               proxy_sslkey 
+                     40293                      10256 
+          proxy_sslkeytype          proxy_sslkey_blob 
+                     10257                      40294 
+          proxy_sslversion      proxy_ssl_cipher_list 
+                       250                      10259 
+         proxy_ssl_options       proxy_ssl_verifyhost 
+                       261                        249 
+      proxy_ssl_verifypeer        proxy_tls13_ciphers 
+                       248                      10277 
+    proxy_tlsauth_password         proxy_tlsauth_type 
+                     10252                      10253 
+    proxy_tlsauth_username        proxy_transfer_mode 
+                     10251                        166 
+                       put                 quick_exit 
+                        54                        322 
+                     quote                random_file 
+                     10028                      10076 
+                     range                   readdata 
+                     10007                      10009 
+              readfunction            redir_protocols 
+                     20012                        182 
+       redir_protocols_str                    referer 
+                     10319                      10016 
+            request_target                    resolve 
+                     10266                      10203 
+       resolver_start_data    resolver_start_function 
+                     10273                      20272 
+               resume_from          resume_from_large 
+                        21                      30116 
+          rtsp_client_cseq               rtsp_request 
+                       193                        189 
+          rtsp_server_cseq            rtsp_session_id 
+                       194                      10190 
+           rtsp_stream_uri             rtsp_transport 
+                     10191                      10192 
+              sasl_authzid                    sasl_ir 
+                     10289                        218 
+                  seekdata               seekfunction 
+                     10168                      20167 
+   server_response_timeout server_response_timeout_ms 
+                       112                        324 
+              service_name                      share 
+                     10236                      10100 
+               sockoptdata            sockoptfunction 
+                     10149                      20148 
+               socks5_auth          socks5_gssapi_nec 
+                       267                        180 
+     socks5_gssapi_service             ssh_auth_types 
+                     10179                        151 
+           ssh_compression            ssh_hostkeydata 
+                       268                      10317 
+       ssh_hostkeyfunction    ssh_host_public_key_md5 
+                     20316                      10162 
+ssh_host_public_key_sha256                ssh_keydata 
+                     10311                      10185 
+           ssh_keyfunction             ssh_knownhosts 
+                     20184                      10183 
+       ssh_private_keyfile         ssh_public_keyfile 
+                     10153                      10152 
+                   sslcert                sslcerttype 
+                     10025                      10086 
+              sslcert_blob                  sslengine 
+                     40291                      10089 
+         sslengine_default                     sslkey 
+                        90                      10087 
+                sslkeytype                sslkey_blob 
+                     10088                      40292 
+                sslversion            ssl_cipher_list 
+                        32                      10083 
+              ssl_ctx_data           ssl_ctx_function 
+                     10109                      20108 
+             ssl_ec_curves            ssl_enable_alpn 
+                     10298                        226 
+            ssl_enable_npn             ssl_falsestart 
+                       225                        233 
+               ssl_options        ssl_sessionid_cache 
+                       216                        150 
+            ssl_verifyhost             ssl_verifypeer 
+                        81                         64 
+          ssl_verifystatus                     stderr 
+                       232                      10037 
+            stream_depends           stream_depends_e 
+                     10240                      10241 
+             stream_weight   suppress_connect_headers 
+                       239                        265 
+              tcp_fastopen              tcp_keepalive 
+                       244                        213 
+               tcp_keepcnt               tcp_keepidle 
+                       326                        214 
+             tcp_keepintvl                tcp_nodelay 
+                       215                        121 
+             telnetoptions               tftp_blksize 
+                     10070                        178 
+           tftp_no_options              timecondition 
+                       242                         33 
+                   timeout                 timeout_ms 
+                        13                        155 
+                 timevalue            timevalue_large 
+                        34                      30270 
+             tls13_ciphers           tlsauth_password 
+                     10276                      10205 
+              tlsauth_type           tlsauth_username 
+                     10206                      10204 
+               trailerdata            trailerfunction 
+                     10284                      20283 
+              transfertext          transfer_encoding 
+                        53                        207 
+          unix_socket_path          unrestricted_auth 
+                     10231                        105 
+        upkeep_interval_ms                     upload 
+                       281                         46 
+         upload_buffersize                        url 
+                       280                      10002 
+                 useragent                   username 
+                     10018                      10173 
+                   userpwd                    use_ssl 
+                     10005                        119 
+                   verbose              wildcardmatch 
+                        41                        197 
+                 writedata              writefunction 
+                     10001                      20011 
+                ws_options               xferinfodata 
+                       320                      10057 
+          xferinfofunction             xoauth2_bearer 
+                     20219                      10220 
+
+                     > curl_version()
+                     $version
+                     [1] "8.9.1"
+                     
+                     $headers
+                     [1] "8.9.1"
+                     
+                     $ssl_version
+                     [1] "OpenSSL/3.3.1"
+                     
+                     $libz_version
+                     [1] "1.3.1"
+                     
+                     $libssh_version
+                     [1] "libssh2/1.11.0"
+                     
+                     $libidn_version
+                     [1] "2.3.7"
+                     
+                     $host
+                     [1] "aarch64-unknown-linux-gnu"
+                     
+                     $protocols
+                      [1] "dict"    "file"    "ftp"     "ftps"    "gopher"  "gophers"
+                      [7] "http"    "https"   "imap"    "imaps"   "ldap"    "ldaps"  
+                     [13] "mqtt"    "pop3"    "pop3s"   "rtmp"    "rtmpe"   "rtmps"  
+                     [19] "rtmpt"   "rtmpte"  "rtmpts"  "rtsp"    "scp"     "sftp"   
+                     [25] "smb"     "smbs"    "smtp"    "smtps"   "telnet"  "tftp"   
+                     [31] "ws"      "wss"    
+                     
+                     $ipv6
+                     [1] TRUE
+                     
+                     $http2
+                     [1] TRUE
+                     
+                     $idn
+                     [1] TRUE
+                     
+                     $url_parser
+                     [1] TRUE
