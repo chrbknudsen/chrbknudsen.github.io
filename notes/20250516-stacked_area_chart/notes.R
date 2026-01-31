@@ -3,6 +3,11 @@ library(rvest)
 
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
 
+url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data#:~:text=addiction%2E-,NHMRC,90%2E6"
+
+
+read_html(url)
+
 # Byg request
 req <- request(url) %>%
   req_options(http_version = 1L) %>%     # Tving HTTP/1.1
@@ -26,15 +31,17 @@ library(httr)
 library(rvest)
 
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
-
+url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data#:~:text=addiction%2E-,NHMRC,90%2E6"
 res <- GET(
   url,
   user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"),
   config = httr::config(http_version = 0)
 )
 
-html <- read_html(res)
-html_table(url)
+read_html_live("https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data#:~:text=addiction%2E-,NHMRC,90%2E6")
+
+html <- read_html(url)
+h(url)
            
 res <- curl::curl_fetch_memory(
   url,
@@ -109,20 +116,16 @@ tables <- html %>% html_elements("table") %>% html_table(fill = TRUE)
 length(tables)  # hvor mange tabeller blev fundet
 head(tables[[1]])
 
+# det er lidt sært - for jeg kan gøre det her på arbejdet og på arbejdscomputeren.
+# Men ikke på min hindbærtærte hjemme. Eller på computeren i stuen.
+# Og heller ikke selvom computeren i stuen kommer på min mobils hotspot.
+# Så...
 
-## det her virker på min arbejdskomputer
-link <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
+# Mon ikke jeg skal kigge på hvad output af denne er på 
+# arbejdsmaskinen?
+curl::curl_options()
 
-
-
-html <- read_html(link)
 library(curl)
-library(xml2)
-library(rvest)
-curl_download(link, destfile = "data/test1.txt")
-html <- read_html("data/test1.txt")
+curl::curl_download("https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data", destfile = "test.txt")
 
-tables <- html_elements(html, "table")
-length(tables)
-dfs <- html_table(tables, fill = TRUE)
-dfs[[3]]
+curl_version()
