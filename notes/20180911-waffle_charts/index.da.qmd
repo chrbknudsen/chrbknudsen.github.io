@@ -1,6 +1,6 @@
 ---
-title: "Waffle charts"
-subtitle: "indsæt subtitle"
+title: "Vaffel diagram"
+subtitle: "eller; kvadratisk lagkagediagram"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -10,12 +10,21 @@ date: "2018-09-11"
 toc: true
 image: "waffles.png"
 ---
-A rather popular chart type. Not really my favorite, but I can see how it makes things easier to understand for people who are not used to read and understand charts. The reason for my less than favourable view on waffle charts are probably linked to its overuse in meaningless infographics.
 
-A waffle chart is a grid with squares/cells/icons/whatever, where each cell represents a number of something.
+En forholdsvis populær type diagram. Det er ikke rigtigt 
+en favorit hos mig, men jeg kan godt se hvordan det gør det 
+lettere at forstå for folk der ikke er så rutinerede i at 
+læse diagrammer eller tabeller.
 
-Lets make an example:
+Og så er min lette afsmag nok påvirket af at det er blevet
+brugt virkelig meget i ligegyldige "infografikker".
 
+Det er et gitter hvor hver celle repræsenterer et tal eller 
+lignende. Og gøres ofte med ikoner i cellerne.
+
+Lad os lave et eksempel:
+
+```{r}
 library(ggplot2)
 library(waffle)
 
@@ -24,23 +33,32 @@ vec <- c(`Category 1 (10)`= 10 , `Category 2 (20)`= 20,
 
 waffle(vec/2, rows=3, size=0.1, 
        colors=c("#c7d4b6", "#a3aabd", "#a0d0de", "#97b5cf"), 
-       title="Four different categories of something", 
-       xlab="1 square = 2 somethings")
+       title="Fire forskellige kategorier af noget", 
+       xlab="1 celle = 2 noget")
+```
 
+En lille irritation er at `waffle` insisterer på at stave
+"colours" forkert.
 
+Funktionen tager en navngiven vektor af værdier, `rows` 
+angiver antallet af rækker af celler eller blokke. Default
+er 10. 
 
-One annoyance: waffle wants you to spell colours wrong.
+En af standardvisningerne er et 10x10 gitter, hvor
+hver celle repræsenterer 1% af totalen:
 
-waffle takes a named vector of values, rows sets the number of rows of blocks. Default is 10.
-
-One standard way, is to show a 10x10 grid, where each cell represents 1% of the total:
-
+```{r}
 waffle(vec/sum(vec)*100)
+```
+
+Yderligere et irritationsmoment. `waffle` afrunder
+vektorens værdier. Og derfor er der kun 98 celler.
+Så du er nødt til at manipulere din vektor, så du sikrer dig
+at du får 100 celler.
+
+Hvad hvis du vil have indsat andet end farvede kvadrater?
 
 
-Bloody annoying - waffle rounds the values of the vector, leading to only 98 squares. So you have to manipulate your vector to get to 100. Well, actually it is probably a minor annoyance.
-
-What if you want something else than coloured squares?
 
 The arguments “use_glyph” and “glyph_size” makes that possible.
 First, we'll need the library extrafont
