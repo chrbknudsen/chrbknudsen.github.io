@@ -25,6 +25,9 @@ Og vi skal have trukket tabellen ud.
 
  det er der vist en funktion til et sted.
  
+
+ NHMRC expenditure for research relevant to specific populations 2015 to 2024
+
 ```{r eval = FALSE}
 
 library(httr)
@@ -32,17 +35,59 @@ library(tidyverse)
 library(xml2)
 library(rvest)
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
-html <- read_html(GET(url, user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")))
+html <- read_html(url)
+tables <- html %>% html_elements("table") %>% html_table(fill = TRUE)
+
+length(tables)  # hvor mange tabeller blev fundet
+data <- tables[[3]]
+
+data |> 
+  pivot_longer(cols = -1) |> 
+  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
+  mutate(value = as.numeric(value),
+  year = as.numeric(year)) |> 
+  select(-name) |> 
+  ggplot(aes(x = year, y = value, fill = Population)) +
+  geom_area()
+
+```
+
+Heraf ses det tydeligt at kvinder er voldsomt underprioriteret. 
+
+
+```{r}
+data |> 
+  pivot_longer(cols = -1) |> 
+  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
+  mutate(value = as.numeric(value),
+  year = as.numeric(year)) |> 
+      select(-name) |> 
+    group_by(year) |> 
+    mutate(andel = value/sum(value)) |> 
+    ungroup() |> 
+    filter(Population == "Women’s Health") 
 ```
 
 
-```{r eval = FALSE}
-
-ua <- user_agent("Mozilla/5.0")
-
-res <- httr::GET(url, ua, config = httr::config(http_version = 1.1))
-
-html <- read_html(res)
-
+```{r}
+data |> 
+  pivot_longer(cols = -1) |> 
+  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
+  mutate(value = as.numeric(value),
+  year = as.numeric(year)) |> 
+      select(-name) |> 
+      mutate(Population = case_when(
+        Population == "Women’s Health" ~ "Women’s and maternal Health",
+        Population == "Maternal Health" ~ "Women’s and maternal Health",
+        .default = Population
+      )) |> 
+    group_by(year, Population) |> 
+    summarise(value = sum(value)) |> 
+    ungroup() |> 
+    group_by(year) |> 
+    mutate(andel = value/sum(value)) |> 
+    ungroup() |> 
+    filter(Population == "Women’s and maternal Health") 
 ```
 
+Selv hvis man lægger womens og maternal health samme, kommer den ikke over 38.6% 
