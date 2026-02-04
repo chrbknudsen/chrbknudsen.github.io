@@ -1,8 +1,7 @@
 ---
 title: "Stakket barchart"
-subtitle: "Og en måde at få ram på en besværlig hjemmeside"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - kategori 1
 date: 2025-05-16
@@ -10,84 +9,95 @@ toc: true
 image: ""
 ---
 
-Nu var det egentlig bare et stakket areachart jeg ville lave.
-Der skulle bruges noget data. Og jeg fandt en fin
-side med sundhedsdata fra australien. Og så var siden bøvlet...
+Det er ikke en supergod måde at visualisere data på. Godt nok giver den en ide om fordelingen af 
+bidrag til et samlet heles udvikling. Men der er detaljer i grafen der gør det vanskeligere at 
+tolke det. 
 
-Det er ofte lidt vanskeligt at aflæse. Men hvordan?
+Men lad os lave et.
 
-Vi skal bruge noget data.
+Til en start skal vi have noget data. Jeg har fundet denne side
+[https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data](Research funding statistics and data) fra de australske sundhedsmyndigheder. Der er tre tabeller,
+og den sidste viser hvor mange penge de bruger på forskning der er målrettet forskellige 
+demografiske grupper. 
 
+Lad os begynde med at få fingre i de data:
 
-https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data
-
-Og vi skal have trukket tabellen ud.
-
- det er der vist en funktion til et sted.
- 
-
- NHMRC expenditure for research relevant to specific populations 2015 to 2024
-
-```{r eval = FALSE}
-
-library(httr)
+```{r}
 library(tidyverse)
-library(xml2)
 library(rvest)
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
-html <- read_html(url)
-tables <- html %>% html_elements("table") %>% html_table(fill = TRUE)
 
-length(tables)  # hvor mange tabeller blev fundet
-data <- tables[[3]]
+data <- read_html(url) |> 
+        rvest::html_table() |> 
+        _[[3]]
+data
+```
 
+Det er ikke specielt tidy, så lad os fikse det.
+
+```{r}
+data <- data |> 
+  pivot_longer(-1) |>  # pivoter tabellen
+  mutate(År = str_extract(name, "\\d{4}"), 
+         År = as.numeric(År)) |> 
+  select(-name)
+
+head(data)
+```
+
+Og så er vi sådan set klar til at plotte:
+
+```{r}
 data |> 
-  pivot_longer(cols = -1) |> 
-  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
-  mutate(value = as.numeric(value),
-  year = as.numeric(year)) |> 
-  select(-name) |> 
-  ggplot(aes(x = year, y = value, fill = Population)) +
+  ggplot(aes(x = År, y = value, fill = Population)) +
   geom_area()
 
 ```
 
-Heraf ses det tydeligt at kvinder er voldsomt underprioriteret. 
+Vupti. Vi starter med at plotte hvor mange AUS$ der bruges på forskning i kvinders sundhed.
+Oven på det plotter vi så hvor mange aud der bruges på forskning i mænds sundhed, og så fortsætter
+vi opad. Tallene er som nævnt i dollar, og det fremgår ikke om de er korrigeret for inflation. 
+
+Fordelen ved at stakke de absolutte tal er at vi får det samlede beløb med det samme. Ulempen er at det er vanskeligt at se hvilken andel hver enkel demografisk gruppe får af den samlede sum. Selvom det jo er meget tydeligt at kvinder er voldsomt underprioriteret. 
+
+Et alternativ er at plotte de relative værdier, altså den procentvise fordeling.
+
+Det gør vi ret let, det er blot et ekstra argument til geom_area:
 
 
 ```{r}
 data |> 
-  pivot_longer(cols = -1) |> 
-  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
-  mutate(value = as.numeric(value),
-  year = as.numeric(year)) |> 
-      select(-name) |> 
-    group_by(year) |> 
-    mutate(andel = value/sum(value)) |> 
-    ungroup() |> 
-    filter(Population == "Women’s Health") 
+  ggplot(aes(x = År, y = value, fill = Population)) +
+  geom_area(position = "fill")
 ```
 
+Nu bliver det lidt lettere at se hvor stor en andel af de samlede forskningsbevillinger der går til hver gruppe - stiger eller falder de? 
+Og det bliver tydeligt at selv hvis vi lægger "Maternal Health" sammen med "Women's Health" er det under 50% af bevillingerne der går 
+specifikt til kvinder. Men det er vanskeligt faktisk at aflæse at det i 2024 kun var 37% der gik til forskning i kvinders sundhed, fordi "Men's Health" 
+ligger mellem de to kategorier, og får den samlede værdi til at se 3,5% større ud.
+
+Det kan vi fikse ved at justere på rækkefølgen af kategorierne. Som sædvanligt når vi skal styre rækkefølger i ggplot, skal vi have fat i faktorer.
+Vi mutater "Population" til at være en kategorisk variabel, og ændrer rækkefølgen. En særlig udfordring er at 
+`fct_relevel` skal have en numerisk værdi i `after` argumentet. Så det piller vi ud semi-manuelt:
 
 ```{r}
 data |> 
-  pivot_longer(cols = -1) |> 
-  mutate(year = str_extract(name, "\\d{4}"), .after = 2) |> 
-  mutate(value = as.numeric(value),
-  year = as.numeric(year)) |> 
-      select(-name) |> 
-      mutate(Population = case_when(
-        Population == "Women’s Health" ~ "Women’s and maternal Health",
-        Population == "Maternal Health" ~ "Women’s and maternal Health",
-        .default = Population
-      )) |> 
-    group_by(year, Population) |> 
-    summarise(value = sum(value)) |> 
-    ungroup() |> 
-    group_by(year) |> 
-    mutate(andel = value/sum(value)) |> 
-    ungroup() |> 
-    filter(Population == "Women’s and maternal Health") 
+  mutate(Population = factor(Population)) |> 
+  mutate(Population = fct_relevel(Population,
+                      "Men’s Health",
+                      after = match("Maternal Health", levels(Population)) - 1 )) |> 
+  ggplot(aes(x = År, y = value, fill = Population)) +
+  geom_area(position = "fill")
 ```
 
-Selv hvis man lægger womens og maternal health samme, kommer den ikke over 38.6% 
+Vupti. De 3.5% der bruges på forskning i mænds sundhed ligger ikke længere mellem "Maternal Health", og "Women's Health", 
+og det er langt tydeligere at de ca 37% af bevillingerne der bruges på forskning i kvinders sundhed udtryk for en voldsom underprioritering af kvinder. 
+
+Det ændrer ikke på at det er vanskeligt at aflæse på grafen hvor stor en andel der bruges på "Aged Health", og en
+tabel vil ofte være at foretrække hvis man faktisk er interesseret i udviklingen. Det er næppe et tilfælde at 
+de oprindelige data netop præsenteres som en tabel.
+
+Tricket med at bruge matchs og levels til at få den numeriske værdi der skal bruges når rækkefølgen skal ændres er ret
+fikst, hvis jeg selv skal sige det.
+
+Så mangler der blot at få smukkeseret plottet. Til en start kunne man fjerne den grå baggrund, der er inderligt overflødig her. Breaks på X-aksen bør gå på hele år, og når vi summerer til 100% vil de fleste sætte pris på at Y-aksen går fra 0 til 100. En titel og en caption vil også være fint, men det overlades til den interesserede studerende.
