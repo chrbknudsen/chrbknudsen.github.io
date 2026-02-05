@@ -58,9 +58,11 @@ at du får 100 celler.
 
 Hvad hvis du vil have indsat andet end farvede kvadrater?
 
+Funktionen tager et par argumenter der gør det muligt:
+
+`use_glyph` `glyph_size`
 
 
-The arguments “use_glyph” and “glyph_size” makes that possible.
 First, we'll need the library extrafont
 
 library(extrafont)
