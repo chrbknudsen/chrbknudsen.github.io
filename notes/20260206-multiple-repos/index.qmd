@@ -1,0 +1,203 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-02-06
+toc: true
+image: ""
+---
+Chefen vil gerne have trukket nogen data og behandlet dem. 
+Vi vil gerne trække data automatisk. Løbende. Og vi kan ikke have de rå data liggende 
+offenligt tilgængeligt. 
+Så de skal ligge på et privat repo. Men på et privat repo kan vi ikke køre actions (på github).
+Løsning? Kør actions på et public repo, men gem data på det private. 
+
+Hvordan?
+
+Givet
+Repo A (public): https://github.com/KUBDatalab/lighthouse-A
+
+Repo B (private): https://github.com/KUBDatalab/lighthouse-B
+
+Action kører i lighthouse-A
+
+R-script ligger i lighthouse-A
+
+Data læses fra + skrives tilbage til lighthouse-B
+
+Ingen data ender i lighthouse-A’s commit-historik
+
+Action i A:
+
+placer et workflow her:
+lighthouse-A/
+└── .github/
+    └── workflows/
+        └── process-lighthouse-b.yml
+
+Lad det have dette indhold:
+name: Process data from lighthouse-B
+
+on:
+  schedule:
+    - cron: "15 3 * * *"   # UTC – justér efter DK-tid
+  workflow_dispatch: {}
+
+permissions:
+  contents: read   # lighthouse-A: kun læsning
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout lighthouse-A
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Setup SSH access to lighthouse-B
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.LIGHTHOUSE_B_DEPLOY_KEY }}
+
+      - name: Clone lighthouse-B to temp dir
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          REPO_B_DIR="$(mktemp -d)"
+          echo "REPO_B_DIR=$REPO_B_DIR" >> "$GITHUB_ENV"
+
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+          git clone "${{ secrets.LIGHTHOUSE_B_SSH_URL }}" "$REPO_B_DIR"
+
+      - name: Install R packages
+        run: |
+          Rscript -e 'install.packages(c("readr","dplyr"), repos="https://cloud.r-project.org")'
+
+      - name: Run R script from lighthouse-A
+        env:
+          REPO_B_DIR: ${{ env.REPO_B_DIR }}
+        run: |
+          Rscript scripts/process_lighthouse_b.R
+
+      - name: Commit & push changes to lighthouse-B
+        env:
+          REPO_B_DIR: ${{ env.REPO_B_DIR }}
+        run: |
+          set -euo pipefail
+          cd "$REPO_B_DIR"
+
+          if git diff --quiet; then
+            echo "No changes detected – nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "Automated update from lighthouse-A ($(date -u +%F\ %T) UTC)"
+          git push
+
+Placer et R-script i repo A
+
+lighthouse-A/
+└── scripts/
+    └── process_lighthouse_b.R
+
+    Med dette indhold:
+
+repo_b_dir <- Sys.getenv("REPO_B_DIR", unset = NA_character_)
+if (is.na(repo_b_dir) || repo_b_dir == "") {
+  stop("REPO_B_DIR is not set")
+}
+
+# Eksempel: fil i lighthouse-B
+input_path <- file.path(repo_b_dir, "data", "input.csv")
+
+if (!file.exists(input_path)) {
+  stop("File not found: ", input_path)
+}
+
+library(readr)
+library(dplyr)
+
+df <- read_csv(input_path, show_col_types = FALSE)
+
+# ---- DINE TRANSFORMATIONER ----
+df <- df |> mutate(processed_at = Sys.time())
+
+# Skriv direkte tilbage til lighthouse-B
+write_csv(df, input_path)
+
+Det kræver selvfølgelig at der er en csv i repo b. Ovenfor kunne man se at den skal ligge i 
+data mappen på repo b.
+
+Det i sig selv gør ikke noget, for de to repos skal kunne snakke sammen.
+
+Vi laver en ssh-nøgle:
+
+ssh-keygen -t ed25519 -C "lighthouse-A->lighthouse-B deploy key" -f lighthouse_b_deploy_key
+
+Det giver to filer
+lighthouse_b_deploy_key
+
+og
+
+lighthouse_b_deploy_key.pub
+
+Den første er privat og må aldrig deles med andre. Den anden er public og må deles vidt og bredt.
+
+Public key skal tilføjes repo B
+Gå til KUBDatalab/lighthouse-B på GitHub
+
+Klik Settings
+
+I venstre menu: Deploy keys
+
+Klik Add deploy key
+
+Title: lighthouse-A-writer (eller hvad du vil)
+
+Åbn lighthouse_b_deploy_key.pub og kopiér hele indholdet (én linje der starter med ssh-ed25519 ...)
+
+Sæt ✅ Allow write access
+
+Klik Add key
+
+Den private skal gemmes som "secret" i repo A
+
+Gå til KUBDatalab/lighthouse-A på GitHub
+
+Klik Settings
+
+Venstre menu: Secrets and variables → Actions
+
+Klik New repository secret
+
+Name: LIGHTHOUSE_B_DEPLOY_KEY
+
+Åbn filen lighthouse_b_deploy_key (den uden .pub) og kopiér alt indholdet (inkl. -----BEGIN ... / -----END ...)
+
+Klik Add secret
+
+Så skal repo A have en url til repo bs ssh URL - som en secret:
+I samme “Actions secrets”:
+
+New repository secret
+
+Name: LIGHTHOUSE_B_SSH_URL
+
+Value: git@github.com:KUBDatalab/lighthouse-B.git
+
+
+Bum bummelum. Juster på scriptet, og hvor ofte koden kører.
