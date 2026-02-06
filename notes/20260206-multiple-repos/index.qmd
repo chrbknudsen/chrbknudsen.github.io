@@ -8,8 +8,10 @@ categories:
   - kategori 2
 date: 2026-02-06
 toc: true
-image: ""
+image: "dualrepos.png"
 ---
+
+
 Chefen vil gerne have trukket nogen data og behandlet dem. 
 Vi vil gerne trække data automatisk. Løbende. Og vi kan ikke have de rå data liggende 
 offenligt tilgængeligt. 
