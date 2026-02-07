@@ -1,13 +1,15 @@
 ---
 title: "Stakket barchart"
 author: "Christian Knudsen"
-visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - kategori 1
 date: 2025-05-16
 toc: true
 image: ""
 ---
+
+Her skal jeg have gemt data for det kan ikke genereres hjemmefra - endnu.
 
 Det er ikke en supergod måde at visualisere data på. Godt nok giver den en ide om fordelingen af 
 bidrag til et samlet heles udvikling. Men der er detaljer i grafen der gør det vanskeligere at 
@@ -22,7 +24,7 @@ demografiske grupper.
 
 Lad os begynde med at få fingre i de data:
 
-```{r}
+```{r eval  = FALSE}
 library(tidyverse)
 library(rvest)
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
@@ -35,7 +37,7 @@ data
 
 Det er ikke specielt tidy, så lad os fikse det.
 
-```{r}
+```{r eval  =FALSE}
 data <- data |> 
   pivot_longer(-1) |>  # pivoter tabellen
   mutate(År = str_extract(name, "\\d{4}"), 
@@ -47,7 +49,7 @@ head(data)
 
 Og så er vi sådan set klar til at plotte:
 
-```{r}
+```{r eval = FALSE}
 data |> 
   ggplot(aes(x = År, y = value, fill = Population)) +
   geom_area()
@@ -65,7 +67,7 @@ Et alternativ er at plotte de relative værdier, altså den procentvise fordelin
 Det gør vi ret let, det er blot et ekstra argument til geom_area:
 
 
-```{r}
+```{r eval = FALSE}
 data |> 
   ggplot(aes(x = År, y = value, fill = Population)) +
   geom_area(position = "fill")
@@ -80,7 +82,7 @@ Det kan vi fikse ved at justere på rækkefølgen af kategorierne. Som sædvanli
 Vi mutater "Population" til at være en kategorisk variabel, og ændrer rækkefølgen. En særlig udfordring er at 
 `fct_relevel` skal have en numerisk værdi i `after` argumentet. Så det piller vi ud semi-manuelt:
 
-```{r}
+```{r eval = FALSE}
 data |> 
   mutate(Population = factor(Population)) |> 
   mutate(Population = fct_relevel(Population,
