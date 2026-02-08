@@ -1,15 +1,13 @@
 ---
 title: "Stakket barchart"
 author: "Christian Knudsen"
-visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - kategori 1
 date: 2025-05-16
 toc: true
 image: ""
 ---
-
-Her skal jeg have gemt data for det kan ikke genereres hjemmefra - endnu.
 
 Det er ikke en supergod måde at visualisere data på. Godt nok giver den en ide om fordelingen af 
 bidrag til et samlet heles udvikling. Men der er detaljer i grafen der gør det vanskeligere at 
@@ -24,6 +22,25 @@ demografiske grupper.
 
 Lad os begynde med at få fingre i de data:
 
+```{r echo = FALSE, warning = FALSE}
+library(tidyverse)
+data <- tibble::tribble(~Population, ~"2015$ million", ~"2016$ million",
+~"2017$ million",
+~"2018$ million",
+~"2019$ million",
+~"2020$ million",
+~"2021$ million",
+~"2022$ million",
+~"2023$ million", ~"2024$ million",
+"Aboriginal and Torres Strait Islander Health",	55.8,	51.7,	49.6,	50,	54.4,	57.2,	58.1,	67,	69,	66.9,
+"Adolescent Health",	26.2,	20.3, 18.9,	20.2,	21.9,	24.5,	23.4,	24.3,	26.5,	26.2,
+"Aged Health",	40.7,	36.2,	36.6,	39.5,	45.9,	45.7,	40.2,	39,	39.5,	33.2,
+"Child Health",	112.2,	98.3,	96.7,	103.3,	111.3,	111,	104.6,	108,	113,	105.8,
+"Maternal Health",	60,	47.2,	45.4,	46,	48.2,	49.4,	50.0,	53.4,	57.6,	54,
+"Men’s Health",	20.5,	17,	17,	18.6,	18.7,	14.9,	13.0,	14.1,	15.3,	14,
+"Women’s Health",	100.7, 84.4,	83,	83.4,	86.5,	83.5,	81.2,	92.3,	98.2,	90.6)
+```
+
 ```{r eval  = FALSE}
 library(tidyverse)
 library(rvest)
@@ -32,12 +49,16 @@ url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-fun
 data <- read_html(url) |> 
         rvest::html_table() |> 
         _[[3]]
-data
+```
+
+Og så har vi data!
+```{r}
+head(data)
 ```
 
 Det er ikke specielt tidy, så lad os fikse det.
 
-```{r eval  =FALSE}
+```{r}
 data <- data |> 
   pivot_longer(-1) |>  # pivoter tabellen
   mutate(År = str_extract(name, "\\d{4}"), 
@@ -49,7 +70,7 @@ head(data)
 
 Og så er vi sådan set klar til at plotte:
 
-```{r eval = FALSE}
+```{r}
 data |> 
   ggplot(aes(x = År, y = value, fill = Population)) +
   geom_area()
@@ -67,7 +88,7 @@ Et alternativ er at plotte de relative værdier, altså den procentvise fordelin
 Det gør vi ret let, det er blot et ekstra argument til geom_area:
 
 
-```{r eval = FALSE}
+```{r}
 data |> 
   ggplot(aes(x = År, y = value, fill = Population)) +
   geom_area(position = "fill")
@@ -82,7 +103,7 @@ Det kan vi fikse ved at justere på rækkefølgen af kategorierne. Som sædvanli
 Vi mutater "Population" til at være en kategorisk variabel, og ændrer rækkefølgen. En særlig udfordring er at 
 `fct_relevel` skal have en numerisk værdi i `after` argumentet. Så det piller vi ud semi-manuelt:
 
-```{r eval = FALSE}
+```{r}
 data |> 
   mutate(Population = factor(Population)) |> 
   mutate(Population = fct_relevel(Population,
