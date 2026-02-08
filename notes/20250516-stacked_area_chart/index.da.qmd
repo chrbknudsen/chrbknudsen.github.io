@@ -6,7 +6,7 @@ categories:
   - kategori 1
 date: 2025-05-16
 toc: true
-image: ""
+image: "stacked_area.png"
 ---
 
 Det er ikke en supergod måde at visualisere data på. Godt nok giver den en ide om fordelingen af 
