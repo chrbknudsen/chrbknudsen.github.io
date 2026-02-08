@@ -223,56 +223,106 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Her skal jeg have gemt data for det kan ikke genereres hjemmefra - endnu.</p>
 <p>Det er ikke en supergod måde at visualisere data på. Godt nok giver den en ide om fordelingen af bidrag til et samlet heles udvikling. Men der er detaljer i grafen der gør det vanskeligere at tolke det.</p>
 <p>Men lad os lave et.</p>
 <p>Til en start skal vi have noget data. Jeg har fundet denne side <a href="Research funding statistics and data">https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data</a> fra de australske sundhedsmyndigheder. Der er tre tabeller, og den sidste viser hvor mange penge de bruger på forskning der er målrettet forskellige demografiske grupper.</p>
 <p>Lad os begynde med at få fingre i de data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url) <span class="sc">|&gt;</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        rvest<span class="sc">::</span><span class="fu">html_table</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        _[[<span class="dv">3</span>]]</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url) <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        rvest<span class="sc">::</span><span class="fu">html_table</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        _[[<span class="dv">3</span>]]</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Og så har vi data!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 11
+  Population     `2015$ million` `2016$ million` `2017$ million` `2018$ million`
+  &lt;chr&gt;                    &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+1 Aboriginal an…            55.8            51.7            49.6            50  
+2 Adolescent He…            26.2            20.3            18.9            20.2
+3 Aged Health               40.7            36.2            36.6            39.5
+4 Child Health             112.             98.3            96.7           103. 
+5 Maternal Heal…            60              47.2            45.4            46  
+6 Men’s Health              20.5            17              17              18.6
+# ℹ 6 more variables: `2019$ million` &lt;dbl&gt;, `2020$ million` &lt;dbl&gt;,
+#   `2021$ million` &lt;dbl&gt;, `2022$ million` &lt;dbl&gt;, `2023$ million` &lt;dbl&gt;,
+#   `2024$ million` &lt;dbl&gt;</code></pre>
+</div>
 </div>
 <p>Det er ikke specielt tidy, så lad os fikse det.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span>  <span class="co"># pivoter tabellen</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(Å<span class="at">r =</span> <span class="fu">str_extract</span>(name, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}"</span>), </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         Å<span class="at">r =</span> <span class="fu">as.numeric</span>(År)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span>  <span class="co"># pivoter tabellen</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(Å<span class="at">r =</span> <span class="fu">str_extract</span>(name, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}"</span>), </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>         Å<span class="at">r =</span> <span class="fu">as.numeric</span>(År)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Population                                   value    År
+  &lt;chr&gt;                                        &lt;dbl&gt; &lt;dbl&gt;
+1 Aboriginal and Torres Strait Islander Health  55.8  2015
+2 Aboriginal and Torres Strait Islander Health  51.7  2016
+3 Aboriginal and Torres Strait Islander Health  49.6  2017
+4 Aboriginal and Torres Strait Islander Health  50    2018
+5 Aboriginal and Torres Strait Islander Health  54.4  2019
+6 Aboriginal and Torres Strait Islander Health  57.2  2020</code></pre>
+</div>
 </div>
 <p>Og så er vi sådan set klar til at plotte:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>()</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>()</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <p>Vupti. Vi starter med at plotte hvor mange AUS$ der bruges på forskning i kvinders sundhed. Oven på det plotter vi så hvor mange aud der bruges på forskning i mænds sundhed, og så fortsætter vi opad. Tallene er som nævnt i dollar, og det fremgår ikke om de er korrigeret for inflation.</p>
 <p>Fordelen ved at stakke de absolutte tal er at vi får det samlede beløb med det samme. Ulempen er at det er vanskeligt at se hvilken andel hver enkel demografisk gruppe får af den samlede sum. Selvom det jo er meget tydeligt at kvinder er voldsomt underprioriteret.</p>
 <p>Et alternativ er at plotte de relative værdier, altså den procentvise fordeling.</p>
 <p>Det gør vi ret let, det er blot et ekstra argument til geom_area:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <p>Nu bliver det lidt lettere at se hvor stor en andel af de samlede forskningsbevillinger der går til hver gruppe - stiger eller falder de? Og det bliver tydeligt at selv hvis vi lægger “Maternal Health” sammen med “Women’s Health” er det under 50% af bevillingerne der går specifikt til kvinder. Men det er vanskeligt faktisk at aflæse at det i 2024 kun var 37% der gik til forskning i kvinders sundhed, fordi “Men’s Health” ligger mellem de to kategorier, og får den samlede værdi til at se 3,5% større ud.</p>
 <p>Det kan vi fikse ved at justere på rækkefølgen af kategorierne. Som sædvanligt når vi skal styre rækkefølger i ggplot, skal vi have fat i faktorer. Vi mutater “Population” til at være en kategorisk variabel, og ændrer rækkefølgen. En særlig udfordring er at <code>fct_relevel</code> skal have en numerisk værdi i <code>after</code> argumentet. Så det piller vi ud semi-manuelt:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Population =</span> <span class="fu">factor</span>(Population)) <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Population =</span> <span class="fu">fct_relevel</span>(Population,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Men’s Health"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">after =</span> <span class="fu">match</span>(<span class="st">"Maternal Health"</span>, <span class="fu">levels</span>(Population)) <span class="sc">-</span> <span class="dv">1</span> )) <span class="sc">|&gt;</span> </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Population =</span> <span class="fu">factor</span>(Population)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Population =</span> <span class="fu">fct_relevel</span>(Population,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Men’s Health"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">after =</span> <span class="fu">match</span>(<span class="st">"Maternal Health"</span>, <span class="fu">levels</span>(Population)) <span class="sc">-</span> <span class="dv">1</span> )) <span class="sc">|&gt;</span> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> År, <span class="at">y =</span> value, <span class="at">fill =</span> Population)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <p>Vupti. De 3.5% der bruges på forskning i mænds sundhed ligger ikke længere mellem “Maternal Health”, og “Women’s Health”, og det er langt tydeligere at de ca 37% af bevillingerne der bruges på forskning i kvinders sundhed udtryk for en voldsom underprioritering af kvinder.</p>
 <p>Det ændrer ikke på at det er vanskeligt at aflæse på grafen hvor stor en andel der bruges på “Aged Health”, og en tabel vil ofte være at foretrække hvis man faktisk er interesseret i udviklingen. Det er næppe et tilfælde at de oprindelige data netop præsenteres som en tabel.</p>
