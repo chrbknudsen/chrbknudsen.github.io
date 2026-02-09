@@ -120,7 +120,6 @@ Det ændrer ikke på at det er vanskeligt at aflæse på grafen hvor stor en and
 tabel vil ofte være at foretrække hvis man faktisk er interesseret i udviklingen. Det er næppe et tilfælde at 
 de oprindelige data netop præsenteres som en tabel.
 
-Tricket med at bruge matchs og levels til at få den numeriske værdi der skal bruges når rækkefølgen skal ændres er ret
-fikst, hvis jeg selv skal sige det.
+Tricket med at bruge matchs og levels til at få den numeriske værdi der skal bruges når rækkefølgen skal ændres er ret fikst, hvis jeg selv skal sige det.
 
 Så mangler der blot at få smukkeseret plottet. Til en start kunne man fjerne den grå baggrund, der er inderligt overflødig her. Breaks på X-aksen bør gå på hele år, og når vi summerer til 100% vil de fleste sætte pris på at Y-aksen går fra 0 til 100. En titel og en caption vil også være fint, men det overlades til den interesserede studerende.
