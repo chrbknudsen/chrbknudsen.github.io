@@ -41,7 +41,7 @@ data <- tibble::tribble(~Population, ~"2015$ million", ~"2016$ million",
 "Women’s Health",	100.7, 84.4,	83,	83.4,	86.5,	83.5,	81.2,	92.3,	98.2,	90.6)
 ```
 
-```{r demo-data-hentning eval = FALSE}
+```{r demo-data-hentning, eval = FALSE}
 library(tidyverse)
 library(rvest)
 url <- "https://www.nhmrc.gov.au/funding/outcomes-and-data-research/research-funding-statistics-and-data"
