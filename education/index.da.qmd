@@ -47,7 +47,7 @@ title: "Uddannelse"
 
 ## Knap så formel uddannelse
 
-- **Feb. -- Maj 2026:** [Basic Statistics](https://kurser.ku.dk/course/asob16107u). Fulgte sammen med mit Datalab-team kurset, uden dog at gå til eksamen.
+- **Feb. -- Maj 2026:** [Basic Statistics](https://web.archive.org/web/20260210092913/https://kurser.ku.dk/course/asob16107u/2025-2026). Fulgte sammen med mit Datalab-team kurset, uden dog at gå til eksamen.
 - **Sep. 2000 -- dec. 2000**  Studieophold i Grækenland  
 Kemisk institut på universitetet i Patras, Grækenland. Jeg foretog spektroskopiske (Raman og VIS/NIR) undersøgelser af modeller af industrielt anvendte svovlsyrekatalysatorer, med henblik på opnåelse af viden om komplekskemien og redox-forholdene i disse modeller.
 
