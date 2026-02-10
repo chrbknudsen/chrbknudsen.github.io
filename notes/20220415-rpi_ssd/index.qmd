@@ -1,10 +1,10 @@
 ---
-title: "Sådan får du en Raspberry Pi model 3 til at boote Home Assistant fra SSD disk"
-subtitle: "indsæt subtitle"
+title: "How to get a Raspberry Pi model 3 to boot Home Assistant from an SSD disc"
+subtitle: "And probably other models as well"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - Linux
 date: 2022-04-15
 toc: true
 image: "rpissd.png"
