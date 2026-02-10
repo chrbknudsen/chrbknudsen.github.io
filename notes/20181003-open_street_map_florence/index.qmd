@@ -4,7 +4,9 @@ subtitle: "indsæt subtitle"
 author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - R
+  - GIS
+  - Visualisation
 date: 2018-10-03
 toc: true
 image: "firenze.png"

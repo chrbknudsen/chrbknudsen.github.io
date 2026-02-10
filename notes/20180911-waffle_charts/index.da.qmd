@@ -5,7 +5,7 @@ author: "Christian Knudsen"
 visible: "false" # sæt til noget andet når oplægget/noten er færdigt
 categories:
   - R
-  - Visualisation
+  - Visualisering
 date: "2018-09-11"
 toc: true
 image: "waffles.png"
