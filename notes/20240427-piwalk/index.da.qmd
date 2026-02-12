@@ -15,8 +15,8 @@ image: "piwalk.png"
 knitr::include_graphics("piwalk.png")
 ```
 
-Heavily inspired by the talented 
-[Naideh Bremer](https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/).
+Efter kraftig inspiration fra den talentfulde 
+[Naideh Bremer](https://web.archive.org/web/20250401003519/https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/).
 
 The idea is:
 
