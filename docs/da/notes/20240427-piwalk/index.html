@@ -216,51 +216,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Heavily inspired by the talented <a href="https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/">Naideh Bremer</a>.</p>
-<p>The idea is:</p>
-<p>Begin somewhere in the coordinate system. Take the first digit of pi, and take a step in a direction specified by that digit. Take the next digit of i. And take a new step i a direction specified by that digit.</p>
-<p>Continue for 1000000 steps.</p>
-<p>First - what direction should we take for a given digit?:</p>
+<p>Efter kraftig inspiration fra den talentfulde <a href="https://web.archive.org/web/20250401003519/https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/">Naideh Bremer</a>.</p>
+<p>Ideen er :</p>
+<p>Start et eller andet sted i koordinatsystemet. Betragt det første ciffer af pi, og gå et skridt i en retning specificeret af det ciffer. Betragt det næste ciffer, og tag et nyt skridt i en retning specificeret af det ciffer.</p>
+<p>Gentag 1000000 trin.</p>
+<p>Først - hvilken retning skal et givet ciffer pege i?:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">cos</span>(<span class="dv">5</span><span class="sc">/</span><span class="dv">2</span><span class="sc">*</span>pi <span class="sc">-</span> digit<span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>pi)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">sin</span>(<span class="dv">5</span><span class="sc">/</span><span class="dv">2</span><span class="sc">*</span>pi <span class="sc">-</span> digit<span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>pi)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This should return the x,y step, based on a digit.</p>
-<p>If we take two steps, the x-position at the end will be the sum of the two x-steps. Similar with the y-position.</p>
-<p>Therefore we can calculate the position at step n by calculating the cumulative sum of x and y.</p>
-<p>We will need to add (0,0) at the beginning - where we start our walk.</p>
-<p>Taking pi as a string, we can do all that, and return a tibble:</p>
+<p>Det giver os et x,y skridt, baseret på cifferet.</p>
+<p>Hvis vi tager to trin, vil x-positionen ende med at være summen af de to skridts x-komponent. Tilsvarende med y-positionen.</p>
+<p>Derfor kan vi beregne en position efter skridt n ved at beregne den kumulerede sum af x og y.</p>
+<p>Vi skal stadig tilføje (0,0) i begyndelsen - der hvor vi starter spadsereturen.</p>
+<p>Hvis vi får fingre i pi som en tekststreng, kan vi gøre alt dette, og returnere en tibble:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>piPoints <span class="ot">&lt;-</span> <span class="cf">function</span>(piString){</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># removing punctuation</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># fjern punktum/decimalkomma</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  numbers <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">substr</span>(piString, <span class="dv">1</span>, <span class="dv">1</span>), <span class="fu">substr</span>(piString, <span class="dv">3</span>, <span class="fu">nchar</span>(piString)))</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Splitting numbers</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Split strengen i individuelle tegn, og coerce til heltal</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  numbers <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">unlist</span>(<span class="fu">strsplit</span>(numbers,<span class="st">""</span>)))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculating steps</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Beregn hvert enkelt skridts x og y komponent</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">cos</span>(<span class="dv">5</span><span class="sc">/</span><span class="dv">2</span><span class="sc">*</span>pi <span class="sc">-</span> numbers<span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>pi)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">sin</span>(<span class="dv">5</span><span class="sc">/</span><span class="dv">2</span><span class="sc">*</span>pi <span class="sc">-</span> numbers<span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>pi)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculating cumulative steps</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Beregn den kumulative sum</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(x)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(y)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># adding start point</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Tilføj startpunkt</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,x)</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,y)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># adding id for sequential coloring</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Tilføj et rækkenummer eller id for kontinuerlig farvelægning</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  id <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(y))</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Assembling and returning dataframe</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Saml og returner tibble</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">id =</span> id)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Next we’ll get pi with a million digits:</p>
+<p>Så skal vi have fingre i pi med en milliion decimaler</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>large_pi <span class="ot">&lt;-</span> <span class="fu">read_file</span>(<span class="st">"https://pi2e.ch/blog/wp-content/uploads/2017/03/pi_dec_1m.txt"</span>)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Pour that into the function:</p>
+<p>Det hælder vi ind i funktionen:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">piPoints</span>(large_pi)</span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Plot - and save</p>
+<p>Plot - og gem.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x,y,<span class="at">group=</span><span class="st">"1"</span>)) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>(<span class="fu">aes</span>(<span class="at">colour=</span>id)) <span class="sc">+</span></span>
@@ -275,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.background =</span> <span class="fu">element_blank</span>())</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"piwalk.png"</span>)  </span></code><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>There are several other mathematical constants. And there are also possibilities for variation in calculating the steps. For now I’m satisfied with the result.</p>
+<p>Der er adskellige andre matematiske konstanter vi kunne gøre det med. Og vi kan også variere resultatet ved at justere på de individuelle skridt. For nuværende er jeg ganske godt tilfreds med resultatet.</p>
 
 
 
