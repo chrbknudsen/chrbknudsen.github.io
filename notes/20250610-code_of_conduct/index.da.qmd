@@ -4,7 +4,8 @@ subtitle: "Eller: Code of Conduct for voksne"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - projectwork
+  - Projekter
+  - Arbejde
 date: 2025-06-10
 toc: true
 image: "coac.png"

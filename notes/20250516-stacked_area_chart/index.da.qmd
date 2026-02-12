@@ -4,7 +4,8 @@ subtitle: "Og lidt af udfordringerne med den type plots"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
+  - R
+  - Visualisering
 date: 2025-05-16
 toc: true
 image: "stacked_area.png"
