@@ -11,15 +11,14 @@ image: ""
 ---
 
 Blot en samling af links til rapporter, artikler og andet godt.
-Det de har til fælles er at alle deres konklusioner er åbenlyst fejlbehæftede. Og jeg vil gerne understrege: Hvis du ikke bryder dig om
-konklusionerne, kan du tage det helt roligt. De er jo netop forkerte.
+
 
 [Ændringer i prøveformer giver øget kønsforskel i folkeskolens eksamener](https://rockwoolfonden.dk/udgivelser/aendringer-i-proeveformer-giver-oeget-koensforskel-i-folkeskolens-eksamener/). Fra Rockwool fonden. Der ses ingen kønsforskel i hvad eleverne
 faktisk kan. Men prøveformen favoriserer pigerne, der får systematisk højere 
 karakterer end de ligeså kvalificerede drenge.
 
-[Nogle elever får lave karakterer trods fint fagligt niveau](https://rockwoolfonden.dk/udgivelser/nogle-elever-faar-lave-karakterer-trods-fint-fagligt-niveau/). Fra Rockwool fonden. De nogen elever der får lavere karakterer
-end deres lige så dygtige klassekammerater har det til fælles at de er drenge. 
+[Nogle elever får lave karakterer trods fint fagligt niveau](https://web.archive.org/web/20260113053811/https://rockwoolfonden.dk/udgivelser/nogle-elever-faar-lave-karakterer-trods-fint-fagligt-niveau/). Fra Rockwool fonden. De nogen elever, der får lavere karakterer
+end deres lige så dygtige klassekammerater, har det til fælles at de er drenge. 
 
 
 [Kønsforskelle fra fødsel til død](https://rockwoolfonden.dk/udgivelser/koensforskelle-fra-foedsel-til-doed-drenge-og-maend-klarer-sig-daarligere-end-piger-og-kvinder-undtagen-paa-arbejdsmarkedet/). 
