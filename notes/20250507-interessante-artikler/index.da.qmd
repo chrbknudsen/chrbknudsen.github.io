@@ -45,13 +45,13 @@ Schaerer, M. et al. Organizational Behavior and Human Decision Processes, Volume
 kræft, før alle kvinder i alle andre lande har fået adgang til vaccinen.
 
 
-[Experimental Evidence on the Acceptance of Males Falling Behind](https://doi.org/10.1093/jeea/jvaf016). Eksperimentel undersøgelse der dokumenterer, at hvis mænd klarer sig dårligt, så er det deres egen skyld.
+[Experimental Evidence on the Acceptance of Males Falling Behind](https://doi.org/10.1093/jeea/jvaf016). Eksperimentel undersøgelse der dokumenterer, at holdningen (blandt respondenterne) er, at hvis mænd klarer sig dårligt, så er det deres egen skyld.
 Men hvis kvinder klarer sig dårligt, så skal de have hjælp. Gerne på 
-bekostning af mænd der har klaret sig bedre..
+bekostning af mænd der har klaret sig bedre.
 
 [Mere populær gennemgang i Weekendavisen.](https://web.archive.org/web/20250815200747/https://www.weekendavisen.dk/ideer/det-dovne-koen)
 
-## en lille samling af beslægtede artikler
+## En lille samling af beslægtede artikler
 [Orchestrating Impartiality: The Impact of "Blind" Auditions on Female Musicians](https://www.aeaweb.org/articles?id=10.1257/aer.90.4.715). Den originale artikel fra 2000, der viste at hvis auditions til orkestre sker bag et forhæng, så bedømmelsesudvalget ikke kender musikerens køn, så ansættes der flere kvinder i orkstrene. 
 Den relative succes for kvinder i auditions er andelen af kvinder ansættes minus andelen af mænd der ansættes. Er værdierne
 positive, er der flere kvinder der er succesfulde. Er de negative, er der flere 
