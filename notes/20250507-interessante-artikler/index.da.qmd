@@ -26,27 +26,30 @@ Fra Rockwool fonden. Af 23 livsbegivenheder fra fødsel til død klarer mænd si
 end kvinder på 3 punkter. På 3 punkter er der ligestilling. På 17 klarer 
 kvinder sig markant bedre.
 
-[Udsatte borgere dør oftere af fortvivlelsesdødsfald](https://rockwoolfonden.dk/udgivelser/udsatte-borgere-doer-oftere-af-fortvivlelsesdoedsfald/). Fra Rockwool fonden. Udsatte borgere dør oftere
+[Udsatte borgere dør oftere af fortvivlelsesdødsfald](https://web.archive.org/web/20251014163228/https://rockwoolfonden.dk/udgivelser/udsatte-borgere-doer-oftere-af-fortvivlelsesdoedsfald/). Fra Rockwool fonden. Udsatte borgere dør oftere
 af selvmord, alkohol og andet misbrug. Mænd i alderen 45-64 dør dobbelt så hyppigt
 som kvinder i samme aldersgruppe.
 
-[Nu er det især mænd, der diskrimineres, når de søger job](https://dm.dk/akademikerbladet/aktuelt/2024/januar/nu-er-det-isaer-maend-der-diskrimineres-naar-de-soeger-job). Akademikerbladet kan fortælle at man ikke længere kan få øje på
+[Nu er det især mænd, der diskrimineres, når de søger job](https://web.archive.org/web/20250917173955/https://dm.dk/akademikerbladet/aktuelt/2024/januar/nu-er-det-isaer-maend-der-diskrimineres-naar-de-soeger-job/). Akademikerbladet kan fortælle at man ikke længere kan få øje på
 at kvinder skulle blive diskrimineret når de søger arbejde i traditionelle mandefag.
+
 Eller, som artiklen formulerer det "Med andre ord står mænd samlet set dårligere i jobsøgningen end kvinder gør."
+
 Den oprindelige forskning kan findes her:
-[On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions](https://www.sciencedirect.com/science/article/pii/S0749597823000560).
+[On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions](https://web.archive.org/web/20231111073106/https://www.sciencedirect.com/science/article/pii/S0749597823000560).
 Schaerer, M. et al. Organizational Behavior and Human Decision Processes, Volume 179,
 2023, 104280.
 
 
-[HPV vaccine Session introduction and key questions](https://cdn.who.int/media/docs/default-source/immunization/position_paper_documents/human-papillomavirus-(hpv)/hpv-vaccine-session-introduction-key-questions-april-2022.pdf). WHOs officielle position var (og er formentlig) at drenge i Danmark (og andre lande) ikke skal have adgang til vacciner der forebygger 
-kræft, før kvinder i alle andre lande har fået adgang til vaccinen.
+[HPV vaccine Session introduction and key questions](https://web.archive.org/web/20241126232745/https://cdn.who.int/media/docs/default-source/immunization/position_paper_documents/human-papillomavirus-(hpv)/hpv-vaccine-session-introduction-key-questions-april-2022.pdf). WHOs officielle position var (og er formentlig stadig) at drenge i Danmark (og andre lande) ikke skal have adgang til vacciner der forebygger 
+kræft, før alle kvinder i alle andre lande har fået adgang til vaccinen.
 
 
 [Experimental Evidence on the Acceptance of Males Falling Behind](https://doi.org/10.1093/jeea/jvaf016). Eksperimentel undersøgelse der dokumenterer, at hvis mænd klarer sig dårligt, så er det deres egen skyld.
 Men hvis kvinder klarer sig dårligt, så skal de have hjælp. Gerne på 
 bekostning af mænd der har klaret sig bedre..
-[Mere populær gennemgang i Weekendavisen.](https://www.weekendavisen.dk/2025-19/ideer/det-dovne-koen)
+
+[Mere populær gennemgang i Weekendavisen.](https://web.archive.org/web/20250815200747/https://www.weekendavisen.dk/ideer/det-dovne-koen)
 
 ## en lille samling af beslægtede artikler
 [Orchestrating Impartiality: The Impact of "Blind" Auditions on Female Musicians](https://www.aeaweb.org/articles?id=10.1257/aer.90.4.715). Den originale artikel fra 2000, der viste at hvis auditions til orkestre sker bag et forhæng, så bedømmelsesudvalget ikke kender musikerens køn, så ansættes der flere kvinder i orkstrene. 
