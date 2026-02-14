@@ -7,7 +7,7 @@ categories:
   - Referencer
 date: 2025-05-07
 toc: true
-image: ""
+image: "illustration.png"
 ---
 
 Blot en samling af links til rapporter, artikler og andet godt.
