@@ -1,6 +1,6 @@
 ---
 title: "Interessante artikler"
-subtitle: "Som viser noget der helt åbenlyst må være forkert"
+subtitle: "Der viser ting som må være forkerte"
 author: "Christian Knudsen"
 visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
 categories:
@@ -21,7 +21,7 @@ karakterer end de ligeså kvalificerede drenge.
 end deres lige så dygtige klassekammerater, har det til fælles at de er drenge. 
 
 
-[Kønsforskelle fra fødsel til død](https://rockwoolfonden.dk/udgivelser/koensforskelle-fra-foedsel-til-doed-drenge-og-maend-klarer-sig-daarligere-end-piger-og-kvinder-undtagen-paa-arbejdsmarkedet/). 
+[Kønsforskelle fra fødsel til død](https://web.archive.org/web/20251215075859/https://rockwoolfonden.dk/udgivelser/koensforskelle-fra-foedsel-til-doed-drenge-og-maend-klarer-sig-daarligere-end-piger-og-kvinder-undtagen-paa-arbejdsmarkedet/). 
 Fra Rockwool fonden. Af 23 livsbegivenheder fra fødsel til død klarer mænd sig ringere
 end kvinder på 3 punkter. På 3 punkter er der ligestilling. På 17 klarer 
 kvinder sig markant bedre.
