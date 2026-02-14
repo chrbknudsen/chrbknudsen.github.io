@@ -2,7 +2,7 @@
 title: "Interessante artikler"
 subtitle: "Der viser ting som må være forkerte"
 author: "Christian Knudsen"
-visible: "true" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+visible: "true" 
 categories:
   - Referencer
 date: 2025-05-07
