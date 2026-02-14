@@ -2,7 +2,7 @@
 title: "Pi-walk"
 subtitle: "Walking the pie"
 author: "Christian Knudsen"
-visible: "false"
+visible: "true"
 categories:
   - R
   - Generativ kunst
@@ -15,69 +15,69 @@ image: "piwalk.png"
 knitr::include_graphics("piwalk.png")
 ```
 
-Heavily inspired by the talented 
-[Naideh Bremer](https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/).
+Efter kraftig inspiration fra den talentfulde 
+[Naideh Bremer](https://web.archive.org/web/20250401003519/https://www.visualcinnamon.com/2015/01/exploring-art-hidden-in-pi/).
 
-The idea is:
+Ideen er :
 
-Begin somewhere in the coordinate system. Take the first digit of pi, and take 
-a step in a direction specified by that digit. Take the next digit of i. And take
-a new step i a direction specified by that digit.
+Start et eller andet sted i koordinatsystemet. Betragt det første ciffer af pi, og gå et skridt 
+i en retning specificeret af det ciffer. Betragt det næste ciffer, og tag et nyt skridt i 
+en retning specificeret af det ciffer.
 
-Continue for 1000000 steps.
+Gentag 1000000 trin.
 
-First - what direction should we take for a given digit?:
+Først - hvilken retning skal et givet ciffer pege i?:
 
 ```{r eval = F}
 x <- cos(5/2*pi - digit/5*pi)
 y <- sin(5/2*pi - digit/5*pi)
 ```
 
-This should return the x,y step, based on a digit.
+Det giver os et x,y skridt, baseret på cifferet.
 
-If we take two steps, the x-position at the end will be the sum of the two
-x-steps. Similar with the y-position.
+Hvis vi tager to trin, vil x-positionen ende med at være summen af de to skridts x-komponent.
+Tilsvarende med y-positionen.
 
-Therefore we can calculate the position at step n by calculating the cumulative
-sum of x and y.
+Derfor kan vi beregne en position efter skridt n ved at beregne den kumulerede sum af x og y.
 
-We will need to add (0,0) at the beginning - where we start our walk.
+Vi skal stadig tilføje (0,0) i begyndelsen - der hvor vi starter spadsereturen.
 
-Taking pi as a string, we can do all that, and return a tibble:
+Hvis vi får fingre i pi som en tekststreng, kan vi gøre alt dette, og returnere en tibble:
+
 ```{r eval  = F}
 library(tidyverse)
 piPoints <- function(piString){
-  # removing punctuation
+  # fjern punktum/decimalkomma
   numbers <- paste0(substr(piString, 1, 1), substr(piString, 3, nchar(piString)))
-  # Splitting numbers
+  # Split strengen i individuelle tegn, og coerce til heltal
   numbers <- as.integer(unlist(strsplit(numbers,"")))
-  # calculating steps
+  # Beregn hvert enkelt skridts x og y komponent
   x <- cos(5/2*pi - numbers/5*pi)
   y <- sin(5/2*pi - numbers/5*pi)
-  # calculating cumulative steps
+  # Beregn den kumulative sum
   x <- cumsum(x)
   y <- cumsum(y)
-  # adding start point
+  # Tilføj startpunkt
   x <- c(0,x)
   y <- c(0,y)
-  # adding id for sequential coloring
+  # Tilføj et rækkenummer eller id for kontinuerlig farvelægning
   id <- 1:(length(y))
-  # Assembling and returning dataframe
+  # Saml og returner tibble
   tibble(x=x,y=y, id = id)
 }
 ```
 
-Next we'll get pi with a million digits:
+Så skal vi have fingre i pi med en milliion decimaler
 ```{r eval = F}
 large_pi <- read_file("https://pi2e.ch/blog/wp-content/uploads/2017/03/pi_dec_1m.txt")
 ```
 
-Pour that into the function:
+Det hælder vi ind i funktionen:
 ```{r eval = F}
 df <- piPoints(large_pi)
 ```
 
-Plot - and save
+Plot - og gem.
 ```{r eval = F}
 ggplot(df, aes(x,y,group="1")) +
   geom_path(aes(colour=id)) +
@@ -93,6 +93,5 @@ ggplot(df, aes(x,y,group="1")) +
 ggsave("piwalk.png")  
 ```
 
-There are several other mathematical constants. And there are also 
-possibilities for variation in calculating the steps. For now I'm satisfied 
-with the result.
+Der er adskellige andre matematiske konstanter vi kunne gøre det med. Og vi kan også
+variere resultatet ved at justere på de individuelle skridt. For nuværende er jeg ganske godt tilfreds med resultatet.
