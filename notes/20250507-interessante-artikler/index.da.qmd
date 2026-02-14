@@ -2,9 +2,9 @@
 title: "Interessante artikler"
 subtitle: "Der viser ting som må være forkerte"
 author: "Christian Knudsen"
-visible: "false" # s?t til noget andet n?r opl?gget/noten er f?rdigt
+visible: "true" # s?t til noget andet n?r opl?gget/noten er f?rdigt
 categories:
-  - kategori 1
+  - Referencer
 date: 2025-05-07
 toc: true
 image: ""
@@ -52,8 +52,8 @@ bekostning af mænd der har klaret sig bedre.
 [Mere populær gennemgang i Weekendavisen.](https://web.archive.org/web/20250815200747/https://www.weekendavisen.dk/ideer/det-dovne-koen)
 
 ## En lille samling af beslægtede artikler
-[Orchestrating Impartiality: The Impact of "Blind" Auditions on Female Musicians](https://www.aeaweb.org/articles?id=10.1257/aer.90.4.715). Den originale artikel fra 2000, der viste at hvis auditions til orkestre sker bag et forhæng, så bedømmelsesudvalget ikke kender musikerens køn, så ansættes der flere kvinder i orkstrene. 
-Den relative succes for kvinder i auditions er andelen af kvinder ansættes minus andelen af mænd der ansættes. Er værdierne
+[Orchestrating Impartiality: The Impact of "Blind" Auditions on Female Musicians](https://web.archive.org/web/20260129024738/https://www.aeaweb.org/articles?id=10.1257/aer.90.4.715). Den originale artikel fra 2000, der viste, at hvis auditions til orkestre sker bag et forhæng, så bedømmelsesudvalget ikke kender musikerens køn, så ansættes der flere kvinder i orkestrene. 
+Den relative succes for kvinder i auditions er andelen af kvinder der ansættes minus andelen af mænd der ansættes. Er værdierne
 positive, er der flere kvinder der er succesfulde. Er de negative, er der flere 
 mænd der er succesfulde. Bemærk fortegnene i tabel 4.
 
@@ -63,13 +63,12 @@ Det førte til en række artikler om hvorfor blindede auditions er en god ide, b
 Og, nogle år senere, til artikler om hvorfor blindede auditions alligevel ikke var en god ide, eksempelvis denne fra 2020:
 [To Make Orchestras More Diverse, End Blind Auditions](https://archive.md/OZNkg). Det viste sig at hvis man i rekrutteringsprocessen ikke kendte ansøgernes køn, kom ansættelsesudvalgene til at ansætte alene på kvalifikationer, hvilket ikke gav den ønskede diversitet.
 
-Hvilket ikke burde være kommet som en overraskelse, fordi man i Australien i 2017 forsøgte sig med blindede ansøgninger ved ansættelser i det offentlige. Og var nødt til at stoppe forsøgtet undervejs, fordi det gav uønskede resultater:
+Hvilket ikke burde være kommet som en overraskelse, fordi man i Australien i 2017 forsøgte sig med blindede ansøgninger ved ansættelser i det offentlige. Og var nødt til at stoppe forsøget undervejs, fordi det gav uønskede resultater:
 [Blind recruitment trial to boost gender equality making things worse, study reveals](https://web.archive.org/web/20170701002727/https://www.abc.net.au/news/2017-06-30/bilnd-recruitment-trial-to-improve-gender-equality-failing-study/8664888)
 
 
 [Boys lag behind: How teachers’ gender biases affect student achievement](https://www.sciencedirect.com/science/article/pii/S0272775718307714). Et dobbeltblindet eksperiment fra Frankring, hvor eksamensbesvarelser blev bedømt uden at examinator kendte elevens køn. Og hvor examinator kendte elevens køn.
 
-[A gender gap in gender gaps: social norms and housework reporting](doi.org/10.1007/s00181-024-02710-z). Den illustrerer hvor vanskeligt det kan være at få data om folks adfærd. Når en interviewer interviewer kvinder om hvor mange timer de bruger på husligt arbejde får man et tal. Det tal er signifikant højere hvis intervieweren er kvinde, end hvis intervieweren er mand. Den forskel optræder ikke når mænd interviewes. Der er der ingen signifikant forskel der afhænger af kønnet på intervieweren. Det er et kendt fænomen - når folk interviewes påvirkes deres svar af hvad de tror intervieweren vil høre. 
+[A gender gap in gender gaps: social norms and housework reporting](https://link.springer.com/article/10.1007/s00181-024-02710-z). Den illustrerer hvor vanskeligt det kan være at få data om folks adfærd. Når en interviewer interviewer kvinder om hvor mange timer de bruger på husligt arbejde får man et tal. Det tal er signifikant højere hvis intervieweren er kvinde, end hvis intervieweren er mand. Den forskel optræder ikke når mænd interviewes. Der er der ingen signifikant forskel, der afhænger af kønnet på intervieweren. Det er et kendt fænomen - når folk interviewes påvirkes deres svar af hvad de tror intervieweren vil høre. 
 
-
-https://web.archive.org/web/20160602052747/https://www.theguardian.com/technology/2016/may/26/half-of-misogynistic-tweets-sent-by-women-study-finds
+[Half of misogynistic tweets sent by women, study finds ](https://web.archive.org/web/20160602052747/https://www.theguardian.com/technology/2016/may/26/half-of-misogynistic-tweets-sent-by-women-study-finds). Det viser sig at ca. halvdelen af de misogyne tweets der blev tweetet (eller blev tweetet op til 2016), blev tweetet af kvinder.
