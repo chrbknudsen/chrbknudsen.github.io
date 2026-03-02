@@ -16,7 +16,7 @@ Eller:
 - Kosmische Florae
 
 
-```{r eval = FALSE}
+```{r biblioteker, eval = FALSE}
 library(tidyverse)
 ```
 
@@ -28,7 +28,7 @@ $$
 r = \exp^{\sin\theta} - 2\cos(4\theta) + 5 \sin^5(\frac{2\theta - \pi}{24})
 $$
 Det skriver vi en funktion til:
-```{r}
+```{r funktionsdef}
 calc <- function(theta){
   exp(sin(theta)) - 2*cos(4*theta) + sin((2*theta - pi ) /24)^5
 }
@@ -36,7 +36,7 @@ calc <- function(theta){
 
 Så prepper vi noget data:
 
-```{r eval = FALSE}
+```{r dataprep, eval = FALSE}
 A <- seq(0,12*pi, 0.1)
 r <-  calc(A)
 B <- seq(0,12*pi, 2.1*pi)
@@ -51,7 +51,7 @@ første værdi i B trækkes fra alle værdier i A, den anden værdi i B
 trækkes fra alle værdier i A osv. Det giver os grundlæggende en rotation.
 
 Så plotter vi:
-```{r eval  = FALSE}
+```{r plotting, eval  = FALSE}
 tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>% 
     ggplot(aes(x=theta, y = r, color = r, alpha = 0.0001)) +
   geom_point() +
@@ -63,7 +63,7 @@ tibble(theta = C, r = rep(r, times = length(C)/length(r))) %>%
   ggsave("Kosmisk_Florae-1.png")
 ```
 
-```{r out.width="30%",echo  =F}
+```{r inkluder_grafik, out.width="30%", echo = FALSE}
 knitr::include_graphics("Kosmisk_Florae-1.png")
 ```
 
