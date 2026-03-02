@@ -15,7 +15,7 @@ image: "Blue_Vorontex-47.2.png"
 ```
 
 Same concept as my Blue Vorentex #47 - just with ggvoronoi instead of polar 
-cooridnates. 
+coordinates. 
 ```{r eval = FALSE}
 library(tidyverse)
 library(ggvoronoi)
