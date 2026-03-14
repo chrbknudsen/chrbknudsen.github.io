@@ -10,13 +10,13 @@ toc: true
 image: "Blue_Vorontex-47.2.png"
 ---
 
-```{r out.width="100%",echo  =F}
+```{r out.width="100%",echo = FALSE}
 #knitr::include_graphics("Blue_Vorontex-47.2.png")
 ```
 
 Same concept as my Blue Vorentex #47 - just with ggvoronoi instead of polar 
-cooridnates. 
-```{r eval = FALSE}
+coordinates. 
+```{r libraries, eval = FALSE}
 library(tidyverse)
 library(ggvoronoi)
 library(deldir)
