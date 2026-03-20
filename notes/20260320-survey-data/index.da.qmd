@@ -1,0 +1,45 @@
+---
+title: "Har du kørekort til en atomubåd?"
+subtitle: "Eller - hvorfor man ikke skal stole (for meget) på spørgeskemaundersøgelser"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-03-20
+toc: true
+image: "sub-survey.png"
+---
+
+Eller - hvorfor de spørger om du har besteget et bjerg, eller dyrket sporten "tesseret" for nylig.
+
+Et af de mest seriøse analyseinstitutter i verden er Pew Research Center. De er USAnske, og har virkelig styr på tingene.
+
+De undersøgte for et par år siden [udfordringerne ved online spørgeskemaundersøgelser](https://www.pewresearch.org/short-reads/2024/03/05/online-opt-in-polls-can-produce-misleading-results-especially-for-young-people-and-hispanic-adults/).
+
+En af de ting de mente var et problem var, at når man spørger om folk er "licensed to operate a class SSGN submarine". Så svarer 12% af de 18-29 årige at det er de. Blandt de 30-60 årige er det 5% der er trænet i den opgave. Blandt respondenter der er ældre end 61 år. Er det 1%.
+
+Man spurgte dem også om de i løbet af den sidste uge havde købt et privat jetfly, klatret op på toppen af Karakoram bjergene, lært at lave retten halusky, eller spillet jai alai. 
+
+8% af alle voksne svarede ja til mindst en af de fire muligheder.
+17% af alle 18-29 årige svarede ja til mindst en af de fire.
+
+Man kan ikke udelukke at der har været udsalg af jetfly. Men det forekommer ikke sandsynligt. Karakoram bjergene ligger i Kashmir, halusky er en central og østeuropæisk nudelret, og jai alai er et baskisk boldspil, der minder lidt om squash.
+
+Så. Er det udtryk for at amerikanske unge har købt et privat jetfly, er fløjet til Kashmir for at bestige et bjerg og på vejen hjem er mellemlandet i Ungarn for at lære at lave mad. Og har sluttet ugen af med at spille et ret eksotisk boldspil? For at fejre at de lige har bestået køreprøven til en atomdreven missilubåd?
+
+Eller, er det udtryk for at spørgeskemaundersøgelser ikke altid er helt pålidelige?
+
+Fænomenet har sin egen [wikipedia artikel](https://en.wikipedia.org/wiki/Mischievous_responders).
+
+Og der er masser af [videnskabelig litteratur](https://pmc.ncbi.nlm.nih.gov/articles/PMC6215371/). Det rapporteres ofte at 60% af respondenterne i en undersøgelse af USAnske kvinders helbred var teenagedrenge. Det er dog ikke muligt at finde en god reference til præcist det tal.
+
+### Og hvad kan vi lære af det?
+
+Vi kan lære, at når vi kigger på spørgeskemaundersøgelser. Specielt hvis de er gennemført online. Og da i særdeleshed hvis de undersøger grænseoverskridende holdninger blandt unge. Og i helt ekstrem grad hvis respondenterne er unge mænd.
+
+Så er det ikke nok at tage svarene med et gran salt - vi skal have fat i hele salthorsten under Mariager.
+
+Af årsager der ikke er helt klare, men formentlig skyldes at mænd er onde, toksiske og patriarkalske, synes særligt teenage drenge åbenbart at det er sjovt at trolle spørgeskemaer.
+
+Derfor: Når man støder på spørgeskemaundersøgelser, der afslører at 31% af Gen-Z mænd (og det er altså aldersgruppen 14-29 år vi taler om) fortæller at de mener at en hustru altid bør adlyde sin mand. Så kan det ikke helt afvises at der er en betydelig andel af dem, der svarer netop det, fordi de ved at det vil få feminister helt op i det røde felt. Og fordi de synes at netop det kunne være totalt grineren (eller hvordan Gen-Z nu formulerer sig).
