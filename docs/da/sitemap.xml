@@ -1,163 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/da/work/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.753Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/stuff/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.746Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/other/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.689Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.672Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20251106-hist-rundvisning-NA49/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.657Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20250812-panel-debate/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.621Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20250708-RPA/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.585Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20250610-code_of_conduct/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.570Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20250507-interessante-artikler/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.551Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20250428-Handling-disrespect/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.348Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20241115-stakkede-barcharts/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.097Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20240709-voronoi-2/index.html</loc>
-    <lastmod>2026-03-02T13:32:01.895Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20240427-piwalk/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.879Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20220415-rpi_ssd/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.857Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20200903-ggbiplot/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.842Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20200406-wifi_ssid_python/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.812Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20180911-waffle_charts/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.789Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20180322-merging-pdfs/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.769Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/notes/20180312-hiding-rows-in-excel/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.752Z</lastmod>
-  </url>
-  <url>
     <loc>/da/education/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.644Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/about.html</loc>
-    <lastmod>2026-03-02T13:21:08.067Z</lastmod>
-  </url>
-  <url>
-    <loc>/da/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.744Z</lastmod>
+    <lastmod>2026-03-21T08:29:12.218Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20180314-excel_dk_en_dict/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.764Z</lastmod>
+    <lastmod>2026-03-21T08:29:08.718Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20180910-font_color_excel/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.783Z</lastmod>
+    <lastmod>2026-03-21T08:29:02.836Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20181003-open_street_map_florence/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.808Z</lastmod>
+    <lastmod>2026-03-21T08:28:55.550Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20200617-easter/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.835Z</lastmod>
+    <lastmod>2026-03-21T08:28:53.814Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20210914-histogram-breaks/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.853Z</lastmod>
+    <lastmod>2026-03-21T08:28:49.232Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20240414-floral/index.html</loc>
-    <lastmod>2026-03-02T13:50:11.359Z</lastmod>
+    <lastmod>2026-03-21T08:28:47.617Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20240609-voronoi/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.894Z</lastmod>
+    <lastmod>2026-03-21T08:28:41.719Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20240819-parade-ruter/index.html</loc>
-    <lastmod>2026-03-02T13:21:09.984Z</lastmod>
+    <lastmod>2026-03-21T08:28:36.146Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20241126-studenter-forventninger/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.242Z</lastmod>
+    <lastmod>2026-03-21T08:28:25.725Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20250502-Stuff-Ive-noticed/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.436Z</lastmod>
+    <lastmod>2026-03-21T08:28:23.948Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20250516-stacked_area_chart/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.553Z</lastmod>
+    <lastmod>2026-03-21T08:28:21.052Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20250622-editing-pdfs/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.581Z</lastmod>
+    <lastmod>2026-03-21T08:28:12.091Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20250728-excel_images/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.590Z</lastmod>
+    <lastmod>2026-03-21T08:28:08.535Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20251023-circle_art/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.648Z</lastmod>
+    <lastmod>2026-03-21T08:28:06.663Z</lastmod>
   </url>
   <url>
     <loc>/da/notes/20260121-kompetenceudvkiling/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.661Z</lastmod>
+    <lastmod>2026-03-21T08:28:00.067Z</lastmod>
   </url>
   <url>
-    <loc>/da/organisations/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.685Z</lastmod>
+    <loc>/da/notes/index.html</loc>
+    <lastmod>2026-03-21T08:27:53.823Z</lastmod>
   </url>
   <url>
-    <loc>/da/publications/index.html</loc>
-    <lastmod>2026-03-02T13:21:10.694Z</lastmod>
+    <loc>/da/other/index.html</loc>
+    <lastmod>2026-03-21T08:27:49.418Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/stuff/index.html</loc>
+    <lastmod>2026-03-21T08:27:44.516Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/about.html</loc>
+    <lastmod>2026-03-21T08:27:43.039Z</lastmod>
   </url>
   <url>
     <loc>/da/test.html</loc>
-    <lastmod>2026-03-02T13:21:10.749Z</lastmod>
+    <lastmod>2026-03-21T08:27:39.898Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/index.html</loc>
+    <lastmod>2026-03-21T08:27:40.677Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/work/index.html</loc>
+    <lastmod>2026-03-21T08:27:43.892Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/publications/index.html</loc>
+    <lastmod>2026-03-21T08:27:48.689Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/organisations/index.html</loc>
+    <lastmod>2026-03-21T08:27:50.246Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20260320-survey-data/index.html</loc>
+    <lastmod>2026-03-21T08:27:54.700Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20251106-hist-rundvisning-NA49/index.html</loc>
+    <lastmod>2026-03-21T08:28:00.912Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20250812-panel-debate/index.html</loc>
+    <lastmod>2026-03-21T08:28:07.443Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20250708-RPA/index.html</loc>
+    <lastmod>2026-03-21T08:28:09.201Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20250610-code_of_conduct/index.html</loc>
+    <lastmod>2026-03-21T08:28:12.867Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20250507-interessante-artikler/index.html</loc>
+    <lastmod>2026-03-21T08:28:22.032Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20250428-Handling-disrespect/index.html</loc>
+    <lastmod>2026-03-21T08:28:24.723Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20241115-stakkede-barcharts/index.html</loc>
+    <lastmod>2026-03-21T08:28:34.140Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20240709-voronoi-2/index.html</loc>
+    <lastmod>2026-03-21T08:28:38.906Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20240427-piwalk/index.html</loc>
+    <lastmod>2026-03-21T08:28:44.573Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20220415-rpi_ssd/index.html</loc>
+    <lastmod>2026-03-21T08:28:48.316Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20200903-ggbiplot/index.html</loc>
+    <lastmod>2026-03-21T08:28:51.567Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20200406-wifi_ssid_python/index.html</loc>
+    <lastmod>2026-03-21T08:28:54.518Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20180911-waffle_charts/index.html</loc>
+    <lastmod>2026-03-21T08:29:02.123Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20180322-merging-pdfs/index.html</loc>
+    <lastmod>2026-03-21T08:29:03.525Z</lastmod>
+  </url>
+  <url>
+    <loc>/da/notes/20180312-hiding-rows-in-excel/index.html</loc>
+    <lastmod>2026-03-21T08:29:11.004Z</lastmod>
   </url>
 </urlset>
