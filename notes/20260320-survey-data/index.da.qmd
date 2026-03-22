@@ -4,8 +4,7 @@ subtitle: "Eller - hvorfor man ikke skal stole (for meget) på spørgeskemaunder
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
-  - kategori 1
-  - kategori 2
+  - spørgeskemaer
 date: 2026-03-20
 toc: true
 image: "sub-survey.png"
@@ -43,3 +42,13 @@ Så er det ikke nok at tage svarene med et gran salt - vi skal have fat i hele s
 Af årsager der ikke er helt klare, men formentlig skyldes at mænd er onde, toksiske og patriarkalske, synes særligt teenage drenge åbenbart at det er sjovt at trolle spørgeskemaer.
 
 Derfor: Når man støder på spørgeskemaundersøgelser, der afslører at 31% af Gen-Z mænd (og det er altså aldersgruppen 14-29 år vi taler om) fortæller at de mener at en hustru altid bør adlyde sin mand. Så kan det ikke helt afvises at der er en betydelig andel af dem, der svarer netop det, fordi de ved at det vil få feminister helt op i det røde felt. Og fordi de synes at netop det kunne være totalt grineren (eller hvordan Gen-Z nu formulerer sig).
+
+## Hvad gør man så ved det?
+
+Det de professionelle gør er netop at stille de absurde spørgsmål. For at få sorteret de absurde svar fra. Det er årsagen til at spørgeskemaer undertiden stiller spørgsmål som 
+ikke rigtig giver mening. 
+
+Men derfor skal du stadig, når du ser resultater fra spørgeskemaundersøgelser, huske at 
+spørge til hvad man har gjort for at fjerne de absurde svar. Man kan jo ikke udelukke 
+at undersøgelsesdesignerne godt ved at den er gal. Men er så glade for at undersøgelsen
+bekræfter deres fordomme, at de ikke rigtig føler trang til at fjerne dem...

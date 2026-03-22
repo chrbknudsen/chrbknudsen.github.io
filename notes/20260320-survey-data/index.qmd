@@ -1,0 +1,53 @@
+---
+title: "Are you licensed to drive a nuclear sub?"
+subtitle: "Or - why you should not trust survey results (too much)"
+author: "Christian Knudsen"
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - surveys
+date: 2026-03-20
+toc: true
+image: "sub-survey.png"
+---
+
+Or - why the ask you if you have climbed a mountain or played tesseret recently.
+
+One of the more serious survey institutes in the world is Pew Research Center. They are USAnian, and really know their stuff.
+
+A couple of years ago the studied some of the challenges with [online surveys](https://www.pewresearch.org/short-reads/2024/03/05/online-opt-in-polls-can-produce-misleading-results-especially-for-young-people-and-hispanic-adults/).
+
+One of the issues they identified as a possible problem was, that if you ask people if they are "licensed to operate a class SSGN submarine". 12%  of the 18-29 year old respondents answers that, yes they are. Amongst the 30-60 year olds, only 5% claims to have the ability to fill that rolde. Respondents older than 61 years, give the far more reasonable proportion of only 1%.
+
+They also asked their respondents if they, in the last week, had bought a private jet, climbed a summit in the Karakoram mountains, learned to prepare the dish halusky, or played ja
+i alai.
+
+8% of all adults answered yes to at least one of the four options. Among the 18 to 29 year olds, 17% ticked one or more of these options.
+
+You cannot completely rule out that by chance you have picked your respondents from an area that have had a clearancesale on private jets. It but it is not vary plausible. The Karakoram mountains are situated in Kashmir, halusky is a central and easteuropean nudeldish, and jai alai is a basque ballgame, similar to racquetball.
+
+So. Do these results indicate that a significant proportion of american youngs have bought a private jet, in order to fly to Kashmir to climb a mountain? And on the way home have refueeld in Hungary in order to learn how to cook. And rounded off their week by playing a rather exotical ballgame. To celebrate that they just got their license to operate a nuclear missilesub?
+
+Or, perhaps, they indicate that surveys are not always completely reliable?
+
+The phenomenon have its own [wikipedia page](https://en.wikipedia.org/wiki/Mischievous_responders).
+
+And lots of [scientific litterature](https://pmc.ncbi.nlm.nih.gov/articles/PMC6215371/) exists on the subject. You might see reports that 60% of the respondens in a survey on the health of USAnian women were teenaged boys. I have not been able to find a solid reference to that number.
+
+
+### And what do we learn from that?
+
+We learn, that when we look at surveys. Especially if they are selfselected online surveys.
+And even more especially if they try to survey controversial opinions amongst young people. And to an extreme degre, if the respondents are young men.
+
+Then it is not enough to take the results with a grain of salt. We need copious amounts of salt.
+
+For reasons not entirely clear, but probably caused by the fact taht men are evil, toxic and patriarchal, teenage boys think its fun to troll surveys.
+
+Therefore: When you encounter surveys that reveal that 31% of all Gen-Z men (and they are at time for typing the age group 14-29) think that a wife should always obey her husband. Then we are not able to entirely rule out that a significant proportion of those answering exactly that. Do it because they know feminists will rage about it. And because they think that is totally fun.
+
+## What to do about it?
+
+The pros asks the absurd questions. That allow us to remove the absurd answers. And this is the reason that you sometimes encounter surveys online, that asks questions that does not make sense.
+
+That does not change the fact, that when you see results from surveys, you should alwas remember to investigate what has been done to remove absurd answers. And you cannot rule out that who ever designed the survey know that there is a problem. But really like the results
+because they confirm their preconceived notions...
