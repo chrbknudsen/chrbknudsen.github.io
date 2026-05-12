@@ -1,0 +1,67 @@
+---
+title: "Kontrolleret for"
+subtitle: "Hvad betyder det i praksis?"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-05-12
+toc: true
+image: ""
+---
+
+Vi læser ofte om resultater, hvor der er "kontrolleret for". Ofte for socioøkonomiske faktorer. Eller erhvervserfaring. Eller alder.
+
+Og hvad betyder det så?
+
+Det forklarer de sjældent, og derfor er det her, lidt ældre, [notat fra Dansk Arbejdsgiverforening](https://www.da.dk/politik-og-analyser/loen-og-ansaettelse/2019/derfor-tjener-maend-mere-end-kvinder/) interessant.
+
+De analyserer lønforskelle på mænd og kvinder. Deres resultat er at den uforklarede lønforskel mellem mænd og kvinder er 4.6%. Hvilket jo er åbenlyst forkert, for vi har 
+fået at vide at den er 12.9% og kvinder derfor har sidste arbejdsdag i midten af november, fordi de fra den dato arbejder gratis året ud, sammenlignet med mænds løn.
+
+DA gør opmærksom på en række faktuelle forhold, eksempelvis at mænds sidste arbejdsdag ligger i midten af november, fordi de når de når den dato har lagt lige så mange timer på arbejdsmarkedet som kvinder gør på et helt år.
+
+Anyway. De korrigerer for en række forhold, og når frem til en "uforklaret" lønforskel mellem mænd og kvinder på 4.6%. Det interessante her er, at de i modsætning til stort set alle
+andre af den slags rapporter og notater, faktisk forklarer hvordan de når frem til det resultat. De springer en detalje over i deres forklaring, der forvirrer lidt, men ellers er de
+usædvanligt åbne om metodikken. Så lad os kigge lidt på den.
+
+De oplyser at de uforklarede kønsforskelle findes ved en regression:
+
+$$y_i = køn_i\beta_1 + X_i\beta_2 + u_i$$
+
+y er responsvariablen: Løn. 
+
+Køn er en kategorisk dummy variabel, hvor de koder kønnet. Kvinder kodet som 1, og mænd som 0. 
+
+$X_i$ er variablene der kontrolleres for - her jobtype, offentliggørelsesgruppe (leder, lønmodtager, den slags), branche, erhvervserfaring, region, børn (både om lønmodtageren har børn, og i givet fald hvor mange), samt enlig/ikke-enlig.
+
+$u_i$ er fejlleddet.
+
+Mekanikken er så at når vi for en given person, hvis løn vi kender, indsætter værdierne for personens køn, og de syv værdier der beskriver $X_i$, så får vi et bud på hvad lønnen er.
+
+Og videre, at vi vælger $\beta_1$ og $\beta_2$, at forskellen på den løn vi forudsiger for personen, og personens faktiske løn, bliver så lille som mulig. Det er den der gemmer sig i fejlleddet $u_i$.
+
+Det vil give os den $\beta_1$, der beskriver hvor meget af lønnen der kan forklares ved personens køn.
+
+Jeg er ikke statistisk velfunderet nok til at udtale mig med meget stor sikkerhed. Men jeg vil mene at der er et par uklare ting eller tre i det.
+
+For det første udtrykker $\beta_1$ ikke en uforklaret forskel mellem mænd og kvinder. Vi forklarer den jo netop med køn. Så uforklaret skal her snarere forstås som den forskel i løn 
+mellem mænd og kvinder, der ikke forklares af nogen af værdierne i $X_i$. Altså den lønforskel der ikke forklares ved jobtype, branche, erhvervserfaring osv. Strengt taget er den uforklarede
+forskel det der gemmer sig i fejlleddet.
+
+For det andet får vi ikke en enkelt $\beta_2$. Vi får et antal $\beta$er, der hver især beskriver hvordan jobtype, branche, erhvervserfaring osv. forklarer lønnen.
+
+Og for det tredie, skriver de ikke at de har et "intercept". Det har de ret sikkert. 
+
+Men lad det ligge, pointen er, at det ligningen fortæller os, er hvor stor forskel der er i løn mellem mænd og kvinder, når vi kontrollerer for de syv parametre i $X_i$. 
+
+Sværere er det ikke, det er det der sker når man "kontrollerer" for et eller andet i de her modeller.
+
+Og så er der en sidste detalje man skal have med hvis man ønsker at reproducere analysen. Altså bortset fra at det kan man nok ikke, da det kræver adgang til de rå tal, og så skal man have en særlig aftale med Danmarks Statistik.
+
+DA fortæller nemlig, at når man vil finde den procentvise forskel på mænd og kvinders løn, så tager man logaritmen af responsvariablen y, og transformerer estimatet $\beta_1$ for køn:
+
+$pct.forskel = 1 - \exp{\hat{\beta_1}}$
+
+Med andre ord, det der fittes på er _ikke_ den rå løn i kroner, men den log-transformerede løn. Hvilket blot er en fancy måde at sige at 
