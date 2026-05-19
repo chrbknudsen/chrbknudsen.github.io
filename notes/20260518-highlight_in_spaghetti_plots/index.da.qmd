@@ -1,0 +1,14 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-05-18
+toc: true
+image: ""
+---
+
+Forleden faldt jeg over et opslag på de sociale medier. Den USAnske delstat Kentucky havde 
