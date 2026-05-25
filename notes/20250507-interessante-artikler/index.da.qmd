@@ -15,7 +15,7 @@ Blot en samling af links til rapporter, artikler og andet godt.
 
 [Ændringer i prøveformer giver øget kønsforskel i folkeskolens eksamener](https://web.archive.org/web/20251206085940/https://rockwoolfonden.dk/udgivelser/aendringer-i-proeveformer-giver-oeget-koensforskel-i-folkeskolens-eksamener/). Fra Rockwool fonden. Der ses ingen kønsforskel i hvad eleverne
 faktisk kan. Men prøveformen favoriserer pigerne, der får systematisk højere 
-karakterer end de ligeså kvalificerede drenge.
+karakterer end de lige så kvalificerede drenge.
 
 [Nogle elever får lave karakterer trods fint fagligt niveau](https://web.archive.org/web/20260113053811/https://rockwoolfonden.dk/udgivelser/nogle-elever-faar-lave-karakterer-trods-fint-fagligt-niveau/). Fra Rockwool fonden. De nogen elever, der får lavere karakterer
 end deres lige så dygtige klassekammerater, har det til fælles at de er drenge. 
@@ -72,4 +72,19 @@ Hvilket ikke burde være kommet som en overraskelse, fordi man i Australien i 20
 
 [A gender gap in gender gaps: social norms and housework reporting](https://link.springer.com/article/10.1007/s00181-024-02710-z). Den illustrerer hvor vanskeligt det kan være at få data om folks adfærd. Når en interviewer interviewer kvinder om hvor mange timer de bruger på husligt arbejde får man et tal. Det tal er signifikant højere hvis intervieweren er kvinde, end hvis intervieweren er mand. Den forskel optræder ikke når mænd interviewes. Der er der ingen signifikant forskel, der afhænger af kønnet på intervieweren. Det er et kendt fænomen - når folk interviewes påvirkes deres svar af hvad de tror intervieweren vil høre. 
 
-[Half of misogynistic tweets sent by women, study finds ](https://web.archive.org/web/20160602052747/https://www.theguardian.com/technology/2016/may/26/half-of-misogynistic-tweets-sent-by-women-study-finds). Det viser sig at ca. halvdelen af de misogyne tweets der blev tweetet (eller blev tweetet op til 2016), blev tweetet af kvinder.
+[Half of misogynistic tweets sent by women, study finds](https://web.archive.org/web/20160602052747/https://www.theguardian.com/technology/2016/may/26/half-of-misogynistic-tweets-sent-by-women-study-finds). Det viser sig at ca. halvdelen af de misogyne tweets der blev tweetet (eller blev tweetet op til 2016), blev tweetet af kvinder.
+
+[Sundhedskløften](https://www.weekendavisen.dk/samfund/sundhedskloeften), Lone Frank i Weekendavisen 8. marts 2024, sektion 1, side 4. Er det nu også sådan at mænd forfordeles på sundhed? Ja, det kommer an på hvilken betydning vi tillægger
+ordet "forfordeling". Lone Frank kommer i hvert fald med en masse postulater, som næppe kan være rigtige.
+
+Nogen af dem refererer til litteraturen. I Månedsskrift for Almen Praksis i 2020 opgjorde man at der i Danmark er 8% flere mænd end kvinder der får kræft. Og at der er 30% flere mænd end kvinder der dør af kræft. 
+
+Formentlig er det samme sted at man kan læse at hjertesvigt rammer 60% flere mænd end kvinder. Og at dødeligheden er 85% højere end for kvinder. Og at 50% flere mænd end kvinder får diabets. Mens dødeligheden er dobbelt så høj. Mænd dør også dobbelt så ofte af ulykker, og fem gange hyppigere af selvmord.
+
+I 2019 offentliggjorde en gruppe under ledelse af Søren Brunak en analyse af data fra Landspatientregisteret. Man kan læse omtale [her](https://sciencenews.dk/da/danske-sundhedsdata-disse-sygdomme-rammer-forud-for-kraeft).
+Det viste sig at mænd generelt rammes og diagnosticeres tidligere end kvinder. For kræftsygdommes vedkommende 2½ år tidligere, for diabetes 4½ år tidligere. Da mænd generelt kommer senere (og for sent) til lægen er den reelle forskel formentlig større. 
+Det kan tolkes som at mænd har langt færre raske leveår. Men World Economic Forum og The Guardian har i stedet valgt at fortolke det som at kvinder behandles dårligere i sundhedsvæsenet. Hvilket Søren Brunak afviser.
+
+I [Dagens Pharma 2025](https://www.dagenspharma.dk/opinion/eu/er-der-brug-for-lovgivning-om-koensrepraesentation-i-kliniske-studier/) omtaler Jakob Wested, der det er en anekdotisk sandhed at medicin kun testes på raske hvide mænd. Det hævder han er faktuelt forkert. 
+
+Eksempelvis var der i 943 afprøvninger af medicin i EU mellem 2007 og 2017 46,7% kvinder og 53,3% mænd. Siden 1993 (altså de sidste `r as.numeric(substr(date(), 21, 24 ))-1993` år), har det været et krav at offentligt støttede kliniske studier skal have en ligelig kønsfordeling.
