@@ -1,0 +1,127 @@
+---
+title: "indsæt title"
+subtitle: "indsæt subtitle"
+author: "Christian Knudsen"
+visible: "false" # sæt til noget andet når oplægget/noten er færdigt
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-05-31
+toc: true
+image: ""
+---
+
+Goodharts lov. Når en mål bliver et måling. Holder det op med at 
+være en god måling. Hvis man begynder at fokusere på hvor mange 
+enheder der produceres. Så bliver antallet enheder der produceres
+målet. Og ikke kvaliteten.
+
+Campbells lov. Korruptionen af kvantitative indikatorer.
+
+Kobra effekten. 
+
+Surrogation. Replacing the construct with its measure.
+
+
+Organisationen ønsker et mål.
+Man vælger en indikator.
+Surrogation: indikatoren bliver forvekslet med målet.
+Goodharts lov: indikatoren mister sin værdi.
+Campbells lov: systemet begynder at blive forvrænget.
+Kobraeffekten: folk finder måder at udnytte incitamentet på.
+Resultatet bliver dårligere end før.
+
+McNamaras fejlslutning
+
+Opkaldt efter Robert McNamara.
+
+Man fokuserer på det, der kan måles, og ignorerer det, der ikke kan.
+
+Parkinsons lov
+
+Formuleret af C. Northcote Parkinson.
+
+"Work expands so as to fill the time available for its completion."
+
+Hvis du giver en opgave en uge, tager den en uge.
+
+Pournelles jernlov om bureaukrati
+
+Formuleret af Jerry Pournelle.
+
+Ethvert bureaukrati udvikler en gruppe, hvis primære mål er at bevare bureaukratiet.
+
+Chestertons hegn
+
+Opkaldt efter G. K. Chesterton.
+
+Fjern ikke et hegn, før du forstår, hvorfor det blev sat op.
+
+En advarsel mod reformiver.
+
+Hanlons ragekniv
+
+Tilskriv aldrig ondskab det, der kan forklares med inkompetence.
+
+Ofte er systemfejl ikke konspirationer, men bare dårligt design.
+
+Streisand-effekten
+
+Opkaldt efter Barbra Streisand.
+
+Forsøg på at skjule information gør den mere synlig.
+
+Mertons lov om utilsigtede konsekvenser
+
+Formuleret af Robert K. Merton.
+
+Sociale indgreb har ofte konsekvenser, som ingen havde forudset.
+
+Goodhart, kobraeffekten og mange andre kan ses som specialtilfælde.
+
+Jernloven om oligarki
+
+Formuleret af Robert Michels.
+
+Alle store organisationer udvikler en elite, som får kontrol over organisationen.
+
+Gælder partier, fagforeninger, foreninger og virksomheder.
+
+Lucas-kritikken
+
+Formuleret af Robert Lucas Jr..
+
+Hvis man ændrer reglerne i et system, ændrer mennesker deres adfærd.
+
+Det er i virkeligheden meget tæt på Goodhart.
+
+Lov om utilsigtede konsekvenser
+
+Et generelt princip:
+
+Indgreb i komplekse systemer giver ofte uforudsete resultater.
+
+Næsten alle de øvrige love kan ses som specialiseringer af denne.
+
+Hofstadters lov
+
+Formuleret af Douglas Hofstadter.
+
+Det tager altid længere tid end forventet, selv når man tager højde for Hofstadters lov.
+
+Brooks' lov
+
+Formuleret af Fred Brooks.
+
+Adding manpower to a late software project makes it later.
+
+Hvis et softwareprojekt er forsinket, hjælper det ofte ikke at kaste flere udviklere efter det.
+
+Conways lov
+
+Formuleret af Melvin Conway.
+
+Systemer afspejler organisationens kommunikationsstruktur.
+
+Hvis organisationen har fire afdelinger, ender softwaren ofte med fire store moduler.
+
