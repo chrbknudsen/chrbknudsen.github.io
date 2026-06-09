@@ -311,3 +311,8 @@ Når jeg beder chatbotten om at løse opgaven for mig, så har jeg ikke selv lav
 på nettet, og har betalt nogen for at lave maleriet. 
 
 
+## Alignment
+
+Det der fænomen at vi ønsker at AI skal være i overensstemmelse med menneskelige værdier.
+
+Spørgsmålet er, hvordan gør vi det? Det forudsætter at "menneskelige værdier" er, eller bør være, universelle. Hvorfor egentlig?
