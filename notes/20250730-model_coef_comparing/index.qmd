@@ -19,7 +19,7 @@ You can make a with the parameters.
 
 
 
-```{r setup}
+```{r setup, eval = FALSE}
 # install.packages("reshape")
 # install.packages("ggstats")
 library(reshape)
@@ -51,18 +51,18 @@ korrekt, og om overlevelse er korrekt kodet.
 
 
 
-```{r lm-byg}
+```{r lm-byg, eval = FALSE}
 model <- lm(tip ~ day + time + total_bill, data = tips)
 library(dplyr)
 ```
 
 
-```{r summary}
+```{r summary, eval = FALSE}
 model %>% summary()
 ```
 
 
-```{r plot}
+```{r plot, eval = FALSE}
 model %>% ggcoef_model(intercept = TRUE)
 
 ```
