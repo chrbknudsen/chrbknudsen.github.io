@@ -382,82 +382,82 @@
     "href": "notes/20180910-font_color_excel/index.html",
     "title": "Get the font color of a cell in Excel",
     "section": "",
-    "text": "People do weird and wonderful things in Excel.\nOther people then have to pull out the data from those spreadsheets.\n“Other people”  tend to spend a lot of time crying into their coffee.\nAt the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.\nThat is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, state is wanted to be.\nSo - I need a way to get the color of an x. VBA can do that:\nFunction GetColour(ByVal Target As Range) As Single Application.Volatile GetColour = Target.Font.Color End Function\nAnd if I need a logical test:\nFunction IsBlack(ByVal Target As Range) As Boolean Application.Volatile If Target.Font.Color = 0 Then IsBlack = True Else IsBlack = False End If End Function"
+    "text": "People do weird and wonderful things in Excel.\nOther people then have to pull out the data from those spreadsheets.\n“Other people” tend to spend a lot of time crying into their coffee.\nAt the moment, I am trying to pull out data of a spreadsheet, where “something” can have a value of 1, 2 or 3. That is of course marked by an “x” in a cell. I need to convert that x to a number.\nThat is rather simple. What is not so simple, is that there can be two x’es. One, in black, to denote the current state of affairs. And a second x, in red, to denote what a future, preferred state should be.\nSo - I need a way to get the color of an x. VBA can do that:\nFunction GetColour(ByVal Target As Range) As Single\nApplication.Volatile\nGetColour = Target.Font.Color\nEnd Function\nAnd if I need a logical test:\nFunction IsBlack(ByVal Target As Range) As Boolean\nApplication.Volatile\nIf Target.Font.Color = 0 Then\nIsBlack = True\nElse\nIsBlack = False\nEnd If\nEnd Function"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html",
     "href": "notes/20180314-excel_dk_en_dict/index.html",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "",
     "text": "Because you often find the solution to your excel problem on an english language site. But have to solve the problem in a danish version of Excel. Remember that you also have to change “,” to “;”"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#add-in-and-automation-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#add-in-and-automation-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "ADD-IN AND AUTOMATION FUNCTIONS",
     "text": "ADD-IN AND AUTOMATION FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#database-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#database-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "DATABASE FUNCTIONS",
     "text": "DATABASE FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#date-and-time-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#date-and-time-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "DATE AND TIME FUNCTIONS",
     "text": "DATE AND TIME FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#engineering-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#engineering-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "ENGINEERING FUNCTIONS",
     "text": "ENGINEERING FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#financial-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#financial-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "FINANCIAL FUNCTIONS",
     "text": "FINANCIAL FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#information-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#information-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "INFORMATION FUNCTIONS",
     "text": "INFORMATION FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#logical-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#logical-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "LOGICAL FUNCTIONS",
     "text": "LOGICAL FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#math-and-trigonometry-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#math-and-trigonometry-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "MATH AND TRIGONOMETRY FUNCTIONS",
     "text": "MATH AND TRIGONOMETRY FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#statistical-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#statistical-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "STATISTICAL FUNCTIONS",
     "text": "STATISTICAL FUNCTIONS"
   },
   {
     "objectID": "notes/20180314-excel_dk_en_dict/index.html#text-functions",
     "href": "notes/20180314-excel_dk_en_dict/index.html#text-functions",
-    "title": "Danish-english excel dictionary",
+    "title": "English - danish excel dictionary",
     "section": "TEXT FUNCTIONS",
     "text": "TEXT FUNCTIONS"
   },
@@ -1012,7 +1012,7 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Some of theses notes originates from older blogs, some dating back to 2003\n\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAre you licensed to drive a nuclear sub?\n\n\nOr - why you should not trust survey results (too much)\n\n\n\nMar 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nCiRcle aRt 0.5\n\n\nInspired by Karel Novosad\n\n\n\nOct 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEditing pdfs\n\n\nSemi-automatically\n\n\n\nJun 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode of Conduct\n\n\nFor adults\n\n\n\nJun 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Disrespect\n\n\nIf you dont tell there is a line - dont expect people to know it exist.\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetup RStudio and Shiny server on your own\n\n\nindsæt subtitle\n\n\n\nMar 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nOct 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nEaster in Excel\n\n\nDanish Excel that is\n\n\n\nJun 17, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nGet current wifi ssid in python\n\n\nindsæt subtitle\n\n\n\nApr 6, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nMerging PDF-files\n\n\nFrom the command line\n\n\n\nMar 22, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux Notes\n\n\nCommands to remember\n\n\n\nMar 18, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nDanish-english excel dictionary\n\n\nindsæt subtitle\n\n\n\nMar 14, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nHide rows, based on value of cell\n\n\nIn Excel\n\n\n\nMar 12, 2018\n\n\n\n\n\n\nNo matching items"
+    "text": "Some of theses notes originates from older blogs, some dating back to 2003\n\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAre you licensed to drive a nuclear sub?\n\n\nOr - why you should not trust survey results (too much)\n\n\n\nMar 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nCiRcle aRt 0.5\n\n\nInspired by Karel Novosad\n\n\n\nOct 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEditing pdfs\n\n\nSemi-automatically\n\n\n\nJun 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode of Conduct\n\n\nFor adults\n\n\n\nJun 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Disrespect\n\n\nIf you dont tell there is a line - dont expect people to know it exist.\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetup RStudio and Shiny server on your own\n\n\nindsæt subtitle\n\n\n\nMar 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturvidenskabelig litteratursøgning\n\n\nFor folkebibliotekarer\n\n\n\nOct 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nKønsfordelingen på KU\n\n\nDet går meget godt på Science. Resten… knap så godt\n\n\n\nAug 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47.2\n\n\nNon-polar Circular Vorontex\n\n\n\nJul 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Vorontex #47\n\n\nPolar Voronoi Tesselation\n\n\n\nJun 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPi-walk\n\n\nWalking the pie\n\n\n\nApr 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nKosmisk Floræ\n\n\nGenerative Art\n\n\n\nApr 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nEaster in Excel\n\n\nDanish Excel that is\n\n\n\nJun 17, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nGet current wifi ssid in python\n\n\nindsæt subtitle\n\n\n\nApr 6, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nGet the font color of a cell in Excel\n\n\nUsing VBA\n\n\n\nSep 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nMerging PDF-files\n\n\nFrom the command line\n\n\n\nMar 22, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux Notes\n\n\nCommands to remember\n\n\n\nMar 18, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnglish - danish excel dictionary\n\n\n\nMar 14, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nHide rows, based on value of cell\n\n\nIn Excel\n\n\n\nMar 12, 2018\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "other/index.html",
