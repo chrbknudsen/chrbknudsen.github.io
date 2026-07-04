@@ -1,6 +1,6 @@
 ---
-title: "Get the font color of a cell in Excel"
-subtitle: "indsæt subtitle"
+title: "Fang font-farven i Excel"
+subtitle: "Ved brug af VBA"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
@@ -15,12 +15,12 @@ Folk gør fantastiske ting i Excel.
 Og undertiden skal andre folk pille data ud af de regneark.
 
 Disse "andre folk" bruger meget tid på at græde... Og en af de ting der får
-os til at græde er hvis der bruges farver til at gemme data i et regneark.
+os til at græde er, hvis der bruges farver til at gemme data i et regneark.
 
 Lad mig forklare ud fra et konkret eksempel.
 
 Jeg skulle trække data ud af et regneark, hvor "noget" kunne have en værdi;
-1, 2 eller 3. Det blev selvfølgelig angivet med et "x". "x" i kolonnen med overskriven "1" hvis værdien var 1 osv. Det "x" skulle konverteres til et tal (1-3). 
+1, 2 eller 3. Det blev selvfølgelig angivet med et "x". "x" i kolonnen med overskriften "1" hvis værdien var 1 osv. Det "x" skulle konverteres til et tal (1-3). 
 
 Det var let nok. Hvad der var en større udfordring var at der kunne være to "x"'er. Et - med sort skriftfarve, der angav den nuværende tilstand. Og et andet
 "x" med rød skriftfarve, der angav hvad en fremtidig, ønsket, tilstand, skulle være.

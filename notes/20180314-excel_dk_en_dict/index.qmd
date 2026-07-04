@@ -1,6 +1,5 @@
 ---
-title: "Danish-english excel dictionary"
-subtitle: "indsæt subtitle"
+title: "English - danish excel dictionary"
 author: "Christian Knudsen"
 visible: "true" # sæt til noget andet når oplægget/noten er færdigt
 categories:
