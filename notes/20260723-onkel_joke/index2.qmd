@@ -1,0 +1,510 @@
+---
+title: "Hønsefødder, gulerødder og en svanehals"
+subtitle: "En lille pædagogisk onkel-forklaring"
+author: "Til Dagmar — med mildt pædagogisk onkelgaranti"
+lang: da
+visible: "true" # sæt til noget andet når oplægget/noten er færdigt
+
+categories:
+  - Talks
+date: 2026-07-23
+format:
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    controls: true
+    progress: true
+    width: 1600
+    height: 900
+    margin: 0.05
+    scrollable: false
+execute:
+  echo: false
+---
+ 
+```{=html}
+<style>
+:root {
+  --cream: #f8f1e8;
+  --ink: #26353d;
+  --muted: #5b6770;
+  --orange: #c86d3f;
+  --blue: #2f5368;
+  --green: #697a45;
+  --gold: #d7a04d;
+  --pale-orange: #f1d7c3;
+  --pale-blue: #d9e6ed;
+  --pale-green: #e3e8cc;
+  --pale-gold: #f4e1b8;
+}
+
+.reveal { color: var(--ink); }
+.reveal .slides section {
+  background: var(--cream);
+  text-align: left;
+  box-sizing: border-box;
+  padding: 52px 74px;
+  font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  color: var(--ink);
+  font-family: "Aptos Display", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.reveal h1 { font-size: 3.0em; }
+.reveal h2 { font-size: 1.82em; margin-bottom: 0.28em; }
+.reveal p, .reveal li { font-size: 0.82em; line-height: 1.32; }
+.reveal ul { margin-top: 0.7em; }
+.reveal li { margin: 0.33em 0; }
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.68em;
+  line-height: 1.35;
+  margin-top: 0.45em;
+  max-width: 750px;
+}
+
+.kicker {
+  color: var(--orange);
+  font-size: 0.52em;
+  font-weight: 700;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.03fr 0.9fr;
+  gap: 58px;
+  align-items: center;
+  height: 670px;
+}
+.two-col.reverse { grid-template-columns: 0.9fr 1fr; }
+
+.side-img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.full-bg-right {
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: auto 100% !important;
+}
+.full-bg-bottom {
+  background-repeat: no-repeat !important;
+  background-position: bottom center !important;
+  background-size: 100% auto !important;
+}
+
+.title-block {
+  width: 640px;
+  padding-top: 36px;
+}
+.title-block h1 { font-size: 2.9em; }
+
+.ingredient h3 {
+  color: var(--orange);
+  font-size: 1.08em;
+  margin-bottom: 0.2em;
+}
+.ingredient h3.blue { color: var(--blue); }
+.ingredient p { margin-top: 0; }
+
+.quote-line {
+  color: var(--orange);
+  font-family: "Aptos Display", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.35em !important;
+  line-height: 1.1 !important;
+  margin-top: 0.45em;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: 1fr 56px 1.05fr 56px 1.05fr 56px 1.05fr;
+  align-items: center;
+  margin: 112px 20px 70px 20px;
+}
+.flow .box, .steps .box {
+  min-height: 160px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-weight: 800;
+  line-height: 1.15;
+  font-size: 0.84em;
+}
+.box.orange { background: var(--pale-orange); }
+.box.blue { background: var(--pale-blue); }
+.box.green { background: var(--pale-green); }
+.box.gold { background: var(--pale-gold); }
+.arrow {
+  color: var(--gold);
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 900;
+}
+.big-center {
+  color: var(--blue);
+  font-size: 0.95em !important;
+  font-weight: 800;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.callout {
+  color: var(--orange);
+  font-size: 0.92em !important;
+  font-weight: 800;
+  margin-top: 34px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr 60px 1fr;
+  align-items: center;
+  margin-top: 95px;
+  margin-bottom: 80px;
+}
+.steps .box { min-height: 130px; }
+
+.caption-note {
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.72em !important;
+  margin-top: 34px;
+}
+
+.conclusion-list {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 1.05em !important;
+  line-height: 1.26 !important;
+}
+</style>
+```
+
+## Hønsefødder,<br>gulerødder<br>og en svanehals {.full-bg-right background-image="assets/uncle_right.png"}
+
+:::::: title-block
+::: subtitle
+En lille præsentation om, hvorfor en onkel på omkring “stadig relativt ung” kan høre en børnesang, når der tales om suppe.
+:::
+
+::: {style="height: 260px"}
+:::
+
+::: kicker
+Til Dagmar — med mildt pædagogisk onkelgaranti
+:::
+::::::
+
+::: notes
+Forklar, at præsentationen er en “manual” til en bestemt onkel-joke.
+:::
+
+## Scene 1: billedet med de frosne hønsefødder
+
+::: subtitle
+Før joken kan forstås, skal vi lige samle sporene.
+:::
+
+::::: two-col
+::: {}
+**Samtalen gik nogenlunde sådan:**
+
+- Et billede af frosne hønsefødder lander i chatten.
+- Dagmar og onkel er enige: det ser ikke umiddelbart lækkert ud.
+- Onkel siger alligevel: “Det kunne nok give en god suppe.”
+- Og så kommer den mystiske tilføjelse: “med gulerødder og en svanehals.”
+:::
+
+::: {}
+<img src="assets/ingredients_side.png" alt="Akvarel med hønsefødder, gulerødder og en svane ved en suppegryde" class="side-img"/>
+:::
+:::::
+
+::: notes
+Start med den konkrete chat: billedet, smagen og suppeidéen.
+:::
+
+## Scene 2: suppedelen er faktisk næsten fornuftig
+
+::: subtitle
+Der er en lille kerne af madlogik under alt onkelvrøvlet.
+:::
+
+:::::::: two-col
+:::::: {}
+::: ingredient
+<h3>Hønsefødder</h3>
+
+<p>kan bruges til fond/suppe, fordi skind, sener og brusk giver fylde i væsken.</p>
+:::
+
+::: ingredient
+<h3>Gulerødder</h3>
+
+<p>giver sødme, farve og den slags pænhed, der får suppe til at se mindre “frossen fod”-agtig ud.</p>
+:::
+
+::: ingredient
+<h3 class="blue">
+
+Svanenhalsen
+
+</h3>
+
+<p>er dér, hvor opskriften forlader køkkenet og går direkte ind i børnesangsafdelingen.</p>
+:::
+::::::
+
+::: {}
+<img src="assets/pot_side.png" alt="Akvarel af en suppegryde med gulerødder, hønsefødder og en svane udenfor vinduet" class="side-img"/>
+:::
+::::::::
+
+::: notes
+Gør klart, at hønsefødder faktisk kan give fylde i suppe. Gulerødder er klassisk suppegrønt.
+:::
+
+## Scene 3: den skjulte børnesang {.full-bg-bottom background-image="assets/song_bottom.png"}
+
+::: subtitle
+Onkelens hjerne hørte ikke kun “mad”. Den hørte også en gammel remse.
+:::
+
+::::: {style="display:grid; grid-template-columns: 1fr 0.8fr; gap: 76px; margin-top: 60px;"}
+::: {}
+Mange voksne kender børnesangen/remse-linjen:
+
+<p class="quote-line">
+
+“Hønsefødder og gulerødder<br>og halsen af en svane …”
+
+</p>
+:::
+
+::: {}
+Den er ikke berømt for dyb mening. Den er berømt for rytme, fjollede billeder og ord, der sætter sig fast.
+:::
+:::::
+
+::: notes
+Syng evt. kun den korte linje, ikke hele sangen. Pointen er genkendelsen.
+:::
+
+## Jokens motor: når mad møder remse
+
+::: subtitle
+Det er ikke én joke. Det er fire små hjul, der kører på samme tid.
+:::
+
+:::::::::: flow
+::: {.box .orange}
+1<br>Hønsefødder
+:::
+
+::: arrow
+→
+:::
+
+::: {.box .blue}
+2<br>Gammel sang<br>tænder i hjernen
+:::
+
+::: arrow
+→
+:::
+
+::: {.box .green}
+3<br>Suppe gør det<br>til “opskrift”
+:::
+
+::: arrow
+→
+:::
+
+::: {.box .gold}
+4<br>Svanehals =<br>absurd finish
+:::
+::::::::::
+
+<p class="big-center">
+
+Det sjove er altså overgangen: En rigtig mulig suppeidé bliver koblet til en vrøvlesang, som om sangen var en seriøs kogebog.
+
+</p>
+
+::: notes
+Vis, at joken er en kædereaktion, ikke bare et tilfældigt ord.
+:::
+
+## Hvorfor gør onkler den slags?
+
+::: subtitle
+Fordi voksenhjerner er fyldt med gamle melodier, reklamer, citater og andet nyttigt rod.
+:::
+
+::::: two-col
+::: {}
+- Et usædvanligt ord kan åbne en hel hukommelsesskuffe.
+- “Hønsefødder” ligger sjældent alene. For mange ligger det sammen med “gulerødder”.
+- Når der så også tales om suppe, begynder onkelhjernen at lave “falsk opskrift”.
+- Resultatet er en joke, der føles elegant inde i onklens hoved — og lidt som kode uden dokumentation for alle andre.
+:::
+
+::: {}
+<img src="assets/attic_square.png" alt="Akvarel af en hjerne som et loft fyldt med gamle børnesange og minder" class="side-img"/>
+:::
+:::::
+
+::: notes
+Brug “hukommelsesskuffe” som billede: rare ord åbner gamle mapper.
+:::
+
+## Hvorfor fangede Dagmar den ikke?
+
+::: subtitle
+Fordi hun manglede den skjulte fil i hukommelsen: sangen.
+:::
+
+::::: {.two-col .reverse}
+::: {}
+<img src="assets/clues_wide.png" alt="Akvarel af en detektivscene med onkel, niece, høne og svane" class="side-img"/>
+:::
+
+::: {}
+**Jokes med referencer virker sådan:**
+
+- Kender man referencen: “Aha!”
+- Kender man den ikke: “Hvorfor snakker du om svaner?”
+- Det betyder ikke, at joken er dårlig. Det betyder bare, at adgangskoden ikke var delt.
+
+<p class="callout">
+
+I dette tilfælde var adgangskoden: en gammel børnesang.
+
+</p>
+:::
+:::::
+
+::: notes
+Understreg, at Dagmar ikke “missede” noget dumt; hun manglede bare referencen.
+:::
+
+## Svanehals-tricket
+
+::: subtitle
+Her bliver ordspillet næsten synligt med lup.
+:::
+
+::::: two-col
+::: {}
+I sangen er det **“halsen af en svane”** — en mærkelig, næsten eventyrlig ingrediens.
+
+I samtalen blev det til **“svanehals”** — som lyder kortere og mere opskriftsagtigt, men stadig er helt fjollet.
+
+<p class="big-center" style="text-align:left; margin-top: 38px;">
+
+Pointen er netop, at onkel tager en vrøvlelinje og lader som om, den er kulinarisk visdom.
+
+</p>
+
+<p class="callout">
+
+Anbefalet køkkenpraksis: brug hønsefødder og gulerødder. Lad svanen svømme videre.
+
+</p>
+:::
+
+::: {}
+<img src="assets/song_side.png" alt="Akvarel af en sangbog med noder, gulerødder, hønsefødder og en svane" class="side-img"/>
+:::
+:::::
+
+::: notes
+Skeln mellem sangens “halsen af en svane” og onkelens “svanehals”.
+:::
+
+## Sådan afkoder man en onkel-joke
+
+::: subtitle
+En praktisk metode til næste gang nogen siger noget, der lyder som fejl i sproget.
+:::
+
+:::::::: steps
+::: {.box .orange}
+Trin 1<br>Find det mærkelige ord
+:::
+
+::: arrow
+→
+:::
+
+::: {.box .blue}
+Trin 2<br>Spørg: “Er det fra en sang, film eller reklame?”
+:::
+
+::: arrow
+→
+:::
+
+::: {.box .green}
+Trin 3<br>Tjek om onklen ser meget tilfreds ud
+:::
+::::::::
+
+<p class="big-center">
+
+Hvis svaret på trin 2 er “ja”, er det sandsynligvis ikke køkkenrådgivning. Det er kulturarv i sokker.
+
+</p>
+
+<p class="caption-note">
+
+Bonus: Man må gerne bede onklen synge kilden. Det gør ham enten glad eller meget stille.
+
+</p>
+
+::: notes
+Giv Dagmar en metode til næste gang. Det er også en joke på onkler.
+:::
+
+## Konklusion {.full-bg-right background-image="assets/uncle_full.png"}
+
+:::: {style="width: 600px; padding-top: 30px;"}
+# Konklusion
+
+::: subtitle
+Joken virker sådan:
+:::
+
+<p class="conclusion-list">
+
+frosne hønsefødder<br>+ rigtig suppeidé<br>+ gammel børnesang<br>+ én alt for selvsikker onkel
+
+</p>
+
+<p>= en reference-joke, der først skal forklares — og som derfor næsten automatisk bliver mere onkelagtig.</p>
+
+<p class="callout">
+
+Suppen kan måske blive god. Referencen skulle bare koge lidt længere.
+
+</p>
+::::
+
+::: notes
+Slut varmt: joken er forklaret, og svanen slipper fri.
+:::
