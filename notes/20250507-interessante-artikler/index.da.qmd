@@ -2,7 +2,7 @@
 title: "Interessante artikler"
 subtitle: "Der viser ting som må være forkerte"
 author: "Christian Knudsen"
-visible: "true" 
+visible: "false" 
 categories:
   - Referencer
 date: 2025-05-07
