@@ -125,3 +125,6 @@ Systemer afspejler organisationens kommunikationsstruktur.
 
 Hvis organisationen har fire afdelinger, ender softwaren ofte med fire store moduler.
 
+The Streetlight Effect
+
+solow paradox
