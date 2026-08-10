@@ -1,63 +1,32 @@
+
 library(ggplot2)
-library(dplyr)
-library(ambient)
+library(ggsketch)
 
-# Data
-set.seed(42)
-n <- 1000
-x <- seq(0, 10, length.out = n)
-
-# Funktion til et strøg
-make_stroke <- function(offset = 0, alpha = 0.1, freq = 0.5, amp = 0.2) {
-  noise <- gen_perlin(x = x, y = offset, frequency = freq)
-  tibble(
-    x = x,
-    ymin = -0.3 + noise * amp,
-    ymax =  0.3 + noise * amp,
-    alpha = alpha
-  )
-}
-
-# Liste af strøg
-stroke_list <- list(
-  make_stroke(0.0, alpha = 0.2),
-  make_stroke(0.5, alpha = 0.1),
-  make_stroke(1.0, alpha = 0.1),
-  make_stroke(1.5, alpha = 0.05),
-  make_stroke(2.0, alpha = 0.05)
+line <- data.frame(
+  x = 1,
+  xend = 9,
+  y = 1,
+  yend = 1
 )
 
-# Start ggplot-objekt
-p <- ggplot()
-
-# Tilføj hvert lag med geom_ribbon separat
-for (stroke in stroke_list) {
-  p <- p + geom_ribbon(
-    data = stroke,
-    aes(x = x, ymin = ymin, ymax = ymax),
-    fill = "red",
-    alpha = unique(stroke$alpha)  # alpha må ikke være i aes()
-  )
-}
-
-# Tema og visning
-p +
-  coord_fixed(ratio = 0.2) +
+ggplot(line) +
+  geom_sketch_segment(
+    aes(
+      x = x,
+      y = y,
+      xend = xend,
+      yend = yend
+    ),
+    linewidth = 12,
+    colour = "black",
+    medium = "brush",
+    roughness = 2,
+    bowing = 0.3,
+    n_passes = 3,
+    seed = 42
+  ) +
+  coord_cartesian(
+    xlim = c(0, 10),
+    ylim = c(0, 2)
+  ) +
   theme_void()
-
-
-
-install.packages("ggfx")
-library(tidyverse)
-library(ggfx)
-
-
-x <- c(runif(10, 0, 0.01), runif(10, 1, 1.01))
-y <- c(runif(10, 0, 0.01), runif(10, 1, 1.01))
-group <- c(1:10, 1:10)
-tibble(x = x, y = y, group = group)%>% 
-  ggplot(aes(x,y, group = group)) +
-  ggfx::with_blur(
-    geom_line(), sigma = 2
-  )
-
