@@ -1,6 +1,8 @@
+install.packages("ggrough")
 
 library(ggplot2)
 library(ggsketch)
+library(ggrough)
 
 line <- data.frame(
   x = 1,
