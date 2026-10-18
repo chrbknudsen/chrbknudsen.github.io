@@ -1,7 +1,13 @@
 ---
 title: "Anbefalet af et bildækfirma?!"
 subtitle: "Den utrolige historie om Michelin"
+author: "Christian Knudsen"
 lang: da
+visible: true
+categories:
+  - kategori 1
+  - kategori 2
+date: 2026-10-18
 format:
   revealjs:
     theme: simple
