@@ -1,0 +1,34 @@
+:root { --red: #b7222d; --ink: #202533; --gold: #df9f35; }
+.reveal { color: var(--ink); }
+.reveal .slides section { overflow-wrap: anywhere; }
+.reveal h1 { font-size: 1.37em; line-height: 1.12; margin-bottom: .42em; text-transform: none; }
+.reveal h1 strong, .reveal p strong { color: var(--red); }
+.reveal p { font-size: .79em; line-height: 1.23; margin: .35em 0; }
+.reveal li { font-size: .79em; line-height: 1.32; }
+.reveal .columns { align-items: center; gap: 1.5rem; }
+.reveal .column { min-width: 0; }
+.reveal img.picture, .reveal img.wide-picture, .reveal img.hero-image, .reveal img.stars-image, .reveal img.portrait-picture { display: block; width: auto; height: auto; object-fit: contain; border: 0; box-shadow: none; margin: .18em auto; }
+.reveal img.picture { max-width: 100%; max-height: 430px; }
+.reveal img.wide-picture { max-width: min(92%, 930px); max-height: 405px; }
+.reveal img.hero-image { max-width: 75%; max-height: 405px; }
+.reveal img.stars-image { max-width: 88%; max-height: 400px; }
+.reveal img.portrait-picture { max-width: 75%; max-height: 415px; }
+.reveal .big-idea { font-size: 1.55em; font-weight: 750; margin: 1em 0 .65em; }
+.reveal .step-chain { font-size: 1.05em; border-top: 2px solid #dedede; border-bottom: 2px solid #dedede; padding: .7em 0; }
+.reveal .step-chain span { color: var(--red); margin: 0 .25em; }
+.reveal .punchline { font-weight: 750; font-size: 1.2em; color: var(--red); margin-top: .75em; }
+.reveal .date-line { font-size: .72em; margin: .25em 0; }
+.reveal .star-grid { display: flex; justify-content: space-between; gap: .6rem; margin: .8em 0; }
+.reveal .star-grid > div { flex: 1; min-width: 0; padding: .6em .3em; border-top: 3px solid #dedede; display: flex; flex-direction: column; gap: .3em; font-size: .75em; }
+.reveal .star-grid span { font-size: .89em; }
+.reveal .symbols { color: var(--red); font-size: 1.6em; white-space: nowrap; }
+.reveal .reveal-big { font-size: 1.55em; line-height: 1.3; margin: 1em .5em; }
+.reveal .references li { font-size: .65em; }
+@media (max-width: 760px) {
+  .reveal .slides section { box-sizing: border-box; }
+  .reveal img.picture, .reveal img.wide-picture, .reveal img.hero-image, .reveal img.stars-image, .reveal img.portrait-picture { max-width: 100%; max-height: 38vh; }
+  .reveal h1 { font-size: 1.15em; }
+  .reveal .columns { gap: .4rem; }
+  .reveal .star-grid { gap: .25rem; }
+  .reveal .star-grid > div { padding: .35em .12em; }
+}
